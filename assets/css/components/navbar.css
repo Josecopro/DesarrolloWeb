@@ -1,0 +1,129 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: var(--header-height);
+  z-index: var(--z-sticky);
+  background-color: var(--color-primary);
+  color: var(--color-text-inverse);
+  box-shadow: var(--shadow-md);
+  transition: background-color var(--transition-base), box-shadow var(--transition-base);
+}
+
+.navbar__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 0 var(--container-padding);
+}
+
+.navbar__brand {
+  flex-shrink: 0;
+}
+
+.navbar__menu {
+  display: none;
+  position: absolute;
+  top: var(--header-height);
+  left: 0;
+  right: 0;
+  background-color: var(--color-primary-dark);
+  padding: var(--spacing-4);
+  border-bottom: 1px solid var(--color-border-dark);
+  box-shadow: var(--shadow-lg);
+}
+
+.navbar__menu--open {
+  display: block;
+  animation: navbar-slide-down var(--transition-base) ease-out;
+}
+
+@keyframes navbar-slide-down {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.navbar__list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-1);
+}
+
+.navbar__item {
+  position: relative;
+}
+
+.navbar__link {
+  display: block;
+  padding: var(--spacing-3) var(--spacing-4);
+  font-size: var(--text-base);
+  font-weight: var(--font-medium);
+  color: var(--color-text-inverse);
+  border-radius: var(--radius-md);
+  transition: background-color var(--transition-fast);
+}
+
+.navbar__link:hover,
+.navbar__link--active {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.navbar__actions {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2);
+}
+
+.navbar__toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  background: none;
+  border: none;
+  border-radius: var(--radius-md);
+  color: var(--color-text-inverse);
+  cursor: pointer;
+  transition: background-color var(--transition-fast);
+}
+
+.navbar__toggle:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+@media (min-width: 768px) {
+  .navbar__toggle {
+    display: none;
+  }
+
+  .navbar__menu {
+    display: block !important;
+    position: static;
+    background: none;
+    padding: 0;
+    border: none;
+    box-shadow: none;
+    animation: none;
+  }
+
+  .navbar__list {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .navbar__link {
+    padding: var(--spacing-2) var(--spacing-3);
+    font-size: var(--text-sm);
+  }
+}

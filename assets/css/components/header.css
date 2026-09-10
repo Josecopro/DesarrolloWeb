@@ -1,0 +1,25 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: var(--z-sticky);
+}
+
+.header__top {
+  height: var(--header-height);
+  background-color: var(--color-primary);
+}
+
+.header__spacer {
+  height: var(--header-height);
+}
+
+@media (max-width: 767px) {
+  .header__top {
+    height: var(--header-height-mobile);
+  }
+  .header__spacer {
+    height: var(--header-height-mobile);
+  }
+}

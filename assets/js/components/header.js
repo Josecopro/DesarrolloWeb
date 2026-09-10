@@ -1,0 +1,146 @@
+const HEADER_HTML = `
+<header class="header" role="banner">
+  <div class="header__top">
+    <nav class="navbar" role="navigation" aria-label="Navegación principal">
+      <div class="navbar__container">
+        <a href="index.html" class="navbar__brand logo logo--horizontal" aria-label="DUAM - Inicio">
+          <img src="https://josecopro.github.io/DUAM/GPT_Lo_Hace/DUAM_LOGO_blanco.svg" alt="" class="logo__image" width="40" height="40">
+          <span class="logo__text">DUAM</span>
+        </a>
+
+        <button class="navbar__toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="navbar-menu" data-navbar-toggle>
+          <svg class="icon icon--md" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+
+        <div class="navbar__menu" id="navbar-menu" role="menubar">
+          <ul class="navbar__list" role="menu">
+            <li class="navbar__item" role="none">
+              <a href="index.html" class="navbar__link" role="menuitem">Inicio</a>
+            </li>
+            <li class="navbar__item" role="none">
+              <a href="universidades.html" class="navbar__link" role="menuitem">Universidades</a>
+            </li>
+            <li class="navbar__item" role="none">
+              <a href="carreras.html" class="navbar__link" role="menuitem">Carreras</a>
+            </li>
+            <li class="navbar__item" role="none">
+              <a href="becas.html" class="navbar__link" role="menuitem">Becas</a>
+            </li>
+            <li class="navbar__item" role="none">
+              <a href="nosotros.html" class="navbar__link" role="menuitem">Nosotros</a>
+            </li>
+            <li class="navbar__item" role="none">
+              <div class="dropdown" data-dropdown>
+                <button class="dropdown__trigger" aria-haspopup="true" aria-expanded="false" aria-controls="dropdown-menu">
+                  <span>Carreras</span>
+                  <svg class="dropdown__icon icon icon--sm" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                  </svg>
+                </button>
+                <div class="dropdown__menu" id="dropdown-menu" role="menu">
+                  <button class="dropdown__item" role="menuitem" data-career="ingenierias">Ingenierías</button>
+                  <button class="dropdown__item" role="menuitem" data-career="salud">Salud</button>
+                  <button class="dropdown__item" role="menuitem" data-career="humanidades">Humanidades</button>
+                  <div class="dropdown__divider"></div>
+                  <button class="dropdown__item" role="menuitem" data-career="educacion">Educación</button>
+                  <button class="dropdown__item" role="menuitem" data-career="cienciasbasicas">Ciencias Básicas</button>
+                  <div class="dropdown__divider"></div>
+                  <button class="dropdown__item" role="menuitem" data-career="cienciassociales">Ciencias Sociales y Derecho</button>
+                  <button class="dropdown__item" role="menuitem" data-career="servicios">Servicios</button>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="navbar__actions">
+          <div class="search-box" data-search-box>
+            <input type="search" class="search-box__input" placeholder="Buscar universidad, carrera..." aria-label="Buscar" autocomplete="off" data-search-input>
+            <button class="search-box__button" aria-label="Buscar" data-search-submit>
+              <svg class="icon icon--md" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+              </svg>
+            </button>
+            <div class="search-box__results" role="listbox" aria-label="Resultados de búsqueda" data-search-results></div>
+          </div>
+
+          <button class="theme-toggle" aria-label="Cambiar tema" data-theme-toggle>
+            <svg class="theme-toggle__icon theme-toggle__icon--sun icon icon--md" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="5"></circle>
+              <line x1="12" y1="1" x2="12" y2="3"></line>
+              <line x1="12" y1="21" x2="12" y2="23"></line>
+              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+              <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+              <line x1="1" y1="12" x2="3" y2="12"></line>
+              <line x1="21" y1="12" x2="23" y2="12"></line>
+              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+              <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+            </svg>
+            <svg class="theme-toggle__icon theme-toggle__icon--moon icon icon--md" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </nav>
+  </div>
+  <div class="header__spacer" aria-hidden="true"></div>
+</header>
+`;
+
+function initHeader() {
+  const placeholder = document.querySelector('[data-header]');
+  if (!placeholder) return;
+
+  placeholder.outerHTML = HEADER_HTML;
+
+  const toggle = document.querySelector('[data-navbar-toggle]');
+  const menu = document.querySelector('.navbar__menu');
+
+  toggle?.addEventListener('click', () => {
+    const isOpen = menu.classList.toggle('navbar__menu--open');
+    toggle.setAttribute('aria-expanded', isOpen);
+    toggle.innerHTML = isOpen
+      ? `<svg class="icon icon--md" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>`
+      : `<svg class="icon icon--md" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>`;
+  });
+
+  document.addEventListener('click', (e) => {
+    if (!menu?.contains(e.target) && !toggle?.contains(e.target)) {
+      menu?.classList.remove('navbar__menu--open');
+      toggle?.setAttribute('aria-expanded', 'false');
+    }
+  });
+
+  document.querySelectorAll('.dropdown__item').forEach(item => {
+    item.addEventListener('click', () => {
+      const career = item.dataset.career;
+      if (career) {
+        window.location.href = `carreras.html#${career}`;
+      }
+    });
+  });
+
+  highlightCurrentPage();
+}
+
+function highlightCurrentPage() {
+  const currentPath = window.location.pathname.split('/').pop() || 'index.html';
+  document.querySelectorAll('.navbar__link').forEach(link => {
+    if (link.getAttribute('href') === currentPath) {
+      link.classList.add('navbar__link--active');
+      link.setAttribute('aria-current', 'page');
+    }
+  });
+}
+
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initHeader);
+} else {
+  initHeader();
+}

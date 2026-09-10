@@ -1,0 +1,36 @@
+.icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 1em;
+  height: 1em;
+  color: currentColor;
+}
+
+.icon--sm { width: 0.875em; height: 0.875em; }
+.icon--md { width: 1.25em; height: 1.25em; }
+.icon--lg { width: 1.5em; height: 1.5em; }
+.icon--xl { width: 2em; height: 2em; }
+
+.icon--primary { color: var(--color-primary); }
+.icon--secondary { color: var(--color-secondary); }
+.icon--muted { color: var(--color-text-muted); }
+.icon--inverse { color: var(--color-text-inverse); }
+
+.icon--spin {
+  animation: icon-spin 1s linear infinite;
+}
+
+@keyframes icon-spin {
+  to { transform: rotate(360deg); }
+}
+
+.icon--pulse {
+  animation: icon-pulse 2s ease-in-out infinite;
+}
+
+@keyframes icon-pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.7; transform: scale(0.95); }
+}

@@ -1,0 +1,106 @@
+.career-grid {
+  padding: var(--spacing-12) var(--container-padding);
+}
+
+.career-grid__header {
+  max-width: var(--container-max);
+  margin: 0 auto var(--spacing-8);
+  text-align: center;
+}
+
+.career-grid__title {
+  font-size: var(--text-3xl);
+  font-weight: var(--font-bold);
+  color: var(--color-text);
+  margin-bottom: var(--spacing-2);
+}
+
+.career-grid__subtitle {
+  font-size: var(--text-lg);
+  color: var(--color-text-light);
+}
+
+.career-grid__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-4);
+  max-width: var(--container-max);
+  margin: 0 auto;
+}
+
+@media (min-width: 480px) {
+  .career-grid__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .career-grid__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.career-grid__card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.career-grid__image-wrapper {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+}
+
+.career-grid__image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  transition: transform var(--transition-slower);
+}
+
+.career-grid__card:hover .career-grid__image {
+  transform: scale(1.05);
+}
+
+.career-grid__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 50%, rgba(0, 0, 0, 0.6) 100%);
+  opacity: 0;
+  transition: opacity var(--transition-base);
+}
+
+.career-grid__card:hover .career-grid__overlay {
+  opacity: 1;
+}
+
+.career-grid__content {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: var(--spacing-4);
+  background-color: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-top: none;
+  border-radius: 0 0 var(--radius-lg) var(--radius-lg);
+}
+
+.career-grid__name {
+  font-size: var(--text-lg);
+  font-weight: var(--font-semibold);
+  color: var(--color-text);
+  margin-bottom: var(--spacing-2);
+}
+
+.career-grid__description {
+  font-size: var(--text-sm);
+  color: var(--color-text-light);
+  line-height: var(--leading-relaxed);
+  flex: 1;
+  margin-bottom: var(--spacing-4);
+}
+
+.career-grid__action {
+  align-self: flex-start;
+}

@@ -1,0 +1,41 @@
+.logo {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-2);
+  text-decoration: none;
+  color: var(--color-text-inverse);
+}
+
+.logo__image {
+  display: block;
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-sm);
+}
+
+.logo__text {
+  display: none;
+  font-size: var(--text-lg);
+  font-weight: var(--font-bold);
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+
+.logo--horizontal .logo__text {
+  display: block;
+}
+
+.logo--large .logo__image {
+  width: 56px;
+  height: 56px;
+}
+
+.logo--large .logo__text {
+  font-size: var(--text-xl);
+}
+
+@media (min-width: 768px) {
+  .logo__text {
+    display: block;
+  }
+}
