@@ -4,7 +4,7 @@ const HEADER_HTML = `
     <nav class="navbar" role="navigation" aria-label="Navegación principal">
       <div class="navbar__container">
         <a href="index.html" class="navbar__brand logo logo--horizontal" aria-label="DUAM - Inicio">
-          <img src="https://josecopro.github.io/DUAM/GPT_Lo_Hace/DUAM_LOGO_blanco.svg" alt="" class="logo__image" width="40" height="40">
+          <img src="../assets/images/DUAM_LOGO_blanco.svg" alt="" class="logo__image" width="40" height="40">
           <span class="logo__text">DUAM</span>
         </a>
 

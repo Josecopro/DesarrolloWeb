@@ -4,7 +4,7 @@ export const careers = {
       id: "ingenierias",
       name: "Ingenierías",
       icon: "⚙️",
-      image: "https://i.imgur.com/wIbAFgE.png",
+      image: "../assets/images/wIbAFgE.png",
       description: "Programas de ingeniería en diversas especialidades",
       subcategories: [
         "Ingeniería de Sistemas",
@@ -21,7 +21,7 @@ export const careers = {
       id: "salud",
       name: "Salud",
       icon: "🏥",
-      image: "https://i.imgur.com/xKfFKiN.png",
+      image: "../assets/images/xKfFKiN.png",
       description: "Carreras del área de la salud y ciencias médicas",
       subcategories: [
         "Medicina",
@@ -38,7 +38,7 @@ export const careers = {
       id: "humanidades",
       name: "Humanidades",
       icon: "📚",
-      image: "https://i.imgur.com/E4QLfTd.jpg",
+      image: "../assets/images/E4QLfTd.jpg",
       description: "Estudios humanísticos y ciencias sociales",
       subcategories: [
         "Filosofía",
@@ -55,7 +55,7 @@ export const careers = {
       id: "educacion",
       name: "Educación",
       icon: "🎓",
-      image: "https://i.imgur.com/STaJkul.jpg",
+      image: "../assets/images/STaJkul.jpg",
       description: "Licenciaturas y pedagogía",
       subcategories: [
         "Licenciatura en Educación Infantil",
@@ -72,7 +72,7 @@ export const careers = {
       id: "cienciasbasicas",
       name: "Ciencias Básicas",
       icon: "🔬",
-      image: "https://i.imgur.com/NptjAAJ.jpg",
+      image: "../assets/images/NptjAAJ.jpg",
       description: "Ciencias puras y aplicadas",
       subcategories: [
         "Matemáticas",
@@ -89,7 +89,7 @@ export const careers = {
       id: "cienciassociales",
       name: "Ciencias Sociales y Derecho",
       icon: "⚖️",
-      image: "https://i.imgur.com/GSpCIQC.jpg",
+      image: "../assets/images/GSpCIQC.jpg",
       description: "Derecho, ciencias políticas y sociales",
       subcategories: [
         "Derecho",
@@ -106,7 +106,7 @@ export const careers = {
       id: "servicios",
       name: "Servicios",
       icon: "🛎️",
-      image: "https://i.imgur.com/wIbAFgE.png",
+      image: "../assets/images/wIbAFgE.png",
       description: "Hotelería, turismo y servicios",
       subcategories: [
         "Administración Hotelera",

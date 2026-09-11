@@ -54,16 +54,20 @@
   line-height: var(--leading-tight);
   margin-bottom: var(--spacing-5);
   letter-spacing: -0.03em;
+  color: var(--color-secondary);
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4), 0 0 20px rgba(232, 168, 56, 0.3);
 }
 
 .hero__subtitle {
   font-size: var(--text-2xl);
   font-weight: var(--font-normal);
-  opacity: 0.9;
+  color: var(--color-text-inverse);
+  opacity: 0.95;
   margin-bottom: var(--spacing-6);
   max-width: 700px;
   margin-left: auto;
   margin-right: auto;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
 }
 
 .hero__divider {
@@ -82,12 +86,14 @@
 
 .hero__description {
   font-size: var(--text-lg);
-  opacity: 0.85;
+  color: var(--color-text-inverse);
+  opacity: 0.9;
   margin-bottom: var(--spacing-10);
   max-width: 700px;
   margin-left: auto;
   margin-right: auto;
   line-height: var(--leading-relaxed);
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
 }
 
 .hero__actions {
