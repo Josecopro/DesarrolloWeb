@@ -2,8 +2,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 44px;
-  height: 44px;
+  width: 48px;
+  height: 48px;
   background: none;
   border: none;
   border-radius: var(--radius-md);
@@ -21,6 +21,14 @@
   transform: scale(0.95);
 }
 
+.theme-toggle:focus-visible {
+  box-shadow: var(--focus-ring);
+}
+
+[data-theme="dark"] .theme-toggle:focus-visible {
+  box-shadow: var(--focus-ring-dark);
+}
+
 .theme-toggle__icon {
   display: flex;
   align-items: center;
@@ -28,18 +36,17 @@
   width: 24px;
   height: 24px;
   transition: opacity var(--transition-base), transform var(--transition-base);
+  position: absolute;
 }
 
 .theme-toggle__icon--sun {
   opacity: 0;
   transform: rotate(-90deg) scale(0.8);
-  position: absolute;
 }
 
 .theme-toggle__icon--moon {
   opacity: 1;
   transform: rotate(0) scale(1);
-  position: absolute;
 }
 
 [data-theme="dark"] .theme-toggle__icon--sun {
@@ -54,7 +61,7 @@
 
 @media (min-width: 768px) {
   .theme-toggle {
-    width: 40px;
-    height: 40px;
+    width: 44px;
+    height: 44px;
   }
 }

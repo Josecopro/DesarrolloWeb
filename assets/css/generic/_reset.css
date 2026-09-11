@@ -8,6 +8,9 @@ html {
   font-size: 16px;
   scroll-behavior: smooth;
   -webkit-text-size-adjust: 100%;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 body {
@@ -17,8 +20,6 @@ body {
   color: var(--color-text);
   background-color: var(--color-bg);
   transition: background-color var(--transition-base), color var(--transition-base);
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
 img, picture, video, canvas, svg {
@@ -42,19 +43,37 @@ ul, ol {
 }
 
 h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
   line-height: var(--leading-tight);
   font-weight: var(--font-bold);
+  color: var(--color-text);
 }
+
+h1 { font-size: var(--text-5xl); }
+h2 { font-size: var(--text-4xl); }
+h3 { font-size: var(--text-3xl); }
+h4 { font-size: var(--text-2xl); }
+h5 { font-size: var(--text-xl); }
+h6 { font-size: var(--text-xl); }
 
 :focus-visible {
   outline: none;
-  box-shadow: var(--shadow-focus);
+  box-shadow: var(--focus-ring);
   border-radius: var(--radius-sm);
+}
+
+[data-theme="dark"] :focus-visible {
+  box-shadow: var(--focus-ring-dark);
 }
 
 ::selection {
   background-color: var(--color-primary);
   color: var(--color-text-inverse);
+}
+
+[data-theme="dark"] ::selection {
+  background-color: var(--color-secondary);
+  color: var(--color-text);
 }
 
 ::placeholder {
@@ -77,4 +96,43 @@ html:focus-within {
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
+}
+
+.container {
+  width: 100%;
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 0 var(--container-padding);
+}
+
+@media (max-width: 640px) {
+  .container {
+    padding: 0 var(--container-padding-mobile);
+  }
+}
+
+.section {
+  padding: var(--spacing-16) 0;
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: var(--spacing-12) 0;
+  }
+}
+
+.visually-hidden {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
+.text-balance {
+  text-wrap: balance;
 }

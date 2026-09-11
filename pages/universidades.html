@@ -20,17 +20,44 @@
         <p class="university-list__subtitle">21 universidades acreditadas de alta calidad en Antioquia</p>
       </header>
 
+      <div class="university-filter" role="search" aria-label="Filtros de universidades">
+        <div class="university-filter__group">
+          <label class="university-filter__label" for="filter-type">Tipo:</label>
+          <select class="university-filter__select" id="filter-type" data-filter-type>
+            <option value="all">Todas</option>
+            <option value="private">Privadas</option>
+            <option value="public">Oficiales</option>
+          </select>
+        </div>
+        <div class="university-filter__group university-filter__search">
+          <label class="university-filter__label visually-hidden" for="filter-search">Buscar universidad</label>
+          <input type="search" class="university-filter__search-input" id="filter-search" placeholder="Buscar por nombre..." data-filter-search>
+        </div>
+        <button class="button button--ghost button--sm" data-filter-clear>
+          <svg class="icon icon--sm" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+          Limpiar
+        </button>
+      </div>
+
       <section class="university-list__section" aria-labelledby="private-title">
-        <h2 id="private-title" class="university-list__section-title">Privadas</h2>
+        <h2 id="private-title" class="university-list__section-title">
+          <svg class="icon icon--lg" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
+          Privadas
+        </h2>
         <div class="university-list__grid" id="private-universities" role="list">
         </div>
       </section>
 
       <section class="university-list__section" aria-labelledby="public-title">
-        <h2 id="public-title" class="university-list__section-title">Oficiales</h2>
+        <h2 id="public-title" class="university-list__section-title">
+          <svg class="icon icon--lg" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
+          Oficiales
+        </h2>
         <div class="university-list__grid" id="public-universities" role="list">
         </div>
       </section>
+
+      <p class="university-list__count" id="universities-count"></p>
     </section>
   </main>
 
@@ -38,39 +65,59 @@
 
   <div class="help-button" role="region" aria-label="Ayuda y PQRS">
     <button class="help-button__trigger" aria-label="Abrir formulario de ayuda" aria-expanded="false">
-      <svg class="icon icon--lg" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <svg class="icon icon--xl" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
         <circle cx="12" cy="12" r="10"></circle>
         <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
         <line x1="12" y1="17" x2="12.01" y2="17"></line>
       </svg>
     </button>
-
     <div class="help-button__panel" role="dialog" aria-modal="true" aria-labelledby="help-title">
       <div class="help-button__header">
         <h3 id="help-title" class="help-button__title">Ayuda y PQRS</h3>
         <button class="help-button__close" aria-label="Cerrar">
-          <svg class="icon icon--md" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <line x1="18" y1="6" x2="6" y2="18"></line>
-            <line x1="6" y1="6" x2="18" y2="18"></line>
-          </svg>
+          <svg class="icon icon--md" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
         </button>
       </div>
       <div class="help-button__form">
         <form class="form-grid" novalidate>
-          <div class="form-field">
-            <label class="form-field__label" for="pqrs-name">Nombre completo *</label>
-            <input type="text" id="pqrs-name" name="nombre" class="form-field__input" required placeholder="Tu nombre completo">
-          </div>
-          <div class="form-field">
-            <label class="form-field__label" for="pqrs-email">Correo electrónico *</label>
-            <input type="email" id="pqrs-email" name="correo" class="form-field__input" required placeholder="tu@correo.com">
-          </div>
-          <div class="form-field form-field--full">
-            <label class="form-field__label" for="pqrs-message">Mensaje *</label>
-            <textarea id="pqrs-message" name="comentario" class="form-field__input" rows="5" required placeholder="Escribe tu consulta, queja, reclamo o sugerencia..."></textarea>
-          </div>
+          <div class="form-field"><label class="form-field__label" for="pqrs-name">Nombre completo *</label><input type="text" id="pqrs-name" name="nombre" class="form-field__input" required placeholder="Tu nombre completo"></div>
+          <div class="form-field"><label class="form-field__label" for="pqrs-email">Correo electrónico *</label><input type="email" id="pqrs-email" name="correo" class="form-field__input" required placeholder="tu@correo.com"></div>
+          <div class="form-field form-field--full"><label class="form-field__label" for="pqrs-message">Mensaje *</label><textarea id="pqrs-message" name="comentario" class="form-field__input" rows="5" required placeholder="Escribe tu consulta, queja, reclamo o sugerencia..."></textarea></div>
           <button type="submit" class="button button--primary button--lg button--full">Enviar PQRS</button>
         </form>
+      </div>
+    </div>
+  </div>
+
+  <div class="comparison-tool" role="region" aria-label="Herramienta de comparación" aria-live="polite">
+    <div class="comparison-tool__bar">
+      <div class="comparison-tool__info">
+        <span class="comparison-tool__count">Comparando: <strong>0</strong> de 4</span>
+      </div>
+      <div class="comparison-tool__actions">
+        <button class="button button--ghost button--sm comparison-tool__clear">Limpiar</button>
+        <a href="comparar.html" class="button button--primary button--sm comparison-tool__compare" disabled>Comparar</a>
+      </div>
+    </div>
+    <div class="comparison-tool__panel">
+      <div class="comparison-tool__list" role="list">
+      </div>
+    </div>
+  </div>
+
+  <div class="favorites-button" role="region" aria-label="Favoritos">
+    <button class="favorites-button__trigger" aria-label="Ver favoritos" aria-expanded="false">
+      <svg class="icon icon--xl" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06a5.5 5.5 0 0 0 7.78 0l1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+      <span class="favorites-button__count" style="display: none;">0</span>
+    </button>
+    <div class="favorites-button__panel" role="dialog" aria-modal="true" aria-labelledby="favorites-title">
+      <div class="favorites-button__header">
+        <h3 id="favorites-title" class="favorites-button__title">Mis favoritos</h3>
+        <button class="favorites-button__close" aria-label="Cerrar">
+          <svg class="icon icon--md" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+        </button>
+      </div>
+      <div class="favorites-button__list" role="list">
       </div>
     </div>
   </div>
@@ -81,21 +128,44 @@
     function renderUniversities() {
       const privateContainer = document.getElementById('private-universities');
       const publicContainer = document.getElementById('public-universities');
+      const countEl = document.getElementById('universities-count');
+
+      function createUniversityLink(uni, type) {
+        return `
+          <a href="${uni.url}" target="_blank" rel="noopener noreferrer" class="university-list__item ${type === 'public' ? 'university-list__item--public' : ''}" role="listitem"
+             data-compare-id="${uni.name}"
+             data-compare-type="university"
+             data-compare-name="${uni.name}"
+             data-compare-category="${type === 'private' ? 'Privada' : 'Oficial'}"
+             data-compare-url="${uni.url}"
+             data-favorite-id="${uni.name}"
+             data-favorite-type="university"
+             data-favorite-name="${uni.name}"
+             data-favorite-category="${type === 'private' ? 'Privada' : 'Oficial'}"
+             data-favorite-url="${uni.url}">
+            <label class="compare-checkbox">
+              <input type="checkbox" aria-label="Agregar ${uni.name} a comparación">
+              <span class="compare-checkbox__box"></span>
+            </label>
+            ${uni.name}
+            <button class="favorite-button" aria-label="Agregar ${uni.name} a favoritos" aria-pressed="false">
+              <svg class="icon icon--sm" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06a5.5 5.5 0 0 0 7.78 0l1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+            </button>
+          </a>
+        `;
+      }
 
       if (privateContainer) {
-        privateContainer.innerHTML = universities.private.map(uni => `
-          <a href="${uni.url}" target="_blank" rel="noopener noreferrer" class="university-list__item" role="listitem">
-            ${uni.name}
-          </a>
-        `).join('');
+        privateContainer.innerHTML = universities.private.map(uni => createUniversityLink(uni, 'private')).join('');
       }
 
       if (publicContainer) {
-        publicContainer.innerHTML = universities.public.map(uni => `
-          <a href="${uni.url}" target="_blank" rel="noopener noreferrer" class="university-list__item university-list__item--public" role="listitem">
-            ${uni.name}
-          </a>
-        `).join('');
+        publicContainer.innerHTML = universities.public.map(uni => createUniversityLink(uni, 'public')).join('');
+      }
+
+      if (countEl) {
+        const total = universities.private.length + universities.public.length;
+        countEl.textContent = `Total: ${total} universidades (${universities.private.length} privadas, ${universities.public.length} oficiales)`;
       }
     }
 

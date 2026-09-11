@@ -19,4 +19,6 @@
 @import './components/career-grid.css';
 @import './components/scholarship-carousel.css';
 @import './components/pqrs-form.css';
+@import './components/tabs.css';
+@import './components/advanced.css';
 @import './utilities.css';

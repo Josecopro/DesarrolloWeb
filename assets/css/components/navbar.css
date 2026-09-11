@@ -8,7 +8,7 @@
   background-color: var(--color-primary);
   color: var(--color-text-inverse);
   box-shadow: var(--shadow-md);
-  transition: background-color var(--transition-base), box-shadow var(--transition-base);
+  transition: background-color var(--transition-base), box-shadow var(--transition-base), height var(--transition-base);
 }
 
 .navbar__container {
@@ -32,7 +32,7 @@
   left: 0;
   right: 0;
   background-color: var(--color-primary-dark);
-  padding: var(--spacing-4);
+  padding: var(--spacing-6) var(--container-padding);
   border-bottom: 1px solid var(--color-border-dark);
   box-shadow: var(--shadow-lg);
 }
@@ -70,7 +70,20 @@
   font-weight: var(--font-medium);
   color: var(--color-text-inverse);
   border-radius: var(--radius-md);
-  transition: background-color var(--transition-fast);
+  transition: all var(--transition-fast);
+  position: relative;
+}
+
+.navbar__link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background-color: var(--color-secondary);
+  transition: all var(--transition-base);
+  transform: translateX(-50%);
 }
 
 .navbar__link:hover,
@@ -78,18 +91,23 @@
   background-color: rgba(255, 255, 255, 0.1);
 }
 
+.navbar__link:hover::after,
+.navbar__link--active::after {
+  width: 80%;
+}
+
 .navbar__actions {
   display: flex;
   align-items: center;
-  gap: var(--spacing-2);
+  gap: var(--spacing-3);
 }
 
 .navbar__toggle {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 44px;
-  height: 44px;
+  width: 48px;
+  height: 48px;
   background: none;
   border: none;
   border-radius: var(--radius-md);
@@ -100,6 +118,10 @@
 
 .navbar__toggle:hover {
   background-color: rgba(255, 255, 255, 0.1);
+}
+
+.navbar__toggle:focus-visible {
+  box-shadow: var(--focus-ring);
 }
 
 @media (min-width: 768px) {
@@ -120,10 +142,15 @@
   .navbar__list {
     flex-direction: row;
     align-items: center;
+    gap: var(--spacing-1);
   }
 
   .navbar__link {
-    padding: var(--spacing-2) var(--spacing-3);
+    padding: var(--spacing-2) var(--spacing-4);
     font-size: var(--text-sm);
+  }
+
+  .navbar__link::after {
+    bottom: var(--spacing-1);
   }
 }

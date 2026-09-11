@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Buscador DUAM - Encuentra universidades, carreras y becas en el Área Metropolitana de Antioquia">
+  <title>Buscador - DUAM</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="icon" type="image/svg+xml" href="https://josecopro.github.io/DUAM/GPT_Lo_Hace/DUAM_LOGO.svg">
+  <link rel="stylesheet" href="../assets/css/main.css">
+</head>
+<body>
+  <div data-header></div>
+
+  <main role="main">
+    <section class="section" aria-labelledby="search-title">
+      <div class="container">
+        <header class="text-center mb-10 max-w-3xl mx-auto animate-fade-in">
+          <h1 id="search-title" class="text-4xl font-bold mb-3">Buscador DUAM</h1>
+          <p class="text-lg text-muted leading-relaxed">Encuentra universidades, carreras y becas escribiendo lo que buscas</p>
+        </header>
+
+        <div class="max-w-2xl mx-auto mb-12 animate-slide-up">
+          <div class="search-box search-box--large" data-search-box>
+            <input
+              type="search"
+              class="search-box__input search-box__input--lg"
+              placeholder="Escribe universidad, carrera, beca..."
+              aria-label="Buscar en DUAM"
+              autocomplete="off"
+              data-search-input
+            >
+            <button class="search-box__button search-box__button--lg" aria-label="Buscar" data-search-submit>
+              <svg class="icon icon--lg" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+              </svg>
+            </button>
+            <div class="search-box__results" role="listbox" aria-label="Resultados de búsqueda" data-search-results></div>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto" id="search-categories" role="list">
+          <article class="card text-center p-6 animate-slide-up" role="listitem" style="animation-delay: 100ms;">
+            <div class="inline-flex items-center justify-center w-16 h-16 mb-4 rounded-full" style="background: rgba(30, 58, 95, 0.1); color: var(--color-primary);">
+              <svg class="icon icon--xl" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path></svg>
+            </div>
+            <h3 class="text-xl font-semibold mb-2">Universidades</h3>
+            <p class="text-muted mb-4">21 universidades acreditadas de alta calidad</p>
+            <a href="universidades.html" class="button button--primary">Ver todas</a>
+          </article>
+          <article class="card text-center p-6 animate-slide-up" role="listitem" style="animation-delay: 200ms;">
+            <div class="inline-flex items-center justify-center w-16 h-16 mb-4 rounded-full" style="background: rgba(232, 168, 56, 0.15); color: var(--color-secondary-dark);">
+              <svg class="icon icon--xl" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+            </div>
+            <h3 class="text-xl font-semibold mb-2">Carreras</h3>
+            <p class="text-muted mb-4">7 áreas con más de 50 programas</p>
+            <a href="carreras.html" class="button button--secondary">Explorar</a>
+          </article>
+          <article class="card text-center p-6 animate-slide-up" role="listitem" style="animation-delay: 300ms;">
+            <div class="inline-flex items-center justify-center w-16 h-16 mb-4 rounded-full" style="background: rgba(39, 174, 96, 0.1); color: var(--color-success);">
+              <svg class="icon icon--xl" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+            </div>
+            <h3 class="text-xl font-semibold mb-2">Becas</h3>
+            <p class="text-muted mb-4">Financiamiento, ICETEX, deportivas y matrícula cero</p>
+            <a href="becas.html" class="button button--outline" style="border-color: var(--color-success); color: var(--color-success);">Ver opciones</a>
+          </article>
+        </div>
+
+        <section id="search-results-section" class="mt-16" aria-labelledby="results-title" hidden>
+          <h2 id="results-title" class="text-2xl font-bold mb-6">Resultados para "<span id="search-query-display"></span>"</h2>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4" id="search-results-grid" role="list">
+          </div>
+          <p id="no-results" class="text-center text-muted py-8" hidden>No se encontraron resultados para tu búsqueda</p>
+        </section>
+      </div>
+    </section>
+  </main>
+
+  <div data-footer></div>
+
+  <div class="help-button" role="region" aria-label="Ayuda y PQRS">
+    <button class="help-button__trigger" aria-label="Abrir formulario de ayuda" aria-expanded="false">
+      <svg class="icon icon--xl" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <circle cx="12" cy="12" r="10"></circle>
+        <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
+        <line x1="12" y1="17" x2="12.01" y2="17"></line>
+      </svg>
+    </button>
+    <div class="help-button__panel" role="dialog" aria-modal="true" aria-labelledby="help-title">
+      <div class="help-button__header">
+        <h3 id="help-title" class="help-button__title">Ayuda y PQRS</h3>
+        <button class="help-button__close" aria-label="Cerrar">
+          <svg class="icon icon--md" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+        </button>
+      </div>
+      <div class="help-button__form">
+        <form class="form-grid" novalidate>
+          <div class="form-field"><label class="form-field__label" for="pqrs-name">Nombre completo *</label><input type="text" id="pqrs-name" name="nombre" class="form-field__input" required placeholder="Tu nombre completo"></div>
+          <div class="form-field"><label class="form-field__label" for="pqrs-email">Correo electrónico *</label><input type="email" id="pqrs-email" name="correo" class="form-field__input" required placeholder="tu@correo.com"></div>
+          <div class="form-field form-field--full"><label class="form-field__label" for="pqrs-message">Mensaje *</label><textarea id="pqrs-message" name="comentario" class="form-field__input" rows="5" required placeholder="Escribe tu consulta, queja, reclamo o sugerencia..."></textarea></div>
+          <button type="submit" class="button button--primary button--lg button--full">Enviar PQRS</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script type="module">
+    import { universities } from '../data/universities.js';
+    import { careers } from '../data/careers.js';
+    import { scholarships } from '../data/scholarships.js';
+
+    const allSearchData = [
+      ...universities.private.map(u => ({ type: 'university', name: u.name, url: u.url, category: 'Universidad privada', icon: '🏛️' })),
+      ...universities.public.map(u => ({ type: 'university', name: u.name, url: u.url, category: 'Universidad oficial', icon: '🏛️' })),
+      ...careers.categories.map(c => ({ type: 'career', name: c.name, url: `carreras.html#${c.id}`, category: 'Área de estudio', icon: c.icon })),
+      ...scholarships.scholarships.map(s => ({ type: 'scholarship', name: s.title, url: `becas.html#${s.id}`, category: 'Beca / Financiamiento', icon: '💰' }))
+    ];
+
+    let debounceTimer;
+
+    function initSearch() {
+      const searchBox = document.querySelector('[data-search-box]');
+      if (!searchBox) return;
+
+      const input = searchBox.querySelector('[data-search-input]');
+      const results = searchBox.querySelector('[data-search-results]');
+      const resultsSection = document.getElementById('search-results-section');
+      const resultsGrid = document.getElementById('search-results-grid');
+      const queryDisplay = document.getElementById('search-query-display');
+      const noResults = document.getElementById('no-results');
+
+      function renderResults(items, query) {
+        if (!results || !resultsSection || !resultsGrid || !queryDisplay) return;
+
+        if (items.length === 0) {
+          results.innerHTML = '<div class="search-box__empty">No se encontraron resultados</div>';
+          resultsSection.hidden = true;
+          noResults.hidden = false;
+          noResults.textContent = `No se encontraron resultados para "${query}"`;
+          return;
+        }
+
+        results.innerHTML = items.slice(0, 8).map(item => `
+          <a href="${item.url}" class="search-box__result-item" role="option">
+            <div class="search-box__result-content">
+              <div class="search-box__result-title">${highlightMatch(item.name, query)}</div>
+              <div class="search-box__result-subtitle">${item.category}</div>
+            </div>
+          </a>
+        `).join('');
+
+        searchBox.classList.add('search-box--open');
+        resultsSection.hidden = false;
+        noResults.hidden = true;
+
+        queryDisplay.textContent = query;
+        resultsGrid.innerHTML = items.map(item => `
+          <article class="card search-box__result-item" role="listitem">
+            <div class="card__content">
+              <div class="flex items-center gap-3 mb-2">
+                <span class="text-xl">${item.icon}</span>
+                <h3 class="card__title m-0">${highlightMatch(item.name, query)}</h3>
+              </div>
+              <p class="text-muted text-sm">${item.category}</p>
+            </div>
+          </article>
+        `).join('');
+      }
+
+      function closeResults() {
+        searchBox.classList.remove('search-box--open');
+        if (resultsSection) resultsSection.hidden = true;
+      }
+
+      function highlightMatch(text, query) {
+        const regex = new RegExp(`(${query})`, 'gi');
+        return text.replace(regex, '<mark class="search-box__highlight">$1</mark>');
+      }
+
+      input?.addEventListener('input', (e) => {
+        clearTimeout(debounceTimer);
+        const query = e.target.value.trim().toLowerCase();
+
+        if (query.length < 2) {
+          closeResults();
+          return;
+        }
+
+        debounceTimer = setTimeout(() => {
+          const filtered = allSearchData
+            .filter(item => item.name.toLowerCase().includes(query))
+            .slice(0, 20);
+
+          renderResults(filtered, e.target.value.trim());
+        }, 150);
+      });
+
+      input?.addEventListener('focus', () => {
+        if (input.value.trim().length >= 2) {
+          const filtered = allSearchData
+            .filter(item => item.name.toLowerCase().includes(input.value.trim().toLowerCase()))
+            .slice(0, 8);
+          renderResults(filtered, input.value.trim());
+        }
+      });
+
+      document.addEventListener('click', (e) => {
+        if (!searchBox.contains(e.target)) {
+          closeResults();
+        }
+      });
+
+      input?.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+          closeResults();
+          input.blur();
+        }
+      });
+    }
+
+    document.addEventListener('DOMContentLoaded', initSearch);
+  </script>
+  <script type="module" src="../assets/js/main.js"></script>
+</body>
+</html>

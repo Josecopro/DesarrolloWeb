@@ -15,11 +15,11 @@
 
   <main role="main">
     <section class="hero" aria-labelledby="hero-title">
-      <div class="hero__content">
+      <div class="hero__content container">
         <h1 id="hero-title" class="hero__title">Bienvenidos a DUAM</h1>
         <p class="hero__subtitle">El Directorio de Universidades del Área Metropolitana</p>
         <div class="hero__divider" aria-hidden="true"></div>
-        <p class="hero__description">
+        <p class="hero__description text-balance">
           Encuentra información completa sobre universidades, carreras, precios, becas y más.
           Tu guía para tomar la mejor decisión educativa.
         </p>
@@ -28,96 +28,108 @@
           <a href="carreras.html" class="button button--outline button--lg" style="border-color: var(--color-secondary); color: var(--color-secondary);">Explorar carreras</a>
         </div>
 
-        <div class="hero__stats" role="list" aria-label="Estadísticas de DUAM">
-          <div class="hero__stat" role="listitem">
-            <div class="hero__stat-number">21</div>
-            <div class="hero__stat-label">Universidades</div>
-          </div>
-          <div class="hero__stat" role="listitem">
-            <div class="hero__stat-number">7</div>
-            <div class="hero__stat-label">Áreas de estudio</div>
-          </div>
-          <div class="hero__stat" role="listitem">
-            <div class="hero__stat-number">50+</div>
-            <div class="hero__stat-label">Programas</div>
-          </div>
-          <div class="hero__stat" role="listitem">
-            <div class="hero__stat-number">100%</div>
-            <div class="hero__stat-label">Gratuito</div>
-          </div>
-        </div>
+        <ul class="hero__stats" role="list" aria-label="Estadísticas de DUAM">
+          <li class="hero__stat" role="listitem">
+            <span class="hero__stat-number">21</span>
+            <span class="hero__stat-label">Universidades</span>
+          </li>
+          <li class="hero__stat" role="listitem">
+            <span class="hero__stat-number">7</span>
+            <span class="hero__stat-label">Áreas de estudio</span>
+          </li>
+          <li class="hero__stat" role="listitem">
+            <span class="hero__stat-number">50+</span>
+            <span class="hero__stat-label">Programas</span>
+          </li>
+          <li class="hero__stat" role="listitem">
+            <span class="hero__stat-number">100%</span>
+            <span class="hero__stat-label">Gratuito</span>
+          </li>
+        </ul>
       </div>
     </section>
 
-    <section class="container" aria-labelledby="about-title" style="padding: var(--spacing-12) var(--container-padding);">
-      <div style="max-width: 800px; margin: 0 auto; text-align: center; margin-bottom: var(--spacing-10);">
-        <h2 id="about-title" style="font-size: var(--text-3xl); font-weight: var(--font-bold); color: var(--color-text); margin-bottom: var(--spacing-3);">¿Qué es DUAM?</h2>
-        <p style="font-size: var(--text-lg); color: var(--color-text-light); line-height: var(--leading-relaxed);">
-          DUAM es un proyecto que busca facilitar el acceso a la información sobre los programas de educación superior en el área metropolitana de Antioquia, Colombia.
-        </p>
-      </div>
-
-      <div class="card card--horizontal" style="max-width: 1000px; margin: 0 auto;">
-        <div class="card__content">
-          <h3 class="card__title">Información centralizada</h3>
-          <p class="card__description">
-            En nuestra plataforma podrás encontrar información sobre las universidades acreditadas de alta calidad en la zona,
-            incluyendo todas las carreras que ofrecen, precios, rutas de acceso, becas y beneficios para diferentes estratos sociales y deportistas.
+    <section class="section" aria-labelledby="about-title">
+      <div class="container">
+        <header class="text-center mb-12 max-w-3xl mx-auto">
+          <h2 id="about-title" class="text-4xl font-bold text-primary mb-4">¿Qué es DUAM?</h2>
+          <p class="text-lg text-muted leading-relaxed">
+            DUAM es un proyecto que busca facilitar el acceso a la información sobre los programas de educación superior en el área metropolitana de Antioquia, Colombia.
           </p>
+        </header>
+
+        <div class="card card--horizontal animate-slide-up" style="max-width: 1000px; margin: 0 auto;">
+          <div class="card__content">
+            <h3 class="card__title">Información centralizada y confiable</h3>
+            <p class="card__description">
+              En nuestra plataforma podrás encontrar información sobre las 21 universidades acreditadas de alta calidad en la zona,
+              incluyendo todas las carreras que ofrecen, precios, rutas de acceso, becas y beneficios para diferentes estratos sociales y deportistas.
+            </p>
+            <div class="card__footer">
+              <span class="tag tag--primary">21 Universidades</span>
+              <span class="tag tag--secondary">Acreditadas Alta Calidad</span>
+              <span class="tag tag--success">Info Actualizada</span>
+            </div>
+          </div>
+          <img src="https://i.imgur.com/xxOPyM5.jpg" alt="Estudiantes universitarios en campus" class="card__image" loading="lazy">
         </div>
-        <img src="https://i.imgur.com/xxOPyM5.jpg" alt="Estudiantes universitarios" class="card__image" loading="lazy">
       </div>
     </section>
 
-    <section class="container" aria-labelledby="why-title" style="padding: var(--spacing-12) var(--container-padding); background-color: var(--color-bg-alt);">
-      <div style="max-width: 800px; margin: 0 auto; text-align: center; margin-bottom: var(--spacing-10);">
-        <h2 id="why-title" style="font-size: var(--text-3xl); font-weight: var(--font-bold); color: var(--color-text); margin-bottom: var(--spacing-3);">¿Por qué usar DUAM?</h2>
-      </div>
+    <section class="section bg-alt" aria-labelledby="why-title">
+      <div class="container">
+        <header class="text-center mb-12 max-w-3xl mx-auto">
+          <h2 id="why-title" class="text-4xl font-bold mb-4">¿Por qué usar DUAM?</h2>
+          <p class="text-lg text-muted">Diseñado para que tomes la mejor decisión educativa</p>
+        </header>
 
-      <div style="display: grid; grid-template-columns: 1fr; gap: var(--spacing-6); max-width: 1000px; margin: 0 auto;">
-        <article class="card" style="text-align: center; padding: var(--spacing-6);">
-          <div style="width: 64px; height: 64px; margin: 0 auto var(--spacing-4); background-color: rgba(30, 58, 95, 0.1); border-radius: var(--radius-full); display: flex; align-items: center; justify-content: center; color: var(--color-primary);">
-            <svg class="icon icon--xl" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
-          </div>
-          <h3 style="font-size: var(--text-xl); font-weight: var(--font-semibold); color: var(--color-text); margin-bottom: var(--spacing-2);">Información completa</h3>
-          <p style="color: var(--color-text-light); line-height: var(--leading-relaxed);">Detalles exhaustivos de universidades y programas: duración, costos, empleabilidad y más.</p>
-        </article>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+          <article class="card text-center p-6 animate-slide-up" style="animation-delay: 100ms;">
+            <div class="inline-flex items-center justify-center w-16 h-16 mb-4 rounded-full" style="background: rgba(30, 58, 95, 0.1); color: var(--color-primary);">
+              <svg class="icon icon--xl" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
+            </div>
+            <h3 class="text-xl font-semibold mb-2">Información completa</h3>
+            <p class="text-muted leading-relaxed">Detalles exhaustivos de universidades y programas: duración, costos, empleabilidad y más.</p>
+          </article>
 
-        <article class="card" style="text-align: center; padding: var(--spacing-6);">
-          <div style="width: 64px; height: 64px; margin: 0 auto var(--spacing-4); background-color: rgba(232, 168, 56, 0.15); border-radius: var(--radius-full); display: flex; align-items: center; justify-content: center; color: var(--color-secondary-dark);">
-            <svg class="icon icon--xl" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
-          </div>
-          <h3 style="font-size: var(--text-xl); font-weight: var(--font-semibold); color: var(--color-text); margin-bottom: var(--spacing-2);">Actualización constante</h3>
-          <p style="color: var(--color-text-light); line-height: var(--leading-relaxed);">Mantenemos nuestra plataforma al día con la realidad académica actual.</p>
-        </article>
+          <article class="card text-center p-6 animate-slide-up" style="animation-delay: 200ms;">
+            <div class="inline-flex items-center justify-center w-16 h-16 mb-4 rounded-full" style="background: rgba(232, 168, 56, 0.15); color: var(--color-secondary-dark);">
+              <svg class="icon icon--xl" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+            </div>
+            <h3 class="text-xl font-semibold mb-2">Actualización constante</h3>
+            <p class="text-muted leading-relaxed">Mantenemos nuestra plataforma al día con la realidad académica actual.</p>
+          </article>
 
-        <article class="card" style="text-align: center; padding: var(--spacing-6);">
-          <div style="width: 64px; height: 64px; margin: 0 auto var(--spacing-4); background-color: rgba(39, 174, 96, 0.1); border-radius: var(--radius-full); display: flex; align-items: center; justify-content: center; color: var(--color-success);">
-            <svg class="icon icon--xl" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 8.5V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8.5"></path><path d="M4 16.5v2.5A2.5 2.5 0 0 0 6.5 21H20"></path><path d="M16 21v-5.5"></path><path d="M8 21v-5.5"></path></svg>
-          </div>
-          <h3 style="font-size: var(--text-xl); font-weight: var(--font-semibold); color: var(--color-text); margin-bottom: var(--spacing-2);">Becas y financiamiento</h3>
-          <p style="color: var(--color-text-light); line-height: var(--leading-relaxed);">Información actualizada sobre becas, créditos y oportunidades de apoyo financiero.</p>
-        </article>
+          <article class="card text-center p-6 animate-slide-up" style="animation-delay: 300ms;">
+            <div class="inline-flex items-center justify-center w-16 h-16 mb-4 rounded-full" style="background: rgba(39, 174, 96, 0.1); color: var(--color-success);">
+              <svg class="icon icon--xl" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 8.5V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8.5"></path><path d="M4 16.5v2.5A2.5 2.5 0 0 0 6.5 21H20"></path><path d="M16 21v-5.5"></path><path d="M8 21v-5.5"></path></svg>
+            </div>
+            <h3 class="text-xl font-semibold mb-2">Becas y financiamiento</h3>
+            <p class="text-muted leading-relaxed">Información actualizada sobre becas, créditos ICETEX y oportunidades de apoyo financiero.</p>
+          </article>
 
-        <article class="card" style="text-align: center; padding: var(--spacing-6);">
-          <div style="width: 64px; height: 64px; margin: 0 auto var(--spacing-4); background-color: rgba(192, 57, 43, 0.1); border-radius: var(--radius-full); display: flex; align-items: center; justify-content: center; color: var(--color-accent);">
-            <svg class="icon icon--xl" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"></circle><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"></path></svg>
-          </div>
-          <h3 style="font-size: var(--text-xl); font-weight: var(--font-semibold); color: var(--color-text); margin-bottom: var(--spacing-2);">Comparación de opciones</h3>
-          <p style="color: var(--color-text-light); line-height: var(--leading-relaxed);">Herramientas para analizar universidades y carreras lado a lado.</p>
-        </article>
+          <article class="card text-center p-6 animate-slide-up" style="animation-delay: 400ms;">
+            <div class="inline-flex items-center justify-center w-16 h-16 mb-4 rounded-full" style="background: rgba(192, 57, 43, 0.1); color: var(--color-accent);">
+              <svg class="icon icon--xl" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"></circle><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"></path></svg>
+            </div>
+            <h3 class="text-xl font-semibold mb-2">Comparación de opciones</h3>
+            <p class="text-muted leading-relaxed">Herramientas para analizar universidades y carreras lado a lado.</p>
+          </article>
+        </div>
       </div>
     </section>
 
-    <section class="container" aria-labelledby="cta-title" style="padding: var(--spacing-16) var(--container-padding); text-align: center;">
-      <h2 id="cta-title" style="font-size: var(--text-3xl); font-weight: var(--font-bold); color: var(--color-text); margin-bottom: var(--spacing-3);">¿Listo para encontrar tu futuro?</h2>
-      <p style="font-size: var(--text-lg); color: var(--color-text-light); margin-bottom: var(--spacing-8); max-width: 600px; margin-left: auto; margin-right: auto;">
-        Explora nuestras universidades, descubre las carreras que más te interesan y encuentra las becas que te ayudarán a financiar tus estudios.
-      </p>
-      <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: var(--spacing-4);">
-        <a href="universidades.html" class="button button--primary button--lg">Ver universidades</a>
-        <a href="carreras.html" class="button button--secondary button--lg">Explorar carreras</a>
-        <a href="becas.html" class="button button--outline button--lg">Ver becas</a>
+    <section class="section text-center" aria-labelledby="cta-title">
+      <div class="container">
+        <h2 id="cta-title" class="text-4xl font-bold mb-4">¿Listo para encontrar tu futuro?</h2>
+        <p class="text-lg text-muted mb-10 max-w-2xl mx-auto leading-relaxed">
+          Explora nuestras universidades, descubre las carreras que más te interesan y encuentra las becas que te ayudarán a financiar tus estudios.
+        </p>
+        <div class="flex flex-wrap justify-center gap-4">
+          <a href="universidades.html" class="button button--primary button--lg">Ver universidades</a>
+          <a href="carreras.html" class="button button--secondary button--lg">Explorar carreras</a>
+          <a href="becas.html" class="button button--outline button--lg">Ver becas</a>
+        </div>
       </div>
     </section>
   </main>
@@ -126,7 +138,7 @@
 
   <div class="help-button" role="region" aria-label="Ayuda y PQRS">
     <button class="help-button__trigger" aria-label="Abrir formulario de ayuda" aria-expanded="false">
-      <svg class="icon icon--lg" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <svg class="icon icon--xl" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
         <circle cx="12" cy="12" r="10"></circle>
         <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
         <line x1="12" y1="17" x2="12.01" y2="17"></line>

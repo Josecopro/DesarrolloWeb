@@ -1,21 +1,33 @@
 .logo {
   display: inline-flex;
   align-items: center;
-  gap: var(--spacing-2);
+  gap: var(--spacing-3);
   text-decoration: none;
   color: var(--color-text-inverse);
+  transition: opacity var(--transition-base);
+}
+
+.logo:hover {
+  opacity: 0.8;
+}
+
+.logo:focus-visible {
+  outline: none;
+  border-radius: var(--radius-sm);
+  box-shadow: var(--focus-ring);
 }
 
 .logo__image {
   display: block;
-  width: 40px;
-  height: 40px;
-  border-radius: var(--radius-sm);
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-md);
+  object-fit: contain;
 }
 
 .logo__text {
   display: none;
-  font-size: var(--text-lg);
+  font-size: var(--text-2xl);
   font-weight: var(--font-bold);
   line-height: 1;
   letter-spacing: -0.02em;
@@ -26,15 +38,15 @@
 }
 
 .logo--large .logo__image {
-  width: 56px;
-  height: 56px;
+  width: 60px;
+  height: 60px;
 }
 
 .logo--large .logo__text {
-  font-size: var(--text-xl);
+  font-size: var(--text-3xl);
 }
 
-@media (min-width: 768px) {
+@media (min-width: 640px) {
   .logo__text {
     display: block;
   }
