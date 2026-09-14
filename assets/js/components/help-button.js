@@ -26,6 +26,11 @@ function initHelpButton() {
 
   form?.addEventListener('submit', async (e) => {
     e.preventDefault();
+
+    if (!validateForm(form)) {
+      return;
+    }
+
     const formData = new FormData(form);
     const data = Object.fromEntries(formData);
 
@@ -38,6 +43,7 @@ function initHelpButton() {
       await new Promise(resolve => setTimeout(resolve, 1500));
       showPopup('¡Mensaje enviado!', 'Tu solicitud ha sido enviada correctamente. Te responderemos a tu correo electrónico.');
       form.reset();
+      clearErrors(form);
     } catch (error) {
       showPopup('Error', 'No se pudo enviar el mensaje. Por favor intenta nuevamente.');
     } finally {
@@ -45,6 +51,77 @@ function initHelpButton() {
       submitBtn.textContent = originalText;
     }
   });
+
+  form?.querySelectorAll('input, textarea').forEach(input => {
+    input.addEventListener('blur', () => validateField(input));
+    input.addEventListener('input', () => {
+      if (input.classList.contains('input--error')) {
+        validateField(input);
+      }
+    });
+  });
+
+  function validateForm(form) {
+    const inputs = form.querySelectorAll('input[required], textarea[required]');
+    let isValid = true;
+
+    inputs.forEach(input => {
+      if (!validateField(input)) {
+        isValid = false;
+      }
+    });
+
+    return isValid;
+  }
+
+  function validateField(input) {
+    const value = input.value.trim();
+    const type = input.type;
+    let error = '';
+
+    if (input.hasAttribute('required') && !value) {
+      error = 'Este campo es obligatorio';
+    } else if (type === 'email' && value && !isValidEmail(value)) {
+      error = 'Ingresa un correo electrónico válido';
+    } else if (input.tagName === 'TEXTAREA' && value && value.length < 10) {
+      error = 'El mensaje debe tener al menos 10 caracteres';
+    }
+
+    if (error) {
+      showError(input, error);
+      return false;
+    } else {
+      clearError(input);
+      return true;
+    }
+  }
+
+  function isValidEmail(email) {
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+  }
+
+  function showError(input, message) {
+    clearError(input);
+    input.classList.add('input--error');
+    const errorEl = document.createElement('span');
+    errorEl.className = 'input-wrapper__error';
+    errorEl.textContent = message;
+    input.parentNode.appendChild(errorEl);
+    input.setAttribute('aria-invalid', 'true');
+    input.setAttribute('aria-describedby', errorEl.id || '');
+  }
+
+  function clearError(input) {
+    input.classList.remove('input--error');
+    const errorEl = input.parentNode.querySelector('.input-wrapper__error');
+    if (errorEl) errorEl.remove();
+    input.removeAttribute('aria-invalid');
+    input.removeAttribute('aria-describedby');
+  }
+
+  function clearErrors(form) {
+    form.querySelectorAll('.input--error').forEach(clearError);
+  }
 
   function showPopup(title, message) {
     const popup = document.createElement('div');
