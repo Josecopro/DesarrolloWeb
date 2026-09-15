@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Salud - Carreras del área de la salud en el Área Metropolitana. Medicina, Enfermería, Odontología, Fisioterapia y más.">
+  <meta name="description" content="Salud - Programas en el Área Metropolitana de Antioquia.">
   <title>Salud - DUAM</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,18 +16,18 @@
   <main role="main">
     <section class="section" aria-labelledby="career-title">
       <div class="container">
-        <header class="text-center mb-12 max-w-3xl mx-auto animate-fade-in">
-          <div class="inline-flex items-center justify-center w-16 h-16 mb-4 rounded-full" style="background: rgba(39, 174, 96, 0.1); color: var(--color-success);">
+        <header class="section__header section__header--centered animate-fade-in">
+          <div class="career-header__icon career-header__icon--primary" style="background: rgba(39, 174, 96, 0.1); color: var(--color-success);">
             <svg class="icon icon--xl" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
           </div>
-          <h1 id="career-title" class="text-4xl font-bold mb-3">Salud</h1>
-          <p class="text-lg text-muted leading-relaxed">Carreras del área de la salud y ciencias médicas. Formación para el cuidado y bienestar de las personas.</p>
+          <h1 id="career-title" class="section__title">Salud</h1>
+          <p class="section__subtitle">Carreras del área de la salud y ciencias médicas. Formación para el cuidado y bienestar de las personas.</p>
         </header>
 
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto" id="subcareers-grid" role="list">
+        <div class="subcareers-grid" id="subcareers-grid" role="list">
         </div>
 
-        <div class="text-center mt-12 animate-fade-in">
+        <div class="section__back-link animate-fade-in">
           <a href="../carreras.html" class="button button--ghost">
             <svg class="icon icon--md" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"></polyline></svg>
             Volver a todas las carreras
@@ -66,31 +66,22 @@
   </div>
 
   <script type="module">
-    const subcareers = [
-      { name: "Medicina", description: "Formación integral para el diagnóstico, tratamiento y prevención de enfermedades.", universities: ["UdeA", "UNAL", "CES", "EAFIT"] },
-      { name: "Enfermería", description: "Cuidado integral del paciente, promoción de la salud y prevención de enfermedades.", universities: ["UdeA", "UNAL", "CES", "EAFIT", "ITM"] },
-      { name: "Odontología", description: "Salud bucal, prevención, diagnóstico y tratamiento de enfermedades dentales.", universities: ["UdeA", "UNAL", "CES", "UPB"] },
-      { name: "Fisioterapia", description: "Rehabilitación física, terapia manual, ejercicio terapéutico y prevención de discapacidades.", universities: ["UdeA", "UNAL", "CES", "EAFIT"] },
-      { name: "Nutrición y Dietética", description: "Alimentación humana, dietoterapia, nutrición clínica y salud pública.", universities: ["UdeA", "UNAL", "CES", "ITM"] },
-      { name: "Psicología", description: "Comportamiento humano, salud mental, evaluación e intervención psicológica.", universities: ["UdeA", "UNAL", "CES", "EAFIT", "UPB", "ITM"] },
-      { name: "Bacteriología", description: "Análisis clínicos, microbiología, parasitología, inmunología y banco de sangre.", universities: ["UdeA", "UNAL", "CES"] },
-      { name: "Instrumentación Quirúrgica", description: "Asistencia en procedimientos quirúrgicos, esterilización y gestión de quirófano.", universities: ["CES", "ITM"] }
-    ];
+    // Subcareer data will be loaded from careers.js
+    import { careers } from '../../../data/careers.js';
 
     function renderSubcareers() {
       const grid = document.getElementById('subcareers-grid');
       if (!grid) return;
 
-      grid.innerHTML = subcareers.map((sub, index) => `
-        <article class="card animate-slide-up" role="listitem" style="animation-delay: ${index * 80}ms;">
+      const category = careers.categories.find(c => c.id === 'salud');
+      if (!category) return;
+
+      grid.innerHTML = category.subcategories.map((sub, index) => `
+        <article class="card card--subcareer animate-slide-up" role="listitem" style="animation-delay: ${index * 80}ms;">
           <div class="card__content">
-            <h3 class="card__title">${sub.name}</h3>
-            <p class="card__description">${sub.description}</p>
+            <h3 class="card__title">${sub}</h3>
             <div class="card__footer">
-              <span class="tag tag--success">${sub.universities.length} universidades</span>
-            </div>
-            <div class="flex flex-wrap gap-2 mt-3">
-              ${sub.universities.map(u => `<span class="tag tag--outline tag--sm">${u}</span>`).join('')}
+              <span class="tag tag--primary">${category.universities?.length || 0} universidades</span>
             </div>
           </div>
         </article>

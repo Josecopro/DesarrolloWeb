@@ -26,9 +26,9 @@
 
     <section class="section" aria-labelledby="subcareers-title">
       <div class="container">
-        <header class="text-center mb-8">
-          <h2 id="subcareers-title" class="text-3xl font-bold">Subdivisiones por área</h2>
-          <p class="text-muted mt-2">Selecciona un área arriba para ver sus programas específicos</p>
+        <header class="section__header section__header--centered section__header--compact">
+          <h2 id="subcareers-title" class="section__title section__title--small">Subdivisiones por área</h2>
+          <p class="section__subtitle section__subtitle--muted">Selecciona un área arriba para ver sus programas específicos</p>
         </header>
         <div id="subcareers-container" class="animate-fade-in">
         </div>
@@ -99,7 +99,7 @@
                 ${career.subcategories.slice(0, 3).map(sub => `<span class="tag tag--primary career-grid__tag">${sub}</span>`).join('')}
                 ${career.subcategories.length > 3 ? `<span class="tag tag--outline career-grid__tag">+${career.subcategories.length - 3} más</span>` : ''}
               </div>
-              <a href="carreras.html#${career.id}" class="button button--primary career-grid__action mt-4">Ver subdivisiones</a>
+              <a href="carreras.html#${career.id}" class="button button--primary career-grid__action button--mt">Ver subdivisiones</a>
             </div>
           </article>
         `).join('');
@@ -112,12 +112,12 @@
             subcareersContainer.innerHTML = `
               <article class="card animate-slide-up">
                 <div class="card__content">
-                  <div class="flex items-center gap-3 mb-4">
-                    <span class="text-4xl">${career.icon}</span>
-                    <h3 class="card__title m-0">${career.name} - Subdivisiones</h3>
+                  <div class="subcareers-header">
+                    <span class="subcareers-icon">${career.icon}</span>
+                    <h3 class="card__title">${career.name} - Subdivisiones</h3>
                   </div>
-                  <p class="card__description mb-6">${career.description}</p>
-                  <div class="flex flex-wrap gap-2">
+                  <p class="card__description">${career.description}</p>
+                  <div class="tag-group">
                     ${career.subcategories.map(sub => `
                       <span class="tag tag--primary">${sub}</span>
                     `).join('')}
@@ -127,14 +127,14 @@
             `;
           } else {
             subcareersContainer.innerHTML = `
-              <div class="card text-center p-12 animate-fade-in">
+              <div class="card card--centered animate-fade-in">
                 <p class="card__description">Selecciona un área de estudio arriba para ver sus subdivisiones.</p>
               </div>
             `;
           }
         } else {
           subcareersContainer.innerHTML = `
-            <div class="card text-center p-12 animate-fade-in">
+            <div class="card card--centered animate-fade-in">
               <p class="card__description">Selecciona un área de estudio arriba para ver sus subdivisiones.</p>
             </div>
           `;

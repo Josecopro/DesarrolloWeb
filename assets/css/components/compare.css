@@ -1,0 +1,111 @@
+.compare-container {
+  max-width: var(--container-max);
+  margin: 0 auto;
+}
+
+.compare-empty {
+  text-align: center;
+  padding: var(--spacing-16) var(--spacing-4);
+}
+
+.compare-empty__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 80px;
+  border-radius: var(--radius-full);
+  background-color: var(--color-bg-alt);
+  color: var(--color-text-muted);
+  margin-bottom: var(--spacing-4);
+}
+
+.compare-empty__title {
+  font-size: var(--text-2xl);
+  font-weight: var(--font-semibold);
+  color: var(--color-text);
+  margin-bottom: var(--spacing-2);
+}
+
+.compare-empty__description {
+  color: var(--color-text-muted);
+  margin-bottom: var(--spacing-6);
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.compare-table-wrapper {
+  max-width: var(--container-max);
+  margin: 0 auto;
+}
+
+.compare-table-container {
+  overflow-x: auto;
+}
+
+.compare-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.compare-table__header {
+  padding: var(--spacing-4);
+  text-align: left;
+  font-weight: var(--font-semibold);
+  color: var(--color-primary);
+  background-color: var(--color-bg-alt);
+  border-bottom: 2px solid var(--color-border);
+}
+
+.compare-table__key {
+  padding: var(--spacing-4);
+  font-weight: var(--font-medium);
+  color: var(--color-primary);
+  border-bottom: 1px solid var(--color-border);
+  white-space: nowrap;
+}
+
+.compare-table td {
+  padding: var(--spacing-4);
+  border-bottom: 1px solid var(--color-border);
+  vertical-align: top;
+}
+
+.compare-table tr:last-child td {
+  border-bottom: none;
+}
+
+.compare-table__empty {
+  color: var(--color-text-muted);
+}
+
+.compare-table__link {
+  color: var(--color-primary);
+  text-decoration: underline;
+}
+
+.compare-table__link:hover {
+  color: var(--color-primary-dark);
+}
+
+.compare-table__description {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+  margin: 0;
+}
+
+.compare-actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: var(--spacing-6);
+}
+
+@media (max-width: 768px) {
+  .compare-table__header,
+  .compare-table__key,
+  .compare-table td {
+    padding: var(--spacing-3);
+    font-size: var(--text-sm);
+  }
+}

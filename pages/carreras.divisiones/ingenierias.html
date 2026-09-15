@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Ingenierías - Programas de ingeniería en el Área Metropolitana. Ingeniería de Sistemas, Civil, Electrónica, Industrial, Mecánica y más.">
+  <meta name="description" content="Ingenierías - Programas en el Área Metropolitana de Antioquia.">
   <title>Ingenierías - DUAM</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,18 +16,18 @@
   <main role="main">
     <section class="section" aria-labelledby="career-title">
       <div class="container">
-        <header class="text-center mb-12 max-w-3xl mx-auto animate-fade-in">
-          <div class="inline-flex items-center justify-center w-16 h-16 mb-4 rounded-full" style="background: rgba(30, 58, 95, 0.1); color: var(--color-primary);">
+        <header class="section__header section__header--centered animate-fade-in">
+          <div class="career-header__icon career-header__icon--primary" style="background: rgba(30, 58, 95, 0.1); color: var(--color-primary);">
             <svg class="icon icon--xl" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
           </div>
-          <h1 id="career-title" class="text-4xl font-bold mb-3">Ingenierías</h1>
-          <p class="text-lg text-muted leading-relaxed">Programas de ingeniería en diversas especialidades. Formación técnica de alto nivel para resolver problemas complejos.</p>
+          <h1 id="career-title" class="section__title">Ingenierías</h1>
+          <p class="section__subtitle">Programas de ingeniería en diversas especialidades. Formación técnica de alto nivel para resolver problemas complejos.</p>
         </header>
 
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto" id="subcareers-grid" role="list">
+        <div class="subcareers-grid" id="subcareers-grid" role="list">
         </div>
 
-        <div class="text-center mt-12 animate-fade-in">
+        <div class="section__back-link animate-fade-in">
           <a href="../carreras.html" class="button button--ghost">
             <svg class="icon icon--md" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"></polyline></svg>
             Volver a todas las carreras
@@ -66,31 +66,22 @@
   </div>
 
   <script type="module">
-    const subcareers = [
-      { name: "Ingeniería de Sistemas", description: "Desarrollo de software, arquitectura de sistemas, bases de datos y seguridad informática.", universities: ["EAFIT", "UdeA", "UPB", "EIA", "UNAL", "ITM"] },
-      { name: "Ingeniería Civil", description: "Diseño, construcción y mantenimiento de infraestructura: puentes, edificios, vías y obras hidráulicas.", universities: ["UNAL", "UdeA", "UPB", "EIA", "EAFIT", "ITM"] },
-      { name: "Ingeniería Electrónica", description: "Sistemas electrónicos, telecomunicaciones, automatización y procesamiento de señales.", universities: ["EAFIT", "UPB", "EIA", "UNAL", "ITM"] },
-      { name: "Ingeniería Industrial", description: "Optimización de procesos, logística, calidad, gestión de operaciones y productividad.", universities: ["EAFIT", "UdeA", "UPB", "UNAL", "EIA", "ITM"] },
-      { name: "Ingeniería Mecánica", description: "Diseño de máquinas, termodinámica, materiales, manufactura y sistemas mecánicos.", universities: ["UNAL", "UdeA", "UPB", "EIA", "ITM"] },
-      { name: "Ingeniería Química", description: "Procesos químicos, petroquímica, biotecnología, medio ambiente y energía.", universities: ["UNAL", "UdeA", "EAFIT", "UPB"] },
-      { name: "Ingeniería Ambiental", description: "Gestión ambiental, tratamiento de aguas, residuos, calidad del aire y sostenibilidad.", universities: ["UNAL", "UdeA", "EAFIT", "UPB", "ITM"] },
-      { name: "Ingeniería de Telecomunicaciones", description: "Redes, comunicaciones móviles, fibra óptica, satélites y sistemas de transmisión.", universities: ["EAFIT", "UPB", "UNAL", "ITM"] }
-    ];
+    // Subcareer data will be loaded from careers.js
+    import { careers } from '../../../data/careers.js';
 
     function renderSubcareers() {
       const grid = document.getElementById('subcareers-grid');
       if (!grid) return;
 
-      grid.innerHTML = subcareers.map((sub, index) => `
-        <article class="card animate-slide-up" role="listitem" style="animation-delay: ${index * 80}ms;">
+      const category = careers.categories.find(c => c.id === 'ingenierias');
+      if (!category) return;
+
+      grid.innerHTML = category.subcategories.map((sub, index) => `
+        <article class="card card--subcareer animate-slide-up" role="listitem" style="animation-delay: ${index * 80}ms;">
           <div class="card__content">
-            <h3 class="card__title">${sub.name}</h3>
-            <p class="card__description">${sub.description}</p>
+            <h3 class="card__title">${sub}</h3>
             <div class="card__footer">
-              <span class="tag tag--primary">${sub.universities.length} universidades</span>
-            </div>
-            <div class="flex flex-wrap gap-2 mt-3">
-              ${sub.universities.map(u => `<span class="tag tag--outline tag--sm">${u}</span>`).join('')}
+              <span class="tag tag--primary">${category.universities?.length || 0} universidades</span>
             </div>
           </div>
         </article>

@@ -21,4 +21,7 @@
 @import './components/pqrs-form.css';
 @import './components/tabs.css';
 @import './components/advanced.css';
+@import './components/section.css';
+@import './components/team.css';
+@import './components/compare.css';
 @import './utilities.css';

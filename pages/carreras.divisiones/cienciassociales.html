@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Ciencias Sociales y Derecho - Derecho, ciencias políticas y sociales en el Área Metropolitana. Derecho, Ciencia Política, Sociología y más.">
+  <meta name="description" content="Ciencias Sociales y Derecho - Programas en el Área Metropolitana de Antioquia.">
   <title>Ciencias Sociales y Derecho - DUAM</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,18 +16,18 @@
   <main role="main">
     <section class="section" aria-labelledby="career-title">
       <div class="container">
-        <header class="text-center mb-12 max-w-3xl mx-auto animate-fade-in">
-          <div class="inline-flex items-center justify-center w-16 h-16 mb-4 rounded-full" style="background: rgba(192, 57, 43, 0.1); color: var(--color-accent);">
+        <header class="section__header section__header--centered animate-fade-in">
+          <div class="career-header__icon career-header__icon--primary" style="background: rgba(192, 57, 43, 0.1); color: var(--color-accent);">
             <svg class="icon icon--xl" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
           </div>
-          <h1 id="career-title" class="text-4xl font-bold mb-3">Ciencias Sociales y Derecho</h1>
-          <p class="text-lg text-muted leading-relaxed">Derecho, ciencias políticas y sociales. Formación para la justicia, la gestión pública y el análisis social.</p>
+          <h1 id="career-title" class="section__title">Ciencias Sociales y Derecho</h1>
+          <p class="section__subtitle">Derecho, ciencias políticas y sociales. Formación para la justicia, la gestión pública y el análisis social.</p>
         </header>
 
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto" id="subcareers-grid" role="list">
+        <div class="subcareers-grid" id="subcareers-grid" role="list">
         </div>
 
-        <div class="text-center mt-12 animate-fade-in">
+        <div class="section__back-link animate-fade-in">
           <a href="../carreras.html" class="button button--ghost">
             <svg class="icon icon--md" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"></polyline></svg>
             Volver a todas las carreras
@@ -66,31 +66,22 @@
   </div>
 
   <script type="module">
-    const subcareers = [
-      { name: "Derecho", description: "Derecho constitucional, penal, civil, laboral, comercial, internacional y administrativo.", universities: ["UNAL", "UdeA", "UPB", "EAFIT", "ITM", "CES"] },
-      { name: "Ciencia Política", description: "Teoría política, sistemas políticos, relaciones internacionales, gestión pública y democracia.", universities: ["UNAL", "UdeA", "UPB", "EAFIT"] },
-      { name: "Sociología", description: "Estructura social, desigualdad, movimientos sociales, metodología de investigación.", universities: ["UNAL", "UdeA", "UPB"] },
-      { name: "Antropología", description: "Culturas, arqueología, antropología física, lingüística y etnográfica.", universities: ["UNAL", "UdeA"] },
-      { name: "Economía", description: "Microeconomía, macroeconomía, econometría, economía del desarrollo y finanzas públicas.", universities: ["UNAL", "UdeA", "EAFIT", "UPB"] },
-      { name: "Administración Pública", description: "Gestión estatal, políticas públicas, derecho administrativo, control fiscal y modernización.", universities: ["UNAL", "UdeA", "UPB", "ITM"] },
-      { name: "Relaciones Internacionales", description: "Diplomacia, organismos internacionales, comercio exterior, cooperación y conflictos.", universities: ["UNAL", "UPB", "EAFIT", "UdeA"] },
-      { name: "Trabajo Social", description: "Intervención social, políticas de bienestar, comunidades, familia y derechos humanos.", universities: ["UNAL", "UdeA", "UPB", "ITM"] }
-    ];
+    // Subcareer data will be loaded from careers.js
+    import { careers } from '../../../data/careers.js';
 
     function renderSubcareers() {
       const grid = document.getElementById('subcareers-grid');
       if (!grid) return;
 
-      grid.innerHTML = subcareers.map((sub, index) => `
-        <article class="card animate-slide-up" role="listitem" style="animation-delay: ${index * 80}ms;">
+      const category = careers.categories.find(c => c.id === 'cienciassociales');
+      if (!category) return;
+
+      grid.innerHTML = category.subcategories.map((sub, index) => `
+        <article class="card card--subcareer animate-slide-up" role="listitem" style="animation-delay: ${index * 80}ms;">
           <div class="card__content">
-            <h3 class="card__title">${sub.name}</h3>
-            <p class="card__description">${sub.description}</p>
+            <h3 class="card__title">${sub}</h3>
             <div class="card__footer">
-              <span class="tag tag--outline">${sub.universities.length} universidades</span>
-            </div>
-            <div class="flex flex-wrap gap-2 mt-3">
-              ${sub.universities.map(u => `<span class="tag tag--outline tag--sm">${u}</span>`).join('')}
+              <span class="tag tag--primary">${category.universities?.length || 0} universidades</span>
             </div>
           </div>
         </article>

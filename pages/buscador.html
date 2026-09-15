@@ -16,12 +16,12 @@
   <main role="main">
     <section class="section" aria-labelledby="search-title">
       <div class="container">
-        <header class="text-center mb-10 max-w-3xl mx-auto animate-fade-in">
-          <h1 id="search-title" class="text-4xl font-bold mb-3">Buscador DUAM</h1>
-          <p class="text-lg text-muted leading-relaxed">Encuentra universidades, carreras y becas escribiendo lo que buscas</p>
+        <header class="section__header section__header--centered animate-fade-in">
+          <h1 id="search-title" class="section__title">Buscador DUAM</h1>
+          <p class="section__subtitle">Encuentra universidades, carreras y becas escribiendo lo que buscas</p>
         </header>
 
-        <div class="max-w-2xl mx-auto mb-12 animate-slide-up">
+        <div class="search-container animate-slide-up">
           <div class="search-box search-box--large" data-search-box>
             <input
               type="search"
@@ -41,38 +41,40 @@
           </div>
         </div>
 
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto" id="search-categories" role="list">
-          <article class="card text-center p-6 animate-slide-up" role="listitem" style="animation-delay: 100ms;">
-            <div class="inline-flex items-center justify-center w-16 h-16 mb-4 rounded-full" style="background: rgba(30, 58, 95, 0.1); color: var(--color-primary);">
+        <div class="search-categories-grid" id="search-categories" role="list">
+          <article class="card card--search-category animate-slide-up" role="listitem" style="animation-delay: 100ms;">
+            <div class="search-category__icon search-category__icon--primary">
               <svg class="icon icon--xl" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path></svg>
             </div>
-            <h3 class="text-xl font-semibold mb-2">Universidades</h3>
-            <p class="text-muted mb-4">21 universidades acreditadas de alta calidad</p>
+            <h3 class="search-category__title">Universidades</h3>
+            <p class="search-category__description">21 universidades acreditadas de alta calidad</p>
             <a href="universidades.html" class="button button--primary">Ver todas</a>
           </article>
-          <article class="card text-center p-6 animate-slide-up" role="listitem" style="animation-delay: 200ms;">
-            <div class="inline-flex items-center justify-center w-16 h-16 mb-4 rounded-full" style="background: rgba(232, 168, 56, 0.15); color: var(--color-secondary-dark);">
+
+          <article class="card card--search-category animate-slide-up" role="listitem" style="animation-delay: 200ms;">
+            <div class="search-category__icon search-category__icon--secondary">
               <svg class="icon icon--xl" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
             </div>
-            <h3 class="text-xl font-semibold mb-2">Carreras</h3>
-            <p class="text-muted mb-4">7 áreas con más de 50 programas</p>
+            <h3 class="search-category__title">Carreras</h3>
+            <p class="search-category__description">7 áreas con más de 50 programas</p>
             <a href="carreras.html" class="button button--secondary">Explorar</a>
           </article>
-          <article class="card text-center p-6 animate-slide-up" role="listitem" style="animation-delay: 300ms;">
-            <div class="inline-flex items-center justify-center w-16 h-16 mb-4 rounded-full" style="background: rgba(39, 174, 96, 0.1); color: var(--color-success);">
+
+          <article class="card card--search-category animate-slide-up" role="listitem" style="animation-delay: 300ms;">
+            <div class="search-category__icon search-category__icon--success">
               <svg class="icon icon--xl" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
             </div>
-            <h3 class="text-xl font-semibold mb-2">Becas</h3>
-            <p class="text-muted mb-4">Financiamiento, ICETEX, deportivas y matrícula cero</p>
-            <a href="becas.html" class="button button--outline" style="border-color: var(--color-success); color: var(--color-success);">Ver opciones</a>
+            <h3 class="search-category__title">Becas</h3>
+            <p class="search-category__description">Financiamiento, ICETEX, deportivas y matrícula cero</p>
+            <a href="becas.html" class="button button--outline button--success-style">Ver opciones</a>
           </article>
         </div>
 
-        <section id="search-results-section" class="mt-16" aria-labelledby="results-title" hidden>
-          <h2 id="results-title" class="text-2xl font-bold mb-6">Resultados para "<span id="search-query-display"></span>"</h2>
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4" id="search-results-grid" role="list">
+        <section id="search-results-section" class="search-results-section" aria-labelledby="results-title" hidden>
+          <h2 id="results-title" class="section__title section__title--small">Resultados para "<span id="search-query-display"></span>"</h2>
+          <div class="search-results-grid" id="search-results-grid" role="list">
           </div>
-          <p id="no-results" class="text-center text-muted py-8" hidden>No se encontraron resultados para tu búsqueda</p>
+          <p id="no-results" class="search-no-results" hidden>No se encontraron resultados para tu búsqueda</p>
         </section>
       </div>
     </section>
@@ -157,13 +159,13 @@
 
         queryDisplay.textContent = query;
         resultsGrid.innerHTML = items.map(item => `
-          <article class="card search-box__result-item" role="listitem">
+          <article class="card search-result-card" role="listitem">
             <div class="card__content">
-              <div class="flex items-center gap-3 mb-2">
-                <span class="text-xl">${item.icon}</span>
-                <h3 class="card__title m-0">${highlightMatch(item.name, query)}</h3>
+              <div class="search-result-header">
+                <span class="search-result-icon">${item.icon}</span>
+                <h3 class="card__title">${highlightMatch(item.name, query)}</h3>
               </div>
-              <p class="text-muted text-sm">${item.category}</p>
+              <p class="search-result-category">${item.category}</p>
             </div>
           </article>
         `).join('');

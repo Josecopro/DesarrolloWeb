@@ -19,13 +19,13 @@
         <h1 id="hero-title" class="hero__title">Bienvenidos a DUAM</h1>
         <p class="hero__subtitle">El Directorio de Universidades del Área Metropolitana</p>
         <div class="hero__divider" aria-hidden="true"></div>
-        <p class="hero__description text-balance">
+        <p class="hero__description hero__description--balanced">
           Encuentra información completa sobre universidades, carreras, precios, becas y más.
           Tu guía para tomar la mejor decisión educativa.
         </p>
         <div class="hero__actions">
           <a href="universidades.html" class="button button--primary button--lg">Ver universidades</a>
-          <a href="carreras.html" class="button button--outline button--lg" style="border-color: var(--color-secondary); color: var(--color-secondary);">Explorar carreras</a>
+          <a href="carreras.html" class="button button--outline button--lg button--secondary-style">Explorar carreras</a>
         </div>
 
         <ul class="hero__stats" role="list" aria-label="Estadísticas de DUAM">
@@ -51,14 +51,12 @@
 
     <section class="section" aria-labelledby="about-title">
       <div class="container">
-        <header class="text-center mb-12 max-w-3xl mx-auto">
-          <h2 id="about-title" class="text-4xl font-bold text-primary mb-4">¿Qué es DUAM?</h2>
-          <p class="text-lg text-muted leading-relaxed">
-            DUAM es un proyecto que busca facilitar el acceso a la información sobre los programas de educación superior en el área metropolitana de Antioquia, Colombia.
-          </p>
+        <header class="section__header section__header--centered">
+          <h2 id="about-title" class="section__title section__title--primary">¿Qué es DUAM?</h2>
+          <p class="section__description">DUAM es un proyecto que busca facilitar el acceso a la información sobre los programas de educación superior en el área metropolitana de Antioquia, Colombia.</p>
         </header>
 
-        <div class="card card--horizontal animate-slide-up" style="max-width: 1000px; margin: 0 auto;">
+        <div class="card card--horizontal card--featured" style="max-width: 1000px; margin: 0 auto;">
           <div class="card__content">
             <h3 class="card__title">Información centralizada y confiable</h3>
             <p class="card__description">
@@ -76,56 +74,54 @@
       </div>
     </section>
 
-    <section class="section bg-alt" aria-labelledby="why-title">
+    <section class="section section--alt" aria-labelledby="why-title">
       <div class="container">
-        <header class="text-center mb-12 max-w-3xl mx-auto">
-          <h2 id="why-title" class="text-4xl font-bold mb-4">¿Por qué usar DUAM?</h2>
-          <p class="text-lg text-muted">Diseñado para que tomes la mejor decisión educativa</p>
+        <header class="section__header section__header--centered">
+          <h2 id="why-title" class="section__title">¿Por qué usar DUAM?</h2>
+          <p class="section__subtitle">Diseñado para que tomes la mejor decisión educativa</p>
         </header>
 
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
-          <article class="card text-center p-6 animate-slide-up" style="animation-delay: 100ms;">
-            <div class="inline-flex items-center justify-center w-16 h-16 mb-4 rounded-full" style="background: rgba(30, 58, 95, 0.1); color: var(--color-primary);">
+        <div class="features-grid">
+          <article class="card card--feature">
+            <div class="feature__icon feature__icon--primary">
               <svg class="icon icon--xl" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
             </div>
-            <h3 class="text-xl font-semibold mb-2">Información completa</h3>
-            <p class="text-muted leading-relaxed">Detalles exhaustivos de universidades y programas: duración, costos, empleabilidad y más.</p>
+            <h3 class="feature__title">Información completa</h3>
+            <p class="feature__description">Detalles exhaustivos de universidades y programas: duración, costos, empleabilidad y más.</p>
           </article>
 
-          <article class="card text-center p-6 animate-slide-up" style="animation-delay: 200ms;">
-            <div class="inline-flex items-center justify-center w-16 h-16 mb-4 rounded-full" style="background: rgba(232, 168, 56, 0.15); color: var(--color-secondary-dark);">
+          <article class="card card--feature">
+            <div class="feature__icon feature__icon--secondary">
               <svg class="icon icon--xl" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
             </div>
-            <h3 class="text-xl font-semibold mb-2">Actualización constante</h3>
-            <p class="text-muted leading-relaxed">Mantenemos nuestra plataforma al día con la realidad académica actual.</p>
+            <h3 class="feature__title">Actualización constante</h3>
+            <p class="feature__description">Mantenemos nuestra plataforma al día con la realidad académica actual.</p>
           </article>
 
-          <article class="card text-center p-6 animate-slide-up" style="animation-delay: 300ms;">
-            <div class="inline-flex items-center justify-center w-16 h-16 mb-4 rounded-full" style="background: rgba(39, 174, 96, 0.1); color: var(--color-success);">
+          <article class="card card--feature">
+            <div class="feature__icon feature__icon--success">
               <svg class="icon icon--xl" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 8.5V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8.5"></path><path d="M4 16.5v2.5A2.5 2.5 0 0 0 6.5 21H20"></path><path d="M16 21v-5.5"></path><path d="M8 21v-5.5"></path></svg>
             </div>
-            <h3 class="text-xl font-semibold mb-2">Becas y financiamiento</h3>
-            <p class="text-muted leading-relaxed">Información actualizada sobre becas, créditos ICETEX y oportunidades de apoyo financiero.</p>
+            <h3 class="feature__title">Becas y financiamiento</h3>
+            <p class="feature__description">Información actualizada sobre becas, créditos ICETEX y oportunidades de apoyo financiero.</p>
           </article>
 
-          <article class="card text-center p-6 animate-slide-up" style="animation-delay: 400ms;">
-            <div class="inline-flex items-center justify-center w-16 h-16 mb-4 rounded-full" style="background: rgba(192, 57, 43, 0.1); color: var(--color-accent);">
+          <article class="card card--feature">
+            <div class="feature__icon feature__icon--accent">
               <svg class="icon icon--xl" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"></circle><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"></path></svg>
             </div>
-            <h3 class="text-xl font-semibold mb-2">Comparación de opciones</h3>
-            <p class="text-muted leading-relaxed">Herramientas para analizar universidades y carreras lado a lado.</p>
+            <h3 class="feature__title">Comparación de opciones</h3>
+            <p class="feature__description">Herramientas para analizar universidades y carreras lado a lado.</p>
           </article>
         </div>
       </div>
     </section>
 
-    <section class="section text-center" aria-labelledby="cta-title">
+    <section class="section section--centered" aria-labelledby="cta-title">
       <div class="container">
-        <h2 id="cta-title" class="text-4xl font-bold mb-4">¿Listo para encontrar tu futuro?</h2>
-        <p class="text-lg text-muted mb-10 max-w-2xl mx-auto leading-relaxed">
-          Explora nuestras universidades, descubre las carreras que más te interesan y encuentra las becas que te ayudarán a financiar tus estudios.
-        </p>
-        <div class="flex flex-wrap justify-center gap-4">
+        <h2 id="cta-title" class="section__title">¿Listo para encontrar tu futuro?</h2>
+        <p class="section__description section__description--large">Explora nuestras universidades, descubre las carreras que más te interesan y encuentra las becas que te ayudarán a financiar tus estudios.</p>
+        <div class="button-group">
           <a href="universidades.html" class="button button--primary button--lg">Ver universidades</a>
           <a href="carreras.html" class="button button--secondary button--lg">Explorar carreras</a>
           <a href="becas.html" class="button button--outline button--lg">Ver becas</a>

@@ -16,21 +16,21 @@
   <main role="main">
     <section class="section" aria-labelledby="team-title">
       <div class="container">
-        <header class="text-center mb-12 max-w-3xl mx-auto animate-fade-in">
-          <h1 id="team-title" class="text-4xl font-bold mb-3">Creadores de DUAM</h1>
-          <p class="text-lg text-muted leading-relaxed">Un equipo multidisciplinario apasionado por la educación y la tecnología</p>
+        <header class="section__header section__header--centered animate-fade-in">
+          <h1 id="team-title" class="section__title">Creadores de DUAM</h1>
+          <p class="section__subtitle">Un equipo multidisciplinario apasionado por la educación y la tecnología</p>
         </header>
 
-        <figure class="mb-16 animate-slide-up">
+        <figure class="team-figure animate-slide-up">
           <div class="card card--featured">
-            <div class="card__content text-center">
-              <img src="../assets/images/BkKBrwC.jpg" alt="Equipo DUAM completo" class="card__image mb-6" style="max-width: 400px; margin: 0 auto -40px; border-radius: var(--radius-xl); box-shadow: var(--shadow-lg);" loading="lazy">
-              <figcaption class="text-muted text-sm mt-4">Equipo DUAM - Comprometidos con tu futuro educativo</figcaption>
+            <div class="card__content card__content--centered">
+              <img src="../assets/images/BkKBrwC.jpg" alt="Equipo DUAM completo" class="card__image team-image" loading="lazy">
+              <figcaption class="card__caption">Equipo DUAM - Comprometidos con tu futuro educativo</figcaption>
             </div>
           </div>
         </figure>
 
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-4xl mx-auto" id="team-grid" role="list">
+        <div class="team-grid" id="team-grid" role="list">
         </div>
       </div>
     </section>
@@ -46,11 +46,15 @@
         <line x1="12" y1="17" x2="12.01" y2="17"></line>
       </svg>
     </button>
+
     <div class="help-button__panel" role="dialog" aria-modal="true" aria-labelledby="help-title">
       <div class="help-button__header">
         <h3 id="help-title" class="help-button__title">Ayuda y PQRS</h3>
         <button class="help-button__close" aria-label="Cerrar">
-          <svg class="icon icon--md" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+          <svg class="icon icon--md" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
         </button>
       </div>
       <div class="help-button__form">
@@ -101,14 +105,12 @@
       if (!grid) return;
 
       grid.innerHTML = team.map((member, index) => `
-        <article class="card animate-slide-up" role="listitem" style="animation-delay: ${index * 120}ms;">
-          <div class="card__content text-center">
-            <div class="inline-flex items-center justify-center w-20 h-20 mb-4 rounded-full" style="background: rgba(30, 58, 95, 0.1); color: var(--color-primary); font-size: 2.5rem;">
-              ${member.icon}
-            </div>
-            <img src="${member.image}" alt="${member.name}" class="card__image mb-4" style="max-width: 200px; border-radius: var(--radius-xl); margin: 0 auto -20px; box-shadow: var(--shadow-lg);" loading="lazy">
+        <article class="card card--team animate-slide-up" role="listitem" style="animation-delay: ${index * 120}ms;">
+          <div class="card__content card__content--centered">
+            <div class="team-member__icon">${member.icon}</div>
+            <img src="${member.image}" alt="${member.name}" class="card__image team-member__image" loading="lazy">
             <h3 class="card__title">${member.name}</h3>
-            <p class="text-primary font-semibold mb-3">${member.role}</p>
+            <p class="team-member__role">${member.role}</p>
             <p class="card__description">${member.bio}</p>
           </div>
         </article>

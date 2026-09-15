@@ -16,12 +16,12 @@
   <main role="main">
     <section class="section" aria-labelledby="about-title">
       <div class="container">
-        <header class="text-center mb-12 max-w-3xl mx-auto animate-fade-in">
-          <h1 id="about-title" class="text-4xl font-bold mb-3">Acerca de DUAM</h1>
-          <p class="text-lg text-muted leading-relaxed">Nuestra misión, visión y objetivos detrás de este grandioso proyecto</p>
+        <header class="section__header section__header--centered animate-fade-in">
+          <h1 id="about-title" class="section__title">Acerca de DUAM</h1>
+          <p class="section__subtitle">Nuestra misión, visión y objetivos detrás de este grandioso proyecto</p>
         </header>
 
-        <div class="max-w-4xl mx-auto">
+        <div class="tabs-container">
           <div class="tabs" role="tablist" aria-label="Secciones informativas" id="tabs">
             <div class="tabs__list" role="tablist">
               <button class="tabs__trigger tabs__trigger--active" role="tab" aria-selected="true" aria-controls="panel-mision" id="tab-mision" data-tab="mision">Misión</button>
@@ -35,11 +35,11 @@
               <div class="tabs__panel tabs__panel--active" role="tabpanel" id="panel-mision" aria-labelledby="tab-mision" tabindex="0">
                 <article class="card animate-fade-in">
                   <div class="card__content">
-                    <h2 class="card__title mb-4">Misión</h2>
-                    <p class="card__description leading-relaxed">
+                    <h2 class="card__title">Misión</h2>
+                    <p class="card__description">
                       En DUAM, nuestra misión principal es servir como puente entre las aspiraciones académicas y las oportunidades educativas disponibles en el área metropolitana de Antioquia. Nos dedicamos de corazón a brindar a los estudiantes, profesionales y cualquier individuo interesado, una plataforma integral que les proporcione detalles actualizados sobre universidades y sus variados programas académicos.
                     </p>
-                    <p class="card__description leading-relaxed mt-4">
+                    <p class="card__description">
                       A través de nuestra plataforma, deseamos eliminar las barreras informativas, garantizando que cada usuario tenga a su alcance la información necesaria para tomar decisiones educativas informadas y enriquecedoras.
                     </p>
                   </div>
@@ -49,11 +49,11 @@
               <div class="tabs__panel" role="tabpanel" id="panel-vision" aria-labelledby="tab-vision" tabindex="0" hidden>
                 <article class="card animate-fade-in">
                   <div class="card__content">
-                    <h2 class="card__title mb-4">Visión</h2>
-                    <p class="card__description leading-relaxed">
+                    <h2 class="card__title">Visión</h2>
+                    <p class="card__description">
                       Mirando hacia el futuro, para el año 2030, DUAM aspira a consolidarse como el recurso principal y más confiable para toda la comunidad de Antioquia en relación con la educación superior.
                     </p>
-                    <p class="card__description leading-relaxed mt-4">
+                    <p class="card__description">
                       Visualizamos una plataforma que no solo proporciona información, sino que también se convierte en una herramienta indispensable para el desarrollo académico y profesional de los usuarios. Nos esforzamos por estar en constante evolución, adaptando nuestros servicios para satisfacer las necesidades cambiantes y crecientes de nuestra comunidad educativa, asegurando que DUAM siempre sea relevante y útil.
                     </p>
                   </div>
@@ -63,41 +63,41 @@
               <div class="tabs__panel" role="tabpanel" id="panel-objetivos" aria-labelledby="tab-objetivos" tabindex="0" hidden>
                 <article class="card animate-fade-in">
                   <div class="card__content">
-                    <h2 class="card__title mb-4">Objetivos</h2>
-                    <ul class="space-y-4" role="list">
-                      <li role="listitem" class="flex gap-3 p-4 rounded-lg" style="background: var(--color-bg-alt);">
-                        <span class="inline-flex items-center justify-center w-8 h-8 flex-shrink-0 rounded-full" style="background: rgba(30, 58, 95, 0.1); color: var(--color-primary);">1</span>
+                    <h2 class="card__title">Objetivos</h2>
+                    <ul class="objectives-list" role="list">
+                      <li class="objective-item" role="listitem">
+                        <span class="objective-number">1</span>
                         <div>
-                          <strong class="block mb-1">Información Completa</strong>
-                          <p class="text-muted">No nos limitamos a ofrecer solo nombres y ubicaciones; nuestro objetivo es proporcionar un compendio detallado y exhaustivo de universidades y programas académicos disponibles en el área metropolitana de Antioquia, desde la duración del curso hasta las posibilidades de empleo posterior.</p>
+                          <strong class="objective-title">Información Completa</strong>
+                          <p class="objective-description">No nos limitamos a ofrecer solo nombres y ubicaciones; nuestro objetivo es proporcionar un compendio detallado y exhaustivo de universidades y programas académicos disponibles en el área metropolitana de Antioquia, desde la duración del curso hasta las posibilidades de empleo posterior.</p>
                         </div>
                       </li>
-                      <li role="listitem" class="flex gap-3 p-4 rounded-lg" style="background: var(--color-bg-alt);">
-                        <span class="inline-flex items-center justify-center w-8 h-8 flex-shrink-0 rounded-full" style="background: rgba(30, 58, 95, 0.1); color: var(--color-primary);">2</span>
+                      <li class="objective-item">
+                        <span class="objective-number">2</span>
                         <div>
-                          <strong class="block mb-1">Actualización Constante</strong>
-                          <p class="text-muted">Vivimos en un mundo dinámico donde las instituciones educativas evolucionan constantemente. Nos comprometemos a mantener nuestra plataforma al día, asegurando que la información proporcionada refleje fielmente la realidad académica del momento.</p>
+                          <strong class="objective-title">Actualización Constante</strong>
+                          <p class="objective-description">Vivimos en un mundo dinámico donde las instituciones educativas evolucionan constantemente. Nos comprometemos a mantener nuestra plataforma al día, asegurando que la información proporcionada refleje fielmente la realidad académica del momento.</p>
                         </div>
                       </li>
-                      <li role="listitem" class="flex gap-3 p-4 rounded-lg" style="background: var(--color-bg-alt);">
-                        <span class="inline-flex items-center justify-center w-8 h-8 flex-shrink-0 rounded-full" style="background: rgba(30, 58, 95, 0.1); color: var(--color-primary);">3</span>
+                      <li class="objective-item">
+                        <span class="objective-number">3</span>
                         <div>
-                          <strong class="block mb-1">Facilitar Decisiones</strong>
-                          <p class="text-muted">Más allá de la información básica, DUAM se esfuerza por brindar herramientas, filtros y comparativos que permitan a los usuarios analizar y sopesar sus opciones académicas, garantizando decisiones bien fundamentadas para su futuro.</p>
+                          <strong class="objective-title">Facilitar Decisiones</strong>
+                          <p class="objective-description">Más allá de la información básica, DUAM se esfuerza por brindar herramientas, filtros y comparativos que permitan a los usuarios analizar y sopesar sus opciones académicas, garantizando decisiones bien fundamentadas para su futuro.</p>
                         </div>
                       </li>
-                      <li role="listitem" class="flex gap-3 p-4 rounded-lg" style="background: var(--color-bg-alt);">
-                        <span class="inline-flex items-center justify-center w-8 h-8 flex-shrink-0 rounded-full" style="background: rgba(30, 58, 95, 0.1); color: var(--color-primary);">4</span>
+                      <li class="objective-item">
+                        <span class="objective-number">4</span>
                         <div>
-                          <strong class="block mb-1">Promover la Inclusividad</strong>
-                          <p class="text-muted">La educación es un derecho, no un lujo. Con esto en mente, nos dedicamos a proporcionar detalles extensos sobre becas, ayudas financieras y oportunidades especiales para diferentes estratos sociales, grupos minoritarios y talentos deportivos, con la firme creencia de que la educación superior debe ser accesible y equitativa para todos.</p>
+                          <strong class="objective-title">Promover la Inclusividad</strong>
+                          <p class="objective-description">La educación es un derecho, no un lujo. Con esto en mente, nos dedicamos a proporcionar detalles extensos sobre becas, ayudas financieras y oportunidades especiales para diferentes estratos sociales, grupos minoritarios y talentos deportivos, con la firme creencia de que la educación superior debe ser accesible y equitativa para todos.</p>
                         </div>
                       </li>
-                      <li role="listitem" class="flex gap-3 p-4 rounded-lg" style="background: var(--color-bg-alt);">
-                        <span class="inline-flex items-center justify-center w-8 h-8 flex-shrink-0 rounded-full" style="background: rgba(30, 58, 95, 0.1); color: var(--color-primary);">5</span>
+                      <li class="objective-item">
+                        <span class="objective-number">5</span>
                         <div>
-                          <strong class="block mb-1">Expansión Nacional</strong>
-                          <p class="text-muted">Expandir nuestra cobertura a otras regiones del país, convirtiéndonos en referente a nivel nacional para la búsqueda de educación superior.</p>
+                          <strong class="objective-title">Expansión Nacional</strong>
+                          <p class="objective-description">Expandir nuestra cobertura a otras regiones del país, convirtiéndonos en referente a nivel nacional para la búsqueda de educación superior.</p>
                         </div>
                       </li>
                     </ul>
@@ -108,11 +108,11 @@
               <div class="tabs__panel" role="tabpanel" id="panel-compromiso" aria-labelledby="tab-compromiso" tabindex="0" hidden>
                 <article class="card animate-fade-in">
                   <div class="card__content">
-                    <h2 class="card__title mb-4">Compromiso</h2>
-                    <p class="card__description leading-relaxed">
+                    <h2 class="card__title">Compromiso</h2>
+                    <p class="card__description">
                       En DUAM, entendemos la importancia de una decisión educativa y cómo puede influir en el futuro de un estudiante. Por ello, trabajamos incansablemente para garantizar que la información que ofrecemos sea precisa, actualizada y relevante para las necesidades de nuestros usuarios.
                     </p>
-                    <p class="card__description leading-relaxed mt-4">
+                    <p class="card__description">
                       A través de nuestro directorio, esperamos ser parte del viaje educativo de miles de estudiantes, ayudándoles a descubrir las oportunidades que les esperan.
                     </p>
                   </div>
@@ -155,7 +155,7 @@
 
   <script type="module">
     function initTabs() {
-      const tabList = document.querySelector('.tabs__list');
+      const tabList = document.query('.tabs__list');
       const triggers = document.querySelectorAll('.tabs__trigger');
       const panels = document.querySelectorAll('.tabs__panel');
       const indicator = document.querySelector('.tabs__indicator');

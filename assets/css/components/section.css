@@ -1,0 +1,144 @@
+.aid-types-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-6);
+  max-width: var(--container-max);
+  margin: 0 auto;
+}
+
+@media (min-width: 640px) {
+  .aid-types-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .aid-types-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.card--aid {
+  text-align: center;
+  padding: var(--spacing-6);
+  border-left-width: 4px;
+  border-left-style: solid;
+}
+
+.card--aid--primary {
+  border-left-color: var(--color-primary);
+}
+
+.card--aid--secondary {
+  border-left-color: var(--color-secondary-dark);
+}
+
+.card--aid--success {
+  border-left-color: var(--color-success);
+}
+
+.card--aid--accent {
+  border-left-color: var(--color-accent);
+}
+
+.aid-type__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  border-radius: var(--radius-full);
+  margin-bottom: var(--spacing-4);
+}
+
+.aid-type__icon--primary {
+  background-color: rgba(30, 58, 95, 0.1);
+  color: var(--color-primary);
+}
+
+[data-theme="dark"] .aid-type__icon--primary {
+  background-color: rgba(30, 58, 95, 0.2);
+  color: var(--color-secondary-light);
+}
+
+.aid-type__icon--secondary {
+  background-color: rgba(232, 168, 56, 0.15);
+  color: var(--color-secondary-dark);
+}
+
+[data-theme="dark"] .aid-type__icon--secondary {
+  background-color: rgba(232, 168, 56, 0.2);
+  color: var(--color-secondary-light);
+}
+
+.aid-type__icon--success {
+  background-color: rgba(39, 174, 96, 0.1);
+  color: var(--color-success);
+}
+
+.aid-type__icon--accent {
+  background-color: rgba(192, 57, 43, 0.1);
+  color: var(--color-accent);
+}
+
+.aid-type__title {
+  font-size: var(--text-xl);
+  font-weight: var(--font-semibold);
+  color: var(--color-text);
+  margin-bottom: var(--spacing-2);
+}
+
+.aid-type__description {
+  color: var(--color-text-muted);
+  line-height: var(--leading-relaxed);
+}
+
+.subcareers-header {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-3);
+  margin-bottom: var(--spacing-4);
+}
+
+.subcareers-icon {
+  font-size: var(--text-4xl);
+}
+
+.tag-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-2);
+}
+
+.card--centered {
+  text-align: center;
+  padding: var(--spacing-12);
+}
+
+.section__header--compact {
+  margin-bottom: var(--spacing-6);
+}
+
+.section__title--small {
+  font-size: var(--text-3xl);
+}
+
+.section__subtitle--muted {
+  color: var(--color-text-muted);
+  margin-top: var(--spacing-2);
+}
+
+.button--mt {
+  margin-top: var(--spacing-4);
+}
+
+.button--secondary-style {
+  border-color: var(--color-secondary);
+  color: var(--color-secondary);
+}
+
+.button--secondary-style:hover {
+  background-color: var(--color-secondary);
+  color: var(--color-text);
+  border-color: var(--color-secondary);
+}

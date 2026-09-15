@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Humanidades - Estudios humanísticos y ciencias sociales en el Área Metropolitana. Filosofía, Historia, Literatura, Comunicación y más.">
+  <meta name="description" content="Humanidades - Programas en el Área Metropolitana de Antioquia.">
   <title>Humanidades - DUAM</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,18 +16,18 @@
   <main role="main">
     <section class="section" aria-labelledby="career-title">
       <div class="container">
-        <header class="text-center mb-12 max-w-3xl mx-auto animate-fade-in">
-          <div class="inline-flex items-center justify-center w-16 h-16 mb-4 rounded-full" style="background: rgba(192, 57, 43, 0.1); color: var(--color-accent);">
-            <svg class="icon icon--xl" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+        <header class="section__header section__header--centered animate-fade-in">
+          <div class="career-header__icon career-header__icon--primary" style="background: rgba(192, 57, 43, 0.1); color: var(--color-accent);">
+            <svg class="icon icon--xl" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
           </div>
-          <h1 id="career-title" class="text-4xl font-bold mb-3">Humanidades</h1>
-          <p class="text-lg text-muted leading-relaxed">Estudios humanísticos y ciencias sociales. Formación en pensamiento crítico, cultura y comunicación.</p>
+          <h1 id="career-title" class="section__title">Humanidades</h1>
+          <p class="section__subtitle">Estudios humanísticos y ciencias sociales. Formación en pensamiento crítico, cultura y comunicación.</p>
         </header>
 
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto" id="subcareers-grid" role="list">
+        <div class="subcareers-grid" id="subcareers-grid" role="list">
         </div>
 
-        <div class="text-center mt-12 animate-fade-in">
+        <div class="section__back-link animate-fade-in">
           <a href="../carreras.html" class="button button--ghost">
             <svg class="icon icon--md" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"></polyline></svg>
             Volver a todas las carreras
@@ -66,31 +66,22 @@
   </div>
 
   <script type="module">
-    const subcareers = [
-      { name: "Filosofía", description: "Pensamiento crítico, ética, lógica, historia de la filosofía y epistemología.", universities: ["UNAL", "UdeA", "UPB"] },
-      { name: "Historia", description: "Investigación histórica, patrimonio cultural, historiografía y culturas antiguas.", universities: ["UNAL", "UdeA", "UPB"] },
-      { name: "Literatura", description: "Teoría literaria, literatura colombiana, latinoamericana y universal, crítica literaria.", universities: ["UNAL", "UdeA", "UPB"] },
-      { name: "Lingüística", description: "Estructura del lenguaje, fonética, sintaxis, semántica y sociolingüística.", universities: ["UNAL", "UdeA"] },
-      { name: "Comunicación Social", description: "Periodismo, comunicación organizacional, medios digitales, investigación y producción audiovisual.", universities: ["UdeA", "UPB", "EAFIT", "UNAL", "EIA"] },
-      { name: "Periodismo", description: "Reportería, investigación periodística, ética profesional, medios impresos y digitales.", universities: ["UPB", "EAFIT", "UdeA"] },
-      { name: "Artes Plásticas", description: "Pintura, escultura, grabado, dibujo, arte contemporáneo y gestión cultural.", universities: ["UNAL", "UdeA"] },
-      { name: "Diseño Gráfico", description: "Comunicación visual, tipografía, branding, diseño editorial y multimedia.", universities: ["UPB", "EAFIT", "UNAL", "EIA", "ITM"] }
-    ];
+    // Subcareer data will be loaded from careers.js
+    import { careers } from '../../../data/careers.js';
 
     function renderSubcareers() {
       const grid = document.getElementById('subcareers-grid');
       if (!grid) return;
 
-      grid.innerHTML = subcareers.map((sub, index) => `
-        <article class="card animate-slide-up" role="listitem" style="animation-delay: ${index * 80}ms;">
+      const category = careers.categories.find(c => c.id === 'humanidades');
+      if (!category) return;
+
+      grid.innerHTML = category.subcategories.map((sub, index) => `
+        <article class="card card--subcareer animate-slide-up" role="listitem" style="animation-delay: ${index * 80}ms;">
           <div class="card__content">
-            <h3 class="card__title">${sub.name}</h3>
-            <p class="card__description">${sub.description}</p>
+            <h3 class="card__title">${sub}</h3>
             <div class="card__footer">
-              <span class="tag tag--outline">${sub.universities.length} universidades</span>
-            </div>
-            <div class="flex flex-wrap gap-2 mt-3">
-              ${sub.universities.map(u => `<span class="tag tag--secondary tag--sm">${u}</span>`).join('')}
+              <span class="tag tag--primary">${category.universities?.length || 0} universidades</span>
             </div>
           </div>
         </article>

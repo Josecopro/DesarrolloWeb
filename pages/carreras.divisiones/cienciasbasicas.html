@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Ciencias Básicas - Ciencias puras y aplicadas en el Área Metropolitana. Matemáticas, Física, Química, Biología y más.">
+  <meta name="description" content="Ciencias Básicas - Programas en el Área Metropolitana de Antioquia.">
   <title>Ciencias Básicas - DUAM</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,18 +16,18 @@
   <main role="main">
     <section class="section" aria-labelledby="career-title">
       <div class="container">
-        <header class="text-center mb-12 max-w-3xl mx-auto animate-fade-in">
-          <div class="inline-flex items-center justify-center w-16 h-16 mb-4 rounded-full" style="background: rgba(30, 58, 95, 0.1); color: var(--color-primary);">
+        <header class="section__header section__header--centered animate-fade-in">
+          <div class="career-header__icon career-header__icon--primary" style="background: rgba(30, 58, 95, 0.1); color: var(--color-primary);">
             <svg class="icon icon--xl" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></path><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
           </div>
-          <h1 id="career-title" class="text-4xl font-bold mb-3">Ciencias Básicas</h1>
-          <p class="text-lg text-muted leading-relaxed">Ciencias puras y aplicadas. Formación en investigación científica, método experimental y pensamiento analítico.</p>
+          <h1 id="career-title" class="section__title">Ciencias Básicas</h1>
+          <p class="section__subtitle">Ciencias puras y aplicadas. Formación en investigación científica, método experimental y pensamiento analítico.</p>
         </header>
 
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto" id="subcareers-grid" role="list">
+        <div class="subcareers-grid" id="subcareers-grid" role="list">
         </div>
 
-        <div class="text-center mt-12 animate-fade-in">
+        <div class="section__back-link animate-fade-in">
           <a href="../carreras.html" class="button button--ghost">
             <svg class="icon icon--md" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"></polyline></svg>
             Volver a todas las carreras
@@ -66,31 +66,22 @@
   </div>
 
   <script type="module">
-    const subcareers = [
-      { name: "Matemáticas", description: "Álgebra, análisis, geometría, topología, probabilidad y matemáticas aplicadas.", universities: ["UNAL", "UdeA", "EAFIT", "UPB"] },
-      { name: "Física", description: "Mecánica clásica, electromagnetismo, cuántica, termodinámica y física de partículas.", universities: ["UNAL", "UdeA", "EAFIT", "UPB"] },
-      { name: "Química", description: "Química orgánica, inorgánica, analítica, fisicoquímica y bioquímica.", universities: ["UNAL", "UdeA", "EAFIT", "UPB", "CES"] },
-      { name: "Biología", description: "Biología molecular, genética, ecología, evolución, microbiología y biotecnología.", universities: ["UNAL", "UdeA", "EAFIT", "CES"] },
-      { name: "Estadística", description: "Inferencia estadística, muestreo, series de tiempo, modeloación y ciencia de datos.", universities: ["UNAL", "UdeA", "EAFIT", "UPB"] },
-      { name: "Geología", description: "Mineralogía, petrología, geofísica, hidrogeología, geología estructural y yacimientos.", universities: ["UNAL", "UdeA"] },
-      { name: "Astronomía", description: "Astrofísica, cosmología, mecánica celeste, observación astronómica y planetología.", universities: ["UNAL"] },
-      { name: "Bioquímica", description: "Metabolismo, biología molecular, enzimología, biotecnología y biología estructural.", universities: ["UNAL", "UdeA", "CES"] }
-    ];
+    // Subcareer data will be loaded from careers.js
+    import { careers } from '../../../data/careers.js';
 
     function renderSubcareers() {
       const grid = document.getElementById('subcareers-grid');
       if (!grid) return;
 
-      grid.innerHTML = subcareers.map((sub, index) => `
-        <article class="card animate-slide-up" role="listitem" style="animation-delay: ${index * 80}ms;">
+      const category = careers.categories.find(c => c.id === 'cienciasbasicas');
+      if (!category) return;
+
+      grid.innerHTML = category.subcategories.map((sub, index) => `
+        <article class="card card--subcareer animate-slide-up" role="listitem" style="animation-delay: ${index * 80}ms;">
           <div class="card__content">
-            <h3 class="card__title">${sub.name}</h3>
-            <p class="card__description">${sub.description}</p>
+            <h3 class="card__title">${sub}</h3>
             <div class="card__footer">
-              <span class="tag tag--primary">${sub.universities.length} universidades</span>
-            </div>
-            <div class="flex flex-wrap gap-2 mt-3">
-              ${sub.universities.map(u => `<span class="tag tag--outline tag--sm">${u}</span>`).join('')}
+              <span class="tag tag--primary">${category.universities?.length || 0} universidades</span>
             </div>
           </div>
         </article>
