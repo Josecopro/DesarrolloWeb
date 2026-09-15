@@ -10,6 +10,7 @@
   color: var(--color-text-inverse);
   cursor: pointer;
   transition: background-color var(--transition-fast), transform var(--transition-fast);
+  position: relative;
 }
 
 .theme-toggle:hover {
