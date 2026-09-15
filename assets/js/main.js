@@ -1,6 +1,3 @@
-import './components/header.js';
-import './components/footer.js';
-
 import './components/theme-toggle.js';
 import './components/search-box.js';
 import './components/help-button.js';
