@@ -16,7 +16,7 @@ class CORSRequestHandler(SimpleHTTPRequestHandler):
 
 if __name__ == '__main__':
     import os
-    os.chdir('/home/josecoprolovespenguins/Projects/DUAM2')
+    os.chdir(os.path.dirname(os.path.abspath(__file__)))
     server = HTTPServer(('localhost', 8080), CORSRequestHandler)
     print("Server running on http://localhost:8080")
     server.serve_forever()

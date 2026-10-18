@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 
-const pagesDir = '/home/josecoprolovespenguins/Projects/DUAM2/pages';
+const pagesDir = path.join(__dirname, 'pages');
 
 // Read partials
 const headerPages = fs.readFileSync(path.join(pagesDir, '_header_pages.html'), 'utf8');
@@ -164,13 +164,13 @@ function updatePage(filePath, headerHtml, footerHtml, isSubdivision) {
 
 // Process depth 1 pages
 pagesDepth1.forEach(page => {
-  const filePath = path.join('/home/josecoprolovespenguins/Projects/DUAM2/pages', page);
+  const filePath = path.join(path.join(__dirname, 'pages'), page);
   updatePage(filePath, headerPages, footerPages, false);
 });
 
 // Process depth 2 pages
 pagesDepth2.forEach(page => {
-  const filePath = path.join('/home/josecoprolovespenguins/Projects/DUAM2/pages', page);
+  const filePath = path.join(path.join(__dirname, 'pages'), page);
   updatePage(filePath, headerSubdivisions, footerSubdivisions, true);
 });
 
