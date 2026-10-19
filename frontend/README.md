@@ -16,7 +16,7 @@ src/
 ├── app/                 # rutas (pages)
 ├── components/
 │   ├── atoms/           # Button, Input, Icon, Logo, Tag
-│   ├── molecules/       # Card, FormField, Dropdown, SearchBox, ThemeToggle, NavLink, HelpButton
+│   ├── molecules/       # Dropdown, SearchBox, ThemeToggle, NavLink (Card, FormField, HelpButton en fases 2-3)
 │   ├── organisms/       # Header, Footer, Hero, UniversityList, CareerGrid, ScholarshipCarousel, ...
 │   └── templates/       # PageLayout
 ├── data/                # JSON (temporal hasta tener backend)
