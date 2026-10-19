@@ -49,7 +49,15 @@ Mapa de origen → átomo: `assets/css/elements/*` → atoms; `components/{navba
 9. `docs/PLAN.md` (este plan) y actualizar `README.md` raíz (estructura monorepo, cómo correr frontend y legacy).
 10. Commit en rama `feat/nextjs-setup`.
 
-### Fase 1 — Base de diseño y layout
+### Fase 1 — Base de diseño y layout ✅ completada 2026-10-18
+Hecho: átomos (Button/ButtonLink, Icon, Input/Textarea, Tag, Logo, CurrentYear), moléculas (NavLink, ThemeToggle, Dropdown, SearchBox), organismos (Header, Footer), template PageLayout (aplicado en `app/layout.tsx`), `lib/{data,navigation,cn,useDismiss}.ts`, `types/`.
+Decisiones / diferencias con legacy:
+- El script inline de legacy tiene un error de sintaxis (`?.textContent =`) que rompe menú móvil, dropdown, tema y resaltado del enlace activo en todas las páginas: se implementó el comportamiento que el código pretendía.
+- Menú horizontal desde 1280px (xl) en vez de 768px: en legacy el header desborda por debajo de ~1200px. En móvil/tablet el buscador va dentro del menú hamburguesa.
+- Altura del navbar en móvil = 64px (legacy dejaba el navbar en 72px y el espaciador en 64px).
+- Logo del footer con texto del color del tema (en legacy era blanco sobre fondo claro).
+- Enlaces de áreas → `/carreras/<id>` (antes `carreras.html#id`). El botón del buscador envía a `/buscador?q=`.
+- Card y FormField se crean en la fase donde se usan (sus estilos dependen de contexto: `card--feature`, `help-button.css`).
 Notas de Fase 0:
 - Los JSON de `frontend/src/data/` se generaron desde `legacy/data/*.js` (lo que las páginas realmente usan); los `legacy/data/*.json` difieren (p. ej. traen `logo`). Rutas de imagen ya apuntan a `/images/`.
 - Legacy declara Inter como `--font-display` pero nunca la cargaba; ahora se carga con `next/font`. Revisar si el cambio visual en títulos es aceptable.
@@ -61,9 +69,11 @@ Notas de Fase 0:
 - Verificación: header/footer idénticos a legacy en claro/oscuro y móvil.
 
 ### Fase 2 — Páginas estáticas
+(Crear Card al migrar `/` — ver `legacy/assets/css/components/card.css` y variantes en `section.css`.)
 `/` (Hero, stats, FeaturesGrid, CTA), `/nosotros` (TeamGrid), `/importante` (Tabs misión/visión), `/carreras` (CareerGrid) y `/carreras/[division]` con `generateStaticParams` (reemplaza las 7 páginas duplicadas).
 
 ### Fase 3 — Páginas interactivas
+(Crear FormField + HelpButton aquí. `/buscador` debe leer `?q=` que envía el SearchBox del header.)
 `/universidades` (filtros, favoritos, comparar), `/becas` (ScholarshipCarousel), `/buscador`, `/comparar`, HelpButton + PqrsForm (validación cliente igual a `help-button.js`). Favoritos/comparación siguen en localStorage vía un hook `useLocalStorage`.
 Al cerrar: auditoría visual completa vs legacy, Lighthouse, deploy a Vercel (root dir `frontend/`).
 
