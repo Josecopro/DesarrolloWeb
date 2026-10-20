@@ -1,5 +1,6 @@
 import { Footer } from "@/components/organisms/Footer";
 import { Header } from "@/components/organisms/Header";
+import { HelpButton } from "@/components/organisms/HelpButton";
 import { getCareerCategories, getSearchItems } from "@/lib/data";
 import { careerHref } from "@/lib/navigation";
 
@@ -15,6 +16,7 @@ export function PageLayout({ children }: { children: React.ReactNode }) {
       <Header searchItems={getSearchItems()} careerGroups={careerGroups} />
       <main className="flex-1">{children}</main>
       <Footer />
+      <HelpButton />
     </div>
   );
 }

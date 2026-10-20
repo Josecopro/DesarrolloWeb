@@ -13,12 +13,14 @@ const tones: Record<Tone, string> = {
 interface IconBadgeProps {
   name: IconName;
   tone?: Tone;
+  /** md = 56px (.aid-type__icon), lg = 64px (.feature__icon). */
+  size?: "md" | "lg";
   className?: string;
 }
 
-export function IconBadge({ name, tone = "primary", className }: IconBadgeProps) {
+export function IconBadge({ name, tone = "primary", size = "lg", className }: IconBadgeProps) {
   return (
-    <div className={cn("inline-flex size-16 shrink-0 items-center justify-center rounded-full", tones[tone], className)}>
+    <div className={cn("inline-flex shrink-0 items-center justify-center rounded-full", size === "md" ? "size-14" : "size-16", tones[tone], className)}>
       <Icon name={name} size="xl" />
     </div>
   );

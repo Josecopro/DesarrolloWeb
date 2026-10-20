@@ -84,10 +84,20 @@ Decisiones / diferencias con legacy:
 - Pendiente: `/carreras/<id-inexistente>` muestra el 404 pero responde 200 (streaming con cacheComponents); añadir `not-found.tsx` con estilo DUAM en la Fase 3.
 `/` (Hero, stats, FeaturesGrid, CTA), `/nosotros` (TeamGrid), `/importante` (Tabs misión/visión), `/carreras` (CareerGrid) y `/carreras/[division]` con `generateStaticParams` (reemplaza las 7 páginas duplicadas).
 
-### Fase 3 — Páginas interactivas
-(Crear FormField + HelpButton aquí. `/buscador` debe leer `?q=` que envía el SearchBox del header.)
-`/universidades` (filtros, favoritos, comparar), `/becas` (ScholarshipCarousel), `/buscador`, `/comparar`, HelpButton + PqrsForm (validación cliente igual a `help-button.js`). Favoritos/comparación siguen en localStorage vía un hook `useLocalStorage`.
-Al cerrar: auditoría visual completa vs legacy, Lighthouse, deploy a Vercel (root dir `frontend/`).
+### Fase 3 — Páginas interactivas ✅ completada 2026-10-20
+Hecho: `/universidades` (filtros, favoritos, comparación), `/becas` (carrusel + tipos de apoyo), `/buscador` (lee `?q=` del header), `/comparar`, botón de ayuda con formulario PQRS en todas las páginas y `not-found.tsx` con estilo DUAM.
+Nuevos: átomo Highlight; moléculas FormField, UniversityItem; organismos UniversityList, ComparisonTool, FavoritesButton, ScholarshipCarousel, SiteSearch, CompareTable, HelpButton, PqrsForm; `lib/saved.ts` (favoritos/comparación en localStorage con las claves de legacy), `lib/search.ts` (búsqueda sin tildes), `getSiteSearchItems()`.
+Pruebas: `npm run test:e2e` ahora tiene 16 casos (filtros, favoritos, comparación con límite de 4, carrusel, buscador, PQRS); espera la hidratación antes de interactuar.
+Decisiones / diferencias con legacy:
+- En legacy `advanced.js` y `carousel.js` no se cargaban (el script de despliegue quitó `main.js`) y el filtro hacía `eval` de un módulo ES: favoritos, comparación, filtros y carrusel nunca funcionaron. Se implementó su intención.
+- Checkbox y botón de favorito ya no van dentro del `<a>` (HTML inválido): enlace estirado sobre la tarjeta con controles en las esquinas.
+- El filtro aplica a ambas secciones; búsquedas sin distinguir tildes ("medellin" → "Medellín") también en el header.
+- Comparación: al llegar a 4 se deshabilitan las demás casillas (legacy usaba `alert`). `/comparar` lee lo guardado (legacy usaba JSON en la URL) y permite quitar columnas.
+- Los botones flotantes (ayuda, favoritos) suben sobre la barra de comparación (`--dock-height`).
+- Carrusel con scroll-snap nativo (swipe, anclas `/becas#id`), sin autoplay; el indicador de la última página ahora sí se activa.
+- Ícono de corazón corregido (el path de legacy no dibujaba un corazón).
+- Popup de PQRS como `<dialog>` nativo. **El envío sigue simulado como en legacy** (muestra "¡Mensaje enviado!" sin enviar nada) hasta la Fase 4.
+- Contenido a revisar: el video de "ICETEX - Créditos y Becas" en `scholarships.json` es "Never Gonna Give You Up" de Rick Astley.
 
 ### Fase 4 — Backend (tecnología a elegir al iniciar la fase)
 - Modelo: University, CareerCategory/Subcategory, Scholarship, PqrsTicket, User, Favorite, Comparison.

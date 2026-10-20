@@ -25,6 +25,16 @@ export function getScholarships(): Scholarship[] {
   return scholarships.scholarships as Scholarship[];
 }
 
+// Índice de /buscador: incluye becas (mismo contenido que legacy/pages/buscador.html).
+export function getSiteSearchItems(): SearchItem[] {
+  return [
+    ...universities.private.map((u) => ({ name: u.name, href: u.url, category: "Universidad privada", icon: "🏛️" })),
+    ...universities.public.map((u) => ({ name: u.name, href: u.url, category: "Universidad oficial", icon: "🏛️" })),
+    ...careers.categories.map((c) => ({ name: c.name, href: `/carreras/${c.id}`, category: "Área de estudio", icon: c.icon })),
+    ...scholarships.scholarships.map((s) => ({ name: s.title, href: `/becas#${s.id}`, category: "Beca / Financiamiento", icon: "💰" })),
+  ];
+}
+
 // Índice del buscador del header (mismo contenido que legacy/assets/js/components/search-box.js).
 export function getSearchItems(): SearchItem[] {
   return [

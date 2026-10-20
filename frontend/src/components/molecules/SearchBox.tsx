@@ -2,26 +2,16 @@
 
 import Link from "next/link";
 import { useRef, useState } from "react";
+import { Highlight } from "@/components/atoms/Highlight";
 import { Icon } from "@/components/atoms/Icon";
 import { useDismiss } from "@/lib/useDismiss";
 import { cn } from "@/lib/cn";
+import { matchIndex } from "@/lib/search";
 import type { SearchItem } from "@/types";
 
 // Traducción de legacy/assets/css/components/search-box.css + la lógica de search-box.js.
 const MIN_CHARS = 2;
 const MAX_RESULTS = 8;
-
-function highlight(text: string, query: string) {
-  const i = text.toLowerCase().indexOf(query.toLowerCase());
-  if (i < 0) return text;
-  return (
-    <>
-      {text.slice(0, i)}
-      <mark className="rounded-xs bg-secondary/30 px-0.5 text-inherit">{text.slice(i, i + query.length)}</mark>
-      {text.slice(i + query.length)}
-    </>
-  );
-}
 
 interface SearchBoxProps {
   items: SearchItem[];
@@ -38,7 +28,7 @@ export function SearchBox({ items, fluid }: SearchBoxProps) {
 
   const q = query.trim();
   const showResults = open && q.length >= MIN_CHARS;
-  const results = showResults ? items.filter((it) => it.name.toLowerCase().includes(q.toLowerCase())).slice(0, MAX_RESULTS) : [];
+  const results = showResults ? items.filter((it) => matchIndex(it.name, q) >= 0).slice(0, MAX_RESULTS) : [];
 
   return (
     // ponytail: el botón envía a /buscador?q=..., página que llega en la Fase 3.
@@ -86,7 +76,7 @@ export function SearchBox({ items, fluid }: SearchBoxProps) {
             className="m-1 flex items-center gap-3 rounded-md px-4 py-3 text-text transition-colors duration-120 hover:bg-bg-hover focus-visible:bg-bg-hover focus-visible:shadow-(--focus-ring) focus-visible:outline-none"
           >
             <div className="min-w-0 flex-1">
-              <div className="truncate text-sm font-semibold text-text">{highlight(item.name, q)}</div>
+              <div className="truncate text-sm font-semibold text-text"><Highlight text={item.name} query={q} /></div>
               <div className="mt-0.5 text-xs text-text-muted">{item.category}</div>
             </div>
           </Link>

@@ -48,4 +48,15 @@ export interface SearchItem {
   name: string;
   href: string;
   category: string;
+  /** Emoji mostrado en los resultados de /buscador. */
+  icon?: string;
+}
+
+/** Elemento guardado en favoritos o comparación (localStorage). */
+export interface SavedItem {
+  id: string;
+  type: "university";
+  name: string;
+  category: string;
+  url: string;
 }

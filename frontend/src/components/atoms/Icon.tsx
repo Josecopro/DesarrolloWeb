@@ -44,6 +44,22 @@ const icons: Record<string, { fill?: boolean; body: ReactNode }> = {
     ),
   },
   "chevron-left": { body: <polyline points="15 18 9 12 15 6" /> },
+  "chevron-right": { body: <polyline points="9 18 15 12 9 6" /> },
+  heart: {
+    body: (
+      // El path de legacy estaba mal cerrado (no dibujaba un corazón); este es el de Feather.
+      <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
+    ),
+  },
+  shield: { body: <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" /> },
+  credit: {
+    body: (
+      <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z" />
+    ),
+  },
+  help: { body: <><circle cx="12" cy="12" r="10" /><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3" /><line x1="12" y1="17" x2="12.01" y2="17" /></> },
+  table: { body: <><rect x="3" y="3" width="18" height="18" rx="2" /><path d="M21 9H3" /><path d="M3 15h18" /></> },
+  square: { body: <rect x="3" y="3" width="18" height="18" rx="2" /> },
   package: {
     body: (
       <>
