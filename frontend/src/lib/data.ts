@@ -2,14 +2,23 @@
 import universities from "@/data/universities.json";
 import careers from "@/data/careers.json";
 import scholarships from "@/data/scholarships.json";
-import type { CareerCategory, Scholarship, SearchItem, Universities } from "@/types";
+import team from "@/data/team.json";
+import type { CareerCategory, Scholarship, SearchItem, TeamMember, Universities } from "@/types";
 
 export function getUniversities(): Universities {
   return universities;
 }
 
 export function getCareerCategories(): CareerCategory[] {
-  return careers.categories;
+  return careers.categories as CareerCategory[];
+}
+
+export function getCareerCategory(id: string): CareerCategory | undefined {
+  return getCareerCategories().find((c) => c.id === id);
+}
+
+export function getTeam(): TeamMember[] {
+  return team;
 }
 
 export function getScholarships(): Scholarship[] {

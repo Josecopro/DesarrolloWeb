@@ -7,6 +7,7 @@ npm install
 npm run dev     # http://localhost:3000
 npm run build
 npm run lint
+npm run test:e2e  # con el sitio corriendo (npm start); usa Chromium del sistema (CHROME_PATH)
 ```
 
 ## Estructura (Atomic Design)

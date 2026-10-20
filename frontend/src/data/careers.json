@@ -15,7 +15,10 @@
         "Ingeniería Química",
         "Ingeniería Ambiental",
         "Ingeniería de Telecomunicaciones"
-      ]
+      ],
+      "tone": "primary",
+      "symbol": "code",
+      "summary": "Programas de ingeniería en diversas especialidades. Formación técnica de alto nivel para resolver problemas complejos."
     },
     {
       "id": "salud",
@@ -32,7 +35,10 @@
         "Psicología",
         "Bacteriología",
         "Instrumentación Quirúrgica"
-      ]
+      ],
+      "tone": "success",
+      "symbol": "check-circle",
+      "summary": "Carreras del área de la salud y ciencias médicas. Formación para el cuidado y bienestar de las personas."
     },
     {
       "id": "humanidades",
@@ -49,7 +55,10 @@
         "Periodismo",
         "Artes Plásticas",
         "Diseño Gráfico"
-      ]
+      ],
+      "tone": "accent",
+      "symbol": "file-text",
+      "summary": "Estudios humanísticos y ciencias sociales. Formación en pensamiento crítico, cultura y comunicación."
     },
     {
       "id": "educacion",
@@ -66,7 +75,10 @@
         "Licenciatura en Educación Física",
         "Pedagogía",
         "Psicopedagogía"
-      ]
+      ],
+      "tone": "secondary",
+      "symbol": "check-circle",
+      "summary": "Licenciaturas y pedagogía. Formación de docentes para transformar la educación en Colombia."
     },
     {
       "id": "cienciasbasicas",
@@ -83,7 +95,10 @@
         "Geología",
         "Astronomía",
         "Bioquímica"
-      ]
+      ],
+      "tone": "primary",
+      "symbol": "globe",
+      "summary": "Ciencias puras y aplicadas. Formación en investigación científica, método experimental y pensamiento analítico."
     },
     {
       "id": "cienciassociales",
@@ -100,7 +115,10 @@
         "Administración Pública",
         "Relaciones Internacionales",
         "Trabajo Social"
-      ]
+      ],
+      "tone": "accent",
+      "symbol": "file-text",
+      "summary": "Derecho, ciencias políticas y sociales. Formación para la justicia, la gestión pública y el análisis social."
     },
     {
       "id": "servicios",
@@ -117,7 +135,10 @@
         "Eventos y Convenciones",
         "Gestión de Servicios",
         "Recreación y Deporte"
-      ]
+      ],
+      "tone": "secondary",
+      "symbol": "check-circle",
+      "summary": "Hotelería, turismo y servicios. Formación en hospitalidad, gastronomía, gestión turística y recreación."
     }
   ]
 }

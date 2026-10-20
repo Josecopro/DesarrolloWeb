@@ -9,7 +9,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "DUAM - Directorio Universitario del Área Metropolitana",
+  title: { default: "DUAM - Directorio Universitario del Área Metropolitana", template: "%s - DUAM" },
   description:
     "DUAM - Directorio Universitario del Área Metropolitana. Encuentra información sobre universidades, carreras, becas y más en Antioquia.",
   icons: { icon: "/images/DUAM_LOGO_blanco.svg" },

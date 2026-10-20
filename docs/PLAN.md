@@ -68,8 +68,20 @@ Notas de Fase 0:
 - Organisms: Header (navbar responsive), Footer. Template: PageLayout.
 - Verificación: header/footer idénticos a legacy en claro/oscuro y móvil.
 
-### Fase 2 — Páginas estáticas
-(Crear Card al migrar `/` — ver `legacy/assets/css/components/card.css` y variantes en `section.css`.)
+### Fase 2 — Páginas estáticas ✅ completada 2026-10-20
+Hecho: `/`, `/nosotros`, `/importante`, `/carreras`, `/carreras/[division]` (7 rutas estáticas con `generateStaticParams`).
+Nuevos: átomo IconBadge; moléculas Card (compuesta), SectionHeader, FeatureCard; organismos Hero, FeaturesGrid, CareerGrid, TeamGrid, Tabs; `data/team.json`; campos `summary`, `tone`, `symbol` en `careers.json`; utilidad `section` y animaciones de entrada en `globals.css`.
+Pruebas: `npm run test:e2e` (`frontend/e2e/smoke.mjs`, Playwright contra el sitio corriendo).
+Decisiones / diferencias con legacy:
+- Legacy: el header fijo incluía el espaciador, así que tapaba los primeros 72px de cada página. Ahora el contenido empieza bajo el header.
+- Clases sin CSS en legacy (`section__header--centered`, `button-group`, `section--centered`, lista de objetivos) → encabezados centrados con el estilo de `.career-grid__header`, botones con `gap-4`, objetivos numerados con círculos estilo feature.
+- Íconos de las tarjetas de features/equipo centrados (en legacy quedaban a la izquierda por ser ítems flex).
+- Fotos del equipo sin margen negativo (montaba nombre y pie de foto sobre la imagen).
+- Tabs de importante.html no funcionaban (`document.query`); ahora sí, con teclado.
+- Subdivisiones: se quitó la etiqueta "0 universidades" (no hay datos) y la sección por hash de `/carreras`; cada tarjeta lleva a `/carreras/<id>`. Subdivisiones en grilla en vez de lista.
+- Botón outline legible en modo oscuro; "Explorar carreras" del hero usa el hover secundario que legacy declaraba (lo pisaba la especificidad).
+- Las estadísticas del hero (universidades, áreas) se calculan desde los datos.
+- Pendiente: `/carreras/<id-inexistente>` muestra el 404 pero responde 200 (streaming con cacheComponents); añadir `not-found.tsx` con estilo DUAM en la Fase 3.
 `/` (Hero, stats, FeaturesGrid, CTA), `/nosotros` (TeamGrid), `/importante` (Tabs misión/visión), `/carreras` (CareerGrid) y `/carreras/[division]` con `generateStaticParams` (reemplaza las 7 páginas duplicadas).
 
 ### Fase 3 — Páginas interactivas

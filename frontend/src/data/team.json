@@ -1,0 +1,30 @@
+[
+  {
+    "name": "Yesid Maldonado",
+    "role": "Documentador Técnico",
+    "image": "/images/ghcD5Ud.jpg",
+    "bio": "Tengo pasión por muchas cosas, el fútbol, la programación, el cine y las peladas con gafas. Confío en que DUAM va a ayudar a un par de estudiantes a informarse para su educación superior.",
+    "icon": "📝"
+  },
+  {
+    "name": "Karina Silva",
+    "role": "DB Developer",
+    "image": "/images/sIh8074.jpg",
+    "bio": "Confío en que el responsive va a funcionar a la primera porque dios es grande amén. Apasionada por las bases de datos y la arquitectura de información.",
+    "icon": "💾"
+  },
+  {
+    "name": "Julian Oviedo",
+    "role": "Backend Developer",
+    "image": "/images/5tFMcsi.jpg",
+    "bio": "Yo le rece al dios del responsive para que esta página se pueda ver en un iPhone SE. Creanme que lo último que quiero hacer es el responsive. Backend developer de corazón.",
+    "icon": "⚙️"
+  },
+  {
+    "name": "Juan José Becerra",
+    "role": "UI/UX Designer & Frontend",
+    "image": "/images/5tFMcsi.jpg",
+    "bio": "Diseñador de interfaces y desarrollador frontend. Apasionado por crear experiencias de usuario intuitivas y accesibles para todos los estudiantes.",
+    "icon": "🎨"
+  }
+]

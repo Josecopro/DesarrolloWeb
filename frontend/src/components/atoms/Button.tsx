@@ -12,7 +12,13 @@ const variants = {
     "not-disabled:active:translate-y-0 not-disabled:active:shadow-md",
   ),
   secondary: cn("bg-secondary text-text border-secondary not-disabled:hover:bg-secondary-dark not-disabled:hover:border-secondary-dark", lift),
-  outline: cn("bg-transparent border-primary text-primary not-disabled:hover:bg-primary not-disabled:hover:text-text-inverse", lift),
+  // .button--outline.button--secondary-style de legacy (section.css)
+  "outline-secondary": cn("bg-transparent border-secondary text-secondary not-disabled:hover:bg-secondary not-disabled:hover:text-text", lift),
+  // En oscuro, primario sobre el fondo es ilegible (también en legacy): texto y borde claros.
+  outline: cn(
+    "bg-transparent border-primary text-primary dark:border-text-lighter dark:text-text-light not-disabled:hover:bg-primary not-disabled:hover:border-primary not-disabled:hover:text-text-inverse",
+    lift,
+  ),
   ghost: "bg-transparent border-transparent text-text not-disabled:hover:bg-bg-hover not-disabled:hover:text-primary",
   danger: cn("bg-error text-text-inverse border-error not-disabled:hover:bg-accent not-disabled:hover:border-accent", lift),
 };

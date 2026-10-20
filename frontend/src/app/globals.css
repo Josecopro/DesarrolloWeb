@@ -91,6 +91,32 @@
   --default-transition-timing-function: ease;
 
   --animate-navbar-slide-down: navbar-slide-down 200ms ease-out;
+  /* Animaciones de entrada de legacy (utilities.css, hero.css, tabs.css). `both` evita el parpadeo con animation-delay. */
+  --animate-fade-in: fade-in 200ms ease-out both;
+  --animate-slide-up: slide-up 200ms ease-out both;
+  --animate-hero-fade-up: hero-fade-up 500ms ease-out both;
+  --animate-hero-divider: hero-divider-expand 500ms ease-out 200ms both;
+  --animate-tabs-panel-in: tabs-panel-in 200ms ease-out both;
+  @keyframes fade-in {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  @keyframes slide-up {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes hero-fade-up {
+    from { opacity: 0; transform: translateY(40px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes hero-divider-expand {
+    from { width: 0; }
+    to { width: 100px; }
+  }
+  @keyframes tabs-panel-in {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
   @keyframes navbar-slide-down {
     from { opacity: 0; transform: translateY(-10px); }
     to { opacity: 1; transform: translateY(0); }
@@ -156,6 +182,15 @@
 
   @media (max-width: 640px) {
     padding-inline: var(--container-padding-mobile);
+  }
+}
+
+/* Equivalente de .section en legacy/assets/css/generic/_reset.css */
+@utility section {
+  padding-block: --spacing(16);
+
+  @media (max-width: 768px) {
+    padding-block: --spacing(12);
   }
 }
 

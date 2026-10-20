@@ -11,6 +11,7 @@ const variants = {
 };
 
 const sizes = {
+  xs: "px-2 py-1 text-xs", // .career-grid__tag
   sm: "px-2 py-0.5 text-[0.6875rem]",
   md: "px-3 py-1 text-xs",
   lg: "px-4 py-2 text-sm",
