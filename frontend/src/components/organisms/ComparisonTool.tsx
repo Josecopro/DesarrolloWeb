@@ -67,7 +67,7 @@ export function ComparisonTool() {
               type="button"
               onClick={() => remove(item)}
               aria-label={`Eliminar ${item.name}`}
-              className="flex size-6 cursor-pointer items-center justify-center rounded-full text-text-muted transition-all duration-120 hover:bg-error hover:text-text-inverse"
+              className="flex size-6 cursor-pointer items-center justify-center rounded-full text-text-lighter transition-all duration-120 hover:bg-error hover:text-text-inverse"
             >
               <Icon name="close" size="sm" />
             </button>

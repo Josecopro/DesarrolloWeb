@@ -1,0 +1,485 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-21T03:44:45+00:00",
+  "title": "Design System: DUAM",
+  "extensions": {
+    "colorMeta": {
+      "primary": {
+        "role": "primary",
+        "displayName": "Azul Toga",
+        "canonical": "oklch(34.6% 0.074 256.0)",
+        "tonalRamp": [
+          "oklch(15% 0.045 256.0)",
+          "oklch(25% 0.057 256.0)",
+          "oklch(35% 0.069 256.0)",
+          "oklch(45% 0.074 256.0)",
+          "oklch(55% 0.074 256.0)",
+          "oklch(65% 0.074 256.0)",
+          "oklch(80% 0.063 256.0)",
+          "oklch(95% 0.045 256.0)"
+        ]
+      },
+      "secondary": {
+        "role": "secondary",
+        "displayName": "Oro Diploma",
+        "canonical": "oklch(77.4% 0.143 77.0)",
+        "tonalRamp": [
+          "oklch(15% 0.068 77.0)",
+          "oklch(25% 0.091 77.0)",
+          "oklch(35% 0.115 77.0)",
+          "oklch(45% 0.139 77.0)",
+          "oklch(55% 0.143 77.0)",
+          "oklch(65% 0.139 77.0)",
+          "oklch(80% 0.103 77.0)",
+          "oklch(95% 0.068 77.0)"
+        ]
+      },
+      "accent": {
+        "role": "tertiary",
+        "displayName": "Rojo Sello",
+        "canonical": "oklch(54.3% 0.174 29.7)",
+        "tonalRamp": [
+          "oklch(15% 0.078 29.7)",
+          "oklch(25% 0.107 29.7)",
+          "oklch(35% 0.136 29.7)",
+          "oklch(45% 0.165 29.7)",
+          "oklch(55% 0.174 29.7)",
+          "oklch(65% 0.165 29.7)",
+          "oklch(80% 0.122 29.7)",
+          "oklch(95% 0.078 29.7)"
+        ]
+      },
+      "success": {
+        "role": "tertiary",
+        "displayName": "Verde Oficial",
+        "canonical": "oklch(66.3% 0.160 152.4)",
+        "tonalRamp": [
+          "oklch(15% 0.073 152.4)",
+          "oklch(25% 0.100 152.4)",
+          "oklch(35% 0.127 152.4)",
+          "oklch(45% 0.154 152.4)",
+          "oklch(55% 0.160 152.4)",
+          "oklch(65% 0.154 152.4)",
+          "oklch(80% 0.113 152.4)",
+          "oklch(95% 0.073 152.4)"
+        ]
+      },
+      "error": {
+        "role": "tertiary",
+        "displayName": "Rojo Error",
+        "canonical": "oklch(63.1% 0.194 29.4)",
+        "tonalRamp": [
+          "oklch(15% 0.085 29.4)",
+          "oklch(25% 0.117 29.4)",
+          "oklch(35% 0.149 29.4)",
+          "oklch(45% 0.182 29.4)",
+          "oklch(55% 0.194 29.4)",
+          "oklch(65% 0.182 29.4)",
+          "oklch(80% 0.133 29.4)",
+          "oklch(95% 0.085 29.4)"
+        ]
+      },
+      "text": {
+        "role": "neutral",
+        "displayName": "Tinta",
+        "canonical": "oklch(22.8% 0.038 282.9)",
+        "tonalRamp": [
+          "oklch(15% 0.033 282.9)",
+          "oklch(25% 0.038 282.9)",
+          "oklch(35% 0.038 282.9)",
+          "oklch(45% 0.038 282.9)",
+          "oklch(55% 0.038 282.9)",
+          "oklch(65% 0.038 282.9)",
+          "oklch(80% 0.038 282.9)",
+          "oklch(95% 0.033 282.9)"
+        ]
+      },
+      "bg": {
+        "role": "neutral",
+        "displayName": "Papel",
+        "canonical": "oklch(98.5% 0.000 89.9)",
+        "tonalRamp": [
+          "oklch(15% 0.000 89.9)",
+          "oklch(25% 0.000 89.9)",
+          "oklch(35% 0.000 89.9)",
+          "oklch(45% 0.000 89.9)",
+          "oklch(55% 0.000 89.9)",
+          "oklch(65% 0.000 89.9)",
+          "oklch(80% 0.000 89.9)",
+          "oklch(95% 0.000 89.9)"
+        ]
+      },
+      "border": {
+        "role": "neutral",
+        "displayName": "Línea",
+        "canonical": "oklch(90.9% 0.011 286.2)",
+        "tonalRamp": [
+          "oklch(15% 0.011 286.2)",
+          "oklch(25% 0.011 286.2)",
+          "oklch(35% 0.011 286.2)",
+          "oklch(45% 0.011 286.2)",
+          "oklch(55% 0.011 286.2)",
+          "oklch(65% 0.011 286.2)",
+          "oklch(80% 0.011 286.2)",
+          "oklch(95% 0.011 286.2)"
+        ]
+      },
+      "dark-bg": {
+        "role": "neutral",
+        "displayName": "Tinta Noche",
+        "canonical": "oklch(17.4% 0.023 283.8)",
+        "tonalRamp": [
+          "oklch(15% 0.023 283.8)",
+          "oklch(25% 0.023 283.8)",
+          "oklch(35% 0.023 283.8)",
+          "oklch(45% 0.023 283.8)",
+          "oklch(55% 0.023 283.8)",
+          "oklch(65% 0.023 283.8)",
+          "oklch(80% 0.023 283.8)",
+          "oklch(95% 0.023 283.8)"
+        ]
+      },
+      "primary-dark": {
+        "role": "primary",
+        "displayName": "Azul Toga Profundo"
+      },
+      "primary-light": {
+        "role": "primary",
+        "displayName": "Azul Toga Claro"
+      },
+      "secondary-dark": {
+        "role": "secondary",
+        "displayName": "Oro Diploma Profundo"
+      },
+      "secondary-light": {
+        "role": "secondary",
+        "displayName": "Oro Diploma Claro"
+      },
+      "bg-card": {
+        "role": "neutral",
+        "displayName": "Blanco Tarjeta"
+      },
+      "bg-alt": {
+        "role": "neutral",
+        "displayName": "Blanco Tarjeta"
+      },
+      "bg-hover": {
+        "role": "neutral",
+        "displayName": "Gris Hover"
+      },
+      "text-light": {
+        "role": "neutral",
+        "displayName": "Grafito"
+      },
+      "text-lighter": {
+        "role": "neutral",
+        "displayName": "Pizarra"
+      },
+      "text-muted": {
+        "role": "neutral",
+        "displayName": "Niebla (solo decorativo)"
+      },
+      "text-inverse": {
+        "role": "neutral",
+        "displayName": "Blanco"
+      },
+      "dark-bg-card": {
+        "role": "neutral",
+        "displayName": "Azul Medianoche"
+      },
+      "dark-bg-hover": {
+        "role": "neutral",
+        "displayName": "Azul Hover"
+      },
+      "dark-text": {
+        "role": "neutral",
+        "displayName": "Tiza"
+      },
+      "dark-border": {
+        "role": "neutral",
+        "displayName": "Línea Noche"
+      },
+      "warning": {
+        "role": "tertiary",
+        "displayName": "Ámbar Aviso"
+      },
+      "info": {
+        "role": "tertiary",
+        "displayName": "Azul Info"
+      },
+      "secondary-ink": {
+        "role": "secondary",
+        "displayName": "Oro Tinta"
+      },
+      "success-ink": {
+        "role": "tertiary",
+        "displayName": "Verde Tinta"
+      },
+      "error-ink": {
+        "role": "tertiary",
+        "displayName": "Rojo Tinta"
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "Solo el título del hero, en Oro Diploma."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Títulos de sección y de página, centrados con subtítulo."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Títulos de tarjetas, áreas y paneles."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Párrafos y descripciones (fuente del sistema)."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Botones, enlaces del menú, etiquetas de formulario."
+      },
+      "overline": {
+        "displayName": "Overline",
+        "purpose": "Títulos de columna del footer y etiquetas de estadísticas, en mayúsculas."
+      }
+    },
+    "shadows": [
+      {
+        "name": "susurro",
+        "value": "0 1px 2px rgba(0,0,0,0.04)",
+        "purpose": "Separación mínima en elementos pequeños."
+      },
+      {
+        "name": "reposo",
+        "value": "0 2px 4px rgba(0,0,0,0.06)",
+        "purpose": "Tarjetas y paneles en reposo (capa base)."
+      },
+      {
+        "name": "barra",
+        "value": "0 4px 12px rgba(0,0,0,0.08)",
+        "purpose": "Barra de navegación; botón primario presionado."
+      },
+      {
+        "name": "elevado",
+        "value": "0 8px 24px rgba(0,0,0,0.1)",
+        "purpose": "Hover de botones, menú móvil, fotos destacadas."
+      },
+      {
+        "name": "flotante",
+        "value": "0 16px 48px rgba(0,0,0,0.12)",
+        "purpose": "Hover de tarjetas, dropdowns, paneles flotantes, barra de comparación."
+      },
+      {
+        "name": "foco",
+        "value": "0 0 0 3px rgba(30,58,95,0.3)",
+        "purpose": "Anillo de foco por teclado (oscuro: rgba(232,168,56,0.4))."
+      }
+    ],
+    "motion": [
+      {
+        "name": "fast",
+        "value": "120ms ease",
+        "purpose": "Hover de enlaces, inputs, ítems de menú."
+      },
+      {
+        "name": "base",
+        "value": "200ms ease",
+        "purpose": "Transiciones estándar de estado, botones, paneles."
+      },
+      {
+        "name": "slow",
+        "value": "300ms ease",
+        "purpose": "Elevación de tarjetas y cambio de tema."
+      },
+      {
+        "name": "slower",
+        "value": "500ms ease",
+        "purpose": "Zoom de imágenes en tarjetas, entrada del hero."
+      },
+      {
+        "name": "enter-slide-up",
+        "value": "slide-up 200ms ease-out both (stagger 80–120ms)",
+        "purpose": "Entrada escalonada de grillas de tarjetas."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "xs",
+        "value": "480px"
+      },
+      {
+        "name": "sm",
+        "value": "640px"
+      },
+      {
+        "name": "md",
+        "value": "768px"
+      },
+      {
+        "name": "lg",
+        "value": "1024px"
+      },
+      {
+        "name": "xl",
+        "value": "1280px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Acción principal: Azul Toga, sube 2px en hover.",
+      "html": "<button class=\"ds-btn-primary\">Ver universidades</button>",
+      "css": ".ds-btn-primary{display:inline-flex;align-items:center;gap:8px;padding:12px 24px;font:600 0.875rem/1.6 system-ui,sans-serif;color:var(--color-text-inverse, #fff);background:var(--color-primary, #1e3a5f);border:2px solid var(--color-primary, #1e3a5f);border-radius:12px;cursor:pointer;transition:all 200ms ease}.ds-btn-primary:hover{background:var(--color-primary-dark, #152a42);border-color:var(--color-primary-dark, #152a42);transform:translateY(-2px);box-shadow:0 8px 24px rgba(0,0,0,0.1)}.ds-btn-primary:active{transform:translateY(0);box-shadow:0 4px 12px rgba(0,0,0,0.08)}.ds-btn-primary:focus-visible{outline:none;box-shadow:0 0 0 3px rgba(30,58,95,0.3)}"
+    },
+    {
+      "name": "Secondary Button",
+      "kind": "button",
+      "refersTo": "button-secondary",
+      "description": "Acción alternativa destacada: fondo Oro Diploma con texto Tinta.",
+      "html": "<button class=\"ds-btn-secondary\">Explorar carreras</button>",
+      "css": ".ds-btn-secondary{display:inline-flex;align-items:center;padding:12px 24px;font:600 0.875rem/1.6 system-ui,sans-serif;color:var(--color-text, #1a1a2e);background:var(--color-secondary, #e8a838);border:2px solid var(--color-secondary, #e8a838);border-radius:12px;cursor:pointer;transition:all 200ms ease}.ds-btn-secondary:hover{background:var(--color-secondary-dark, #d4942e);border-color:var(--color-secondary-dark, #d4942e);transform:translateY(-2px);box-shadow:0 8px 24px rgba(0,0,0,0.1)}.ds-btn-secondary:focus-visible{outline:none;box-shadow:0 0 0 3px rgba(30,58,95,0.3)}"
+    },
+    {
+      "name": "Outline Button",
+      "kind": "button",
+      "refersTo": "button-outline",
+      "description": "Acción terciaria: borde Azul Toga que se rellena en hover.",
+      "html": "<button class=\"ds-btn-outline\">Ver becas</button>",
+      "css": ".ds-btn-outline{display:inline-flex;align-items:center;padding:12px 24px;font:600 0.875rem/1.6 system-ui,sans-serif;color:var(--color-primary, #1e3a5f);background:transparent;border:2px solid var(--color-primary, #1e3a5f);border-radius:12px;cursor:pointer;transition:all 200ms ease}.ds-btn-outline:hover{background:var(--color-primary, #1e3a5f);color:#fff;transform:translateY(-2px);box-shadow:0 8px 24px rgba(0,0,0,0.1)}.ds-btn-outline:focus-visible{outline:none;box-shadow:0 0 0 3px rgba(30,58,95,0.3)}"
+    },
+    {
+      "name": "Text Input",
+      "kind": "input",
+      "refersTo": "input",
+      "description": "Campo de formulario (PQRS): borde 2px, foco con anillo.",
+      "html": "<label class=\"ds-field\"><span class=\"ds-label\">Correo electrónico *</span><input class=\"ds-input\" type=\"email\" placeholder=\"tu@correo.com\"></label>",
+      "css": ".ds-field{display:flex;flex-direction:column;gap:4px;width:320px}.ds-label{font:500 0.875rem/1.6 system-ui,sans-serif;color:var(--color-text, #1a1a2e)}.ds-input{padding:12px 16px;font:400 1rem/1.6 system-ui,sans-serif;color:var(--color-text, #1a1a2e);background:var(--color-bg-card, #fff);border:2px solid var(--color-border, #e0e0e8);border-radius:12px;transition:border-color 120ms ease,box-shadow 120ms ease}.ds-input:hover{border-color:var(--color-text-lighter, #6b6b8a)}.ds-input:focus{outline:none;border-color:var(--color-border-focus, #1e3a5f);box-shadow:0 0 0 3px rgba(30,58,95,0.3)}.ds-input::placeholder{color:var(--color-text-lighter, #6b6b8a)}"
+    },
+    {
+      "name": "Header Search",
+      "kind": "input",
+      "refersTo": "search-box",
+      "description": "Buscador píldora del header; crece al enfocarlo.",
+      "html": "<form class=\"ds-search\"><input class=\"ds-search-input\" type=\"search\" placeholder=\"Buscar universidad, carrera...\"><button class=\"ds-search-btn\" aria-label=\"Buscar\"><svg width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><circle cx=\"11\" cy=\"11\" r=\"8\"/><line x1=\"21\" y1=\"21\" x2=\"16.65\" y2=\"16.65\"/></svg></button></form>",
+      "css": ".ds-search{position:relative;display:flex;align-items:center}.ds-search-input{width:280px;padding:8px 48px 8px 16px;font:400 0.875rem/1.6 system-ui,sans-serif;color:var(--color-text, #1a1a2e);background:var(--color-bg-card, #fff);border:2px solid var(--color-border, #e0e0e8);border-radius:9999px;transition:all 200ms ease}.ds-search-input:focus{outline:none;width:340px;border-color:var(--color-primary, #1e3a5f);box-shadow:0 0 0 3px rgba(30,58,95,0.3)}.ds-search-btn{position:absolute;right:6px;display:flex;align-items:center;justify-content:center;width:36px;height:36px;color:#fff;background:var(--color-primary, #1e3a5f);border:none;border-radius:9999px;cursor:pointer;transition:all 120ms ease}.ds-search-btn:hover{background:var(--color-primary-dark, #152a42);transform:scale(1.05)}"
+    },
+    {
+      "name": "Navigation Bar",
+      "kind": "nav",
+      "refersTo": "navbar",
+      "description": "Barra fija Azul Toga; el enlace activo lleva línea Oro Diploma.",
+      "html": "<nav class=\"ds-nav\"><span class=\"ds-nav-brand\">DUAM</span><a class=\"ds-nav-link ds-active\" href=\"#\">Inicio</a><a class=\"ds-nav-link\" href=\"#\">Universidades</a><a class=\"ds-nav-link\" href=\"#\">Carreras</a><a class=\"ds-nav-link\" href=\"#\">Becas</a></nav>",
+      "css": ".ds-nav{display:flex;align-items:center;gap:4px;height:72px;padding:0 24px;background:var(--color-primary, #1e3a5f);box-shadow:0 4px 12px rgba(0,0,0,0.08)}.ds-nav-brand{margin-right:32px;font:700 1.5rem/1 Inter,system-ui,sans-serif;letter-spacing:-0.02em;color:#fff}.ds-nav-link{position:relative;padding:8px 16px;font:500 0.875rem/1.6 system-ui,sans-serif;color:#fff;text-decoration:none;border-radius:8px;transition:all 120ms ease}.ds-nav-link::after{content:'';position:absolute;bottom:4px;left:50%;width:0;height:2px;background:var(--color-secondary, #e8a838);transform:translateX(-50%);transition:all 200ms ease}.ds-nav-link:hover,.ds-active{background:rgba(255,255,255,0.1)}.ds-nav-link:hover::after,.ds-active::after{width:80%}"
+    },
+    {
+      "name": "Tags",
+      "kind": "chip",
+      "refersTo": "tag-primary",
+      "description": "Etiquetas informativas píldora en sus variantes.",
+      "html": "<div class=\"ds-tags\"><span class=\"ds-tag ds-tag-primary\">21 Universidades</span><span class=\"ds-tag ds-tag-secondary\">Acreditadas Alta Calidad</span><span class=\"ds-tag ds-tag-success\">Info Actualizada</span><span class=\"ds-tag ds-tag-outline\">+5 más</span></div>",
+      "css": ".ds-tags{display:flex;flex-wrap:wrap;gap:8px}.ds-tag{display:inline-flex;padding:4px 12px;font:600 0.75rem/1 system-ui,sans-serif;border-radius:9999px;border:1px solid}.ds-tag-primary{color:var(--color-primary, #1e3a5f);background:rgba(30,58,95,0.1);border-color:rgba(30,58,95,0.2)}.ds-tag-secondary{color:var(--color-secondary-ink, #8f5d0f);background:rgba(232,168,56,0.15);border-color:rgba(232,168,56,0.2)}.ds-tag-success{color:var(--color-success-ink, #1d7a43);background:rgba(39,174,96,0.1);border-color:rgba(39,174,96,0.2)}.ds-tag-outline{color:var(--color-text-light, #4a4a6a);background:transparent;border-color:var(--color-border, #e0e0e8)}"
+    },
+    {
+      "name": "Feature Card",
+      "kind": "card",
+      "refersTo": "card",
+      "description": "Tarjeta informativa con ícono en círculo tintado; quieta, con sombra de reposo.",
+      "html": "<article class=\"ds-card\"><div class=\"ds-card-icon\"><svg width=\"32\" height=\"32\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><circle cx=\"12\" cy=\"12\" r=\"10\"/><polyline points=\"12 6 12 12 16 14\"/></svg></div><h3 class=\"ds-card-title\">Actualización constante</h3><p class=\"ds-card-text\">Mantenemos nuestra plataforma al día con la realidad académica actual.</p></article>",
+      "css": ".ds-card{display:flex;flex-direction:column;align-items:center;width:260px;padding:24px;text-align:center;background:var(--color-bg-card, #fff);border:1px solid var(--color-border, #e0e0e8);border-radius:16px;box-shadow:0 2px 4px rgba(0,0,0,0.06);transition:transform 300ms ease,box-shadow 300ms ease,border-color 200ms ease}.ds-card-icon{display:flex;align-items:center;justify-content:center;width:64px;height:64px;margin-bottom:16px;border-radius:9999px;color:var(--color-secondary-ink, #8f5d0f);background:rgba(232,168,56,0.15)}.ds-card-title{margin:0 0 8px;font:600 1.25rem/1.3 Inter,system-ui,sans-serif;color:var(--color-text, #1a1a2e)}.ds-card-text{margin:0;font:400 1rem/1.7 system-ui,sans-serif;color:var(--color-text-lighter, #6b6b8a)}"
+    },
+    {
+      "name": "Help Button",
+      "kind": "custom",
+      "refersTo": "help-button",
+      "description": "Botón flotante de ayuda/PQRS con degradado Oro Diploma y anillo pulsante.",
+      "html": "<button class=\"ds-help\" aria-label=\"Ayuda\"><svg width=\"32\" height=\"32\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><circle cx=\"12\" cy=\"12\" r=\"10\"/><path d=\"M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3\"/><line x1=\"12\" y1=\"17\" x2=\"12.01\" y2=\"17\"/></svg></button>",
+      "css": ".ds-help{display:flex;align-items:center;justify-content:center;width:60px;height:60px;color:var(--color-text, #1a1a2e);background:linear-gradient(135deg,var(--color-secondary, #e8a838),var(--color-secondary-dark, #d4942e));border:none;border-radius:9999px;cursor:pointer;box-shadow:0 16px 48px rgba(0,0,0,0.12);transition:transform 200ms ease,box-shadow 200ms ease;animation:ds-help-pulse 3s ease-in-out infinite}.ds-help:hover{transform:scale(1.1);box-shadow:0 12px 40px rgba(232,168,56,0.4)}.ds-help:active{transform:scale(0.95)}@keyframes ds-help-pulse{0%,100%{box-shadow:0 16px 48px rgba(0,0,0,0.12),0 0 0 0 rgba(232,168,56,0.4)}50%{box-shadow:0 16px 48px rgba(0,0,0,0.12),0 0 0 16px rgba(232,168,56,0)}}"
+    }
+  ],
+  "narrative": {
+    "northStar": "El Orientador de Confianza",
+    "overview": "DUAM se comporta como un buen consejero académico: sobrio, cercano y claro. No vende ninguna universidad ni intenta impresionar. Ordena la información para que la persona que está decidiendo qué y dónde estudiar vea sus opciones, las compare y sepa cuál es su siguiente paso. El **Azul Toga** pone la seriedad institucional en la barra de navegación, el hero y las acciones principales. El **Oro Diploma** es la luz que señala hacia dónde ir: el título de bienvenida, el subrayado del enlace activo y el botón de ayuda.\n\nEl sistema es de densidad media y está pensado primero para el celular. Las superficies son claras (o azul noche en modo oscuro), las tarjetas son blancas, con borde fino y esquinas suaves, y el texto se lee con la fuente del sistema. La tipografía Inter se reserva para los títulos y la marca. Los componentes son **sobrios y precisos**: responden a la interacción de forma clara pero contenida, y la legibilidad y el orden van antes que la expresión.\n\nRechazos confirmados: DUAM no debe parecer un **portal gubernamental** (denso, gris, muros de enlaces sin jerarquía) ni una **startup genérica** (degradados morados, ilustraciones 3D, tarjetas de plantilla idénticas).",
+    "keyCharacteristics": [
+      "Dos colores con significado: azul para la estructura y las acciones, oro para la orientación y el énfasis.",
+      "Modo claro y oscuro completos, controlados con `data-theme` en `<html>`.",
+      "Tarjetas con borde fino, esquinas de 16px y elevación al interactuar.",
+      "Inter en los títulos y la fuente del sistema en todo lo que se lee.",
+      "Escala de texto fluida con `clamp()` para que se lea igual en el celular y en el escritorio.",
+      "Tokens en `frontend/src/app/globals.css` (`@theme`). Tailwind solo expone los valores de DUAM."
+    ],
+    "rules": [
+      {
+        "name": "The Borla Rule",
+        "body": "El Oro Diploma señala; no se usa para leer. Va sobre Azul Toga o superficies oscuras (5.5:1) o como fondo con texto Tinta (8.2:1). Sobre fondo claro como texto no llega a 2:1, así que nunca debe usarse ahí.",
+        "section": "colors"
+      },
+      {
+        "name": "The Night Swap Rule",
+        "body": "Toda asignación de color debe tener su contraparte oscura. El Azul Toga como texto o acento sobre superficies oscuras queda casi invisible (1.65:1), así que en modo oscuro se cambia por Oro Diploma Claro.",
+        "section": "colors"
+      },
+      {
+        "name": "The Same Ground Rule",
+        "body": "Universidades privadas y oficiales reciben el mismo tratamiento visual. Lo único que las distingue es el color del borde (Línea frente a Verde Oficial); ninguna se destaca por tamaño, posición ni decoración.",
+        "section": "colors"
+      },
+      {
+        "name": "The Ink Rule",
+        "body": "Los acentos (oro, verde, rojo) se usan tal cual para bordes, fondos y rellenos. Cuando son texto o íconos sobre un fondo claro, se usa su versión *ink*: Oro Tinta (5.1:1 sobre su tag), Verde Tinta (4.9:1) y Rojo Tinta (5.4:1). Todo el texto secundario es Pizarra (4.9:1) o Grafito (8.1:1). El objetivo es WCAG 2.2 AA en ambos temas.",
+        "section": "colors"
+      },
+      {
+        "name": "The Two Voices Rule",
+        "body": "Inter es para lo que se escanea: títulos, marca y números destacados. Todo lo que se lee de corrido usa la fuente del sistema. No se agregan más familias.",
+        "section": "typography"
+      },
+      {
+        "name": "The Fluid Scale Rule",
+        "body": "Todos los tamaños vienen de la escala `clamp()` de los tokens (`text-xs` … `text-6xl`). No se fijan tamaños en px.",
+        "section": "typography"
+      },
+      {
+        "name": "The Layered Rule",
+        "body": "Cada nivel tiene una sola sombra: el fondo no tiene, las tarjetas tienen Reposo, la navegación Barra y lo que flota sobre el contenido Flotante. Solo lo clicable sube un nivel al interactuar; una tarjeta informativa nunca se mueve, porque prometería una acción que no existe.",
+        "section": "elevation"
+      },
+      {
+        "name": "The Focus Ring Rule",
+        "body": "El foco con teclado siempre es un anillo de 3px hecho con `box-shadow` (Azul Toga en claro, Oro Diploma en oscuro). Nunca se quita sin reemplazarlo.",
+        "section": "elevation"
+      },
+      {
+        "name": "The Growing Radius Rule",
+        "body": "A mayor contenedor, mayor radio: píldora para lo diminuto, 12px para controles y 16px para tarjetas. No se mezclan esquinas rectas.",
+        "section": "shapes"
+      }
+    ],
+    "dos": [
+      "**Do** usar solo los tokens de `globals.css` (`bg-primary`, `text-text-light`, `rounded-xl`, `shadow-md`…). Las escalas de color, radio, sombra y texto de Tailwind están reemplazadas por las de DUAM.",
+      "**Do** definir cada color de texto y de acento también para `[data-theme=\"dark\"]` (con la variante `dark:`), siguiendo The Night Swap Rule.",
+      "**Do** usar Grafito (`text-text-light`) o Pizarra (`text-text-lighter`) para el texto secundario, y las tintas (`text-secondary-ink`, `text-success-ink`, `text-error-ink`) para texto de acento.",
+      "**Do** dar a los controles una zona táctil de al menos 24×24px, aunque su dibujo sea más chico (casillas, puntos del carrusel).",
+      "**Do** dar a cada elemento interactivo un hover y un foco visibles (anillo de 3px con `focus-visible:shadow-(--focus-ring)`).",
+      "**Do** usar el patrón de encabezado de sección: título `headline` centrado, subtítulo `text-xl` Grafito y 48px de espacio inferior.",
+      "**Do** respetar `prefers-reduced-motion`, que ya está implementado de forma global."
+    ],
+    "donts": [
+      "**Don't** usar Oro Diploma como color de texto sobre fondos claros (no llega a 2:1).",
+      "**Don't** usar Azul Toga como texto o acento sobre superficies del modo oscuro (1.65:1).",
+      "**Don't** usar Niebla (`text-text-muted`) ni los acentos puros (`text-secondary`, `text-success`, `text-error`) como color de texto sobre fondos claros.",
+      "**Don't** hacer que una tarjeta no clicable se mueva o cambie de sombra al pasar el mouse.",
+      "**Don't** poner enlaces vacíos (`href=\"#\"`); si un destino no existe, el enlace no se muestra.",
+      "**Don't** parecer un portal gubernamental: nada de muros de enlaces ni bloques densos de texto gris sin jerarquía.",
+      "**Don't** parecer una startup genérica: nada de degradados morados, ilustraciones 3D ni grillas de tarjetas idénticas sin contenido real.",
+      "**Don't** destacar visualmente una universidad sobre otra, ni privadas sobre oficiales.",
+      "**Don't** agregar movimiento continuo aparte del botón de ayuda, ni efectos de hover más grandes que el levantamiento de 8px de las tarjetas.",
+      "**Don't** introducir valores sueltos (`#hex`, px o fuentes) fuera de la escala de tokens."
+    ]
+  }
+}

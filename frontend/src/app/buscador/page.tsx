@@ -68,7 +68,7 @@ export default async function BuscadorPage() {
               <Card as="article" className="h-full items-center p-6 text-center">
                 <IconBadge name={c.icon} tone={c.tone} className="mb-4" />
                 <h3 className="mb-2 text-xl font-semibold text-text">{c.title}</h3>
-                <p className="mb-4 flex-1 leading-relaxed text-text-muted">{c.description}</p>
+                <p className="mb-4 flex-1 leading-relaxed text-text-lighter">{c.description}</p>
                 <ButtonLink href={c.href} variant={c.variant}>
                   {c.cta}
                 </ButtonLink>

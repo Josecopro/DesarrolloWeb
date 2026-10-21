@@ -47,6 +47,11 @@
   --color-border-focus: #1e3a5f;
   --color-border-error: #e74c3c;
 
+  /* Tintas: versiones de los acentos para TEXTO e íconos sobre fondos claros (WCAG AA ≥4.5:1). */
+  --color-secondary-ink: #8f5d0f;
+  --color-success-ink: #1d7a43;
+  --color-error-ink: #c0392b;
+
   --shadow-*: initial;
   --shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.04);
   --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.06);
@@ -86,7 +91,6 @@
   --leading-normal: 1.6;
   --leading-relaxed: 1.7;
 
-  --ease-bounce: cubic-bezier(0.34, 1.56, 0.64, 1);
   /* Legacy usa `ease` en todas sus transiciones. */
   --default-transition-timing-function: ease;
 
@@ -144,7 +148,6 @@
   --transition-base: 200ms ease;
   --transition-slow: 300ms ease;
   --transition-slower: 500ms ease;
-  --transition-bounce: 300ms cubic-bezier(0.34, 1.56, 0.64, 1);
   --transition-theme: 300ms ease;
 
   --z-dropdown: 100;
@@ -177,6 +180,9 @@
   --color-text-muted: #6a6a8a;
   --color-border: #2a3a5a;
   --color-border-focus: #e8a838;
+  --color-secondary-ink: #f0c46e;
+  --color-success-ink: #3cc47a;
+  --color-error-ink: #f1867b;
   --shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.2);
   --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.3);
   --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.4);
@@ -264,13 +270,10 @@
     color: var(--color-text);
   }
 
+  /* Legacy usaba text-muted (2.7:1); placeholders también deben llegar a 4.5:1. */
   ::placeholder {
-    color: var(--color-text-muted);
+    color: var(--color-text-lighter);
     opacity: 1;
-  }
-
-  [data-theme="dark"] ::placeholder {
-    color: var(--color-text-dark-muted);
   }
 
   @media (prefers-reduced-motion: reduce) {

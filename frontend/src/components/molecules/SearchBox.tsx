@@ -49,7 +49,7 @@ export function SearchBox({ items, fluid }: SearchBoxProps) {
         aria-label="Buscar"
         autoComplete="off"
         className={cn(
-          "rounded-full border-2 border-border bg-bg-card px-4 py-2 pr-12 text-sm text-text outline-none transition-all duration-200 placeholder:text-text-muted focus:border-primary focus:shadow-(--focus-ring)",
+          "rounded-full border-2 border-border bg-bg-card px-4 py-2 pr-12 text-sm text-text outline-none transition-all duration-200 placeholder:text-text-lighter focus:border-primary focus:shadow-(--focus-ring)",
           fluid ? "w-full" : "w-70 focus:w-85",
         )}
       />
@@ -67,7 +67,7 @@ export function SearchBox({ items, fluid }: SearchBoxProps) {
           showResults ? "visible translate-y-0 opacity-100" : "invisible -translate-y-2 opacity-0",
         )}
       >
-        {showResults && results.length === 0 && <div className="p-6 text-center text-sm text-text-muted">No se encontraron resultados</div>}
+        {showResults && results.length === 0 && <div className="p-6 text-center text-sm text-text-lighter">No se encontraron resultados</div>}
         {results.map((item) => (
           <Link
             key={item.href}
@@ -77,7 +77,7 @@ export function SearchBox({ items, fluid }: SearchBoxProps) {
           >
             <div className="min-w-0 flex-1">
               <div className="truncate text-sm font-semibold text-text"><Highlight text={item.name} query={q} /></div>
-              <div className="mt-0.5 text-xs text-text-muted">{item.category}</div>
+              <div className="mt-0.5 text-xs text-text-lighter">{item.category}</div>
             </div>
           </Link>
         ))}

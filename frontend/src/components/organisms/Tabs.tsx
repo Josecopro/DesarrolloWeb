@@ -41,7 +41,7 @@ export function Tabs({ label, tabs }: TabsProps) {
             onClick={() => setActive(i)}
             className={cn(
               "relative z-1 flex-1 cursor-pointer rounded-lg px-4 py-3 text-sm font-semibold transition-all duration-200 focus-visible:shadow-(--focus-ring) focus-visible:outline-none max-sm:px-2",
-              i === active ? "bg-linear-135 from-primary to-primary-dark text-text-inverse shadow-md" : "text-text-muted hover:bg-bg-hover hover:text-text",
+              i === active ? "bg-linear-135 from-primary to-primary-dark text-text-inverse shadow-md" : "text-text-lighter hover:bg-bg-hover hover:text-text",
             )}
           >
             {tab.label}

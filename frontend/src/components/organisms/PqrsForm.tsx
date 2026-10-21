@@ -81,7 +81,7 @@ export function PqrsForm() {
         </Button>
         {/* .pqrs-form__message--error de legacy (pqrs-form.css) */}
         {failed && (
-          <p role="alert" className="rounded-lg border border-error bg-error/10 px-5 py-4 text-center text-sm text-error">
+          <p role="alert" className="rounded-lg border border-error bg-error/10 px-5 py-4 text-center text-sm text-error-ink">
             No se pudo enviar el mensaje. Por favor intenta nuevamente.
           </p>
         )}
@@ -94,7 +94,7 @@ export function PqrsForm() {
         onClick={(e) => e.target === e.currentTarget && e.currentTarget.close()}
         className="m-auto w-full max-w-[420px] rounded-xl bg-bg-card p-10 text-center shadow-xl backdrop:bg-black/60 backdrop:backdrop-blur-xs"
       >
-        <div className="mx-auto mb-5 flex size-18 items-center justify-center rounded-full bg-linear-135 from-success/15 to-success/5 text-success">
+        <div className="mx-auto mb-5 flex size-18 items-center justify-center rounded-full bg-linear-135 from-success/15 to-success/5 text-success-ink">
           <Icon name="check-circle" size="xl" />
         </div>
         <h3 id="pqrs-sent-title" className="mb-3 text-2xl font-bold text-text">

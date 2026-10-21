@@ -29,7 +29,7 @@ export function SiteSearch({ items }: { items: SearchItem[] }) {
           placeholder="Escribe universidad, carrera, beca..."
           aria-label="Buscar en DUAM"
           autoComplete="off"
-          className="w-full rounded-xl border-2 border-border bg-bg-card px-6 py-4 pr-14 text-lg text-text outline-none transition-all duration-200 placeholder:text-text-muted focus:border-primary focus:shadow-(--focus-ring)"
+          className="w-full rounded-xl border-2 border-border bg-bg-card px-6 py-4 pr-14 text-lg text-text outline-none transition-all duration-200 placeholder:text-text-lighter focus:border-primary focus:shadow-(--focus-ring)"
         />
         <button
           type="submit"
@@ -46,14 +46,14 @@ export function SiteSearch({ items }: { items: SearchItem[] }) {
             Resultados para &ldquo;{q}&rdquo;
           </h2>
           {results.length === 0 ? (
-            <p className="text-text-muted">No se encontraron resultados para tu búsqueda</p>
+            <p className="text-text-lighter">No se encontraron resultados para tu búsqueda</p>
           ) : (
             <ul className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
               {results.map((item) => (
                 <li key={item.href}>
                   <Link
                     href={item.href}
-                    className="flex h-full items-center gap-3 rounded-xl border border-border bg-bg-card p-5 transition-[translate,box-shadow,border-color] duration-300 hover:-translate-y-1 hover:border-primary hover:shadow-lg focus-visible:shadow-(--focus-ring) focus-visible:outline-none"
+                    className="flex h-full items-center gap-3 rounded-xl border border-border bg-bg-card p-5 shadow-sm transition-[translate,box-shadow,border-color] duration-300 hover:-translate-y-1 hover:border-primary hover:shadow-lg focus-visible:shadow-(--focus-ring) focus-visible:outline-none"
                   >
                     <span aria-hidden="true" className="text-3xl">
                       {item.icon}
@@ -62,7 +62,7 @@ export function SiteSearch({ items }: { items: SearchItem[] }) {
                       <span className="block text-lg font-semibold leading-snug text-text">
                         <Highlight text={item.name} query={q} />
                       </span>
-                      <span className="text-sm text-text-muted">{item.category}</span>
+                      <span className="text-sm text-text-lighter">{item.category}</span>
                     </span>
                   </Link>
                 </li>

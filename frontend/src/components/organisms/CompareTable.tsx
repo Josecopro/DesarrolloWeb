@@ -27,11 +27,11 @@ export function CompareTable() {
   if (items.length < 2) {
     return (
       <div className="animate-fade-in px-4 py-16 text-center">
-        <div className="mb-4 inline-flex size-20 items-center justify-center rounded-full bg-bg-alt text-text-muted">
+        <div className="mb-4 inline-flex size-20 items-center justify-center rounded-full bg-bg-alt text-text-lighter">
           <Icon name="table" size="xl" />
         </div>
         <h2 className="mb-2 text-2xl font-semibold text-text">No hay elementos para comparar</h2>
-        <p className="mx-auto mb-6 max-w-[400px] text-text-muted">Selecciona al menos 2 universidades desde la página de universidades</p>
+        <p className="mx-auto mb-6 max-w-[400px] text-text-lighter">Selecciona al menos 2 universidades desde la página de universidades</p>
         <ButtonLink href="/universidades">Ver universidades</ButtonLink>
       </div>
     );
@@ -52,7 +52,7 @@ export function CompareTable() {
                       type="button"
                       onClick={() => remove(item)}
                       aria-label={`Quitar ${item.name} de la comparación`}
-                      className="flex size-6 shrink-0 cursor-pointer items-center justify-center rounded-full text-text-muted transition-all duration-120 hover:bg-error hover:text-text-inverse"
+                      className="flex size-6 shrink-0 cursor-pointer items-center justify-center rounded-full text-text-lighter transition-all duration-120 hover:bg-error hover:text-text-inverse"
                     >
                       <Icon name="close" size="sm" />
                     </button>

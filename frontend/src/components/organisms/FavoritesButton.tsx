@@ -53,29 +53,29 @@ export function FavoritesButton() {
             type="button"
             aria-label="Cerrar"
             onClick={() => setOpen(false)}
-            className="flex size-8 cursor-pointer items-center justify-center rounded-sm text-text-muted transition-all duration-120 hover:bg-bg-hover hover:text-text"
+            className="flex size-8 cursor-pointer items-center justify-center rounded-sm text-text-lighter transition-all duration-120 hover:bg-bg-hover hover:text-text"
           >
             <Icon name="close" size="md" />
           </button>
         </div>
         {items.length === 0 ? (
-          <p className="p-8 text-center text-text-muted">No tienes favoritos guardados</p>
+          <p className="p-8 text-center text-text-lighter">No tienes favoritos guardados</p>
         ) : (
           <ul className="max-h-[300px] overflow-y-auto p-3">
             {items.map((item) => (
               <li key={item.id} className="flex items-center gap-3 rounded-md p-3 transition-colors duration-120 hover:bg-bg-hover">
-                <div className="flex size-12 shrink-0 items-center justify-center rounded-sm bg-bg text-text-muted">
+                <div className="flex size-12 shrink-0 items-center justify-center rounded-sm bg-bg text-text-lighter">
                   <Icon name="square" size="md" />
                 </div>
                 <a href={item.url} target="_blank" rel="noopener noreferrer" className="min-w-0 flex-1">
                   <div className="truncate text-sm font-medium text-text">{item.name}</div>
-                  <div className="text-xs text-text-muted">{item.category}</div>
+                  <div className="text-xs text-text-lighter">{item.category}</div>
                 </a>
                 <button
                   type="button"
                   onClick={() => remove(item)}
                   aria-label={`Eliminar ${item.name} de favoritos`}
-                  className="flex size-8 shrink-0 cursor-pointer items-center justify-center rounded-full text-text-muted transition-colors duration-120 hover:bg-error hover:text-text-inverse"
+                  className="flex size-8 shrink-0 cursor-pointer items-center justify-center rounded-full text-text-lighter transition-colors duration-120 hover:bg-error hover:text-text-inverse"
                 >
                   <Icon name="close" size="sm" />
                 </button>

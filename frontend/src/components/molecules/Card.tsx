@@ -8,15 +8,17 @@ interface CardProps extends ComponentProps<"div"> {
   featured?: boolean;
   /** .card--horizontal: contenido e imagen lado a lado desde 640px. */
   horizontal?: boolean;
+  /** Solo las tarjetas clicables se elevan al pasar el mouse (The Layered Rule, DESIGN.md). */
+  interactive?: boolean;
   as?: "div" | "article";
 }
 
-export function Card({ featured, horizontal, as: Tag = "div", className, ...props }: CardProps) {
+export function Card({ featured, horizontal, interactive, as: Tag = "div", className, ...props }: CardProps) {
   return (
     <Tag
       className={cn(
-        "group flex flex-col overflow-hidden rounded-xl bg-bg-card transition-[translate,box-shadow,border-color] duration-300",
-        "hover:-translate-y-2 hover:border-primary hover:shadow-xl focus-within:shadow-(--focus-ring)",
+        "group flex flex-col overflow-hidden rounded-xl bg-bg-card shadow-sm transition-[translate,box-shadow,border-color] duration-300 focus-within:shadow-(--focus-ring)",
+        interactive && "hover:-translate-y-2 hover:border-primary hover:shadow-xl",
         featured ? "border-2 border-primary bg-linear-135 from-bg-card to-primary/3" : "border border-border",
         horizontal && "sm:flex-row",
         className,
@@ -31,7 +33,7 @@ export function CardImage({ className, horizontal, alt, ...props }: ImageProps &
     <Image
       alt={alt}
       className={cn(
-        "w-full object-cover transition-transform duration-500 group-hover:scale-105",
+        "w-full object-cover",
         horizontal ? "h-50 sm:h-auto sm:min-h-50 sm:w-60" : "aspect-16/10",
         className,
       )}

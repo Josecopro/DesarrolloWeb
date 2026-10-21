@@ -5,8 +5,8 @@ import type { Tone } from "@/types";
 // Círculo con ícono: .feature__icon / .aid-type__icon de legacy/assets/css/components/section.css
 const tones: Record<Tone, string> = {
   primary: "bg-primary/10 text-primary dark:bg-primary/20 dark:text-secondary-light",
-  secondary: "bg-secondary/15 text-secondary-dark dark:bg-secondary/20 dark:text-secondary-light",
-  success: "bg-success/10 text-success",
+  secondary: "bg-secondary/15 text-secondary-ink dark:bg-secondary/20 dark:text-secondary-light",
+  success: "bg-success/10 text-success-ink",
   accent: "bg-accent/10 text-accent",
 };
 

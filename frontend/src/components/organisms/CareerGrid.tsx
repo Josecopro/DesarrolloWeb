@@ -11,7 +11,7 @@ export function CareerGrid({ careers }: { careers: CareerCategory[] }) {
   return (
     <ul className="mx-auto grid max-w-(--container-max) grid-cols-1 gap-6 min-[480px]:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
       {careers.map((career, i) => (
-        <li key={career.id} className="group flex h-full animate-slide-up flex-col" style={{ animationDelay: `${i * 100}ms` }}>
+        <li key={career.id} className="group flex h-full animate-slide-up flex-col rounded-xl shadow-sm transition-shadow duration-300 hover:shadow-xl" style={{ animationDelay: `${i * 100}ms` }}>
           <div className="relative aspect-16/10 overflow-hidden rounded-t-xl">
             <Image
               src={career.image}

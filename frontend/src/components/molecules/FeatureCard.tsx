@@ -16,7 +16,7 @@ export function FeatureCard({ icon, tone, title, description }: FeatureCardProps
     <Card as="article" className="p-6 text-center">
       <IconBadge name={icon} tone={tone} className="mb-4 self-center" />
       <h3 className="mb-2 text-xl font-semibold text-text">{title}</h3>
-      <p className="leading-relaxed text-text-muted">{description}</p>
+      <p className="leading-relaxed text-text-lighter">{description}</p>
     </Card>
   );
 }

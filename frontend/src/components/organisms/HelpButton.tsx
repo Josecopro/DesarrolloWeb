@@ -51,7 +51,7 @@ export function HelpButton() {
             type="button"
             aria-label="Cerrar"
             onClick={() => setOpen(false)}
-            className="flex size-9 cursor-pointer items-center justify-center rounded-md text-text-muted transition-all duration-120 hover:bg-bg-hover hover:text-text focus-visible:shadow-(--focus-ring) focus-visible:outline-none"
+            className="flex size-9 cursor-pointer items-center justify-center rounded-md text-text-lighter transition-all duration-120 hover:bg-bg-hover hover:text-text focus-visible:shadow-(--focus-ring) focus-visible:outline-none"
           >
             <Icon name="close" size="md" />
           </button>

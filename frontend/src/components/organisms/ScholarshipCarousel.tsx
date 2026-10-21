@@ -54,7 +54,7 @@ export function ScholarshipCarousel({ scholarships }: { scholarships: Scholarshi
         >
           {scholarships.map((s) => (
             <li key={s.id} id={s.id} className="shrink-0 basis-full snap-start px-3 sm:basis-1/2 lg:basis-1/3">
-              <article className="group flex h-full flex-col">
+              <article className="group flex h-full flex-col rounded-xl shadow-sm">
                 <div className="relative aspect-video w-full overflow-hidden rounded-t-xl bg-bg">
                   <iframe
                     src={s.videoUrl}
@@ -86,7 +86,7 @@ export function ScholarshipCarousel({ scholarships }: { scholarships: Scholarshi
         </button>
       </nav>
 
-      <div aria-label="Páginas del carrusel" className="mt-6 flex justify-center gap-2">
+      <div aria-label="Páginas del carrusel" className="mt-6 flex justify-center">
         {Array.from({ length: pages }, (_, p) => (
           <button
             key={p}
@@ -94,11 +94,15 @@ export function ScholarshipCarousel({ scholarships }: { scholarships: Scholarshi
             aria-label={`Ir a página ${p + 1}`}
             aria-current={p === page}
             onClick={() => goTo(p * perView)}
-            className={cn(
-              "size-3 cursor-pointer rounded-full transition-all duration-120 focus-visible:shadow-(--focus-ring) focus-visible:outline-none",
-              p === page ? "scale-130 bg-primary dark:bg-secondary" : "bg-border hover:bg-text-lighter",
-            )}
-          />
+            className="group/dot flex size-6 cursor-pointer items-center justify-center rounded-full focus-visible:shadow-(--focus-ring) focus-visible:outline-none"
+          >
+            <span
+              className={cn(
+                "size-3 rounded-full transition-all duration-120",
+                p === page ? "scale-130 bg-primary dark:bg-secondary" : "bg-border group-hover/dot:bg-text-lighter",
+              )}
+            />
+          </button>
         ))}
       </div>
     </>

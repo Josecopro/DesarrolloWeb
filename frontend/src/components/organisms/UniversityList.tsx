@@ -83,9 +83,9 @@ export function UniversityList({ universities }: { universities: Universities })
         </section>
       ))}
 
-      {visible.length === 0 && <p className="p-16 text-center text-text-muted">No se encontraron universidades con esos filtros</p>}
+      {visible.length === 0 && <p className="p-16 text-center text-text-lighter">No se encontraron universidades con esos filtros</p>}
 
-      <p className="mt-6 block text-center text-sm text-text-muted">
+      <p className="mt-6 block text-center text-sm text-text-lighter">
         Total: {universities.private.length + universities.public.length} universidades ({universities.private.length} privadas,{" "}
         {universities.public.length} oficiales)
       </p>
