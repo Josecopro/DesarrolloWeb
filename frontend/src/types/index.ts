@@ -36,14 +36,6 @@ export interface Scholarship {
   institution: string;
 }
 
-export interface TeamMember {
-  name: string;
-  role: string;
-  image: string;
-  bio: string;
-  icon: string;
-}
-
 export interface SearchItem {
   name: string;
   href: string;

@@ -116,6 +116,9 @@ Despliegue:
 - Verificado en producción: endpoints, 401/400 del PQRS, e2e completas y un PQRS real que llegó a Neon (borrado después).
 - Para recargar datos en Neon tras cambiar `backend/db/seed/*.json`: `DATABASE_URL=<DATABASE_URL_UNPOOLED de Vercel> npm run db:setup` (o `vercel env pull` en un directorio enlazado a `duam-api`).
 
+### Cambio de alcance (2026-10-21)
+- Se eliminó la página `/nosotros` (equipo) y todo lo relacionado: `TeamGrid`, `team.json`, tipo `TeamMember`, enlace en header/footer y fotos del equipo en `public/images`. `/nosotros` ahora da 404. `legacy/` conserva la versión original hasta la Fase 6.
+
 ### Fase 5 — Usuarios y admin
 - Auth; favoritos/comparación persistidos por usuario (migrar desde localStorage al iniciar sesión).
 - `/admin`: CRUD de universidades, carreras, becas y gestión de PQRS, protegido por rol.

@@ -42,7 +42,7 @@ async function test(name, fn) {
   }
 }
 
-const routes = ["/", "/nosotros", "/importante", "/carreras", "/carreras/salud", "/universidades", "/becas", "/buscador", "/comparar"];
+const routes = ["/", "/importante", "/carreras", "/carreras/salud", "/universidades", "/becas", "/buscador", "/comparar"];
 
 await test("rutas responden y sin scroll horizontal a 375px", async () => {
   const p = await page(375);
@@ -100,8 +100,8 @@ await test("menú móvil: abre, cierra al navegar y al hacer clic fuera", async 
   await open(p);
   await p.click('[aria-controls="navbar-menu"]');
   assert.ok(await p.isVisible("#navbar-menu"));
-  await p.click("#navbar-menu >> text=Nosotros");
-  await p.waitForURL("**/nosotros");
+  await p.click("#navbar-menu >> text=Becas");
+  await p.waitForURL("**/becas");
   await p.waitForTimeout(300);
   assert.ok(!(await p.isVisible("#navbar-menu")));
   await p.click('[aria-controls="navbar-menu"]');
@@ -136,12 +136,6 @@ await test("tabs de Misión y Visión: clic y teclado", async () => {
   await p.keyboard.press("End");
   assert.equal(await visiblePanel(), "Compromiso");
   assert.equal(await p.evaluate(() => document.activeElement?.textContent), "Compromiso");
-});
-
-await test("nosotros: 4 integrantes", async () => {
-  const p = await page();
-  await open(p, "/nosotros");
-  assert.equal(await p.locator("main ul > li").count(), 4);
 });
 
 await test("universidades: filtro por tipo, búsqueda sin tildes y limpiar", async () => {
@@ -226,7 +220,7 @@ await test("buscador: ?q= desde el header, resultados y sin resultados", async (
 
 await test("PQRS: validación, envío (solo local) y confirmación", async () => {
   const p = await page();
-  await open(p, "/nosotros");
+  await open(p, "/importante");
   await p.click("button[aria-label='Abrir formulario de ayuda']");
   await p.click("#help-panel button[type=submit]");
   assert.equal(await p.locator("#help-panel >> text=Este campo es obligatorio").count(), 3);

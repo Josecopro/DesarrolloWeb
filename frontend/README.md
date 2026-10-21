@@ -21,7 +21,6 @@ src/
 │   ├── molecules/       # Dropdown, SearchBox, ThemeToggle, NavLink (Card, FormField, HelpButton en fases 2-3)
 │   ├── organisms/       # Header, Footer, Hero, UniversityList, CareerGrid, ScholarshipCarousel, ...
 │   └── templates/       # PageLayout
-├── data/                # team.json (contenido de /nosotros)
 ├── lib/                 # data.ts (lee la API, con 'use cache'), pqrs.ts (server action)
 └── types/
 ```

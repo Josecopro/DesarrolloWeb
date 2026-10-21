@@ -2,8 +2,7 @@
 // así que las páginas siguen prerenderizándose en el build y se renuevan cada hora.
 // Requiere API_URL en el entorno (también durante `next build`).
 import { cacheLife } from "next/cache";
-import team from "@/data/team.json";
-import type { CareerCategory, Scholarship, SearchItem, TeamMember, Universities } from "@/types";
+import type { CareerCategory, Scholarship, SearchItem, Universities } from "@/types";
 
 async function api<T>(path: string): Promise<T> {
   "use cache";
@@ -23,11 +22,6 @@ export async function getCareerCategory(id: string): Promise<CareerCategory | un
 }
 
 export const getScholarships = () => api<Scholarship[]>("/scholarships");
-
-// El equipo es contenido de la página /nosotros, no datos del dominio: se queda en el frontend.
-export function getTeam(): TeamMember[] {
-  return team;
-}
 
 // Índice de /buscador: incluye becas (mismo contenido que legacy/pages/buscador.html).
 export async function getSiteSearchItems(): Promise<SearchItem[]> {
