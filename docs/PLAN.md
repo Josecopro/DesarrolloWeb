@@ -99,7 +99,7 @@ Decisiones / diferencias con legacy:
 - Popup de PQRS como `<dialog>` nativo. **El envío sigue simulado como en legacy** (muestra "¡Mensaje enviado!" sin enviar nada) hasta la Fase 4.
 - Contenido a revisar: el video de "ICETEX - Créditos y Becas" en `scholarships.json` es "Never Gonna Give You Up" de Rick Astley.
 
-### Fase 4 — Backend ✅ código completado 2026-10-20 (despliegue pendiente)
+### Fase 4 — Backend ✅ completada y desplegada 2026-10-20
 Stack: Node.js + Express 5 + TypeScript + PostgreSQL (`pg`, SQL directo, sin ORM). Neon en producción; Postgres en podman/docker en local. Ver `backend/README.md`.
 Hecho:
 - Esquema `backend/db/schema.sql` y `npm run db:setup` (idempotente) que carga `backend/db/seed/*.json` (movidos desde `frontend/src/data`).
@@ -110,7 +110,11 @@ Decisiones:
 - PQRS solo se guarda en BD (sin correo); se gestionará desde el panel admin.
 - `team.json` queda en el frontend (contenido de página, no dominio).
 - El frontend necesita `API_URL` también en el build: desplegar backend antes que frontend.
-Pendiente: crear proyecto `duam-api` en Vercel + Neon (Marketplace), y variables `API_URL`/`API_KEY` en `desarrollo-web`.
+Despliegue:
+- API: proyecto Vercel `duam-api` (Root Directory `backend`, preset Express) → https://duam-api.vercel.app. Base Neon `duam-db` (región iad1, plan gratuito) instalada desde el Marketplace; `DATABASE_URL` la inyecta la integración. Esquema y datos cargados con `db:setup` usando `DATABASE_URL_UNPOOLED`.
+- Frontend: `desarrollo-web` con `API_URL=https://duam-api.vercel.app` y `API_KEY` (misma clave que la API, marcada como sensible) en production y preview.
+- Verificado en producción: endpoints, 401/400 del PQRS, e2e completas y un PQRS real que llegó a Neon (borrado después).
+- Para recargar datos en Neon tras cambiar `backend/db/seed/*.json`: `DATABASE_URL=<DATABASE_URL_UNPOOLED de Vercel> npm run db:setup` (o `vercel env pull` en un directorio enlazado a `duam-api`).
 
 ### Fase 5 — Usuarios y admin
 - Auth; favoritos/comparación persistidos por usuario (migrar desde localStorage al iniciar sesión).
