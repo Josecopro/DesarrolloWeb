@@ -99,10 +99,18 @@ Decisiones / diferencias con legacy:
 - Popup de PQRS como `<dialog>` nativo. **El envío sigue simulado como en legacy** (muestra "¡Mensaje enviado!" sin enviar nada) hasta la Fase 4.
 - Contenido a revisar: el video de "ICETEX - Créditos y Becas" en `scholarships.json` es "Never Gonna Give You Up" de Rick Astley.
 
-### Fase 4 — Backend (tecnología a elegir al iniciar la fase)
-- Modelo: University, CareerCategory/Subcategory, Scholarship, PqrsTicket, User, Favorite, Comparison.
-- API REST JSON + seed desde los JSON actuales.
-- `lib/data.ts` pasa a `fetch` a la API (Server Components); PQRS real (guardar + correo).
+### Fase 4 — Backend ✅ código completado 2026-10-20 (despliegue pendiente)
+Stack: Node.js + Express 5 + TypeScript + PostgreSQL (`pg`, SQL directo, sin ORM). Neon en producción; Postgres en podman/docker en local. Ver `backend/README.md`.
+Hecho:
+- Esquema `backend/db/schema.sql` y `npm run db:setup` (idempotente) que carga `backend/db/seed/*.json` (movidos desde `frontend/src/data`).
+- Endpoints GET de universidades, carreras, carrera por id y becas (cacheados en la CDN) y POST `/api/pqrs` protegido con `x-api-key`.
+- Frontend: `lib/data.ts` lee la API con `'use cache'` + `cacheLife('hours')` (páginas siguen siendo estáticas, se renuevan cada hora). El PQRS se envía con una server action (`lib/pqrs.ts`): la clave no llega al navegador y la API no necesita CORS. Errores del servidor se muestran por campo o con aviso general.
+- Pruebas: `backend` `npm test` (10 casos contra Postgres real); e2e del frontend verifican el envío real de PQRS solo en local.
+Decisiones:
+- PQRS solo se guarda en BD (sin correo); se gestionará desde el panel admin.
+- `team.json` queda en el frontend (contenido de página, no dominio).
+- El frontend necesita `API_URL` también en el build: desplegar backend antes que frontend.
+Pendiente: crear proyecto `duam-api` en Vercel + Neon (Marketplace), y variables `API_URL`/`API_KEY` en `desarrollo-web`.
 
 ### Fase 5 — Usuarios y admin
 - Auth; favoritos/comparación persistidos por usuario (migrar desde localStorage al iniciar sesión).

@@ -10,8 +10,8 @@ export const metadata: Metadata = {
   description: "Universidades privadas y oficiales acreditadas de alta calidad en el Área Metropolitana de Antioquia.",
 };
 
-export default function UniversidadesPage() {
-  const universities = getUniversities();
+export default async function UniversidadesPage() {
+  const universities = await getUniversities();
   const total = universities.private.length + universities.public.length;
 
   return (

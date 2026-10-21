@@ -36,8 +36,8 @@ function LinkList({ title, label, links }: { title: string; label: string; links
   );
 }
 
-export function Footer() {
-  const careers = getCareerCategories().map((c) => ({ label: c.name, href: careerHref(c.id) }));
+export async function Footer() {
+  const careers = (await getCareerCategories()).map((c) => ({ label: c.name, href: careerHref(c.id) }));
 
   return (
     <footer className="mt-auto border-t border-border bg-bg-alt px-(--container-padding) pt-20 pb-10">

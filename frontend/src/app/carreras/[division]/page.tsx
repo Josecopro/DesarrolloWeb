@@ -8,17 +8,17 @@ import { SectionHeader } from "@/components/molecules/SectionHeader";
 import { getCareerCategories, getCareerCategory } from "@/lib/data";
 
 // Reemplaza las 7 páginas de legacy/pages/carreras.divisiones/*.html y la sección "Subdivisiones por área" de carreras.html.
-export function generateStaticParams() {
-  return getCareerCategories().map((c) => ({ division: c.id }));
+export async function generateStaticParams() {
+  return (await getCareerCategories()).map((c) => ({ division: c.id }));
 }
 
 export async function generateMetadata({ params }: PageProps<"/carreras/[division]">): Promise<Metadata> {
-  const career = getCareerCategory((await params).division);
+  const career = await getCareerCategory((await params).division);
   return career ? { title: career.name, description: `${career.name} - Programas en el Área Metropolitana de Antioquia.` } : {};
 }
 
 export default async function DivisionPage({ params }: PageProps<"/carreras/[division]">) {
-  const career = getCareerCategory((await params).division);
+  const career = await getCareerCategory((await params).division);
   if (!career) notFound();
 
   return (

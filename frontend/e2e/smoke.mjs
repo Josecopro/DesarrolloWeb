@@ -4,6 +4,8 @@ import assert from "node:assert/strict";
 import { chromium } from "playwright-core";
 
 const BASE = process.env.BASE_URL ?? "http://localhost:3000";
+// Contra un sitio remoto no se envían PQRS reales (crearía tickets en la base de producción).
+const LOCAL = /^http:\/\/(localhost|127\.0\.0\.1)/.test(BASE);
 const browser = await chromium.launch({ executablePath: process.env.CHROME_PATH ?? "/usr/bin/chromium-browser" });
 const errors = [];
 let passed = 0;
@@ -222,7 +224,7 @@ await test("buscador: ?q= desde el header, resultados y sin resultados", async (
   assert.ok(await p.isVisible("text=No se encontraron resultados para tu búsqueda"));
 });
 
-await test("PQRS: validación, envío y confirmación", async () => {
+await test("PQRS: validación, envío (solo local) y confirmación", async () => {
   const p = await page();
   await open(p, "/nosotros");
   await p.click("button[aria-label='Abrir formulario de ayuda']");
@@ -234,6 +236,7 @@ await test("PQRS: validación, envío y confirmación", async () => {
   await p.click("#help-panel button[type=submit]");
   assert.ok(await p.isVisible("text=Ingresa un correo electrónico válido"));
   assert.ok(await p.isVisible("text=al menos 10 caracteres"));
+  if (!LOCAL) return;
   await p.fill("#pqrs-correo", "ana@correo.com");
   await p.fill("#pqrs-comentario", "Quiero información sobre becas");
   await p.click("#help-panel button[type=submit]");

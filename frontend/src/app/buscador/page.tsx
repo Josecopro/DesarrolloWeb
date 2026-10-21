@@ -14,8 +14,8 @@ export const metadata: Metadata = {
   description: "Busca universidades, carreras y becas del Área Metropolitana de Antioquia.",
 };
 
-export default function BuscadorPage() {
-  const { private: priv, public: pub } = getUniversities();
+export default async function BuscadorPage() {
+  const [{ private: priv, public: pub }, careers, searchItems] = await Promise.all([getUniversities(), getCareerCategories(), getSiteSearchItems()]);
   const categories: { icon: IconName; tone: Tone; title: string; description: string; href: string; cta: string; variant: "primary" | "secondary" | "outline" }[] = [
     {
       icon: "package",
@@ -30,7 +30,7 @@ export default function BuscadorPage() {
       icon: "code",
       tone: "secondary",
       title: "Carreras",
-      description: `${getCareerCategories().length} áreas con más de 50 programas`,
+      description: `${careers.length} áreas con más de 50 programas`,
       href: "/carreras",
       cta: "Explorar",
       variant: "secondary",
@@ -59,7 +59,7 @@ export default function BuscadorPage() {
 
         {/* useSearchParams necesita un límite de Suspense para que el resto de la página se prerenderice. */}
         <Suspense>
-          <SiteSearch items={getSiteSearchItems()} />
+          <SiteSearch items={searchItems} />
         </Suspense>
 
         <ul className="grid grid-cols-1 gap-6 md:grid-cols-3">

@@ -5,6 +5,7 @@ import { Button } from "@/components/atoms/Button";
 import { Icon } from "@/components/atoms/Icon";
 import { Input, Textarea } from "@/components/atoms/Input";
 import { errorId, FormField } from "@/components/molecules/FormField";
+import { submitPqrs } from "@/lib/pqrs";
 
 // Formulario PQRS con las reglas de validación de legacy/assets/js/components/help-button.js.
 type Field = "nombre" | "correo" | "comentario";
@@ -20,12 +21,10 @@ function validate(field: Field, value: string): string | undefined {
   if (field === "comentario" && v.length < MIN_MESSAGE) return `El mensaje debe tener al menos ${MIN_MESSAGE} caracteres`;
 }
 
-// ponytail: envío simulado igual que legacy; en la Fase 4 se reemplaza por el POST al backend de PQRS.
-const send = () => new Promise((resolve) => setTimeout(resolve, 1500));
-
 export function PqrsForm() {
   const [errors, setErrors] = useState<Errors>({});
   const [sending, setSending] = useState(false);
+  const [failed, setFailed] = useState(false);
   const dialog = useRef<HTMLDialogElement>(null);
 
   const check = (field: Field, value: string) => setErrors((e) => ({ ...e, [field]: validate(field, value) }));
@@ -51,8 +50,15 @@ export function PqrsForm() {
     if (Object.values(next).some(Boolean)) return;
 
     setSending(true);
-    await send();
+    setFailed(false);
+    const result = await submitPqrs({ nombre: String(data.get("nombre")), correo: String(data.get("correo")), comentario: String(data.get("comentario")) });
     setSending(false);
+    if (!result.ok) {
+      // Errores de validación del servidor junto a cada campo; cualquier otro fallo, aviso general.
+      if (result.errors) setErrors(result.errors);
+      else setFailed(true);
+      return;
+    }
     form.reset();
     dialog.current?.showModal();
     setTimeout(() => dialog.current?.close(), 4000);
@@ -73,6 +79,12 @@ export function PqrsForm() {
         <Button type="submit" size="lg" full disabled={sending}>
           {sending ? "Enviando..." : "Enviar PQRS"}
         </Button>
+        {/* .pqrs-form__message--error de legacy (pqrs-form.css) */}
+        {failed && (
+          <p role="alert" className="rounded-lg border border-error bg-error/10 px-5 py-4 text-center text-sm text-error">
+            No se pudo enviar el mensaje. Por favor intenta nuevamente.
+          </p>
+        )}
       </form>
 
       {/* .pqrs-form__popup de legacy (pqrs-form.css) como <dialog> nativo: clic fuera o Escape lo cierran. */}

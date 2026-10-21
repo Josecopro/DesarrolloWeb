@@ -8,8 +8,8 @@ export const metadata: Metadata = {
   description: "Carreras universitarias por área - Ingenierías, Salud, Humanidades, Educación, Ciencias Básicas, Ciencias Sociales y Servicios",
 };
 
-export default function CarrerasPage() {
-  const careers = getCareerCategories();
+export default async function CarrerasPage() {
+  const careers = await getCareerCategories();
   return (
     <section aria-labelledby="careers-title" className="px-(--container-padding) py-20">
       <SectionHeader

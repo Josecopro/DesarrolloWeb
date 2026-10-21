@@ -23,12 +23,12 @@ const features: Feature[] = [
   { icon: "compare", tone: "accent", title: "Comparación de opciones", description: "Herramientas para analizar universidades y carreras lado a lado." },
 ];
 
-export default function Home() {
-  const { private: priv, public: pub } = getUniversities();
+export default async function Home() {
+  const [{ private: priv, public: pub }, careers] = await Promise.all([getUniversities(), getCareerCategories()]);
   const universityCount = priv.length + pub.length;
   const stats = [
     { value: String(universityCount), label: "Universidades" },
-    { value: String(getCareerCategories().length), label: "Áreas de estudio" },
+    { value: String(careers.length), label: "Áreas de estudio" },
     { value: "50+", label: "Programas" },
     { value: "100%", label: "Gratuito" },
   ];

@@ -45,7 +45,7 @@ const aidTypes: { icon: IconName; tone: Tone; border: string; title: string; des
   },
 ];
 
-export default function BecasPage() {
+export default async function BecasPage() {
   return (
     <>
       <section aria-labelledby="scholarships-title" className="px-(--container-padding) py-20">
@@ -55,7 +55,7 @@ export default function BecasPage() {
           title="Becas y Financiamiento"
           subtitle="Descubre oportunidades de becas, créditos y apoyo financiero para tus estudios"
         />
-        <ScholarshipCarousel scholarships={getScholarships()} />
+        <ScholarshipCarousel scholarships={await getScholarships()} />
       </section>
 
       <section aria-labelledby="types-title" className="section">

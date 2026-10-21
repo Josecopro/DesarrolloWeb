@@ -3,6 +3,7 @@
 Next.js (App Router) + TypeScript + Tailwind CSS v4.
 
 ```bash
+cp .env.example .env.local   # API_URL y API_KEY del backend
 npm install
 npm run dev     # http://localhost:3000
 npm run build
@@ -20,8 +21,8 @@ src/
 │   ├── molecules/       # Dropdown, SearchBox, ThemeToggle, NavLink (Card, FormField, HelpButton en fases 2-3)
 │   ├── organisms/       # Header, Footer, Hero, UniversityList, CareerGrid, ScholarshipCarousel, ...
 │   └── templates/       # PageLayout
-├── data/                # JSON (temporal hasta tener backend)
-├── lib/                 # data.ts: único punto de acceso a datos
+├── data/                # team.json (contenido de /nosotros)
+├── lib/                 # data.ts (lee la API, con 'use cache'), pqrs.ts (server action)
 └── types/
 ```
 
