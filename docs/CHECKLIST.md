@@ -3,11 +3,11 @@
 Checklist vivo contra la guía de la entrega (backend REST + frontend Next.js + despliegue + README).
 **Cómo usarlo:** marca `[x]` solo lo verificado (prueba, captura o comando). Cada ítem pendiente apunta a la etapa del plan que lo resuelve. Al final de cada sesión, actualiza este archivo y el traspaso local (`docs/HANDOFF.md`, ignorado por git).
 
-Leyenda: `[x]` cumple · `[~]` parcial (ver nota) · `[ ]` no existe.
+Leyenda: `[x]` cumple · `[~]` parcial / pendiente de los autores (ver nota) · `[-]` no aplica por decisión explícita del equipo (desviación documentada) · `[ ]` no existe.
 
 Auditoría inicial: 2026-10-21, commit `20a61ca`. Última actualización: 2026-10-22 (E1–E9 completas).
 
-**Pendientes del equipo:** (1) escribir con sus palabras la sección "Uso de IA" del README raíz; (2) hacer push de `main`; (3) opcional: borrar `legacy/` y revisar los contenidos señalados (video de ICETEX, afirmación "acreditadas de alta calidad").
+**Pendientes del equipo:** (1) escribir con sus palabras la sección "Uso de IA" del README raíz; (2) opcional: borrar `legacy/` y revisar los contenidos señalados (video de ICETEX, afirmación "acreditadas de alta calidad").
 
 ---
 
@@ -30,7 +30,7 @@ Auditoría inicial: 2026-10-21, commit `20a61ca`. Última actualización: 2026-1
 Verificado con `cd backend && npm test` (23 pruebas contra Postgres real, 2026-10-21).
 
 ### Estructura
-- [ ] Repositorio propio — **desviación aceptada (C1)**: monorepo, `backend/` es independiente.
+- [-] Repositorio propio — **desviación aceptada (C1)**, reconfirmada el 2026-10-22: monorepo, `backend/` es independiente.
 - [x] Node.js + Express 5 + TypeScript + Prisma 7 + PostgreSQL (`backend/prisma/schema.prisma`, migración `prisma/migrations/*_init`).
 - [x] Capas `src/domain` (entidades, contratos, errores) · `src/application` (casos de uso, puertos) · `src/infrastructure` (Prisma, bcrypt, JWT, env, container) · `src/interface/http` (routers, controllers, middlewares, schemas zod).
 
@@ -79,7 +79,7 @@ Verificado con `cd backend && npm test` (23 pruebas contra Postgres real, 2026-1
 Verificado con `cd frontend && npm run test:e2e` (27 pruebas en navegador real contra la API local, 2026-10-22) y capturas en 375/1280/1536 px, claro y oscuro.
 
 ### Estructura
-- [ ] Repositorio propio — **desviación aceptada (C1)**: monorepo, `frontend/` es independiente.
+- [-] Repositorio propio — **desviación aceptada (C1)**, reconfirmada el 2026-10-22: monorepo, `frontend/` es independiente.
 - [x] Next.js 16 (App Router) + TypeScript + Tailwind v4.
 - [x] `app/` solo compone (las páginas importan componentes y loaders de `features/`).
 - [x] `features/common/config.ts`: `API_BASE_URL` desde `NEXT_PUBLIC_API_HOST`.
@@ -116,8 +116,8 @@ Verificado con `cd frontend && npm run test:e2e` (27 pruebas en navegador real c
 Verificado el 2026-10-22: e2e contra producción (24 pasan, 3 que escriben datos omitidas) y un flujo PQRS real en producción (creado, visto en Neon y borrado).
 
 - [x] Frontend en Vercel (`desarrollo-web`) → https://desarrollo-web-seven-tau.vercel.app con `NEXT_PUBLIC_API_HOST=https://duam-api.vercel.app` (se quitaron `API_URL`/`API_KEY`).
-- [ ] Backend en Render o Railway — **desviación aceptada (C5)**: sigue en Vercel (`duam-api`) → https://duam-api.vercel.app/api, con `DATABASE_URL` (Neon), `JWT_SECRET` (sensible), `JWT_EXPIRES_IN`, `CORS_ORIGINS` configuradas en la plataforma. Neon migrado a Prisma (`migrate deploy`) y con seed.
-- [x] Ambos proyectos conectados a GitHub (`Josecopro/DesarrolloWeb`, rama `main`): un push a `main` redespliega los dos. *(Los commits de esta etapa están sin push; producción se desplegó desde ellos con la CLI.)*
+- [-] Backend en Render o Railway — **desviación aceptada (C5)**, reconfirmada el 2026-10-22: sigue en Vercel (`duam-api`) → https://duam-api.vercel.app/api, con `DATABASE_URL` (Neon), `JWT_SECRET` (sensible), `JWT_EXPIRES_IN`, `CORS_ORIGINS` configuradas en la plataforma. Neon migrado a Prisma (`migrate deploy`) y con seed.
+- [x] Ambos proyectos conectados a GitHub (`Josecopro/DesarrolloWeb`, rama `main`): un push a `main` redespliega los dos (verificado con el push del 2026-10-22).
 
 ---
 
