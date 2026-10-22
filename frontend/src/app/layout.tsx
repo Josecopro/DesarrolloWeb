@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import { PageLayout } from "@/components/templates/PageLayout";
+import { AuthProvider } from "@/features/auth/hooks/useAuth";
+import { PageLayout } from "@/features/layout/components/PageLayout";
 import "./globals.css";
 
 const inter = Inter({
@@ -25,7 +26,9 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <script dangerouslySetInnerHTML={{ __html: themeScript }} />
       </head>
       <body>
-        <PageLayout>{children}</PageLayout>
+        <AuthProvider>
+          <PageLayout>{children}</PageLayout>
+        </AuthProvider>
       </body>
     </html>
   );

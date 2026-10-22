@@ -1,0 +1,22 @@
+import type { IconName } from "@/features/common/components/Icon";
+import { IconBadge } from "@/features/common/components/IconBadge";
+import { Card } from "@/features/common/components/Card";
+import type { Tone } from "@/features/common/domain/types";
+
+// .card--feature + .feature__* de legacy/assets/css/components/section.css
+interface FeatureCardProps {
+  icon: IconName;
+  tone: Tone;
+  title: string;
+  description: string;
+}
+
+export function FeatureCard({ icon, tone, title, description }: FeatureCardProps) {
+  return (
+    <Card as="article" className="p-6 text-center">
+      <IconBadge name={icon} tone={tone} className="mb-4 self-center" />
+      <h3 className="mb-2 text-xl font-semibold text-text">{title}</h3>
+      <p className="leading-relaxed text-text-lighter">{description}</p>
+    </Card>
+  );
+}

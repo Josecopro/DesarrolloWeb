@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
-import type { IconName } from "@/components/atoms/Icon";
-import { IconBadge } from "@/components/atoms/IconBadge";
-import { Card } from "@/components/molecules/Card";
-import { SectionHeader } from "@/components/molecules/SectionHeader";
-import { ScholarshipCarousel } from "@/components/organisms/ScholarshipCarousel";
-import { cn } from "@/lib/cn";
-import { getScholarships } from "@/lib/data";
-import type { Tone } from "@/types";
+import type { IconName } from "@/features/common/components/Icon";
+import { IconBadge } from "@/features/common/components/IconBadge";
+import { Card } from "@/features/common/components/Card";
+import { SectionHeader } from "@/features/common/components/SectionHeader";
+import { ScholarshipCarousel } from "@/features/scholarships/components/ScholarshipCarousel";
+import { cn } from "@/features/common/lib/cn";
+import { getAllScholarships } from "@/features/scholarships/services/scholarships.cache";
+import type { Tone } from "@/features/common/domain/types";
 
 export const metadata: Metadata = {
   title: "Becas",
@@ -55,7 +55,7 @@ export default async function BecasPage() {
           title="Becas y Financiamiento"
           subtitle="Descubre oportunidades de becas, créditos y apoyo financiero para tus estudios"
         />
-        <ScholarshipCarousel scholarships={await getScholarships()} />
+        <ScholarshipCarousel scholarships={await getAllScholarships()} />
       </section>
 
       <section aria-labelledby="types-title" className="section">

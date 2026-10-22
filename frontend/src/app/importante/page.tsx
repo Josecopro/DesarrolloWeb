@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
-import { Card, CardContent, CardDescription, CardTitle } from "@/components/molecules/Card";
-import { SectionHeader } from "@/components/molecules/SectionHeader";
-import { Tabs } from "@/components/organisms/Tabs";
+import { Card, CardContent, CardDescription, CardTitle } from "@/features/common/components/Card";
+import { SectionHeader } from "@/features/common/components/SectionHeader";
+import { Tabs } from "@/features/common/components/Tabs";
 
 export const metadata: Metadata = {
   title: "Misión y Visión",

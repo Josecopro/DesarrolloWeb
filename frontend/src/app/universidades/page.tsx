@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
-import { SectionHeader } from "@/components/molecules/SectionHeader";
-import { ComparisonTool } from "@/components/organisms/ComparisonTool";
-import { FavoritesButton } from "@/components/organisms/FavoritesButton";
-import { UniversityList } from "@/components/organisms/UniversityList";
-import { getUniversities } from "@/lib/data";
+import { Suspense } from "react";
+import { SectionHeader } from "@/features/common/components/SectionHeader";
+import { ComparisonTool } from "@/features/universities/components/ComparisonTool";
+import { FavoritesButton } from "@/features/universities/components/FavoritesButton";
+import { UniversityCatalog } from "@/features/universities/components/UniversityCatalog";
+import { getUniversityStats } from "@/features/universities/services/universities.cache";
 
 export const metadata: Metadata = {
   title: "Universidades",
@@ -11,9 +12,7 @@ export const metadata: Metadata = {
 };
 
 export default async function UniversidadesPage() {
-  const universities = await getUniversities();
-  const total = universities.private.length + universities.public.length;
-
+  const { total } = await getUniversityStats();
   return (
     <section aria-labelledby="universities-title" className="px-(--container-padding) py-20">
       <SectionHeader
@@ -22,7 +21,10 @@ export default async function UniversidadesPage() {
         title="Universidades del Área Metropolitana"
         subtitle={`${total} universidades acreditadas de alta calidad en Antioquia`}
       />
-      <UniversityList universities={universities} />
+      {/* Catálogo desde la API en el navegador: ?page=, ?tipo=, ?q=, con cargando / vacío / error. */}
+      <Suspense>
+        <UniversityCatalog />
+      </Suspense>
       <ComparisonTool />
       <FavoritesButton />
     </section>

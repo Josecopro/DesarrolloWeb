@@ -74,40 +74,40 @@ Verificado con `cd backend && npm test` (23 pruebas contra Postgres real, 2026-1
 
 ## 2. Frontend — Next.js
 
+Verificado con `cd frontend && npm run test:e2e` (27 pruebas en navegador real contra la API local, 2026-10-22) y capturas en 375/1280/1536 px, claro y oscuro.
+
 ### Estructura
-- [ ] Repositorio propio (C1).
-- [x] Next.js (App Router) + TypeScript + Tailwind (Next 16, Tailwind v4).
-- [~] `app/` solo compone — las páginas componen organismos, pero algunas definen datos inline (features, tipos de apoyo, objetivos). → E4
-- [ ] `src/features/common/config.ts` con `API_BASE_URL` desde `NEXT_PUBLIC_API_HOST` (C6). → E4
-- [ ] `src/features/common/http.ts`: agrega el token y maneja el 401. → E4
-- [~] `src/features/common/components/` (Pagination, Button, Input…) — existen `Button`, `Input`, `Tag`, `Card`, `FormField`… en `components/atoms|molecules`; no hay `Pagination` (C4). → E4
-- [ ] `features/auth/{domain,services,hooks,components}` (User, LoginRequest, AuthResponse, login/register, useAuth, LoginForm/RegisterForm). → E5
-- [ ] `features/<catalogo>/{domain,services,hooks,components}`. → E4/E6
-- [ ] `features/<interaccion>/{domain,services,hooks,components}`. → E6
+- [ ] Repositorio propio — **desviación aceptada (C1)**: monorepo, `frontend/` es independiente.
+- [x] Next.js 16 (App Router) + TypeScript + Tailwind v4.
+- [x] `app/` solo compone (las páginas importan componentes y loaders de `features/`).
+- [x] `features/common/config.ts`: `API_BASE_URL` desde `NEXT_PUBLIC_API_HOST`.
+- [x] `features/common/http.ts`: agrega `Authorization: Bearer <token>` y maneja el 401.
+- [x] `features/common/components/` (Button, Input, Select, Card, **Pagination**, QueryState, Table, Icon, FormField…).
+- [x] `features/auth/{domain,services,hooks,components}`: `User`, `LoginRequest`, `RegisterRequest`, `AuthResponse`; `authService.login/register/me`; `useAuth`; `LoginForm`, `RegisterForm`, `RouteGuard`, `UserNav`.
+- [x] `features/universities/` y `features/careers/` (los dos catálogos) con `domain/services/hooks/components`.
+- [x] `features/requests/` (interacción: solicitudes PQRS) con `domain/services/hooks/components`.
 
 ### Migración del sitio
-- [x] Mismo contenido e identidad de la Entrega 1 con componentes y Tailwind (tokens 1:1 de legacy; ver `DESIGN.md`). Excepción deliberada: se eliminó la página "Nosotros".
-- [x] Responsive en móvil, tablet y escritorio (verificado con capturas 375/768/1024/1280 y prueba sin scroll horizontal).
-- [~] Catálogo cargado desde la API — sí, pero en el servidor y estático; **faltan estados visibles de cargando / vacío / error y paginación por URL (`?page=2`)**. → E6
-- [~] El formulario de la Entrega 1 crea la interacción en la API — el PQRS se guarda en Postgres, pero **no requiere sesión** ni queda a nombre de un usuario. → E6
+- [x] Mismo contenido e identidad de la Entrega 1 (tokens de legacy, `DESIGN.md`). Excepción: se quitó "Nosotros".
+- [x] Responsive en móvil, tablet y escritorio (sin scroll horizontal a 375 px; header medido sin desborde a 1280/1536 en los 3 estados de sesión).
+- [x] Catálogos desde la API con estados visibles de cargando / vacío / error (probados interceptando la red) y paginación por URL: `/universidades?page=2&tipo=public&q=…`, `/carreras?page=`.
+- [x] El formulario de la Entrega 1 (botón de ayuda PQRS) crea la solicitud en la API y requiere sesión (invitado ve "Ingresar / Crear cuenta").
 
 ### Consumo de la API
-- [~] Ningún componente llama a `fetch` directo — hoy solo `lib/data.ts` y `lib/pqrs.ts` hacen `fetch`; falta la capa `services/` + `hooks/`. → E4
-- [ ] Cliente HTTP centralizado que agrega `Authorization: Bearer <token>`. → E4
-- [ ] Ante 401, el cliente cierra la sesión y lleva a `/login`. → E4
+- [x] Ningún componente llama a `fetch`: services + hooks (`grep fetch src` solo encuentra `common/http.ts`).
+- [x] `http.ts` agrega `Authorization: Bearer` (probado capturando la petición a `/api/solicitudes/mias`).
+- [x] 401 con token → cierra sesión y lleva a `/login?next=…` (probado con un token de firma falsa).
 
 ### Sesión
-- [ ] Registro y login con formularios validados; errores del backend junto al campo (no `alert`). (Ya existe el patrón `FormField` con error por campo, usado en el PQRS.) → E5
-- [ ] La sesión sobrevive al refrescar; logout borra el token. → E5
-- [ ] Navbar según sesión: invitado "Ingresar"; usuario su nombre + "Salir"; admin además "Administración". → E5
+- [x] Registro y login validados en el cliente; errores del backend junto al campo (409 en email) y error general en la página, nunca `alert` (la prueba falla si aparece un diálogo nativo).
+- [x] La sesión sobrevive al recargar; un token con `exp` vencido se descarta; logout borra el token.
+- [x] Navbar: invitado "Ingresar"; usuario su nombre (enlace a sus solicitudes) y "Salir"; admin además "Administración".
 
 ### Rutas protegidas
-- [ ] `/mis-<interacciones>`: solo con sesión; sin sesión → `/login`. → E5/E6
-- [ ] `/admin`: solo rol admin; usuario normal redirigido. → E5/E7
-- [ ] Con sesión activa, `/login` y `/registro` redirigen al inicio. → E5
-- [x] Página 404 propia (`app/not-found.tsx`, con estilo DUAM).
-
----
+- [x] `/mis-solicitudes`: solo con sesión; sin sesión → `/login?next=/mis-solicitudes` y vuelve tras ingresar.
+- [x] `/admin`: solo admin; un usuario normal es redirigido al inicio (y la API responde 403).
+- [x] Con sesión, `/login` y `/registro` redirigen al inicio.
+- [x] Página 404 propia (`app/not-found.tsx`).
 
 ## 3. Despliegue
 - [~] Frontend en Vercel (`desarrollo-web` → https://desarrollo-web-seven-tau.vercel.app) — sí; **falta `NEXT_PUBLIC_API_HOST`** (hoy usa `API_URL`/`API_KEY` privados). → E8
@@ -135,9 +135,9 @@ Cada etapa termina con pruebas en verde, este checklist actualizado y commit en 
 | **E1** ✅ | Backend: Prisma (schema + migraciones), 4 capas, modelos `User`, catálogo e interacción con FK, seed con datos reales + usuarios admin/user de prueba | E0 |
 | **E2** ✅ | Backend: auth (register/login, bcrypt, JWT con `JWT_SECRET`/`JWT_EXPIRES_IN`), middlewares `authenticate` y `soloAdmin`, 401/403/409, `.env.example` | E1 |
 | **E3** ✅ | Backend: catálogo paginado `{ pagination, data }`, `GET /:id`, CRUD admin, interacción (`POST`, `/mias`, `GET` admin), validación 400 de body/params/query, 404, errores de Prisma, CORS con la URL de Vercel; pruebas | E2 |
-| **E4** | Frontend: estructura por features, `common/config.ts`, `common/http.ts` (Bearer + 401 → logout y `/login`), `common/components` (incl. `Pagination`) | E0 |
-| **E5** | Frontend: feature `auth` (domain/services/hooks/components), páginas `/login` y `/registro`, sesión persistente, navbar según sesión, redirecciones de rutas | E2, E4 |
-| **E6** | Frontend: catálogo desde la API con cargando/vacío/error y `?page=`; formulario de interacción con sesión; `/mis-<interacciones>` | E3, E5 |
-| **E7** | Frontend: `/admin` (CRUD del catálogo + todas las interacciones), protegido por rol | E3, E5 |
+| **E4** ✅ | Frontend: estructura por features, `common/config.ts`, `common/http.ts` (Bearer + 401 → logout y `/login`), `common/components` (incl. `Pagination`) | E0 |
+| **E5** ✅ | Frontend: feature `auth` (domain/services/hooks/components), páginas `/login` y `/registro`, sesión persistente, navbar según sesión, redirecciones de rutas | E2, E4 |
+| **E6** ✅ | Frontend: catálogo desde la API con cargando/vacío/error y `?page=`; formulario de interacción con sesión; `/mis-<interacciones>` | E3, E5 |
+| **E7** ✅ | Frontend: `/admin` (CRUD del catálogo + todas las interacciones), protegido por rol | E3, E5 |
 | **E8** | Despliegue: backend en Render/Railway (o según C5) con variables; frontend con `NEXT_PUBLIC_API_HOST`; CORS con la URL de producción; auto-deploy desde `main` | E3, E6 |
 | **E9** | README por repositorio (links, local, variables, credenciales, decisiones técnicas, captura de Network) y limpieza (`legacy/`) | E8 |

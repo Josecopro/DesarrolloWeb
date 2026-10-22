@@ -1,5 +1,5 @@
-import { ButtonLink } from "@/components/atoms/Button";
-import { Icon } from "@/components/atoms/Icon";
+import { ButtonLink } from "@/features/common/components/Button";
+import { Icon } from "@/features/common/components/Icon";
 
 // Mismo lenguaje visual que el estado vacío de /comparar (.compare-empty).
 export default function NotFound() {

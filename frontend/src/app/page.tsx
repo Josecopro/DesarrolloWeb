@@ -1,10 +1,11 @@
-import { ButtonLink } from "@/components/atoms/Button";
-import { Tag } from "@/components/atoms/Tag";
-import { Card, CardContent, CardDescription, CardFooter, CardImage, CardTitle } from "@/components/molecules/Card";
-import { SectionHeader } from "@/components/molecules/SectionHeader";
-import { type Feature, FeaturesGrid } from "@/components/organisms/FeaturesGrid";
-import { Hero } from "@/components/organisms/Hero";
-import { getCareerCategories, getUniversities } from "@/lib/data";
+import { ButtonLink } from "@/features/common/components/Button";
+import { Tag } from "@/features/common/components/Tag";
+import { Card, CardContent, CardDescription, CardFooter, CardImage, CardTitle } from "@/features/common/components/Card";
+import { SectionHeader } from "@/features/common/components/SectionHeader";
+import { type Feature, FeaturesGrid } from "@/features/home/components/FeaturesGrid";
+import { Hero } from "@/features/home/components/Hero";
+import { getAllCareers } from "@/features/careers/services/careers.cache";
+import { getUniversityStats } from "@/features/universities/services/universities.cache";
 
 const features: Feature[] = [
   {
@@ -24,8 +25,7 @@ const features: Feature[] = [
 ];
 
 export default async function Home() {
-  const [{ private: priv, public: pub }, careers] = await Promise.all([getUniversities(), getCareerCategories()]);
-  const universityCount = priv.length + pub.length;
+  const [{ total: universityCount }, careers] = await Promise.all([getUniversityStats(), getAllCareers()]);
   const stats = [
     { value: String(universityCount), label: "Universidades" },
     { value: String(careers.length), label: "Áreas de estudio" },

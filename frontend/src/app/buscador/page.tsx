@@ -1,13 +1,15 @@
 import type { Metadata } from "next";
 import { Suspense } from "react";
-import { ButtonLink } from "@/components/atoms/Button";
-import type { IconName } from "@/components/atoms/Icon";
-import { IconBadge } from "@/components/atoms/IconBadge";
-import { Card } from "@/components/molecules/Card";
-import { SectionHeader } from "@/components/molecules/SectionHeader";
-import { SiteSearch } from "@/components/organisms/SiteSearch";
-import { getCareerCategories, getSiteSearchItems, getUniversities } from "@/lib/data";
-import type { Tone } from "@/types";
+import { ButtonLink } from "@/features/common/components/Button";
+import type { IconName } from "@/features/common/components/Icon";
+import { IconBadge } from "@/features/common/components/IconBadge";
+import { Card } from "@/features/common/components/Card";
+import { SectionHeader } from "@/features/common/components/SectionHeader";
+import { SiteSearch } from "@/features/search/components/SiteSearch";
+import { getAllCareers } from "@/features/careers/services/careers.cache";
+import { getSiteSearchItems } from "@/features/search/services/search.cache";
+import { getUniversityStats } from "@/features/universities/services/universities.cache";
+import type { Tone } from "@/features/common/domain/types";
 
 export const metadata: Metadata = {
   title: "Buscador",
@@ -15,13 +17,13 @@ export const metadata: Metadata = {
 };
 
 export default async function BuscadorPage() {
-  const [{ private: priv, public: pub }, careers, searchItems] = await Promise.all([getUniversities(), getCareerCategories(), getSiteSearchItems()]);
+  const [stats, careers, searchItems] = await Promise.all([getUniversityStats(), getAllCareers(), getSiteSearchItems()]);
   const categories: { icon: IconName; tone: Tone; title: string; description: string; href: string; cta: string; variant: "primary" | "secondary" | "outline" }[] = [
     {
       icon: "package",
       tone: "primary",
       title: "Universidades",
-      description: `${priv.length + pub.length} universidades acreditadas de alta calidad`,
+      description: `${stats.total} universidades acreditadas de alta calidad`,
       href: "/universidades",
       cta: "Ver todas",
       variant: "primary",

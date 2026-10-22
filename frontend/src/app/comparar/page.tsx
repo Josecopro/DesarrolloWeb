@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
-import { SectionHeader } from "@/components/molecules/SectionHeader";
-import { CompareTable } from "@/components/organisms/CompareTable";
+import { SectionHeader } from "@/features/common/components/SectionHeader";
+import { CompareTable } from "@/features/universities/components/CompareTable";
 
 export const metadata: Metadata = {
   title: "Comparar",
