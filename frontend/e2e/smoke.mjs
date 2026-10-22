@@ -68,7 +68,11 @@ async function test(name, fn, { writes = false } = {}) {
     console.log(`✓ ${name}`);
   } catch (e) {
     console.error(`✗ ${name}\n  ${e.message.split("\n")[0]}`);
-    if (process.env.SHOTS && lastPage) await lastPage.screenshot({ path: `${process.env.SHOTS}/fail-${passed + 1}.png`, fullPage: true }).catch(() => {}), console.error(`  url: ${lastPage.url()}`);
+    // SHOTS=<carpeta>: guarda una captura de la página al fallar.
+    if (process.env.SHOTS && lastPage) {
+      await lastPage.screenshot({ path: `${process.env.SHOTS}/fail-${passed + 1}.png`, fullPage: true }).catch(() => {});
+      console.error(`  url: ${lastPage.url()}`);
+    }
     process.exitCode = 1;
   }
 }

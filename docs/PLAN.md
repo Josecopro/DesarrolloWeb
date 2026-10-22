@@ -119,9 +119,8 @@ Despliegue:
 ### Cambio de alcance (2026-10-21)
 - Se eliminó la página `/nosotros` (equipo) y todo lo relacionado: `TeamGrid`, `team.json`, tipo `TeamMember`, enlace en header/footer y fotos del equipo en `public/images`. `/nosotros` ahora da 404. `legacy/` conserva la versión original hasta la Fase 6.
 
-### Fase 5 — Usuarios y admin
-- Auth; favoritos/comparación persistidos por usuario (migrar desde localStorage al iniciar sesión).
-- `/admin`: CRUD de universidades, carreras, becas y gestión de PQRS, protegido por rol.
+### Fase 5 — Usuarios y admin ✅ completada 2026-10-22 (vía la guía de entrega)
+Se ejecutó siguiendo `docs/CHECKLIST.md` (etapas E0–E9): backend migrado a Prisma 7 con 4 capas y autenticación JWT (bcrypt, `authenticate`, `soloAdmin`, 401/403/409), catálogos universidades y carreras paginados con CRUD admin, interacción `pqrs_requests` (usuario ↔ universidad); frontend reorganizado por features con sesión, rutas protegidas, `/mis-solicitudes` y `/admin`; desplegado en Vercel con Neon; README de entrega con decisiones técnicas y captura de Network. El detalle y la evidencia están en el checklist.
 
 ### Fase 6 — Limpieza
 Borrar `legacy/`, CI (lint + build), README final.

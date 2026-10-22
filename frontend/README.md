@@ -4,6 +4,9 @@ Next.js 16 (App Router) + TypeScript + Tailwind CSS v4. Consume la API de `backe
 
 - Producción: https://desarrollo-web-seven-tau.vercel.app
 - API de producción: https://duam-api.vercel.app/api
+- Visión general, decisiones técnicas (flujo de login, dónde se guarda el token, 401 vs 403) y captura de Network: [README raíz](../README.md).
+
+Credenciales de prueba (creadas por el seed del backend, solo para la entrega): `admin@duam.co` / `AdminDuam2026!` (admin) · `usuario@duam.co` / `UsuarioDuam2026!` (user).
 
 ## Correr en local
 

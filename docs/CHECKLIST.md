@@ -5,7 +5,9 @@ Checklist vivo contra la guía de la entrega (backend REST + frontend Next.js + 
 
 Leyenda: `[x]` cumple · `[~]` parcial (ver nota) · `[ ]` no existe.
 
-Auditoría inicial: 2026-10-21, commit `20a61ca` (main = origin/main).
+Auditoría inicial: 2026-10-21, commit `20a61ca`. Última actualización: 2026-10-22 (E1–E9 completas).
+
+**Pendientes del equipo:** (1) escribir con sus palabras la sección "Uso de IA" del README raíz; (2) hacer push de `main`; (3) opcional: borrar `legacy/` y revisar los contenidos señalados (video de ICETEX, afirmación "acreditadas de alta calidad").
 
 ---
 
@@ -110,18 +112,24 @@ Verificado con `cd frontend && npm run test:e2e` (27 pruebas en navegador real c
 - [x] Página 404 propia (`app/not-found.tsx`).
 
 ## 3. Despliegue
-- [~] Frontend en Vercel (`desarrollo-web` → https://desarrollo-web-seven-tau.vercel.app) — sí; **falta `NEXT_PUBLIC_API_HOST`** (hoy usa `API_URL`/`API_KEY` privados). → E8
-- [ ] Backend en Render o Railway con sus variables — hoy está en Vercel (`duam-api` → https://duam-api.vercel.app) con Neon (C5). → E8
-- [~] Ambos conectados a GitHub (push a `main` redespliega) — sí para los dos proyectos de Vercel; habría que repetirlo en Render/Railway. → E8
+
+Verificado el 2026-10-22: e2e contra producción (24 pasan, 3 que escriben datos omitidas) y un flujo PQRS real en producción (creado, visto en Neon y borrado).
+
+- [x] Frontend en Vercel (`desarrollo-web`) → https://desarrollo-web-seven-tau.vercel.app con `NEXT_PUBLIC_API_HOST=https://duam-api.vercel.app` (se quitaron `API_URL`/`API_KEY`).
+- [ ] Backend en Render o Railway — **desviación aceptada (C5)**: sigue en Vercel (`duam-api`) → https://duam-api.vercel.app/api, con `DATABASE_URL` (Neon), `JWT_SECRET` (sensible), `JWT_EXPIRES_IN`, `CORS_ORIGINS` configuradas en la plataforma. Neon migrado a Prisma (`migrate deploy`) y con seed.
+- [x] Ambos proyectos conectados a GitHub (`Josecopro/DesarrolloWeb`, rama `main`): un push a `main` redespliega los dos. *(Los commits de esta etapa están sin push; producción se desplegó desde ellos con la CLI.)*
 
 ---
 
 ## 4. README (uno por repositorio)
-- [~] Qué es el proyecto + links de ambos despliegues — el README raíz describe el proyecto y los proyectos de Vercel, pero **no enlaza las URLs públicas**. → E9
-- [~] Cómo correrlo en local y variables de entorno — sí (README raíz, `backend/README.md`, `frontend/README.md`); habrá que actualizar variables (JWT, `NEXT_PUBLIC_API_HOST`). → E9
-- [ ] Credenciales de prueba admin y user creadas por el seed. → E1/E9
-- [ ] Decisiones técnicas en palabras propias: flujo completo de login; dónde se guarda el token y su riesgo; cuándo 401 y cuándo 403 con ejemplo real; uso de IA y qué se corrigió. → E9 (las respuestas personales sobre la IA deben escribirlas los autores)
-- [ ] Captura de la pestaña Network con una petición protegida y el header `Authorization`. → E9
+
+Monorepo (C1): el README raíz es el de la entrega; `backend/README.md` y `frontend/README.md` cubren cada proyecto y enlazan al raíz.
+
+- [x] Qué es el proyecto + links de ambos despliegues (raíz, backend, frontend).
+- [x] Cómo correrlo en local y variables de entorno (tabla en el raíz; `.env.example` en cada proyecto).
+- [x] Credenciales de prueba admin y user creadas por el seed.
+- [~] Decisiones técnicas: flujo completo de login, dónde se guarda el token y su riesgo, 401 vs 403 con ejemplos reales — **escritas**. "Uso de IA" queda como **borrador** que los autores deben revisar y escribir con sus palabras.
+- [x] Captura de la pestaña Network con una petición protegida y el header `Authorization` (`docs/img/network-authorization.png`, DevTools reales de Chromium en producción; script `frontend/e2e/network-screenshot.mjs`).
 
 ---
 
@@ -139,5 +147,5 @@ Cada etapa termina con pruebas en verde, este checklist actualizado y commit en 
 | **E5** ✅ | Frontend: feature `auth` (domain/services/hooks/components), páginas `/login` y `/registro`, sesión persistente, navbar según sesión, redirecciones de rutas | E2, E4 |
 | **E6** ✅ | Frontend: catálogo desde la API con cargando/vacío/error y `?page=`; formulario de interacción con sesión; `/mis-<interacciones>` | E3, E5 |
 | **E7** ✅ | Frontend: `/admin` (CRUD del catálogo + todas las interacciones), protegido por rol | E3, E5 |
-| **E8** | Despliegue: backend en Render/Railway (o según C5) con variables; frontend con `NEXT_PUBLIC_API_HOST`; CORS con la URL de producción; auto-deploy desde `main` | E3, E6 |
-| **E9** | README por repositorio (links, local, variables, credenciales, decisiones técnicas, captura de Network) y limpieza (`legacy/`) | E8 |
+| **E8** ✅ | Despliegue: backend en Render/Railway (o según C5) con variables; frontend con `NEXT_PUBLIC_API_HOST`; CORS con la URL de producción; auto-deploy desde `main` | E3, E6 |
+| **E9** ✅ | README por repositorio (links, local, variables, credenciales, decisiones técnicas, captura de Network). Pendiente opcional: borrar `legacy/` | E8 |
