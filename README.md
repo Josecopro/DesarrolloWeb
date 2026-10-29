@@ -19,35 +19,11 @@ DUAM2/
 └── PRODUCT.md  contexto de producto
 ```
 
-> **Repositorios por proyecto.** Este repositorio (`DesarrolloWeb`) es el principal: reúne todo el trabajo, el sitio de la Entrega 1 (`legacy/`) y la documentación. Como pide la guía, cada proyecto tiene además su propio repositorio, con su historial y un README completo:
+> **Repositorios por proyecto.** Este repositorio (`DesarrolloWeb`) es el principal: reúne todo el trabajo, el sitio de la Entrega 1 (`legacy/`) y la documentación.
+> Para el orden del proyecto se inicio como un monorepositorio, sin embargo se crearon los dos repositorios correspondientes para el backend y el frontend, esto para cumplir la rubrica y separar las responsabilidades que hay entre ambos, asi tambien para aumentar la legibilidad 
 >
 > - Backend: https://github.com/Josecopro/duam-backend
 > - Frontend: https://github.com/Josecopro/duam-frontend
-
-## Correr en local
-
-Requisitos: Node.js ≥ 20 y PostgreSQL (o podman/docker).
-
-```bash
-# 1. Base de datos (puerto 5433 para no chocar con un Postgres instalado)
-podman run -d --name duam-pg -e POSTGRES_USER=duam -e POSTGRES_PASSWORD=duam -e POSTGRES_DB=duam -p 5433:5432 postgres:17-alpine
-
-# 2. API → http://localhost:4000/api
-cd backend
-cp .env.example .env            # y pon un JWT_SECRET propio
-npm install                     # genera el cliente de Prisma
-npm run db:migrate              # aplica las migraciones
-npm run db:seed                 # catálogo de la Entrega 1 + usuarios de prueba
-npm run dev
-
-# 3. Frontend → http://localhost:3000 (en otra terminal)
-cd frontend
-cp .env.example .env.local      # NEXT_PUBLIC_API_HOST=http://localhost:4000
-npm install
-npm run dev
-```
-
-Pruebas: `cd backend && npm test` (23 pruebas de la API contra Postgres real) y `cd frontend && npm run test:e2e` (27 pruebas en navegador, con el sitio y la API corriendo).
 
 ### Variables de entorno
 
@@ -102,47 +78,29 @@ Creadas por `npm run db:seed`. **Solo para el ambiente de la entrega.**
 
 En **`localStorage`** (clave `duam-session`, junto al usuario público). Se eligió porque es simple, sobrevive al recargar y permite que `http.ts` agregue el header `Authorization` a cualquier petición hacia una API en otro dominio.
 
-**Riesgo:** cualquier JavaScript que logre ejecutarse en la página, por ejemplo por XSS o por una dependencia comprometida, puede leer el token y usarlo hasta que expire. Lo mitigamos así:
-
-- React escapa el contenido y no se usa `dangerouslySetInnerHTML` con datos de usuario (el único uso es el script fijo del tema).
-- El token dura solo **2 horas**.
-- El payload no lleva datos sensibles.
-- El frontend descarta al cargar un token cuyo `exp` ya pasó.
-- Ante cualquier 401, `http.ts` borra la sesión.
-
 La alternativa más segura sería una cookie `HttpOnly; Secure; SameSite`, que JavaScript no puede leer. Con dos dominios distintos (frontend y API) eso exige configurar cookies entre sitios y protección CSRF, y queda como mejora.
 
-### ¿Cuándo responde la API 401 y cuándo 403?
 
-- **401 Unauthorized: no sabemos quién eres o tu identidad no es válida.** Pasa cuando no hay token, el header no es `Bearer`, la firma no coincide o el token expiró. También en un login con credenciales incorrectas. Ejemplo real: `GET /api/solicitudes/mias` sin header devuelve `401 {"error":"Se requiere iniciar sesión"}`, y con un token vencido `401 {"error":"Sesión inválida o expirada"}`. En el frontend, un 401 en una petición que llevaba token cierra la sesión y redirige a `/login`.
-- **403 Forbidden: sabemos quién eres, pero no tienes permiso.** El token es válido pero el rol no alcanza (middleware `soloAdmin`). Ejemplo real: con la sesión de `usuario@duam.co`, `GET /api/solicitudes` (listar todas) o `POST /api/universidades` devuelven `403 {"error":"No tienes permiso para realizar esta acción"}`. En el frontend, si ese usuario escribe `/admin` en la URL, se le redirige al inicio; y aunque se saltara esa redirección, la API seguiría respondiendo 403.
-
-### Uso de IA (borrador para que lo completen los autores)
+### Uso de IA 
 
 Se usó un asistente de IA (Claude Code) como pareja de programación para:
 
-- migrar el sitio estático a Next.js conservando los tokens de diseño;
-- reescribir el backend con Prisma y la arquitectura de 4 capas;
-- implementar la autenticación JWT;
-- escribir las pruebas automáticas y desplegar en Vercel.
+- Crear una guia de diseño mediante skills como impecable, esto para mejorar el UX, UI y que la pagina web tenga una guia de marca mas estable, todo esto para que sea mas bonito
+- Arreglo de errores y ejecucion de pruebas automaticas para confirmar que todo funcionara de manera correcta
+- revision de la seguridad del JWT, esto para confirmar y arreglar errores que tuvieran que ver con la autenticacion
+- Mejora de la busqueda mediante regex, esto para que a la hora de buscar carreras sea mas amigable
+- implementacion de prisma para el uso correcto de las queries y asi evitar fallas o abusos como sql inyection
 
-Correcciones hechas durante el proceso (a revisar y completar por el equipo):
 
-- **Decisiones que el equipo cambió:** mantener el monorepo y la API en Vercel en lugar de separar repositorios y usar Render; eliminar la página "Nosotros"; definir como catálogos universidades **y** carreras.
-- **Errores detectados con pruebas y capturas y corregidos:**
-  - la búsqueda no encontraba "Medellín" al escribir "medellin";
-  - el header se desbordaba a 1280 px con la sesión de admin;
-  - una condición de carrera entre la redirección de `/login` y el guard de invitados;
-  - pruebas que interactuaban antes de que la página estuviera lista.
-- **Contenido a revisar:** el video de "ICETEX - Créditos y Becas" en los datos de la Entrega 1 no corresponde a ICETEX, y la afirmación "acreditadas de alta calidad" no está verificada para cada universidad.
 
-*(Agreguen aquí, en sus palabras, para qué usaron la IA ustedes y qué tuvieron que corregir o decidir.)*
+## Acerca del backend
+
+Se decidio no usar Neon como base de datos debido a que esta si no se usa en un periodo de tiempo se apaga, y por ende dejan de funcionar algunas funcionalidades por un tiempo, en cambio se utilizo el mismo servicio de vercel para montar duam-api que es el backend y en donde nos conectamos a la db para obtener la informacion de las carreras
 
 ## Despliegue
 
 | Proyecto Vercel | Root Directory | Variables | Se actualiza con |
 |---|---|---|---|
 | `desarrollo-web` (frontend) | `frontend` | `NEXT_PUBLIC_API_HOST` | push a `main` |
-| `duam-api` (backend) | `backend` | `DATABASE_URL`/`DATABASE_URL_UNPOOLED` (integración Neon), `JWT_SECRET`, `JWT_EXPIRES_IN`, `CORS_ORIGINS` | push a `main` |
+| `duam-api` (backend) | `backend` | `DATABASE_URL`/`DATABASE_URL_UNPOOLED` , `JWT_SECRET`, `JWT_EXPIRES_IN`, `CORS_ORIGINS` | push a `main` |
 
-> **Desviación de la guía (decisión del equipo):** el backend está en Vercel (Express como función) y no en Render o Railway. Las migraciones de la base de producción se aplican manualmente con `npm run db:deploy` usando la URL directa de Neon.
