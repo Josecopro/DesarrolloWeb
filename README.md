@@ -19,7 +19,10 @@ DUAM2/
 └── PRODUCT.md  contexto de producto
 ```
 
-> **Monorepo (decisión del equipo).** La guía pide un repositorio por proyecto; aquí `backend/` y `frontend/` son proyectos independientes (cada uno con su `package.json`, README, variables y proyecto de Vercel) dentro del mismo repositorio. Ver `docs/CHECKLIST.md` (choques C1–C7).
+> **Repositorios por proyecto.** Este repositorio (`DesarrolloWeb`) es el principal: reúne todo el trabajo, el sitio de la Entrega 1 (`legacy/`) y la documentación. Como pide la guía, cada proyecto tiene además su propio repositorio, con su historial y un README completo:
+>
+> - Backend: https://github.com/Josecopro/duam-backend
+> - Frontend: https://github.com/Josecopro/duam-frontend
 
 ## Correr en local
 

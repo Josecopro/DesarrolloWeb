@@ -15,7 +15,7 @@ Auditoría inicial: 2026-10-21, commit `20a61ca`. Última actualización: 2026-1
 
 | # | La guía pide | Hoy existe | Decisión |
 |---|---|---|---|
-| C1 | Un repositorio propio para backend y otro para frontend | Monorepo `DUAM2/` con `frontend/`, `backend/`, `legacy/` | **Se mantiene el monorepo** (decisión del equipo, 2026-10-21): cada carpeta es independiente (package.json, README, despliegue). Desviación documentada. |
+| C1 | Un repositorio propio para backend y otro para frontend | Monorepo `DUAM2/` con `frontend/`, `backend/`, `legacy/` | **Resuelto (2026-10-28):** `Josecopro/duam-backend` y `Josecopro/duam-frontend` (historial conservado, README completo cada uno). `DesarrolloWeb` queda como repositorio principal. |
 | C2 | Prisma + PostgreSQL | `pg` con SQL directo (`backend/db/schema.sql`, `backend/src/app.ts`) | **Migrar a Prisma** (schema, migraciones, seed). |
 | C3 | Capas domain / application / infrastructure / interface | Todo el backend en `src/app.ts` (+ `db.ts`, `pqrs.ts`) | **Reescribir en 4 capas.** |
 | C4 | Frontend organizado por features (`src/features/...`) | Atomic Design (`components/atoms|molecules|organisms|templates`) + `lib/` | **Reorganizar por features conservando el diseño**: los componentes genéricos pasan a `features/common/components`. |
@@ -30,7 +30,7 @@ Auditoría inicial: 2026-10-21, commit `20a61ca`. Última actualización: 2026-1
 Verificado con `cd backend && npm test` (23 pruebas contra Postgres real, 2026-10-21).
 
 ### Estructura
-- [-] Repositorio propio — **desviación aceptada (C1)**, reconfirmada el 2026-10-22: monorepo, `backend/` es independiente.
+- [x] Repositorio propio: https://github.com/Josecopro/duam-backend (C1).
 - [x] Node.js + Express 5 + TypeScript + Prisma 7 + PostgreSQL (`backend/prisma/schema.prisma`, migración `prisma/migrations/*_init`).
 - [x] Capas `src/domain` (entidades, contratos, errores) · `src/application` (casos de uso, puertos) · `src/infrastructure` (Prisma, bcrypt, JWT, env, container) · `src/interface/http` (routers, controllers, middlewares, schemas zod).
 
@@ -79,7 +79,7 @@ Verificado con `cd backend && npm test` (23 pruebas contra Postgres real, 2026-1
 Verificado con `cd frontend && npm run test:e2e` (27 pruebas en navegador real contra la API local, 2026-10-22) y capturas en 375/1280/1536 px, claro y oscuro.
 
 ### Estructura
-- [-] Repositorio propio — **desviación aceptada (C1)**, reconfirmada el 2026-10-22: monorepo, `frontend/` es independiente.
+- [x] Repositorio propio: https://github.com/Josecopro/duam-frontend (C1).
 - [x] Next.js 16 (App Router) + TypeScript + Tailwind v4.
 - [x] `app/` solo compone (las páginas importan componentes y loaders de `features/`).
 - [x] `features/common/config.ts`: `API_BASE_URL` desde `NEXT_PUBLIC_API_HOST`.
