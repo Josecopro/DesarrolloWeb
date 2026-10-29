@@ -4,6 +4,7 @@ import { useRef, useState } from "react";
 import { Icon } from "@/features/common/components/Icon";
 import { cn } from "@/features/common/lib/cn";
 import { useFavorites } from "@/features/universities/hooks/useSaved";
+import { universityTypeIcon, universityTypeLabel } from "@/features/universities/domain/types";
 import { useDismiss } from "@/features/common/lib/useDismiss";
 
 // .favorites-button de legacy/assets/css/components/advanced.css (botón flotante abajo a la izquierda).
@@ -65,7 +66,7 @@ export function FavoritesButton() {
             {items.map((item) => (
               <li key={item.id} className="flex items-center gap-3 rounded-md p-3 transition-colors duration-120 hover:bg-bg-hover">
                 <div className="flex size-12 shrink-0 items-center justify-center rounded-sm bg-bg text-text-lighter">
-                  <Icon name="square" size="md" />
+                  <Icon name={item.category === universityTypeLabel.public ? universityTypeIcon.public : universityTypeIcon.private} size="md" />
                 </div>
                 <a href={item.url} target="_blank" rel="noopener noreferrer" className="min-w-0 flex-1">
                   <div className="truncate text-sm font-medium text-text">{item.name}</div>

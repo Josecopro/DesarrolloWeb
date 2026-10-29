@@ -96,6 +96,35 @@ const icons: Record<string, { fill?: boolean; body: ReactNode }> = {
       </>
     ),
   },
+  // Universidades: building y landmark son de Lucide (mismo trazo de 24px que Feather).
+  building: {
+    body: (
+      <>
+        <path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z" />
+        <path d="M6 12H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2" />
+        <path d="M18 9h2a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-2" />
+        <path d="M10 6h4M10 10h4M10 14h4M10 18h4" />
+      </>
+    ),
+  },
+  landmark: {
+    body: (
+      <>
+        <line x1="3" y1="22" x2="21" y2="22" />
+        <path d="M6 18v-7M10 18v-7M14 18v-7M18 18v-7" />
+        <polygon points="12 2 20 7 4 7" />
+      </>
+    ),
+  },
+  "external-link": {
+    body: (
+      <>
+        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+        <polyline points="15 3 21 3 21 9" />
+        <line x1="10" y1="14" x2="21" y2="3" />
+      </>
+    ),
+  },
 };
 
 export type IconName = keyof typeof icons;

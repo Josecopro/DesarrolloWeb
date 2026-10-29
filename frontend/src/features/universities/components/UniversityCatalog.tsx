@@ -5,7 +5,7 @@ import { Button } from "@/features/common/components/Button";
 import { Icon } from "@/features/common/components/Icon";
 import { Pagination } from "@/features/common/components/Pagination";
 import { EmptyState, ErrorState, LoadingState } from "@/features/common/components/QueryState";
-import { type SavedItem, type University, universityTypeLabel } from "../domain/types";
+import { type SavedItem, type University, type UniversityType, universityTypeIcon, universityTypeLabel } from "../domain/types";
 import { UNIVERSITIES_PER_PAGE, useUniversities, useUniversityFilters } from "../hooks/useUniversities";
 import { UniversityItem } from "./UniversityItem";
 
@@ -15,7 +15,7 @@ import { UniversityItem } from "./UniversityItem";
 const sections = [
   { key: "private", title: "Privadas" },
   { key: "public", title: "Oficiales" },
-] as const;
+] as const satisfies { key: UniversityType; title: string }[];
 
 const control =
   "rounded-md border border-border bg-bg-card px-3 py-2 text-sm text-text transition-all duration-120 focus:border-border-focus focus:shadow-(--focus-ring) focus:outline-none";
@@ -53,11 +53,12 @@ export function UniversityCatalog() {
             <option value="public">Oficiales</option>
           </select>
         </div>
-        <div className="flex min-w-[200px] flex-1 items-center">
+        <div className="relative flex min-w-[200px] flex-1 items-center">
           <label htmlFor="filter-search" className="sr-only">
             Buscar universidad
           </label>
-          <input id="filter-search" type="search" value={draft} onChange={(e) => setDraft(e.target.value)} placeholder="Buscar por nombre..." className={`${control} w-full`} />
+          <Icon name="search" size="sm" className="pointer-events-none absolute left-3 text-text-lighter" />
+          <input id="filter-search" type="search" value={draft} onChange={(e) => setDraft(e.target.value)} placeholder="Buscar por nombre..." className={`${control} w-full pl-9`} />
         </div>
         <Button
           variant="ghost"
@@ -73,7 +74,7 @@ export function UniversityCatalog() {
       </div>
 
       <div className="mx-auto max-w-(--container-max)" aria-busy={status === "loading"}>
-        {status === "loading" && <LoadingState count={UNIVERSITIES_PER_PAGE} className={gridClass} />}
+        {status === "loading" && <LoadingState count={UNIVERSITIES_PER_PAGE} className={gridClass} itemClassName="h-36" />}
 
         {status === "error" && <ErrorState error={error} onRetry={reload} />}
 
@@ -109,7 +110,7 @@ export function UniversityCatalog() {
                   id={`${s.key}-title`}
                   className="mb-8 flex items-center justify-center gap-4 border-b-2 border-primary pb-4 text-2xl font-semibold text-primary before:h-px before:flex-1 before:bg-border after:h-px after:flex-1 after:bg-border dark:text-secondary-light"
                 >
-                  <Icon name="package" size="lg" />
+                  <Icon name={universityTypeIcon[s.key]} size="lg" />
                   {s.title}
                 </h2>
                 <ul className={gridClass}>

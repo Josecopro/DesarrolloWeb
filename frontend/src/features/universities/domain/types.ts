@@ -16,6 +16,18 @@ export interface UniversityFilters {
 
 export const universityTypeLabel: Record<UniversityType, string> = { private: "Privada", public: "Oficial" };
 
+/** Ícono por tipo: edificio (privada) o institución con columnas (oficial). */
+export const universityTypeIcon = { private: "building", public: "landmark" } as const;
+
+/** Dominio del sitio sin "www." para mostrar en la tarjeta (udea.edu.co). */
+export function siteHost(url: string): string {
+  try {
+    return new URL(url).hostname.replace(/^www\./, "");
+  } catch {
+    return url;
+  }
+}
+
 /** Elemento guardado en favoritos o comparación (localStorage). */
 export interface SavedItem {
   id: number;
