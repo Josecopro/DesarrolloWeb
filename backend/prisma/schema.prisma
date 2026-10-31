@@ -42,6 +42,7 @@ model University {
   createdAt DateTime       @default(now()) @map("created_at")
   updatedAt DateTime       @updatedAt @map("updated_at")
   requests  PqrsRequest[]
+  programs  Program[]
 
   @@index([type])
   @@map("universities")
@@ -58,20 +59,38 @@ enum Tone {
 
 model Career {
   /// Slug usado en la URL (/carreras/<id>).
-  id          String   @id @db.VarChar(60)
-  name        String   @db.VarChar(120)
-  icon        String   @db.VarChar(16)
-  image       String   @db.VarChar(300)
-  description String   @db.VarChar(300)
-  summary     String   @db.VarChar(600)
+  id          String    @id @db.VarChar(60)
+  name        String    @db.VarChar(120)
+  icon        String    @db.VarChar(16)
+  image       String    @db.VarChar(300)
+  description String    @db.VarChar(300)
+  summary     String    @db.VarChar(600)
   tone        Tone
-  symbol      String   @db.VarChar(40)
-  programs    String[]
-  sort        Int      @default(0)
-  createdAt   DateTime @default(now()) @map("created_at")
-  updatedAt   DateTime @updatedAt @map("updated_at")
+  symbol      String    @db.VarChar(40)
+  programs    Program[]
+  sort        Int       @default(0)
+  createdAt   DateTime  @default(now()) @map("created_at")
+  updatedAt   DateTime  @updatedAt @map("updated_at")
 
   @@map("careers")
+}
+
+/// Programa real de una universidad, importado del SNIES (prisma/fetch-programs.ts). Solo lectura.
+model Program {
+  id           Int        @id @default(autoincrement())
+  name         String     @db.VarChar(200)
+  /// Universitaria, Tecnológica o Técnica.
+  level        String     @db.VarChar(40)
+  /// Presencial, Virtual o A distancia.
+  modality     String     @db.VarChar(40)
+  careerId     String     @map("career_id") @db.VarChar(60)
+  universityId Int        @map("university_id")
+  career       Career     @relation(fields: [careerId], references: [id], onDelete: Cascade)
+  university   University @relation(fields: [universityId], references: [id], onDelete: Cascade)
+
+  @@unique([universityId, name, level, modality])
+  @@index([careerId])
+  @@map("programs")
 }
 
 // ── Becas (solo lectura) ───────────────────────────────────────────────────

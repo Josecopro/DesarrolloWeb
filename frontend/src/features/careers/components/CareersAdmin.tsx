@@ -11,24 +11,25 @@ import { EmptyState, ErrorState, LoadingState } from "@/features/common/componen
 import { Notice, Table, Td, Th } from "@/features/common/components/Table";
 import type { Tone } from "@/features/common/domain/types";
 import { useEntityForm } from "@/features/common/hooks/useEntityForm";
-import type { Career } from "../domain/types";
+import type { Career, CareerInput } from "../domain/types";
 import { useCareers } from "../hooks/useCareers";
 import { careersService } from "../services/careers.service";
 
-// CRUD de áreas de estudio (solo admin). Los programas se escriben uno por línea.
+// CRUD de áreas de estudio (solo admin). Los programas vienen del SNIES (backend: npm run data:programs).
+
+type NewCareer = CareerInput & { id: string };
 
 const SLUG = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
 const tones: Record<Tone, string> = { primary: "Azul", secondary: "Dorado", success: "Verde", accent: "Rojo" };
 const symbols = ["code", "check-circle", "globe", "file-text", "shield", "package"];
 
-const validate = (c: Career, isNew: boolean) => ({
+const validate = (c: NewCareer, isNew: boolean) => ({
   id: isNew && !SLUG.test(c.id) ? "Solo minúsculas, números y guiones (ej. artes-y-diseno)" : undefined,
   name: c.name.length < 2 ? "El nombre debe tener al menos 2 caracteres" : undefined,
   icon: c.icon ? undefined : "Escribe un emoji",
   image: c.image ? undefined : "Indica la ruta de la imagen",
   description: c.description.length < 2 ? "La descripción es obligatoria" : undefined,
   summary: c.summary.length < 2 ? "El resumen es obligatorio" : undefined,
-  programs: c.programs.length ? undefined : "Agrega al menos un programa",
 });
 
 const textFields = [
@@ -54,7 +55,7 @@ export function CareersAdmin() {
   async function onSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
     const raw = Object.fromEntries(new FormData(e.currentTarget)) as Record<string, string>;
-    const career: Career = {
+    const career: NewCareer = {
       id: editing?.id ?? raw.id.trim(),
       name: raw.name.trim(),
       icon: raw.icon.trim(),
@@ -63,7 +64,6 @@ export function CareersAdmin() {
       summary: raw.summary.trim(),
       tone: raw.tone as Tone,
       symbol: raw.symbol,
-      programs: raw.programs.split("\n").map((p) => p.trim()).filter(Boolean),
       sort: Number(raw.sort) || 0,
     };
     const { id, ...data } = career;
@@ -131,11 +131,6 @@ export function CareersAdmin() {
             <div className="md:col-span-2">
               <FormField id="career-summary" label="Resumen (página del área)" error={form.errors.summary}>
                 <Textarea {...field("summary")} rows={3} className="min-h-[90px]" defaultValue={editing?.summary} />
-              </FormField>
-            </div>
-            <div className="md:col-span-2">
-              <FormField id="career-programs" label="Programas (uno por línea)" error={form.errors.programs}>
-                <Textarea {...field("programs")} rows={5} defaultValue={editing?.programs.join("\n")} />
               </FormField>
             </div>
             <div className="flex gap-2 md:col-span-2">

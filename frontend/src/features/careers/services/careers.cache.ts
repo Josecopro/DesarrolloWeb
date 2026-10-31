@@ -13,3 +13,10 @@ export async function getAllCareers(): Promise<Career[]> {
 export async function getCareerById(id: string): Promise<Career | undefined> {
   return (await getAllCareers()).find((c) => c.id === id);
 }
+
+/** Área con sus programas y las universidades que los ofrecen. */
+export async function getCareerDetail(id: string): Promise<Career> {
+  "use cache";
+  cacheLife("minutes");
+  return careersService.get(id);
+}

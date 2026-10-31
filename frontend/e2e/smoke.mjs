@@ -164,15 +164,20 @@ await test("tabs de Misión y Visión: clic y teclado", async () => {
 });
 
 // ── Catálogos desde la API ─────────────────────────────────────────────────
-await test("carreras: catálogo desde la API y tarjeta → subdivisiones", async () => {
+await test("carreras: catálogo desde la API y tarjeta → carreras con sus universidades", async () => {
   const p = await page();
   await open(p, "/carreras");
   const cards = p.locator("main li").filter({ hasText: "Ver subdivisiones" });
   await cards.first().waitFor();
-  assert.equal(await cards.count(), 7);
+  assert.equal(await cards.count(), 8);
   await p.click("main li:has-text('Salud') >> text=Ver subdivisiones");
   await p.waitForURL("**/carreras/salud");
-  assert.ok(await p.isVisible("main >> text=Medicina"));
+  const medicina = p.locator("main article").filter({ hasText: "Médico y Cirujano" });
+  assert.ok(await medicina.getByRole("link", { name: /Universidad de Antioquia/ }).isVisible());
+  await p.fill("main input[type=search]", "ces");
+  await p.locator("main article").first().waitFor();
+  const shown = await p.locator("main article").allTextContents();
+  assert.ok(shown.length > 0 && shown.every((t) => t.includes("Universidad CES")), "el filtro busca por universidad");
 });
 
 await test("universidades: paginación por URL (?page=2) y navegación con el paginador", async () => {

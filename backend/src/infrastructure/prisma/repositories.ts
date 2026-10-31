@@ -1,5 +1,5 @@
 // Implementaciones Prisma de los repositorios del dominio.
-import type { Career, CareerInput, CareerRepository } from "../../domain/career.js";
+import type { Career, CareerInput, CareerRepository, Offering } from "../../domain/career.js";
 import { ConflictError, NotFoundError } from "../../domain/errors.js";
 import { type PageQuery, toPage } from "../../domain/pagination.js";
 import type { PqrsRequest, PqrsRequestFilters, PqrsRequestRepository, RequestStatus } from "../../domain/pqrs-request.js";
@@ -77,9 +77,12 @@ const careerSelect = {
   summary: true,
   tone: true,
   symbol: true,
-  programs: true,
+  programs: { select: { name: true }, distinct: ["name"], orderBy: { name: "asc" } },
   sort: true,
 } satisfies Prisma.CareerSelect;
+
+type CareerRow = Prisma.CareerGetPayload<{ select: typeof careerSelect }>;
+const toCareer = (c: CareerRow) => ({ ...c, programs: c.programs.map((p) => p.name) }) as Career;
 
 export const careerRepository: CareerRepository = {
   async list(query) {
@@ -87,15 +90,32 @@ export const careerRepository: CareerRepository = {
       prisma.career.findMany({ select: careerSelect, orderBy: [{ sort: "asc" }, { name: "asc" }], ...skipTake(query) }),
       prisma.career.count(),
     ]);
-    return toPage(data as Career[], total, query);
+    return toPage(data.map(toCareer), total, query);
   },
-  findById: (id) => prisma.career.findUnique({ where: { id }, select: careerSelect }) as Promise<Career | null>,
+  async findById(id) {
+    const [career, programs] = await Promise.all([
+      prisma.career.findUnique({ where: { id }, select: careerSelect }),
+      prisma.program.findMany({
+        where: { careerId: id },
+        select: { name: true, level: true, modality: true, university: { select: universitySelect } },
+        orderBy: [{ name: "asc" }, { university: { name: "asc" } }],
+      }),
+    ]);
+    if (!career) return null;
+    const offerings = new Map<string, Offering>();
+    for (const { name, university, level, modality } of programs) {
+      let offering = offerings.get(name);
+      if (!offering) offerings.set(name, (offering = { name, universities: [] }));
+      offering.universities.push({ ...university, level, modality });
+    }
+    return { ...toCareer(career), offerings: [...offerings.values()] };
+  },
   create: (data) =>
-    translate(() => prisma.career.create({ data, select: careerSelect }) as Promise<Career>, {
+    translate(async () => toCareer(await prisma.career.create({ data, select: careerSelect })), {
       conflict: "Ya existe un área con ese identificador",
     }).catch(withField("id")),
   update: (id, data: CareerInput) =>
-    translate(() => prisma.career.update({ where: { id }, data, select: careerSelect }) as Promise<Career>, { notFound: "Área no encontrada" }),
+    translate(async () => toCareer(await prisma.career.update({ where: { id }, data, select: careerSelect })), { notFound: "Área no encontrada" }),
   delete: (id) =>
     translate(
       async () => {

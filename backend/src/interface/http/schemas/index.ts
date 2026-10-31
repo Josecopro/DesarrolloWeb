@@ -68,7 +68,6 @@ const careerFields = {
   summary: text(2, 600, "El resumen"),
   tone: z.enum(["primary", "secondary", "success", "accent"], { error: "Tono inválido" }),
   symbol: text(1, 40, "El símbolo"),
-  programs: z.array(text(1, 120, "Cada programa"), { error: "programs debe ser una lista" }).max(100),
   sort: z.coerce.number().int().min(0).max(1000).default(0),
 };
 

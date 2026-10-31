@@ -9,10 +9,12 @@ import { PrismaClient } from "../src/generated/prisma/client.js";
 const prisma = new PrismaClient({ adapter: new PrismaPg({ connectionString: process.env.DATABASE_URL_UNPOOLED ?? process.env.DATABASE_URL }) });
 const load = (file: string) => JSON.parse(readFileSync(new URL(`./seed-data/${file}`, import.meta.url), "utf8"));
 
-const universities = load("universities.json") as Record<"private" | "public", { name: string; url: string }[]>;
+const universities = load("universities.json") as Record<"private" | "public", { name: string; url: string; snies: string }[]>;
 const { categories } = load("careers.json") as {
-  categories: { id: string; name: string; icon: string; image: string; description: string; summary: string; tone: "primary" | "secondary" | "success" | "accent"; symbol: string; subcategories: string[] }[];
+  categories: { id: string; name: string; icon: string; image: string; description: string; summary: string; tone: "primary" | "secondary" | "success" | "accent"; symbol: string }[];
 };
+// Generado con `npm run data:programs` desde el SNIES.
+const programs = load("programs.json") as { university: string; name: string; career: string; level: string; modality: string }[];
 const { scholarships } = load("scholarships.json") as {
   scholarships: { id: string; title: string; description: string; videoUrl: string; type: "government" | "academic" | "sports"; institution: string }[];
 };
@@ -26,15 +28,24 @@ const testUsers = [
 
 async function main() {
   for (const type of ["private", "public"] as const) {
-    for (const u of universities[type]) {
+    for (const { snies: _, ...u } of universities[type]) {
       await prisma.university.upsert({ where: { name: u.name }, create: { ...u, type }, update: { url: u.url, type } });
     }
   }
 
-  for (const [sort, { subcategories, ...c }] of categories.entries()) {
-    const data = { ...c, programs: subcategories, sort };
+  for (const [sort, c] of categories.entries()) {
+    const data = { ...c, sort };
     await prisma.career.upsert({ where: { id: c.id }, create: data, update: data });
   }
+
+  // Programas: solo lectura y sin referencias entrantes, así que se recrean completos en cada seed.
+  const universityIds = new Map((await prisma.university.findMany({ select: { id: true, name: true } })).map((u) => [u.name, u.id]));
+  await prisma.$transaction([
+    prisma.program.deleteMany(),
+    prisma.program.createMany({
+      data: programs.map(({ university, career, ...p }) => ({ ...p, careerId: career, universityId: universityIds.get(university)! })),
+    }),
+  ]);
 
   for (const [sort, s] of scholarships.entries()) {
     const data = { ...s, sort };
@@ -46,8 +57,8 @@ async function main() {
     await prisma.user.upsert({ where: { email: user.email }, create: { ...user, password: await bcrypt.hash(password, 10) }, update: {} });
   }
 
-  const [u, c, s, users] = await Promise.all([prisma.university.count(), prisma.career.count(), prisma.scholarship.count(), prisma.user.count()]);
-  console.log(`Seed listo: ${u} universidades, ${c} áreas, ${s} becas, ${users} usuarios.`);
+  const [u, c, p, s, users] = await Promise.all([prisma.university.count(), prisma.career.count(), prisma.program.count(), prisma.scholarship.count(), prisma.user.count()]);
+  console.log(`Seed listo: ${u} universidades, ${c} áreas, ${p} programas, ${s} becas, ${users} usuarios.`);
 }
 
 main()

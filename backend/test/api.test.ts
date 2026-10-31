@@ -174,15 +174,17 @@ describe("catálogo: carreras", () => {
     summary: "Resumen de prueba",
     tone: "primary",
     symbol: "code",
-    programs: ["Programa A", "Programa B"],
   };
 
   test("GET público paginado y GET /:id por slug", async () => {
     const res = await call("GET", "/carreras");
-    assert.equal(res.json.pagination.total, 7);
+    assert.equal(res.json.pagination.total, 8);
     assert.equal(res.json.data[0].id, "ingenierias");
+    assert.equal(res.json.data[0].offerings, undefined, "la lista no trae el detalle por universidad");
     const salud = await call("GET", "/carreras/salud");
-    assert.ok(salud.json.programs.includes("Medicina"));
+    assert.ok(salud.json.programs.includes("Médico y Cirujano"));
+    const medico = salud.json.offerings.find((o: Json) => o.name === "Médico y Cirujano");
+    assert.ok(medico.universities.some((u: Json) => u.name === "Universidad de Antioquia" && u.level === "Universitaria"));
     assert.equal((await call("GET", "/carreras/no-existe")).status, 404);
     assert.equal((await call("GET", "/carreras/MAL ID")).status, 400);
   });
@@ -194,8 +196,9 @@ describe("catálogo: carreras", () => {
     created.careers.push(career.id);
     assert.equal((await call("POST", "/carreras", { body: career, token: adminToken })).status, 409);
     const { id: _id, ...rest } = career;
-    const upd = await call("PUT", `/carreras/${career.id}`, { body: { ...rest, programs: ["Solo uno"] }, token: adminToken });
-    assert.deepEqual(upd.json.programs, ["Solo uno"]);
+    const upd = await call("PUT", `/carreras/${career.id}`, { body: { ...rest, name: "Área renombrada" }, token: adminToken });
+    assert.equal(upd.json.name, "Área renombrada");
+    assert.deepEqual(upd.json.programs, [], "los programas solo vienen del SNIES");
     assert.equal((await call("DELETE", `/carreras/${career.id}`, { token: adminToken })).status, 204);
   });
 });

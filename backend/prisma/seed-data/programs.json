@@ -1,0 +1,3803 @@
+[
+  {
+    "university": "Universidad Nacional Abierta y a Distancia",
+    "name": "Agronomo",
+    "career": "cienciasbasicas",
+    "level": "Universitaria",
+    "modality": "A distancia"
+  },
+  {
+    "university": "Universidad de Antioquia",
+    "name": "Astrónomo",
+    "career": "cienciasbasicas",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad CES",
+    "name": "Biólogo",
+    "career": "cienciasbasicas",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad de Antioquia",
+    "name": "Biólogo",
+    "career": "cienciasbasicas",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad EAFIT",
+    "name": "Biólogo",
+    "career": "cienciasbasicas",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad Nacional",
+    "name": "Científico de la Computación",
+    "career": "cienciasbasicas",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad CES",
+    "name": "Ecólogo",
+    "career": "cienciasbasicas",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad de Antioquia",
+    "name": "Estadístico",
+    "career": "cienciasbasicas",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad Nacional",
+    "name": "Estadístico",
+    "career": "cienciasbasicas",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad de Antioquia",
+    "name": "Físico",
+    "career": "cienciasbasicas",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad EIA",
+    "name": "Físico",
+    "career": "cienciasbasicas",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad EAFIT",
+    "name": "Geólogo",
+    "career": "cienciasbasicas",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad Nacional",
+    "name": "Ingeniero Biologico",
+    "career": "cienciasbasicas",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad Nacional",
+    "name": "Matemático",
+    "career": "cienciasbasicas",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad de Antioquia",
+    "name": "Médico Veterinario",
+    "career": "cienciasbasicas",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad CES",
+    "name": "Médico Veterinario Zootecnista",
+    "career": "cienciasbasicas",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad de Antioquia",
+    "name": "Microbiólogo Industrial y Ambiental",
+    "career": "cienciasbasicas",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad de Antioquia",
+    "name": "Oceanógrafo",
+    "career": "cienciasbasicas",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad de Medellín",
+    "name": "Profesional en Computación Científica",
+    "career": "cienciasbasicas",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad de Antioquia",
+    "name": "Químico",
+    "career": "cienciasbasicas",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad CES",
+    "name": "Químico Farmacéutico",
+    "career": "cienciasbasicas",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad de Antioquia",
+    "name": "Químico Farmacéutico",
+    "career": "cienciasbasicas",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Instituto Tecnológico Metropolitano - ITM",
+    "name": "Químico Industrial",
+    "career": "cienciasbasicas",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad de Antioquia",
+    "name": "Técnico Profesional Agropecuario",
+    "career": "cienciasbasicas",
+    "level": "Técnica",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Fundación Universitaria Del Area Andina",
+    "name": "Técnico Profesional en Producción de Ganadería Sostenible",
+    "career": "cienciasbasicas",
+    "level": "Técnica",
+    "modality": "Virtual"
+  },
+  {
+    "university": "Tecnológico de Antioquia",
+    "name": "Tecnólogo Agroambiental",
+    "career": "cienciasbasicas",
+    "level": "Tecnológica",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Politécnico Colombiano Jaime Isaza Cadavid",
+    "name": "Tecnólogo Agropecuario",
+    "career": "cienciasbasicas",
+    "level": "Tecnológica",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad Nacional Abierta y a Distancia",
+    "name": "Tecnólogo en Calidad Alimentaria",
+    "career": "cienciasbasicas",
+    "level": "Tecnológica",
+    "modality": "A distancia"
+  },
+  {
+    "university": "Universidad de Antioquia",
+    "name": "Tecnólogo en Gestión de Insumos Agropecuarios",
+    "career": "cienciasbasicas",
+    "level": "Tecnológica",
+    "modality": "Virtual"
+  },
+  {
+    "university": "Universidad Nacional Abierta y a Distancia",
+    "name": "Tecnólogo en Manejo y Comercializacion Agroforestal",
+    "career": "cienciasbasicas",
+    "level": "Tecnológica",
+    "modality": "A distancia"
+  },
+  {
+    "university": "Universidad Nacional Abierta y a Distancia",
+    "name": "Tecnólogo en Producción Animal",
+    "career": "cienciasbasicas",
+    "level": "Tecnológica",
+    "modality": "A distancia"
+  },
+  {
+    "university": "Fundación Universitaria Del Area Andina",
+    "name": "Tecnólogo en Producción de Ganadería Sostenible",
+    "career": "cienciasbasicas",
+    "level": "Tecnológica",
+    "modality": "Virtual"
+  },
+  {
+    "university": "Politécnico Colombiano Jaime Isaza Cadavid",
+    "name": "Tecnólogo en Quimica Industrial y de Laboratorio",
+    "career": "cienciasbasicas",
+    "level": "Tecnológica",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Tecnológico de Antioquia",
+    "name": "Tecnólogo Gestión Agroambiental",
+    "career": "cienciasbasicas",
+    "level": "Tecnológica",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad de Antioquia",
+    "name": "Tecnólogo Químico",
+    "career": "cienciasbasicas",
+    "level": "Tecnológica",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad de Antioquia",
+    "name": "Zootecnista",
+    "career": "cienciasbasicas",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad Nacional",
+    "name": "Zootecnista",
+    "career": "cienciasbasicas",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad Nacional Abierta y a Distancia",
+    "name": "Zootecnista",
+    "career": "cienciasbasicas",
+    "level": "Universitaria",
+    "modality": "A distancia"
+  },
+  {
+    "university": "Institución Universitaria De Envigado",
+    "name": "Abogado",
+    "career": "cienciassociales",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Tecnológico de Antioquia",
+    "name": "Abogado",
+    "career": "cienciassociales",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad Autónoma Latinoamericana",
+    "name": "Abogado",
+    "career": "cienciassociales",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad CES",
+    "name": "Abogado",
+    "career": "cienciassociales",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad de Antioquia",
+    "name": "Abogado",
+    "career": "cienciassociales",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad de Medellín",
+    "name": "Abogado",
+    "career": "cienciassociales",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad EAFIT",
+    "name": "Abogado",
+    "career": "cienciassociales",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad Nacional Abierta y a Distancia",
+    "name": "Abogado",
+    "career": "cienciassociales",
+    "level": "Universitaria",
+    "modality": "Virtual"
+  },
+  {
+    "university": "Universidad Pontificia Bolivariana",
+    "name": "Abogado",
+    "career": "cienciassociales",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad San Buenaventura",
+    "name": "Abogado",
+    "career": "cienciassociales",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad de Antioquia",
+    "name": "Antropólogo",
+    "career": "cienciassociales",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Fundación Universitaria Del Area Andina",
+    "name": "Economista",
+    "career": "cienciassociales",
+    "level": "Universitaria",
+    "modality": "Virtual"
+  },
+  {
+    "university": "Universidad Autónoma Latinoamericana",
+    "name": "Economista",
+    "career": "cienciassociales",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad de Antioquia",
+    "name": "Economista",
+    "career": "cienciassociales",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad de Medellín",
+    "name": "Economista",
+    "career": "cienciassociales",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad EAFIT",
+    "name": "Economista",
+    "career": "cienciassociales",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad EAN",
+    "name": "Economista",
+    "career": "cienciassociales",
+    "level": "Universitaria",
+    "modality": "Virtual"
+  },
+  {
+    "university": "Universidad EIA",
+    "name": "Economista",
+    "career": "cienciassociales",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad Nacional",
+    "name": "Economista",
+    "career": "cienciassociales",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad Nacional Abierta y a Distancia",
+    "name": "Economista",
+    "career": "cienciassociales",
+    "level": "Universitaria",
+    "modality": "Virtual"
+  },
+  {
+    "university": "Universidad Pontificia Bolivariana",
+    "name": "Economista",
+    "career": "cienciassociales",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad CES",
+    "name": "Geopolitólogo",
+    "career": "cienciassociales",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad Pontificia Bolivariana",
+    "name": "Gestor del Emprendimiento y la Innovación",
+    "career": "cienciassociales",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad de Antioquia",
+    "name": "Politólogo",
+    "career": "cienciassociales",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad de Medellín",
+    "name": "Politólogo",
+    "career": "cienciassociales",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad EAFIT",
+    "name": "Politólogo",
+    "career": "cienciassociales",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad Nacional",
+    "name": "Politólogo",
+    "career": "cienciassociales",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad Nacional Abierta y a Distancia",
+    "name": "Politólogo",
+    "career": "cienciassociales",
+    "level": "Universitaria",
+    "modality": "Virtual"
+  },
+  {
+    "university": "Universidad Pontificia Bolivariana",
+    "name": "Politólogo",
+    "career": "cienciassociales",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad EAN",
+    "name": "Profesional en Comercio y Negocios Globales",
+    "career": "cienciassociales",
+    "level": "Universitaria",
+    "modality": "Virtual"
+  },
+  {
+    "university": "Tecnológico de Antioquia",
+    "name": "Profesional en Criminalistica",
+    "career": "cienciassociales",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad de Antioquia",
+    "name": "Profesional en Desarrollo Territorial",
+    "career": "cienciassociales",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad de Antioquia",
+    "name": "Profesional en Gestión Cultural",
+    "career": "cienciassociales",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad Nacional Abierta y a Distancia",
+    "name": "Profesional en Gestión Deportiva",
+    "career": "cienciassociales",
+    "level": "Universitaria",
+    "modality": "Virtual"
+  },
+  {
+    "university": "Universidad EAN",
+    "name": "Profesional en Historia y Gestión Política",
+    "career": "cienciassociales",
+    "level": "Universitaria",
+    "modality": "Virtual"
+  },
+  {
+    "university": "Universidad de Medellín",
+    "name": "Profesional en Investigación Criminal",
+    "career": "cienciassociales",
+    "level": "Universitaria",
+    "modality": "Virtual"
+  },
+  {
+    "university": "Universidad de Medellín",
+    "name": "Profesional en Investigación Criminal",
+    "career": "cienciassociales",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad EAN",
+    "name": "Profesional en Negocios Internacionales",
+    "career": "cienciassociales",
+    "level": "Universitaria",
+    "modality": "Virtual"
+  },
+  {
+    "university": "Colegio Mayor De Antioquia",
+    "name": "Profesional en Planeacion y Desarrollo Social",
+    "career": "cienciassociales",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad de Antioquia",
+    "name": "Sociólogo",
+    "career": "cienciassociales",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad Nacional Abierta y a Distancia",
+    "name": "Sociólogo",
+    "career": "cienciassociales",
+    "level": "Universitaria",
+    "modality": "Virtual"
+  },
+  {
+    "university": "Fundación Universitaria Del Area Andina",
+    "name": "Técnico Profesional en Comercio Exterior",
+    "career": "cienciassociales",
+    "level": "Técnica",
+    "modality": "Virtual"
+  },
+  {
+    "university": "Tecnológico de Antioquia",
+    "name": "Técnico Profesional en Procesos de Comercio Exterior y Logística",
+    "career": "cienciassociales",
+    "level": "Técnica",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Colegio Mayor De Antioquia",
+    "name": "Tecnólogo en Gestión Comunitaria",
+    "career": "cienciassociales",
+    "level": "Tecnológica",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Tecnológico de Antioquia",
+    "name": "Tecnólogo en Gestión de Comercio Exterior y Logística",
+    "career": "cienciassociales",
+    "level": "Tecnológica",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad Nacional Abierta y a Distancia",
+    "name": "Tecnólogo en Gestión Jurídica de la Información",
+    "career": "cienciassociales",
+    "level": "Tecnológica",
+    "modality": "Virtual"
+  },
+  {
+    "university": "Tecnológico de Antioquia",
+    "name": "Tecnólogo en Investigación Judicial",
+    "career": "cienciassociales",
+    "level": "Tecnológica",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad de Antioquia",
+    "name": "Tecnólogo en Regencia de Farmacia",
+    "career": "cienciassociales",
+    "level": "Tecnológica",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Institución Universitaria De Envigado",
+    "name": "Trabajador Social",
+    "career": "cienciassociales",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad de Antioquia",
+    "name": "Trabajador Social",
+    "career": "cienciassociales",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad Pontificia Bolivariana",
+    "name": "Trabajador Social",
+    "career": "cienciassociales",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad Pontificia Bolivariana",
+    "name": "Trabajador Social",
+    "career": "cienciassociales",
+    "level": "Universitaria",
+    "modality": "A distancia"
+  },
+  {
+    "university": "Tecnológico de Antioquia",
+    "name": "Trabajor Social",
+    "career": "cienciassociales",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad de Antioquia",
+    "name": "Licenciada / Licenciado en Pedagogía de la Madre Tierra",
+    "career": "educacion",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad de Antioquia",
+    "name": "Licenciado en Artes Escénicas",
+    "career": "educacion",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad de Antioquia",
+    "name": "Licenciado en Artes Plasticas",
+    "career": "educacion",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad de Antioquia",
+    "name": "Licenciado en Ciencias Naturales",
+    "career": "educacion",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad Antonio Nariño",
+    "name": "Licenciado en Ciencias Naturales y Educación Ambiental",
+    "career": "educacion",
+    "level": "Universitaria",
+    "modality": "A distancia"
+  },
+  {
+    "university": "Fundación Universitaria Del Area Andina",
+    "name": "Licenciado en Ciencias Sociales",
+    "career": "educacion",
+    "level": "Universitaria",
+    "modality": "Virtual"
+  },
+  {
+    "university": "Universidad Autónoma Latinoamericana",
+    "name": "Licenciado en Ciencias Sociales",
+    "career": "educacion",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad de Antioquia",
+    "name": "Licenciado en Ciencias Sociales",
+    "career": "educacion",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad San Buenaventura",
+    "name": "Licenciado en Educación Artistica",
+    "career": "educacion",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad de Antioquia",
+    "name": "Licenciado en Educación Básica Primaria",
+    "career": "educacion",
+    "level": "Universitaria",
+    "modality": "A distancia"
+  },
+  {
+    "university": "Universidad de Antioquia",
+    "name": "Licenciado en Educación Especial",
+    "career": "educacion",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad de Antioquia",
+    "name": "Licenciado en Educación Física",
+    "career": "educacion",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Politécnico Colombiano Jaime Isaza Cadavid",
+    "name": "Licenciado en Educación Física Recreación y Deportes",
+    "career": "educacion",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad San Buenaventura",
+    "name": "Licenciado en Educación Física y Deporte",
+    "career": "educacion",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Fundación Universitaria Del Area Andina",
+    "name": "Licenciado en Educación Infantil",
+    "career": "educacion",
+    "level": "Universitaria",
+    "modality": "A distancia"
+  },
+  {
+    "university": "Tecnológico de Antioquia",
+    "name": "Licenciado en Educación Infantil",
+    "career": "educacion",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad Antonio Nariño",
+    "name": "Licenciado en Educación Infantil",
+    "career": "educacion",
+    "level": "Universitaria",
+    "modality": "A distancia"
+  },
+  {
+    "university": "Universidad de Antioquia",
+    "name": "Licenciado en Educación Infantil",
+    "career": "educacion",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad San Buenaventura",
+    "name": "Licenciado en Educación Infantil",
+    "career": "educacion",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Tecnológico de Antioquia",
+    "name": "Licenciado en Educación Preescolar",
+    "career": "educacion",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad Pontificia Bolivariana",
+    "name": "Licenciado en Español e Inglés",
+    "career": "educacion",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad Nacional Abierta y a Distancia",
+    "name": "Licenciado en Etnoeducacion",
+    "career": "educacion",
+    "level": "Universitaria",
+    "modality": "A distancia"
+  },
+  {
+    "university": "Universidad Pontificia Bolivariana",
+    "name": "Licenciado en Etnoeducacion",
+    "career": "educacion",
+    "level": "Universitaria",
+    "modality": "A distancia"
+  },
+  {
+    "university": "Universidad Nacional Abierta y a Distancia",
+    "name": "Licenciado en Filosofía",
+    "career": "educacion",
+    "level": "Universitaria",
+    "modality": "A distancia"
+  },
+  {
+    "university": "Universidad Pontificia Bolivariana",
+    "name": "Licenciado en Filosofía y Letras",
+    "career": "educacion",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad de Antioquia",
+    "name": "Licenciado en Física",
+    "career": "educacion",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad San Buenaventura",
+    "name": "Licenciado en Humanidades y Lengua Castellana",
+    "career": "educacion",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad Nacional Abierta y a Distancia",
+    "name": "Licenciado en Lenguas Extranjeras con Énfasis en Inglés",
+    "career": "educacion",
+    "level": "Universitaria",
+    "modality": "Virtual"
+  },
+  {
+    "university": "Universidad de Antioquia",
+    "name": "Licenciado en Lenguas Extranjeras con Énfasis en Inglés y Francés",
+    "career": "educacion",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Tecnológico de Antioquia",
+    "name": "Licenciado en Literatura y Lengua Castellana",
+    "career": "educacion",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad de Antioquia",
+    "name": "Licenciado en Literatura y Lengua Castellana",
+    "career": "educacion",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad de Antioquia",
+    "name": "Licenciado en Matemáticas",
+    "career": "educacion",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad Nacional Abierta y a Distancia",
+    "name": "Licenciado en Matemáticas",
+    "career": "educacion",
+    "level": "Universitaria",
+    "modality": "Virtual"
+  },
+  {
+    "university": "Universidad Antonio Nariño",
+    "name": "Licenciado en Matemáticas e Informática",
+    "career": "educacion",
+    "level": "Universitaria",
+    "modality": "Virtual"
+  },
+  {
+    "university": "Universidad de Antioquia",
+    "name": "Licenciado en Música",
+    "career": "educacion",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad Nacional Abierta y a Distancia",
+    "name": "Licenciado en Pedagogía Infantil",
+    "career": "educacion",
+    "level": "Universitaria",
+    "modality": "Virtual"
+  },
+  {
+    "university": "Universidad de Antioquia",
+    "name": "Matemático",
+    "career": "educacion",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad de Antioquia",
+    "name": "Pedagogo",
+    "career": "educacion",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Politécnico Colombiano Jaime Isaza Cadavid",
+    "name": "Profesional en Deporte",
+    "career": "educacion",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad de Antioquia",
+    "name": "Profesional en Entrenamiento Deportivo",
+    "career": "educacion",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad San Buenaventura",
+    "name": "Tecnólogo en Entrenamiento Deportivo",
+    "career": "educacion",
+    "level": "Tecnológica",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad de Antioquia",
+    "name": "Archivista",
+    "career": "humanidades",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad de Antioquia",
+    "name": "Bibliotecologo",
+    "career": "humanidades",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad de Antioquia",
+    "name": "Comunicador",
+    "career": "humanidades",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Politécnico Colombiano Jaime Isaza Cadavid",
+    "name": "Comunicador Audiovisual",
+    "career": "humanidades",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad de Antioquia",
+    "name": "Comunicador Audiovisual y Multimedial",
+    "career": "humanidades",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad de Medellín",
+    "name": "Comunicador en Entretenimiento Digital",
+    "career": "humanidades",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad de Medellín",
+    "name": "Comunicador en Lenguajes Audiovisuales",
+    "career": "humanidades",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad de Medellín",
+    "name": "Comunicador Gráfico Publicitario",
+    "career": "humanidades",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Fundación Universitaria Del Area Andina",
+    "name": "Comunicador Social",
+    "career": "humanidades",
+    "level": "Universitaria",
+    "modality": "Virtual"
+  },
+  {
+    "university": "Universidad EAFIT",
+    "name": "Comunicador Social",
+    "career": "humanidades",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad Nacional Abierta y a Distancia",
+    "name": "Comunicador Social",
+    "career": "humanidades",
+    "level": "Universitaria",
+    "modality": "Virtual"
+  },
+  {
+    "university": "Universidad de Antioquia",
+    "name": "Comunicador Social - Periodista",
+    "career": "humanidades",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad Pontificia Bolivariana",
+    "name": "Comunicador Social - Periodista",
+    "career": "humanidades",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Fundación Universitaria Del Area Andina",
+    "name": "Diseñador de Modas",
+    "career": "humanidades",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad Pontificia Bolivariana",
+    "name": "Diseñador de Vestuario",
+    "career": "humanidades",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Institución Universitaria Pascual Bravo",
+    "name": "Diseñador Gráfico",
+    "career": "humanidades",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad Pontificia Bolivariana",
+    "name": "Diseñador Gráfico",
+    "career": "humanidades",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad Nacional Abierta y a Distancia",
+    "name": "Diseñador Industrial",
+    "career": "humanidades",
+    "level": "Universitaria",
+    "modality": "Virtual"
+  },
+  {
+    "university": "Universidad Pontificia Bolivariana",
+    "name": "Diseñador Industrial",
+    "career": "humanidades",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad San Buenaventura",
+    "name": "Diseñador Industrial",
+    "career": "humanidades",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad EAFIT",
+    "name": "Diseñador Interactivo",
+    "career": "humanidades",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad de Antioquia",
+    "name": "Filólogo Hispanista",
+    "career": "humanidades",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad de Antioquia",
+    "name": "Filosofo",
+    "career": "humanidades",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad Nacional Abierta y a Distancia",
+    "name": "Filosofo",
+    "career": "humanidades",
+    "level": "Universitaria",
+    "modality": "Virtual"
+  },
+  {
+    "university": "Universidad Pontificia Bolivariana",
+    "name": "Filosofo",
+    "career": "humanidades",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad de Antioquia",
+    "name": "Historiador",
+    "career": "humanidades",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad Nacional",
+    "name": "Historiador",
+    "career": "humanidades",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad Pontificia Bolivariana",
+    "name": "Historiador",
+    "career": "humanidades",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Instituto Tecnológico Metropolitano - ITM",
+    "name": "Intérprete y Traductor Lengua de Señas Colombiana - Español",
+    "career": "humanidades",
+    "level": "Universitaria",
+    "modality": "Virtual"
+  },
+  {
+    "university": "Universidad de Antioquia",
+    "name": "Licenciado en Danza",
+    "career": "humanidades",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad Pontificia Bolivariana",
+    "name": "Licenciado en Español e Inglés",
+    "career": "humanidades",
+    "level": "Universitaria",
+    "modality": "A distancia"
+  },
+  {
+    "university": "Universidad de Antioquia",
+    "name": "Licenciado en Filosofía",
+    "career": "humanidades",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad de Antioquia",
+    "name": "Maestro en Arte Dramático",
+    "career": "humanidades",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad de Antioquia",
+    "name": "Maestro en Artes Plasticas",
+    "career": "humanidades",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad Nacional",
+    "name": "Maestro en Artes Plasticas",
+    "career": "humanidades",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Instituto Tecnológico Metropolitano - ITM",
+    "name": "Maestro en Artes Visuales",
+    "career": "humanidades",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad Nacional Abierta y a Distancia",
+    "name": "Maestro en Artes Visuales",
+    "career": "humanidades",
+    "level": "Universitaria",
+    "modality": "Virtual"
+  },
+  {
+    "university": "Universidad de Antioquia",
+    "name": "Maestro en Canto Lírico / Maestro en Canto Popular",
+    "career": "humanidades",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad Nacional Abierta y a Distancia",
+    "name": "Maestro en Música",
+    "career": "humanidades",
+    "level": "Universitaria",
+    "modality": "Virtual"
+  },
+  {
+    "university": "Universidad de Antioquia",
+    "name": "Músico (adjetivo Derivado del Énfasis)",
+    "career": "humanidades",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad EAFIT",
+    "name": "Músico con Énfasis en Instrumento",
+    "career": "humanidades",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad de Antioquia",
+    "name": "Periodista",
+    "career": "humanidades",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Instituto Tecnológico Metropolitano - ITM",
+    "name": "Profesional en Artes de la Grabacion y Profesional Musical",
+    "career": "humanidades",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Instituto Tecnológico Metropolitano - ITM",
+    "name": "Profesional en Cine",
+    "career": "humanidades",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad de Medellín",
+    "name": "Profesional en Comunicacion y Relaciones Corporativas",
+    "career": "humanidades",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Institución Universitaria Pascual Bravo",
+    "name": "Profesional en Diseño de Vestuario",
+    "career": "humanidades",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad de Medellín",
+    "name": "Profesional en Diseño y Gestión de Espacios",
+    "career": "humanidades",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad de Medellín",
+    "name": "Profesional en Diseño y Gestión de la Moda y el Textil",
+    "career": "humanidades",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad de Medellín",
+    "name": "Profesional en Diseño y Gestión del Producto",
+    "career": "humanidades",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad Pontificia Bolivariana",
+    "name": "Profesional en Estudios Literarios",
+    "career": "humanidades",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad EAN",
+    "name": "Profesional en Lenguas Modernas",
+    "career": "humanidades",
+    "level": "Universitaria",
+    "modality": "Virtual"
+  },
+  {
+    "university": "Universidad EAFIT",
+    "name": "Profesional en Literatura",
+    "career": "humanidades",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad Pontificia Bolivariana",
+    "name": "Publicista",
+    "career": "humanidades",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Institución Universitaria Pascual Bravo",
+    "name": "Tecnólogo en Animación Digital",
+    "career": "humanidades",
+    "level": "Tecnológica",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad de Antioquia",
+    "name": "Tecnólogo en Archivística",
+    "career": "humanidades",
+    "level": "Tecnológica",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad de Antioquia",
+    "name": "Tecnólogo en Artesanías",
+    "career": "humanidades",
+    "level": "Tecnológica",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Institución Universitaria Pascual Bravo",
+    "name": "Tecnólogo en Gestión del Diseño Gráfico",
+    "career": "humanidades",
+    "level": "Tecnológica",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Institución Universitaria Pascual Bravo",
+    "name": "Tecnólogo en Gestión del Diseño Textil y de Modas",
+    "career": "humanidades",
+    "level": "Tecnológica",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Instituto Tecnológico Metropolitano - ITM",
+    "name": "Tecnólogo en Informática Musical",
+    "career": "humanidades",
+    "level": "Tecnológica",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Politécnico Colombiano Jaime Isaza Cadavid",
+    "name": "Tecnólogo en Producción de Television",
+    "career": "humanidades",
+    "level": "Tecnológica",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad Pontificia Bolivariana",
+    "name": "Teologo",
+    "career": "humanidades",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad de Antioquia",
+    "name": "Traductor Inglés-francés-español",
+    "career": "humanidades",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Colegio Mayor De Antioquia",
+    "name": "Arquitecto",
+    "career": "ingenierias",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad Nacional",
+    "name": "Arquitecto",
+    "career": "ingenierias",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad Pontificia Bolivariana",
+    "name": "Arquitecto",
+    "career": "ingenierias",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad San Buenaventura",
+    "name": "Arquitecto",
+    "career": "ingenierias",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad Nacional",
+    "name": "Arquitecto Constructor",
+    "career": "ingenierias",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad de Antioquia",
+    "name": "Bioingeniero",
+    "career": "ingenierias",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Colegio Mayor De Antioquia",
+    "name": "Constructor Civil",
+    "career": "ingenierias",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Fundación Universitaria Del Area Andina",
+    "name": "Ingeniería Industrial",
+    "career": "ingenierias",
+    "level": "Universitaria",
+    "modality": "Virtual"
+  },
+  {
+    "university": "Universidad de Antioquia",
+    "name": "Ingeniero Acuícola",
+    "career": "ingenierias",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad EIA",
+    "name": "Ingeniero Administrador",
+    "career": "ingenierias",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad Nacional",
+    "name": "Ingeniero Administrador",
+    "career": "ingenierias",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad Pontificia Bolivariana",
+    "name": "Ingeniero Administrador",
+    "career": "ingenierias",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Institución Universitaria Pascual Bravo",
+    "name": "Ingeniero Administrativo",
+    "career": "ingenierias",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad Pontificia Bolivariana",
+    "name": "Ingeniero Aeronautico",
+    "career": "ingenierias",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad Nacional",
+    "name": "Ingeniero Agricola",
+    "career": "ingenierias",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad Nacional Abierta y a Distancia",
+    "name": "Ingeniero Agroforestal",
+    "career": "ingenierias",
+    "level": "Universitaria",
+    "modality": "A distancia"
+  },
+  {
+    "university": "Universidad de Antioquia",
+    "name": "Ingeniero Agroindustrial",
+    "career": "ingenierias",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad Pontificia Bolivariana",
+    "name": "Ingeniero Agroindustrial",
+    "career": "ingenierias",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad EAFIT",
+    "name": "Ingeniero Agronómico",
+    "career": "ingenierias",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad Nacional",
+    "name": "Ingeniero Agronomo",
+    "career": "ingenierias",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Politécnico Colombiano Jaime Isaza Cadavid",
+    "name": "Ingeniero Agropecuario",
+    "career": "ingenierias",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad de Antioquia",
+    "name": "Ingeniero Agropecuario",
+    "career": "ingenierias",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Colegio Mayor De Antioquia",
+    "name": "Ingeniero Ambiental",
+    "career": "ingenierias",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Tecnológico de Antioquia",
+    "name": "Ingeniero Ambiental",
+    "career": "ingenierias",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad de Antioquia",
+    "name": "Ingeniero Ambiental",
+    "career": "ingenierias",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad de Antioquia",
+    "name": "Ingeniero Ambiental",
+    "career": "ingenierias",
+    "level": "Universitaria",
+    "modality": "Virtual"
+  },
+  {
+    "university": "Universidad de Medellín",
+    "name": "Ingeniero Ambiental",
+    "career": "ingenierias",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad EIA",
+    "name": "Ingeniero Ambiental",
+    "career": "ingenierias",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad Nacional",
+    "name": "Ingeniero Ambiental",
+    "career": "ingenierias",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad Pontificia Bolivariana",
+    "name": "Ingeniero Ambiental",
+    "career": "ingenierias",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad San Buenaventura",
+    "name": "Ingeniero Ambiental",
+    "career": "ingenierias",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Instituto Tecnológico Metropolitano - ITM",
+    "name": "Ingeniero Biomédico",
+    "career": "ingenierias",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad CES",
+    "name": "Ingeniero Biomédico",
+    "career": "ingenierias",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad EIA",
+    "name": "Ingeniero Biomédico",
+    "career": "ingenierias",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad de Antioquia",
+    "name": "Ingeniero Bioquímico",
+    "career": "ingenierias",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad EIA",
+    "name": "Ingeniero Biotecnológico",
+    "career": "ingenierias",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Politécnico Colombiano Jaime Isaza Cadavid",
+    "name": "Ingeniero Civil",
+    "career": "ingenierias",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad de Antioquia",
+    "name": "Ingeniero Civil",
+    "career": "ingenierias",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad de Medellín",
+    "name": "Ingeniero Civil",
+    "career": "ingenierias",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad EAFIT",
+    "name": "Ingeniero Civil",
+    "career": "ingenierias",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad EIA",
+    "name": "Ingeniero Civil",
+    "career": "ingenierias",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad Nacional",
+    "name": "Ingeniero Civil",
+    "career": "ingenierias",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Colegio Mayor De Antioquia",
+    "name": "Ingeniero Comercial",
+    "career": "ingenierias",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad de Antioquia",
+    "name": "Ingeniero de Alimentos",
+    "career": "ingenierias",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad Nacional Abierta y a Distancia",
+    "name": "Ingeniero de Alimentos",
+    "career": "ingenierias",
+    "level": "Universitaria",
+    "modality": "Virtual"
+  },
+  {
+    "university": "Universidad Nacional",
+    "name": "Ingeniero de Control",
+    "career": "ingenierias",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad San Buenaventura",
+    "name": "Ingeniero de Datos y Software",
+    "career": "ingenierias",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad EAFIT",
+    "name": "Ingeniero de Diseño de Producto",
+    "career": "ingenierias",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Instituto Tecnológico Metropolitano - ITM",
+    "name": "Ingeniero de la Calidad",
+    "career": "ingenierias",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Institución Universitaria Pascual Bravo",
+    "name": "Ingeniero de Materiales",
+    "career": "ingenierias",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad de Antioquia",
+    "name": "Ingeniero de Materiales",
+    "career": "ingenierias",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad de Medellín",
+    "name": "Ingeniero de Materiales",
+    "career": "ingenierias",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad Nacional",
+    "name": "Ingeniero de Minas y Metalurgia",
+    "career": "ingenierias",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad San Buenaventura",
+    "name": "Ingeniero de Multimedia",
+    "career": "ingenierias",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad Nacional",
+    "name": "Ingeniero de Petroleos",
+    "career": "ingenierias",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad EAFIT",
+    "name": "Ingeniero de Procesos",
+    "career": "ingenierias",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Instituto Tecnológico Metropolitano - ITM",
+    "name": "Ingeniero de Producción",
+    "career": "ingenierias",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad EAFIT",
+    "name": "Ingeniero de Producción",
+    "career": "ingenierias",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad EAN",
+    "name": "Ingeniero de Producción",
+    "career": "ingenierias",
+    "level": "Universitaria",
+    "modality": "Virtual"
+  },
+  {
+    "university": "Politécnico Colombiano Jaime Isaza Cadavid",
+    "name": "Ingeniero de Productividad y Calidad",
+    "career": "ingenierias",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Fundación Universitaria Del Area Andina",
+    "name": "Ingeniero de Sistemas",
+    "career": "ingenierias",
+    "level": "Universitaria",
+    "modality": "Virtual"
+  },
+  {
+    "university": "Institución Universitaria De Envigado",
+    "name": "Ingeniero de Sistemas",
+    "career": "ingenierias",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Instituto Tecnológico Metropolitano - ITM",
+    "name": "Ingeniero de Sistemas",
+    "career": "ingenierias",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad de Antioquia",
+    "name": "Ingeniero de Sistemas",
+    "career": "ingenierias",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad de Antioquia",
+    "name": "Ingeniero de Sistemas",
+    "career": "ingenierias",
+    "level": "Universitaria",
+    "modality": "Virtual"
+  },
+  {
+    "university": "Universidad de Medellín",
+    "name": "Ingeniero de Sistemas",
+    "career": "ingenierias",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad EAFIT",
+    "name": "Ingeniero de Sistemas",
+    "career": "ingenierias",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad EAN",
+    "name": "Ingeniero de Sistemas",
+    "career": "ingenierias",
+    "level": "Universitaria",
+    "modality": "Virtual"
+  },
+  {
+    "university": "Universidad Nacional Abierta y a Distancia",
+    "name": "Ingeniero de Sistemas",
+    "career": "ingenierias",
+    "level": "Universitaria",
+    "modality": "Virtual"
+  },
+  {
+    "university": "Universidad San Buenaventura",
+    "name": "Ingeniero de Sistemas Ciberneticos",
+    "career": "ingenierias",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad Nacional",
+    "name": "Ingeniero de Sistemas e Informática",
+    "career": "ingenierias",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad Pontificia Bolivariana",
+    "name": "Ingeniero de Sistemas e Informática",
+    "career": "ingenierias",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad EIA",
+    "name": "Ingeniero de Sistemas y Computación",
+    "career": "ingenierias",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Institución Universitaria Pascual Bravo",
+    "name": "Ingeniero de Software",
+    "career": "ingenierias",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad Antonio Nariño",
+    "name": "Ingeniero de Software",
+    "career": "ingenierias",
+    "level": "Universitaria",
+    "modality": "A distancia"
+  },
+  {
+    "university": "Universidad San Buenaventura",
+    "name": "Ingeniero de Sonido",
+    "career": "ingenierias",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Instituto Tecnológico Metropolitano - ITM",
+    "name": "Ingeniero de Telecomunicaciones",
+    "career": "ingenierias",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad de Antioquia",
+    "name": "Ingeniero de Telecomunicaciones",
+    "career": "ingenierias",
+    "level": "Universitaria",
+    "modality": "Virtual"
+  },
+  {
+    "university": "Universidad de Antioquia",
+    "name": "Ingeniero de Telecomunicaciones",
+    "career": "ingenierias",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad de Medellín",
+    "name": "Ingeniero de Telecomunicaciones",
+    "career": "ingenierias",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad Nacional Abierta y a Distancia",
+    "name": "Ingeniero de Telecomunicaciones",
+    "career": "ingenierias",
+    "level": "Universitaria",
+    "modality": "A distancia"
+  },
+  {
+    "university": "Universidad Pontificia Bolivariana",
+    "name": "Ingeniero de Telecomunicaciones",
+    "career": "ingenierias",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Institución Universitaria Pascual Bravo",
+    "name": "Ingeniero Electricista",
+    "career": "ingenierias",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad de Antioquia",
+    "name": "Ingeniero Electricista",
+    "career": "ingenierias",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad Nacional",
+    "name": "Ingeniero Electricista",
+    "career": "ingenierias",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad Pontificia Bolivariana",
+    "name": "Ingeniero Electricista",
+    "career": "ingenierias",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Instituto Tecnológico Metropolitano - ITM",
+    "name": "Ingeniero Electromecánico",
+    "career": "ingenierias",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Institución Universitaria De Envigado",
+    "name": "Ingeniero Electrónico",
+    "career": "ingenierias",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Instituto Tecnológico Metropolitano - ITM",
+    "name": "Ingeniero Electrónico",
+    "career": "ingenierias",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad de Antioquia",
+    "name": "Ingeniero Electrónico",
+    "career": "ingenierias",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad de Medellín",
+    "name": "Ingeniero Electrónico",
+    "career": "ingenierias",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad Nacional Abierta y a Distancia",
+    "name": "Ingeniero Electrónico",
+    "career": "ingenierias",
+    "level": "Universitaria",
+    "modality": "A distancia"
+  },
+  {
+    "university": "Universidad Pontificia Bolivariana",
+    "name": "Ingeniero Electrónico",
+    "career": "ingenierias",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Politécnico Colombiano Jaime Isaza Cadavid",
+    "name": "Ingeniero en Automatización y Control",
+    "career": "ingenierias",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad Pontificia Bolivariana",
+    "name": "Ingeniero en Ciencia de Datos",
+    "career": "ingenierias",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad Pontificia Bolivariana",
+    "name": "Ingeniero en Diseño de Entretenimiento Digital",
+    "career": "ingenierias",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Instituto Tecnológico Metropolitano - ITM",
+    "name": "Ingeniero en Diseño Industrial",
+    "career": "ingenierias",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad de Medellín",
+    "name": "Ingeniero en Energía",
+    "career": "ingenierias",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Institución Universitaria Pascual Bravo",
+    "name": "Ingeniero en Logística",
+    "career": "ingenierias",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad Pontificia Bolivariana",
+    "name": "Ingeniero en Nanotecnología",
+    "career": "ingenierias",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Politécnico Colombiano Jaime Isaza Cadavid",
+    "name": "Ingeniero en Seguridad y Salud en el Trabajo",
+    "career": "ingenierias",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Tecnológico de Antioquia",
+    "name": "Ingeniero en Software",
+    "career": "ingenierias",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad de Medellín",
+    "name": "Ingeniero Financiero",
+    "career": "ingenierias",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad EIA",
+    "name": "Ingeniero Financiero",
+    "career": "ingenierias",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad EAFIT",
+    "name": "Ingeniero Físico",
+    "career": "ingenierias",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad Nacional",
+    "name": "Ingeniero Físico",
+    "career": "ingenierias",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad Nacional",
+    "name": "Ingeniero Forestal",
+    "career": "ingenierias",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad EIA",
+    "name": "Ingeniero Geólogo",
+    "career": "ingenierias",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad Nacional",
+    "name": "Ingeniero Geólogo",
+    "career": "ingenierias",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Institución Universitaria De Envigado",
+    "name": "Ingeniero Industrial",
+    "career": "ingenierias",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Institución Universitaria Pascual Bravo",
+    "name": "Ingeniero Industrial",
+    "career": "ingenierias",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad Antonio Nariño",
+    "name": "Ingeniero Industrial",
+    "career": "ingenierias",
+    "level": "Universitaria",
+    "modality": "A distancia"
+  },
+  {
+    "university": "Universidad Autónoma Latinoamericana",
+    "name": "Ingeniero Industrial",
+    "career": "ingenierias",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad de Antioquia",
+    "name": "Ingeniero Industrial",
+    "career": "ingenierias",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad de Antioquia",
+    "name": "Ingeniero Industrial",
+    "career": "ingenierias",
+    "level": "Universitaria",
+    "modality": "Virtual"
+  },
+  {
+    "university": "Universidad de Medellín",
+    "name": "Ingeniero Industrial",
+    "career": "ingenierias",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad EAN",
+    "name": "Ingeniero Industrial",
+    "career": "ingenierias",
+    "level": "Universitaria",
+    "modality": "Virtual"
+  },
+  {
+    "university": "Universidad EIA",
+    "name": "Ingeniero Industrial",
+    "career": "ingenierias",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad Nacional",
+    "name": "Ingeniero Industrial",
+    "career": "ingenierias",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad Nacional Abierta y a Distancia",
+    "name": "Ingeniero Industrial",
+    "career": "ingenierias",
+    "level": "Universitaria",
+    "modality": "Virtual"
+  },
+  {
+    "university": "Universidad Pontificia Bolivariana",
+    "name": "Ingeniero Industrial",
+    "career": "ingenierias",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad San Buenaventura",
+    "name": "Ingeniero Industrial",
+    "career": "ingenierias",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Politécnico Colombiano Jaime Isaza Cadavid",
+    "name": "Ingeniero Informático",
+    "career": "ingenierias",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad Autónoma Latinoamericana",
+    "name": "Ingeniero Informático",
+    "career": "ingenierias",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad EAFIT",
+    "name": "Ingeniero Matemático",
+    "career": "ingenierias",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Institución Universitaria Pascual Bravo",
+    "name": "Ingeniero Mecánico",
+    "career": "ingenierias",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad de Antioquia",
+    "name": "Ingeniero Mecánico",
+    "career": "ingenierias",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad EAFIT",
+    "name": "Ingeniero Mecánico",
+    "career": "ingenierias",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad EIA",
+    "name": "Ingeniero Mecánico",
+    "career": "ingenierias",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad Nacional",
+    "name": "Ingeniero Mecánico",
+    "career": "ingenierias",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad Pontificia Bolivariana",
+    "name": "Ingeniero Mecánico",
+    "career": "ingenierias",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Instituto Tecnológico Metropolitano - ITM",
+    "name": "Ingeniero Mecatrónico",
+    "career": "ingenierias",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad EIA",
+    "name": "Ingeniero Mecatrónico",
+    "career": "ingenierias",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad Nacional Abierta y a Distancia",
+    "name": "Ingeniero Multimedia",
+    "career": "ingenierias",
+    "level": "Universitaria",
+    "modality": "Virtual"
+  },
+  {
+    "university": "Universidad de Antioquia",
+    "name": "Ingeniero Oceanográfico",
+    "career": "ingenierias",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad de Antioquia",
+    "name": "Ingeniero Químico",
+    "career": "ingenierias",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad Nacional",
+    "name": "Ingeniero Químico",
+    "career": "ingenierias",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad Pontificia Bolivariana",
+    "name": "Ingeniero Químico",
+    "career": "ingenierias",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad de Antioquia",
+    "name": "Ingeniero Sanitario",
+    "career": "ingenierias",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad Pontificia Bolivariana",
+    "name": "Ingeniero Textil",
+    "career": "ingenierias",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad de Antioquia",
+    "name": "Ingeniero Urbanista",
+    "career": "ingenierias",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Instituto Tecnológico Metropolitano - ITM",
+    "name": "Profesional en Ciencias Ambientales",
+    "career": "ingenierias",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad EAFIT",
+    "name": "Profesional en Diseño Urbano y Gestión del Hábitat",
+    "career": "ingenierias",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Institución Universitaria Pascual Bravo",
+    "name": "Técnico Profesional en Mantenimiento Electromecánico",
+    "career": "ingenierias",
+    "level": "Técnica",
+    "modality": "A distancia"
+  },
+  {
+    "university": "Politécnico Colombiano Jaime Isaza Cadavid",
+    "name": "Técnico Profesional en Programación de Sistemas de Información",
+    "career": "ingenierias",
+    "level": "Técnica",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Institución Universitaria Pascual Bravo",
+    "name": "Técnico Profesional en Redes Eléctricas de Distribución de Energía",
+    "career": "ingenierias",
+    "level": "Técnica",
+    "modality": "A distancia"
+  },
+  {
+    "university": "Tecnológico de Antioquia",
+    "name": "Técnico Profesional en Sistemas",
+    "career": "ingenierias",
+    "level": "Técnica",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Institución Universitaria De Envigado",
+    "name": "Técnico Profesional en Tránsito Transporte y Seguridad Vial",
+    "career": "ingenierias",
+    "level": "Técnica",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad Nacional Abierta y a Distancia",
+    "name": "Tecnólogo Agroforestal",
+    "career": "ingenierias",
+    "level": "Tecnológica",
+    "modality": "A distancia"
+  },
+  {
+    "university": "Universidad de Antioquia",
+    "name": "Tecnólogo Agroindustrial",
+    "career": "ingenierias",
+    "level": "Tecnológica",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad de Antioquia",
+    "name": "Tecnólogo Biomédico",
+    "career": "ingenierias",
+    "level": "Tecnológica",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Instituto Tecnológico Metropolitano - ITM",
+    "name": "Tecnólogo en Automatización Electrónica",
+    "career": "ingenierias",
+    "level": "Tecnológica",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad Nacional Abierta y a Distancia",
+    "name": "Tecnólogo en Automatización Electrónica Induistrial",
+    "career": "ingenierias",
+    "level": "Tecnológica",
+    "modality": "Virtual"
+  },
+  {
+    "university": "Institución Universitaria Pascual Bravo",
+    "name": "Tecnólogo en Bioelectronica",
+    "career": "ingenierias",
+    "level": "Tecnológica",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Instituto Tecnológico Metropolitano - ITM",
+    "name": "Tecnólogo en Construcción de Acabados Arquitectonicos",
+    "career": "ingenierias",
+    "level": "Tecnológica",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad Antonio Nariño",
+    "name": "Tecnólogo en Construcción de Software",
+    "career": "ingenierias",
+    "level": "Tecnológica",
+    "modality": "A distancia"
+  },
+  {
+    "university": "Politécnico Colombiano Jaime Isaza Cadavid",
+    "name": "Tecnólogo en Construcciones Civiles",
+    "career": "ingenierias",
+    "level": "Tecnológica",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Colegio Mayor De Antioquia",
+    "name": "Tecnólogo en Delineante de Arquitectura e Ingeniería",
+    "career": "ingenierias",
+    "level": "Tecnológica",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Instituto Tecnológico Metropolitano - ITM",
+    "name": "Tecnólogo en Desarrollo de Aplicaciones para Dispositivos Móviles",
+    "career": "ingenierias",
+    "level": "Tecnológica",
+    "modality": "Virtual"
+  },
+  {
+    "university": "Institución Universitaria De Envigado",
+    "name": "Tecnólogo en Desarrollo de Sistemas de Información",
+    "career": "ingenierias",
+    "level": "Tecnológica",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Institución Universitaria Pascual Bravo",
+    "name": "Tecnólogo en Desarrollo de Software",
+    "career": "ingenierias",
+    "level": "Tecnológica",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Institución Universitaria Pascual Bravo",
+    "name": "Tecnólogo en Desarrollo de Software",
+    "career": "ingenierias",
+    "level": "Tecnológica",
+    "modality": "Virtual"
+  },
+  {
+    "university": "Instituto Tecnológico Metropolitano - ITM",
+    "name": "Tecnólogo en Desarrollo de Software",
+    "career": "ingenierias",
+    "level": "Tecnológica",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Politécnico Colombiano Jaime Isaza Cadavid",
+    "name": "Tecnólogo en Desarrollo de Software",
+    "career": "ingenierias",
+    "level": "Tecnológica",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad de Medellín",
+    "name": "Tecnólogo en Desarrollo de Software",
+    "career": "ingenierias",
+    "level": "Tecnológica",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad Nacional Abierta y a Distancia",
+    "name": "Tecnólogo en Desarrollo de Software",
+    "career": "ingenierias",
+    "level": "Tecnológica",
+    "modality": "A distancia"
+  },
+  {
+    "university": "Instituto Tecnológico Metropolitano - ITM",
+    "name": "Tecnólogo en Diseño Industrial",
+    "career": "ingenierias",
+    "level": "Tecnológica",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Tecnológico de Antioquia",
+    "name": "Tecnólogo en Diseño y Desarrollo Web",
+    "career": "ingenierias",
+    "level": "Tecnológica",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Instituto Tecnológico Metropolitano - ITM",
+    "name": "Tecnólogo en Diseño y Programación de Soluciones de Software Como Servicio",
+    "career": "ingenierias",
+    "level": "Tecnológica",
+    "modality": "Virtual"
+  },
+  {
+    "university": "Institución Universitaria Pascual Bravo",
+    "name": "Tecnólogo en Eléctrica",
+    "career": "ingenierias",
+    "level": "Tecnológica",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Institución Universitaria Pascual Bravo",
+    "name": "Tecnólogo en Electrónica",
+    "career": "ingenierias",
+    "level": "Tecnológica",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Colegio Mayor De Antioquia",
+    "name": "Tecnólogo en Gestión Ambiental",
+    "career": "ingenierias",
+    "level": "Tecnológica",
+    "modality": "Virtual"
+  },
+  {
+    "university": "Colegio Mayor De Antioquia",
+    "name": "Tecnólogo en Gestión Catastral",
+    "career": "ingenierias",
+    "level": "Tecnológica",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Institución Universitaria Pascual Bravo",
+    "name": "Tecnólogo en Gestión de Mantenimiento Electromecánico",
+    "career": "ingenierias",
+    "level": "Tecnológica",
+    "modality": "A distancia"
+  },
+  {
+    "university": "Universidad Antonio Nariño",
+    "name": "Tecnólogo en Gestión de Operaciones Industriales",
+    "career": "ingenierias",
+    "level": "Tecnológica",
+    "modality": "A distancia"
+  },
+  {
+    "university": "Institución Universitaria De Envigado",
+    "name": "Tecnólogo en Gestión de Redes",
+    "career": "ingenierias",
+    "level": "Tecnológica",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad Nacional Abierta y a Distancia",
+    "name": "Tecnólogo en Gestión de Redes Inalámbricas",
+    "career": "ingenierias",
+    "level": "Tecnológica",
+    "modality": "Virtual"
+  },
+  {
+    "university": "Tecnológico de Antioquia",
+    "name": "Tecnólogo en Gestión de Servicios Públicos Domiciliarios",
+    "career": "ingenierias",
+    "level": "Tecnológica",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Institución Universitaria Pascual Bravo",
+    "name": "Tecnólogo en Gestión del Mantenimiento Aeronautico",
+    "career": "ingenierias",
+    "level": "Tecnológica",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Politécnico Colombiano Jaime Isaza Cadavid",
+    "name": "Tecnólogo en Gestión Industrial",
+    "career": "ingenierias",
+    "level": "Tecnológica",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Tecnológico de Antioquia",
+    "name": "Tecnólogo en Gestión Informática",
+    "career": "ingenierias",
+    "level": "Tecnológica",
+    "modality": "Virtual"
+  },
+  {
+    "university": "Tecnológico de Antioquia",
+    "name": "Tecnólogo en Gestión Informática",
+    "career": "ingenierias",
+    "level": "Tecnológica",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Politécnico Colombiano Jaime Isaza Cadavid",
+    "name": "Tecnólogo en Infraestructura de Telecomunicaciones",
+    "career": "ingenierias",
+    "level": "Tecnológica",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Politécnico Colombiano Jaime Isaza Cadavid",
+    "name": "Tecnólogo en Instrumentacion Industrial",
+    "career": "ingenierias",
+    "level": "Tecnológica",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Instituto Tecnológico Metropolitano - ITM",
+    "name": "Tecnólogo en Mantenimiento de Equipo Biomédico",
+    "career": "ingenierias",
+    "level": "Tecnológica",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad Antonio Nariño",
+    "name": "Tecnólogo en Mantenimiento Electromecánico Industrial",
+    "career": "ingenierias",
+    "level": "Tecnológica",
+    "modality": "A distancia"
+  },
+  {
+    "university": "Institución Universitaria Pascual Bravo",
+    "name": "Tecnólogo en Mecanica Automotriz",
+    "career": "ingenierias",
+    "level": "Tecnológica",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Institución Universitaria Pascual Bravo",
+    "name": "Tecnólogo en Mecanica Automotriz",
+    "career": "ingenierias",
+    "level": "Tecnológica",
+    "modality": "A distancia"
+  },
+  {
+    "university": "Institución Universitaria Pascual Bravo",
+    "name": "Tecnólogo en Mecanica Industrial",
+    "career": "ingenierias",
+    "level": "Tecnológica",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Institución Universitaria Pascual Bravo",
+    "name": "Tecnólogo en Operacion Integral del Transporte",
+    "career": "ingenierias",
+    "level": "Tecnológica",
+    "modality": "Virtual"
+  },
+  {
+    "university": "Universidad Nacional Abierta y a Distancia",
+    "name": "Tecnólogo en Producción Agricola",
+    "career": "ingenierias",
+    "level": "Tecnológica",
+    "modality": "A distancia"
+  },
+  {
+    "university": "Universidad Nacional Abierta y a Distancia",
+    "name": "Tecnólogo en Producción Audio",
+    "career": "ingenierias",
+    "level": "Tecnológica",
+    "modality": "Virtual"
+  },
+  {
+    "university": "Institución Universitaria Pascual Bravo",
+    "name": "Tecnólogo en Producción Industrial",
+    "career": "ingenierias",
+    "level": "Tecnológica",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad de Antioquia",
+    "name": "Tecnólogo en Saneamiento Ambiental",
+    "career": "ingenierias",
+    "level": "Tecnológica",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad Nacional Abierta y a Distancia",
+    "name": "Tecnólogo en Saneamiento Ambiental",
+    "career": "ingenierias",
+    "level": "Tecnológica",
+    "modality": "A distancia"
+  },
+  {
+    "university": "Politécnico Colombiano Jaime Isaza Cadavid",
+    "name": "Tecnólogo en Seguridad e Higiene Ocupacional",
+    "career": "ingenierias",
+    "level": "Tecnológica",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Tecnológico de Antioquia",
+    "name": "Tecnólogo en Sistemas",
+    "career": "ingenierias",
+    "level": "Tecnológica",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Instituto Tecnológico Metropolitano - ITM",
+    "name": "Tecnólogo en Sistemas de Producción",
+    "career": "ingenierias",
+    "level": "Tecnológica",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Institución Universitaria Pascual Bravo",
+    "name": "Tecnólogo en Sistemas Electromecánicos",
+    "career": "ingenierias",
+    "level": "Tecnológica",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Instituto Tecnológico Metropolitano - ITM",
+    "name": "Tecnólogo en Sistemas Electromecánicos",
+    "career": "ingenierias",
+    "level": "Tecnológica",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Institución Universitaria Pascual Bravo",
+    "name": "Tecnólogo en Sistemas Mecatrónicos",
+    "career": "ingenierias",
+    "level": "Tecnológica",
+    "modality": "A distancia"
+  },
+  {
+    "university": "Institución Universitaria Pascual Bravo",
+    "name": "Tecnólogo en Sistemas Mecatrónicos",
+    "career": "ingenierias",
+    "level": "Tecnológica",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Politécnico Colombiano Jaime Isaza Cadavid",
+    "name": "Tecnólogo en Sistematizacion de Datos",
+    "career": "ingenierias",
+    "level": "Tecnológica",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Institución Universitaria Pascual Bravo",
+    "name": "Tecnólogo en Supervición de Sistemas Electricos de Potencia",
+    "career": "ingenierias",
+    "level": "Tecnológica",
+    "modality": "A distancia"
+  },
+  {
+    "university": "Institución Universitaria Pascual Bravo",
+    "name": "Tecnólogo en Supervisión de Sistemas de Generación y Distribución de Energía Eléctrica",
+    "career": "ingenierias",
+    "level": "Tecnológica",
+    "modality": "A distancia"
+  },
+  {
+    "university": "Institución Universitaria Pascual Bravo",
+    "name": "Tecnólogo en Supervisión de Sistemas de Generación y Distribución de Energía Eléctrica",
+    "career": "ingenierias",
+    "level": "Tecnológica",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad Nacional",
+    "name": "Tecnólogo Forestal",
+    "career": "ingenierias",
+    "level": "Tecnológica",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Instituto Tecnológico Metropolitano - ITM",
+    "name": "Tecnólogo Gestión de Redes de Telecomunicaciones",
+    "career": "ingenierias",
+    "level": "Tecnológica",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Politécnico Colombiano Jaime Isaza Cadavid",
+    "name": "Tecnólogo Industrial",
+    "career": "ingenierias",
+    "level": "Tecnológica",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad Nacional Abierta y a Distancia",
+    "name": "Tecnólogo Logística Industrial",
+    "career": "ingenierias",
+    "level": "Tecnológica",
+    "modality": "Virtual"
+  },
+  {
+    "university": "Institución Universitaria Pascual Bravo",
+    "name": "Tecnólogo Mecánico Industrial",
+    "career": "ingenierias",
+    "level": "Tecnológica",
+    "modality": "A distancia"
+  },
+  {
+    "university": "Universidad de Antioquia",
+    "name": "Administrador Ambiental y Sanitario",
+    "career": "negocios",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Tecnológico de Antioquia",
+    "name": "Administrador Comercial",
+    "career": "negocios",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad de Medellín",
+    "name": "Administrador de Agronegocios",
+    "career": "negocios",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Fundación Universitaria Ceipa",
+    "name": "Administrador de Empresas",
+    "career": "negocios",
+    "level": "Universitaria",
+    "modality": "Virtual"
+  },
+  {
+    "university": "Fundación Universitaria Ceipa",
+    "name": "Administrador de Empresas",
+    "career": "negocios",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Fundación Universitaria Del Area Andina",
+    "name": "Administrador de Empresas",
+    "career": "negocios",
+    "level": "Universitaria",
+    "modality": "Virtual"
+  },
+  {
+    "university": "Universidad Antonio Nariño",
+    "name": "Administrador de Empresas",
+    "career": "negocios",
+    "level": "Universitaria",
+    "modality": "Virtual"
+  },
+  {
+    "university": "Universidad Autónoma Latinoamericana",
+    "name": "Administrador de Empresas",
+    "career": "negocios",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad CES",
+    "name": "Administrador de Empresas",
+    "career": "negocios",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad de Antioquia",
+    "name": "Administrador de Empresas",
+    "career": "negocios",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad de Medellín",
+    "name": "Administrador de Empresas",
+    "career": "negocios",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad EAN",
+    "name": "Administrador de Empresas",
+    "career": "negocios",
+    "level": "Universitaria",
+    "modality": "Virtual"
+  },
+  {
+    "university": "Universidad Nacional Abierta y a Distancia",
+    "name": "Administrador de Empresas",
+    "career": "negocios",
+    "level": "Universitaria",
+    "modality": "Virtual"
+  },
+  {
+    "university": "Universidad Pontificia Bolivariana",
+    "name": "Administrador de Empresas",
+    "career": "negocios",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Politécnico Colombiano Jaime Isaza Cadavid",
+    "name": "Administrador de Empresas Agropecuarias",
+    "career": "negocios",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad EAN",
+    "name": "Administrador de Empresas Globales",
+    "career": "negocios",
+    "level": "Universitaria",
+    "modality": "Virtual"
+  },
+  {
+    "university": "Fundación Universitaria Ceipa",
+    "name": "Administrador de Mercadeo",
+    "career": "negocios",
+    "level": "Universitaria",
+    "modality": "Virtual"
+  },
+  {
+    "university": "Fundación Universitaria Ceipa",
+    "name": "Administrador de Mercadeo",
+    "career": "negocios",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad EAFIT",
+    "name": "Administrador de Negocios",
+    "career": "negocios",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad San Buenaventura",
+    "name": "Administrador de Negocios",
+    "career": "negocios",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Fundación Universitaria Ceipa",
+    "name": "Administrador de Negocios Internacionales",
+    "career": "negocios",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Fundación Universitaria Ceipa",
+    "name": "Administrador de Negocios Internacionales",
+    "career": "negocios",
+    "level": "Universitaria",
+    "modality": "Virtual"
+  },
+  {
+    "university": "Institución Universitaria De Envigado",
+    "name": "Administrador de Negocios Internacionales",
+    "career": "negocios",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad de Antioquia",
+    "name": "Administrador en Salud",
+    "career": "negocios",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Fundación Universitaria Ceipa",
+    "name": "Administrador Financiero",
+    "career": "negocios",
+    "level": "Universitaria",
+    "modality": "Virtual"
+  },
+  {
+    "university": "Fundación Universitaria Ceipa",
+    "name": "Administrador Financiero",
+    "career": "negocios",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Institución Universitaria De Envigado",
+    "name": "Administrador Financiero",
+    "career": "negocios",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Tecnológico de Antioquia",
+    "name": "Administrador Financiero",
+    "career": "negocios",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Fundación Universitaria Ceipa",
+    "name": "Administrador Humano",
+    "career": "negocios",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Fundación Universitaria Ceipa",
+    "name": "Administrador Humano",
+    "career": "negocios",
+    "level": "Universitaria",
+    "modality": "Virtual"
+  },
+  {
+    "university": "Politécnico Colombiano Jaime Isaza Cadavid",
+    "name": "Administrador Público",
+    "career": "negocios",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Instituto Tecnológico Metropolitano - ITM",
+    "name": "Administrador Tecnológico",
+    "career": "negocios",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Fundación Universitaria Ceipa",
+    "name": "Contador Público",
+    "career": "negocios",
+    "level": "Universitaria",
+    "modality": "Virtual"
+  },
+  {
+    "university": "Fundación Universitaria Ceipa",
+    "name": "Contador Público",
+    "career": "negocios",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Fundación Universitaria Del Area Andina",
+    "name": "Contador Público",
+    "career": "negocios",
+    "level": "Universitaria",
+    "modality": "A distancia"
+  },
+  {
+    "university": "Institución Universitaria De Envigado",
+    "name": "Contador Público",
+    "career": "negocios",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Instituto Tecnológico Metropolitano - ITM",
+    "name": "Contador Público",
+    "career": "negocios",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Politécnico Colombiano Jaime Isaza Cadavid",
+    "name": "Contador Público",
+    "career": "negocios",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Tecnológico de Antioquia",
+    "name": "Contador Público",
+    "career": "negocios",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad Autónoma Latinoamericana",
+    "name": "Contador Público",
+    "career": "negocios",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad de Antioquia",
+    "name": "Contador Público",
+    "career": "negocios",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad de Medellín",
+    "name": "Contador Público",
+    "career": "negocios",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad EAFIT",
+    "name": "Contador Público",
+    "career": "negocios",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad EAN",
+    "name": "Contador Público",
+    "career": "negocios",
+    "level": "Universitaria",
+    "modality": "Virtual"
+  },
+  {
+    "university": "Universidad Nacional Abierta y a Distancia",
+    "name": "Contador Público",
+    "career": "negocios",
+    "level": "Universitaria",
+    "modality": "Virtual"
+  },
+  {
+    "university": "Universidad San Buenaventura",
+    "name": "Contador Público",
+    "career": "negocios",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad Pontificia Bolivariana",
+    "name": "Economista",
+    "career": "negocios",
+    "level": "Universitaria",
+    "modality": "A distancia"
+  },
+  {
+    "university": "Instituto Tecnológico Metropolitano - ITM",
+    "name": "Ingeniero Financiero",
+    "career": "negocios",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Tecnológico de Antioquia",
+    "name": "Negociador Internacional",
+    "career": "negocios",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad EAFIT",
+    "name": "Negociador Internacional",
+    "career": "negocios",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad Pontificia Bolivariana",
+    "name": "Negociador Internacional",
+    "career": "negocios",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad San Buenaventura",
+    "name": "Negociador Internacional",
+    "career": "negocios",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Fundación Universitaria Del Area Andina",
+    "name": "Profesional en Administración de Mercadeo",
+    "career": "negocios",
+    "level": "Universitaria",
+    "modality": "Virtual"
+  },
+  {
+    "university": "Universidad EAFIT",
+    "name": "Profesional en Finanzas",
+    "career": "negocios",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Fundación Universitaria Del Area Andina",
+    "name": "Profesional en Finanzas y Negocios Internacionales",
+    "career": "negocios",
+    "level": "Universitaria",
+    "modality": "Virtual"
+  },
+  {
+    "university": "Universidad de Antioquia",
+    "name": "Profesional en Gerencia en Sistemas de Información en Salud",
+    "career": "negocios",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Institución Universitaria Pascual Bravo",
+    "name": "Profesional en Gestión del Diseño",
+    "career": "negocios",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad EAN",
+    "name": "Profesional en Marketing",
+    "career": "negocios",
+    "level": "Universitaria",
+    "modality": "Virtual"
+  },
+  {
+    "university": "Institución Universitaria De Envigado",
+    "name": "Profesional en Mercadeo",
+    "career": "negocios",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad de Medellín",
+    "name": "Profesional en Mercadeo",
+    "career": "negocios",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad EAFIT",
+    "name": "Profesional en Mercadeo",
+    "career": "negocios",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad EAN",
+    "name": "Profesional en Mercadeo",
+    "career": "negocios",
+    "level": "Universitaria",
+    "modality": "Virtual"
+  },
+  {
+    "university": "Universidad de Medellín",
+    "name": "Profesional en Negocios Internacionales",
+    "career": "negocios",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad Nacional Abierta y a Distancia",
+    "name": "Profesional en Negocios Internacionales",
+    "career": "negocios",
+    "level": "Universitaria",
+    "modality": "Virtual"
+  },
+  {
+    "university": "Fundación Universitaria Del Area Andina",
+    "name": "Técnico Profesional en Procesos Administrativos",
+    "career": "negocios",
+    "level": "Técnica",
+    "modality": "Virtual"
+  },
+  {
+    "university": "Tecnológico de Antioquia",
+    "name": "Técnico Profesional en Procesos Financieros",
+    "career": "negocios",
+    "level": "Técnica",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad de Antioquia",
+    "name": "Tecnólogo en Administración de Servicios de Salud",
+    "career": "negocios",
+    "level": "Tecnológica",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Instituto Tecnológico Metropolitano - ITM",
+    "name": "Tecnólogo en Análisis de Costos y Presupuestos",
+    "career": "negocios",
+    "level": "Tecnológica",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Instituto Tecnológico Metropolitano - ITM",
+    "name": "Tecnólogo en Análisis de Costos y Presupuestos",
+    "career": "negocios",
+    "level": "Tecnológica",
+    "modality": "Virtual"
+  },
+  {
+    "university": "Instituto Tecnológico Metropolitano - ITM",
+    "name": "Tecnólogo en Control de la Calidad",
+    "career": "negocios",
+    "level": "Tecnológica",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Politécnico Colombiano Jaime Isaza Cadavid",
+    "name": "Tecnólogo en Costos y Auditoria",
+    "career": "negocios",
+    "level": "Tecnológica",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Instituto Tecnológico Metropolitano - ITM",
+    "name": "Tecnólogo en Gestión Administrativa",
+    "career": "negocios",
+    "level": "Tecnológica",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Instituto Tecnológico Metropolitano - ITM",
+    "name": "Tecnólogo en Gestión Administrativa",
+    "career": "negocios",
+    "level": "Tecnológica",
+    "modality": "Virtual"
+  },
+  {
+    "university": "Politécnico Colombiano Jaime Isaza Cadavid",
+    "name": "Tecnólogo en Gestión Aeroportuaria",
+    "career": "negocios",
+    "level": "Tecnológica",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad Nacional Abierta y a Distancia",
+    "name": "Tecnólogo en Gestión Agropecuaria",
+    "career": "negocios",
+    "level": "Tecnológica",
+    "modality": "A distancia"
+  },
+  {
+    "university": "Tecnológico de Antioquia",
+    "name": "Tecnólogo en Gestión Comercial",
+    "career": "negocios",
+    "level": "Tecnológica",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad Nacional Abierta y a Distancia",
+    "name": "Tecnólogo en Gestión Comercial y de Negocios",
+    "career": "negocios",
+    "level": "Tecnológica",
+    "modality": "Virtual"
+  },
+  {
+    "university": "Fundación Universitaria Del Area Andina",
+    "name": "Tecnólogo en Gestión de Calidad",
+    "career": "negocios",
+    "level": "Tecnológica",
+    "modality": "Virtual"
+  },
+  {
+    "university": "Universidad Nacional Abierta y a Distancia",
+    "name": "Tecnólogo en Gestión de Empresas Asociativas y Organizaciones Comunitarias",
+    "career": "negocios",
+    "level": "Tecnológica",
+    "modality": "A distancia"
+  },
+  {
+    "university": "Fundación Universitaria Del Area Andina",
+    "name": "Tecnólogo en Gestión de Logística Internacional",
+    "career": "negocios",
+    "level": "Tecnológica",
+    "modality": "Virtual"
+  },
+  {
+    "university": "Universidad Nacional Abierta y a Distancia",
+    "name": "Tecnólogo en Gestión de Obras Civiles y Construcciones",
+    "career": "negocios",
+    "level": "Tecnológica",
+    "modality": "Virtual"
+  },
+  {
+    "university": "Universidad Nacional Abierta y a Distancia",
+    "name": "Tecnólogo en Gestión de Trasportes",
+    "career": "negocios",
+    "level": "Tecnológica",
+    "modality": "A distancia"
+  },
+  {
+    "university": "Tecnológico de Antioquia",
+    "name": "Tecnólogo en Gestión Financiera",
+    "career": "negocios",
+    "level": "Tecnológica",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad Nacional Abierta y a Distancia",
+    "name": "Tecnólogo en Gestión Industrial",
+    "career": "negocios",
+    "level": "Tecnológica",
+    "modality": "A distancia"
+  },
+  {
+    "university": "Politécnico Colombiano Jaime Isaza Cadavid",
+    "name": "Tecnólogo en Gestión Logística Integral",
+    "career": "negocios",
+    "level": "Tecnológica",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Politécnico Colombiano Jaime Isaza Cadavid",
+    "name": "Tecnólogo en Gestión Pública",
+    "career": "negocios",
+    "level": "Tecnológica",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Politécnico Colombiano Jaime Isaza Cadavid",
+    "name": "Tecnólogo en Logística Integral",
+    "career": "negocios",
+    "level": "Tecnológica",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad Nacional Abierta y a Distancia",
+    "name": "Tecnólogo en Regencia de Farmacia",
+    "career": "negocios",
+    "level": "Tecnológica",
+    "modality": "A distancia"
+  },
+  {
+    "university": "Universidad Nacional Abierta y a Distancia",
+    "name": "Administrador en Salud",
+    "career": "salud",
+    "level": "Universitaria",
+    "modality": "Virtual"
+  },
+  {
+    "university": "Colegio Mayor De Antioquia",
+    "name": "Bacteriologo y Laboratorista Clinico",
+    "career": "salud",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Colegio Mayor De Antioquia",
+    "name": "Biotecnólogo",
+    "career": "salud",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad CES",
+    "name": "Enfermera",
+    "career": "salud",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad de Antioquia",
+    "name": "Enfermera",
+    "career": "salud",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad de Antioquia",
+    "name": "Enfermero",
+    "career": "salud",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad Pontificia Bolivariana",
+    "name": "Enfermero",
+    "career": "salud",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad CES",
+    "name": "Fisioterapéuta",
+    "career": "salud",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad de Antioquia",
+    "name": "Instrumentador Quirurgico",
+    "career": "salud",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad EIA",
+    "name": "Médico",
+    "career": "salud",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad Pontificia Bolivariana",
+    "name": "Médico",
+    "career": "salud",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad CES",
+    "name": "Médico General",
+    "career": "salud",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad de Antioquia",
+    "name": "Médico y Cirujano",
+    "career": "salud",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad de Antioquia",
+    "name": "Microbiólogo y Bioanalista",
+    "career": "salud",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad CES",
+    "name": "Nutricionista Dietista",
+    "career": "salud",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad de Antioquia",
+    "name": "Nutricionista Dietista",
+    "career": "salud",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad de Antioquia",
+    "name": "Nutricionista y Dietista",
+    "career": "salud",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad CES",
+    "name": "Odontologo",
+    "career": "salud",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad de Antioquia",
+    "name": "Odontologo",
+    "career": "salud",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Tecnológico de Antioquia",
+    "name": "Profesional en Gestión en Seguridad y Salud en el Trabajo",
+    "career": "salud",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Tecnológico de Antioquia",
+    "name": "Profesional en Psicología",
+    "career": "salud",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Institución Universitaria De Envigado",
+    "name": "Profesional en Seguridad y Salud en el Trabajo",
+    "career": "salud",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Fundación Universitaria Del Area Andina",
+    "name": "Psicólogo",
+    "career": "salud",
+    "level": "Universitaria",
+    "modality": "Virtual"
+  },
+  {
+    "university": "Institución Universitaria De Envigado",
+    "name": "Psicólogo",
+    "career": "salud",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad Antonio Nariño",
+    "name": "Psicólogo",
+    "career": "salud",
+    "level": "Universitaria",
+    "modality": "A distancia"
+  },
+  {
+    "university": "Universidad CES",
+    "name": "Psicólogo",
+    "career": "salud",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad de Antioquia",
+    "name": "Psicólogo",
+    "career": "salud",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad de Medellín",
+    "name": "Psicólogo",
+    "career": "salud",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad EAFIT",
+    "name": "Psicólogo",
+    "career": "salud",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad EAN",
+    "name": "Psicólogo",
+    "career": "salud",
+    "level": "Universitaria",
+    "modality": "Virtual"
+  },
+  {
+    "university": "Universidad Nacional Abierta y a Distancia",
+    "name": "Psicólogo",
+    "career": "salud",
+    "level": "Universitaria",
+    "modality": "A distancia"
+  },
+  {
+    "university": "Universidad Pontificia Bolivariana",
+    "name": "Psicólogo",
+    "career": "salud",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad San Buenaventura",
+    "name": "Psicólogo",
+    "career": "salud",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad de Antioquia",
+    "name": "Técnico Profesional en Atención Prehospitalaria",
+    "career": "salud",
+    "level": "Técnica",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Politécnico Colombiano Jaime Isaza Cadavid",
+    "name": "Técnico Profesional en Masoterapia",
+    "career": "salud",
+    "level": "Técnica",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Tecnológico de Antioquia",
+    "name": "Técnico Profesional en Tanatopraxia",
+    "career": "salud",
+    "level": "Técnica",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad CES",
+    "name": "Tecnólogo en Atención Prehospitalaria",
+    "career": "salud",
+    "level": "Tecnológica",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Tecnológico de Antioquia",
+    "name": "Tecnólogo en Histocitotecnologia",
+    "career": "salud",
+    "level": "Tecnológica",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad Nacional Abierta y a Distancia",
+    "name": "Tecnólogo en Radiologia e Imagenes Diagnosticas",
+    "career": "salud",
+    "level": "Tecnológica",
+    "modality": "A distancia"
+  },
+  {
+    "university": "Colegio Mayor De Antioquia",
+    "name": "Tecnólogo en Seguridad y Salud en el Trabajo",
+    "career": "salud",
+    "level": "Tecnológica",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad Nacional Abierta y a Distancia",
+    "name": "Tecnólogo en Seguridad y Salud en el Trabajo",
+    "career": "salud",
+    "level": "Tecnológica",
+    "modality": "Virtual"
+  },
+  {
+    "university": "Colegio Mayor De Antioquia",
+    "name": "Administrador de Empresas Turisticas",
+    "career": "servicios",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad de Medellín",
+    "name": "Administrador de Empresas Turisticas",
+    "career": "servicios",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad de Antioquia",
+    "name": "Gestor en Ecología y Turismo",
+    "career": "servicios",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Universidad de Antioquia",
+    "name": "Profesional en Ciencias Culinarias",
+    "career": "servicios",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Colegio Mayor De Antioquia",
+    "name": "Profesional en Gastronomía y Culinaria",
+    "career": "servicios",
+    "level": "Universitaria",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Politécnico Colombiano Jaime Isaza Cadavid",
+    "name": "Tecnólogo en Gestión de Empresas y Destinos Turisticos",
+    "career": "servicios",
+    "level": "Tecnológica",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Colegio Mayor De Antioquia",
+    "name": "Tecnólogo en Gestión de Servicios Gastronómicos",
+    "career": "servicios",
+    "level": "Tecnológica",
+    "modality": "Presencial"
+  },
+  {
+    "university": "Colegio Mayor De Antioquia",
+    "name": "Tecnólogo en Gestión Turística",
+    "career": "servicios",
+    "level": "Tecnológica",
+    "modality": "Virtual"
+  },
+  {
+    "university": "Politécnico Colombiano Jaime Isaza Cadavid",
+    "name": "Tecnólogo en Producción de Eventos",
+    "career": "servicios",
+    "level": "Tecnológica",
+    "modality": "Presencial"
+  }
+]

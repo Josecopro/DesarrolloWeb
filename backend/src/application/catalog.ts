@@ -1,4 +1,4 @@
-import type { Career, CareerInput, CareerRepository } from "../domain/career.js";
+import type { CareerInput, CareerRepository } from "../domain/career.js";
 import { NotFoundError } from "../domain/errors.js";
 import type { PageQuery } from "../domain/pagination.js";
 import type { ScholarshipRepository } from "../domain/scholarship.js";
@@ -28,7 +28,7 @@ export function makeCareerUseCases(repo: CareerRepository) {
       if (!career) throw new NotFoundError("Área no encontrada");
       return career;
     },
-    create: (data: Career) => repo.create(data),
+    create: (data: CareerInput & { id: string }) => repo.create(data),
     update: (id: string, data: CareerInput) => repo.update(id, data),
     remove: (id: string) => repo.delete(id),
   };

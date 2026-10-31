@@ -24,7 +24,8 @@ npm test                    # 23 pruebas de la API contra la base de DATABASE_UR
 | `db:migrate` | `prisma migrate dev` (crea/aplica migraciones en desarrollo) |
 | `db:deploy` | `prisma migrate deploy` (producción) |
 | `db:seed` | `prisma db seed` → `prisma/seed.ts` |
-| `test` | Pruebas `node:test` (`test/api.test.ts`) |
+| `data:programs` | Descarga del SNIES las carreras de cada universidad → `prisma/seed-data/programs.json` (después: `db:seed`) |
+| `test` | Pruebas `node:test` (`test/*.test.ts`) |
 | `typecheck` | `tsc --noEmit` |
 
 ### Variables de entorno (`.env.example`)
@@ -54,7 +55,8 @@ prisma/               schema.prisma, migrations/, seed.ts, seed-data/ (datos de 
 
 - `users`: name, email (único), password (hash bcrypt), role (`admin` | `user`).
 - `universities` (catálogo 1): name (único), url, type (`private` | `public`).
-- `careers` (catálogo 2): id (slug), name, icon, image, description, summary, tone, symbol, programs[].
+- `careers` (catálogo 2): id (slug), name, icon, image, description, summary, tone, symbol. La API devuelve `programs[]` (nombres) derivado de `programs`; el detalle `GET /carreras/:id` agrega `offerings` (carrera → universidades).
+- `programs`: carreras reales del SNIES (solo lectura): name, level, modality, **career_id → careers** y **university_id → universities** (cascade). Se recrean en cada `db:seed`.
 - `scholarships`: solo lectura.
 - `pqrs_requests` (interacción): type, message, status, **user_id → users** (cascade) y **university_id → universities** (restrict).
 
