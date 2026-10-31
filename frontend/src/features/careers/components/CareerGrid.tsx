@@ -11,7 +11,7 @@ export function CareerGrid({ careers }: { careers: Career[] }) {
   return (
     <ul className="mx-auto grid max-w-(--container-max) grid-cols-1 gap-6 min-[480px]:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
       {careers.map((career, i) => (
-        <li key={career.id} className="group flex h-full animate-slide-up flex-col rounded-xl shadow-sm transition-shadow duration-300 hover:shadow-xl" style={{ animationDelay: `${i * 100}ms` }}>
+        <li key={career.id} className="group flex h-full min-w-0 animate-slide-up flex-col rounded-xl shadow-sm transition-shadow duration-300 hover:shadow-xl" style={{ animationDelay: `${i * 100}ms` }}>
           <div className="relative aspect-16/10 overflow-hidden rounded-t-xl">
             <Image
               src={career.image}
@@ -30,8 +30,8 @@ export function CareerGrid({ careers }: { careers: Career[] }) {
             <p className="mb-4 flex-1 text-sm leading-relaxed text-text-light">{career.description}</p>
             <div className="mt-3 flex flex-wrap gap-2">
               {career.programs.slice(0, VISIBLE_TAGS).map((sub) => (
-                <Tag key={sub} size="xs">
-                  {sub}
+                <Tag key={sub} size="xs" title={sub} className="max-w-full">
+                  <span className="min-w-0 truncate">{sub}</span>
                 </Tag>
               ))}
               {career.programs.length > VISIBLE_TAGS && (
