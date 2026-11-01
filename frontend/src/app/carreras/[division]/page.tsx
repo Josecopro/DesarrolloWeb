@@ -6,6 +6,7 @@ import { IconBadge } from "@/features/common/components/IconBadge";
 import { SectionHeader } from "@/features/common/components/SectionHeader";
 import { OfferingList } from "@/features/careers/components/OfferingList";
 import { getAllCareers, getCareerById, getCareerDetail } from "@/features/careers/services/careers.cache";
+import { careerHref } from "@/features/common/lib/navigation";
 
 // Carreras reales del SNIES con sus universidades. Reemplaza las 7 páginas de legacy/pages/carreras.divisiones/*.html y la sección "Subdivisiones por área" de carreras.html.
 export async function generateStaticParams() {
@@ -14,7 +15,9 @@ export async function generateStaticParams() {
 
 export async function generateMetadata({ params }: PageProps<"/carreras/[division]">): Promise<Metadata> {
   const career = await getCareerById((await params).division);
-  return career ? { title: career.name, description: `${career.name} - Programas en el Área Metropolitana de Antioquia.` } : {};
+  return career
+    ? { title: career.name, description: career.description || `${career.name} - Programas en el Área Metropolitana de Antioquia.`, alternates: { canonical: careerHref(career.id) } }
+    : {};
 }
 
 export default async function DivisionPage({ params }: PageProps<"/carreras/[division]">) {

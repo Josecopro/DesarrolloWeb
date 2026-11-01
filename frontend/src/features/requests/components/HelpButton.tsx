@@ -25,7 +25,7 @@ export function HelpButton() {
         onClick={() => setOpen(!open)}
         className={cn(
           "relative flex size-15 cursor-pointer items-center justify-center rounded-full bg-linear-135 from-secondary to-secondary-dark text-xl font-bold text-text shadow-xl transition-[scale,box-shadow] duration-200",
-          "animate-help-pulse hover:scale-110 hover:shadow-[0_12px_40px_rgba(232,168,56,0.4)] focus-visible:shadow-[var(--focus-ring),0_12px_40px_rgba(232,168,56,0.4)] focus-visible:outline-none active:scale-95",
+          "hover:scale-110 hover:shadow-[0_12px_40px_rgba(232,168,56,0.4)] focus-visible:shadow-[var(--focus-ring),0_12px_40px_rgba(232,168,56,0.4)] focus-visible:outline-none active:scale-95",
           "before:absolute before:-inset-1 before:-z-1 before:animate-help-ring before:rounded-full before:bg-linear-135 before:from-secondary before:to-secondary-dark before:opacity-30",
           "max-[480px]:h-14 max-[480px]:w-full max-[480px]:rounded-lg max-[480px]:before:rounded-lg",
         )}

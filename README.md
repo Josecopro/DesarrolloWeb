@@ -13,7 +13,6 @@ DUAM reúne en un solo lugar la oferta de educación superior del Área Metropol
 DUAM2/
 ├── backend/    API REST: Node.js + Express 5 + TypeScript + Prisma 7 + PostgreSQL (Neon) — ver backend/README.md
 ├── frontend/   Next.js 16 (App Router) + TypeScript + Tailwind v4, organizado por features — ver frontend/README.md
-├── legacy/     sitio estático original (Entrega 1), referencia visual
 ├── docs/       CHECKLIST.md (estado contra la guía de la entrega), PLAN.md, img/
 ├── DESIGN.md   sistema visual (tokens, componentes, reglas)
 └── PRODUCT.md  contexto de producto
@@ -21,7 +20,7 @@ DUAM2/
 
 > **Repositorios del proyecto.** El proyecto empezó como un monorepositorio y luego se separó el backend para cumplir la rúbrica y dividir las responsabilidades:
 >
-> - **Frontend → este repositorio (`DesarrolloWeb`).** Guarda ambos proyectos (`frontend/` y `backend/`), además del sitio de la Entrega 1 (`legacy/`) y la documentación, pero **funciona como el repositorio del frontend**: es el que está conectado a Vercel.
+> - **Frontend → este repositorio (`DesarrolloWeb`).** Guarda ambos proyectos (`frontend/` y `backend/`) y la documentación, pero **funciona como el repositorio del frontend**: es el que está conectado a Vercel.
 > - **Backend → https://github.com/Josecopro/duam-backend.** Repositorio propio de la API REST, con su historial y README completo. Es la fuente del despliegue del backend; la carpeta `backend/` de aquí se conserva como referencia.
 
 ### Variables de entorno

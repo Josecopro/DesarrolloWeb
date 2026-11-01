@@ -7,7 +7,7 @@ Leyenda: `[x]` cumple · `[~]` parcial / pendiente de los autores (ver nota) · 
 
 Auditoría inicial: 2026-10-21, commit `20a61ca`. Última actualización: 2026-10-22 (E1–E9 completas).
 
-**Pendientes del equipo:** (1) escribir con sus palabras la sección "Uso de IA" del README raíz; (2) opcional: borrar `legacy/` y revisar los contenidos señalados (video de ICETEX, afirmación "acreditadas de alta calidad").
+**Pendientes del equipo:** (1) escribir con sus palabras la sección "Uso de IA" del README raíz; (2) revisar los contenidos señalados (video de ICETEX, afirmación "acreditadas de alta calidad").
 
 ---
 
@@ -148,4 +148,4 @@ Cada etapa termina con pruebas en verde, este checklist actualizado y commit en 
 | **E6** ✅ | Frontend: catálogo desde la API con cargando/vacío/error y `?page=`; formulario de interacción con sesión; `/mis-<interacciones>` | E3, E5 |
 | **E7** ✅ | Frontend: `/admin` (CRUD del catálogo + todas las interacciones), protegido por rol | E3, E5 |
 | **E8** ✅ | Despliegue: backend en Render/Railway (o según C5) con variables; frontend con `NEXT_PUBLIC_API_HOST`; CORS con la URL de producción; auto-deploy desde `main` | E3, E6 |
-| **E9** ✅ | README por repositorio (links, local, variables, credenciales, decisiones técnicas, captura de Network). Pendiente opcional: borrar `legacy/` | E8 |
+| **E9** ✅ | README por repositorio (links, local, variables, credenciales, decisiones técnicas, captura de Network). `legacy/` borrado (2026-11-01) | E8 |

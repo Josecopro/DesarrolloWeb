@@ -130,7 +130,7 @@ Cada área (`/carreras/<id>`) muestra las carreras reales de las 21 universidade
 - Producción: `DATABASE_URL=<UNPOOLED> npm run db:deploy && npm run db:seed` en `backend` **antes** de desplegar el frontend.
 
 ### Fase 6 — Limpieza
-Borrar `legacy/`, CI (lint + build), README final.
+Borrar `legacy/` (hecho 2026-11-01; el sitio de la Entrega 1 sigue en el historial de git, commit `fd1709b`), CI (lint + build), README final.
 
 ## Archivos críticos
 - Fuente de tokens: `legacy/assets/css/settings/_tokens.css`

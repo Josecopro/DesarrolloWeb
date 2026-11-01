@@ -5,6 +5,7 @@ import { CompareTable } from "@/features/universities/components/CompareTable";
 export const metadata: Metadata = {
   title: "Comparar",
   description: "Compara lado a lado universidades del Área Metropolitana de Antioquia.",
+  alternates: { canonical: "/comparar" },
 };
 
 export default function CompararPage() {

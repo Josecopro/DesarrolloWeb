@@ -11,6 +11,7 @@ import type { Tone } from "@/features/common/domain/types";
 export const metadata: Metadata = {
   title: "Becas",
   description: "Becas y financiamiento para la educación superior en el Área Metropolitana de Antioquia: ICETEX, becas académicas, deportivas y matrícula cero.",
+  alternates: { canonical: "/becas" },
 };
 
 // .card--aid de legacy/assets/css/components/section.css (borde izquierdo del color del tipo).

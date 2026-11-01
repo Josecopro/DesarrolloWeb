@@ -6,6 +6,7 @@ import { Tabs } from "@/features/common/components/Tabs";
 export const metadata: Metadata = {
   title: "Misión y Visión",
   description: "Misión, Visión, Objetivos y Compromiso de DUAM - Directorio Universitario del Área Metropolitana",
+  alternates: { canonical: "/importante" },
 };
 
 const objectives = [

@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { ButtonLink } from "@/features/common/components/Button";
 import { Tag } from "@/features/common/components/Tag";
 import { Card, CardContent, CardDescription, CardFooter, CardImage, CardTitle } from "@/features/common/components/Card";
@@ -23,6 +24,8 @@ const features: Feature[] = [
   },
   { icon: "compare", tone: "accent", title: "Comparación de opciones", description: "Herramientas para analizar universidades y carreras lado a lado." },
 ];
+
+export const metadata: Metadata = { alternates: { canonical: "/" } };
 
 export default async function Home() {
   const [{ total: universityCount }, careers] = await Promise.all([getUniversityStats(), getAllCareers()]);

@@ -7,6 +7,7 @@ import { SectionHeader } from "@/features/common/components/SectionHeader";
 export const metadata: Metadata = {
   title: "Carreras",
   description: "Carreras universitarias por área - Ingenierías, Salud, Humanidades, Educación, Ciencias Básicas, Ciencias Sociales y Servicios",
+  alternates: { canonical: "/carreras" },
 };
 
 export default async function CarrerasPage() {

@@ -9,6 +9,7 @@ import { getUniversityStats } from "@/features/universities/services/universitie
 export const metadata: Metadata = {
   title: "Universidades",
   description: "Universidades privadas y oficiales acreditadas de alta calidad en el Área Metropolitana de Antioquia.",
+  alternates: { canonical: "/universidades" },
 };
 
 export default async function UniversidadesPage() {

@@ -14,6 +14,7 @@ import type { Tone } from "@/features/common/domain/types";
 export const metadata: Metadata = {
   title: "Buscador",
   description: "Busca universidades, carreras y becas del Área Metropolitana de Antioquia.",
+  alternates: { canonical: "/buscador" },
 };
 
 export default async function BuscadorPage() {
