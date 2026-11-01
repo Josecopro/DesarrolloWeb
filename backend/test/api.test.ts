@@ -266,7 +266,8 @@ describe("interacción: solicitudes PQRS", () => {
 describe("transversal", () => {
   test("becas paginadas", async () => {
     const res = await call("GET", "/becas");
-    assert.equal(res.json.pagination.total, 4);
+    assert.equal(res.json.pagination.total, 34);
+    assert.ok(res.json.data.every((s: { url: string; coverage: string }) => s.url.startsWith("https://") && s.coverage));
   });
 
   test("CORS: solo el origen del frontend configurado", async () => {

@@ -97,18 +97,26 @@ model Program {
 
 enum ScholarshipType {
   government
-  academic
-  sports
+  credit
+  partnership
+  university
 }
 
 model Scholarship {
-  id          String          @id @db.VarChar(80)
-  title       String          @db.VarChar(200)
-  description String          @db.VarChar(600)
-  videoUrl    String          @map("video_url") @db.VarChar(300)
-  type        ScholarshipType
-  institution String          @db.VarChar(160)
-  sort        Int             @default(0)
+  id           String          @id @db.VarChar(80)
+  title        String          @db.VarChar(200)
+  provider     String          @db.VarChar(160)
+  type         ScholarshipType
+  level        String[]
+  coverage     String          @db.VarChar(600)
+  requirements String[]
+  /// Cierre de la convocatoria abierta; null si no hay una con fecha.
+  deadline     DateTime?       @db.Date
+  note         String?         @db.VarChar(400)
+  url          String          @db.VarChar(300)
+  /// Nombres de `universities.name` donde aplica; vacío = varias o cualquiera.
+  universities String[]
+  sort         Int             @default(0)
 
   @@map("scholarships")
 }

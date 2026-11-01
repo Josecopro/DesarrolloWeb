@@ -247,9 +247,9 @@ await test("favoritos y comparación con ids de la API", async () => {
 await test("becas y buscador desde la API", async () => {
   const p = await page();
   await open(p, "/becas");
-  assert.equal(await p.locator("main iframe").count(), 4);
+  assert.equal(await p.locator("main article").count(), 34);
   await open(p, "/buscador?q=matricula");
-  await p.locator("main >> text=Información de matrícula 0 2023").waitFor({ timeout: 3000 });
+  await p.locator("main >> text=Matrícula Cero Medellín").waitFor({ timeout: 3000 });
 });
 
 // ── Sesión y rutas protegidas ──────────────────────────────────────────────

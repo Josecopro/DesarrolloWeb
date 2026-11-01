@@ -8,3 +8,10 @@ export async function getAllScholarships(): Promise<Scholarship[]> {
   cacheLife("minutes");
   return (await scholarshipsService.list()).data;
 }
+
+/** Fecha de hoy en Colombia (YYYY-MM-DD) para saber qué convocatorias siguen abiertas. */
+export async function getToday(): Promise<string> {
+  "use cache";
+  cacheLife("hours");
+  return new Date().toLocaleDateString("en-CA", { timeZone: "America/Bogota" });
+}

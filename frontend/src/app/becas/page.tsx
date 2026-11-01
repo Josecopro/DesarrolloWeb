@@ -3,82 +3,116 @@ import type { IconName } from "@/features/common/components/Icon";
 import { IconBadge } from "@/features/common/components/IconBadge";
 import { Card } from "@/features/common/components/Card";
 import { SectionHeader } from "@/features/common/components/SectionHeader";
-import { ScholarshipCarousel } from "@/features/scholarships/components/ScholarshipCarousel";
-import { cn } from "@/features/common/lib/cn";
-import { getAllScholarships } from "@/features/scholarships/services/scholarships.cache";
+import { ScholarshipCard } from "@/features/scholarships/components/ScholarshipCard";
+import { getAllScholarships, getToday } from "@/features/scholarships/services/scholarships.cache";
+import type { Scholarship, ScholarshipType } from "@/features/scholarships/domain/types";
 import type { Tone } from "@/features/common/domain/types";
 
 export const metadata: Metadata = {
   title: "Becas",
-  description: "Becas y financiamiento para la educación superior en el Área Metropolitana de Antioquia: ICETEX, becas académicas, deportivas y matrícula cero.",
+  description:
+    "Becas y financiamiento para la educación superior en el Área Metropolitana de Antioquia: Sapiencia, Matrícula Cero, ICETEX, convenios y becas de cada universidad.",
   alternates: { canonical: "/becas" },
 };
 
-// .card--aid de legacy/assets/css/components/section.css (borde izquierdo del color del tipo).
-const aidTypes: { icon: IconName; tone: Tone; border: string; title: string; description: string }[] = [
+// Orden de las secciones = orden de este arreglo.
+const sections: { type: ScholarshipType; slug: string; icon: IconName; tone: Tone; title: string; description: string }[] = [
   {
-    icon: "shield",
+    type: "government",
+    slug: "estado",
+    icon: "landmark",
     tone: "primary",
-    border: "border-l-primary",
-    title: "Becas Académicas",
-    description: "Por excelencia académica, mérito estudiantil y rendimiento sobresaliente.",
+    title: "Estado y Alcaldía",
+    description: "Programas públicos de Sapiencia, la Gobernación de Antioquia y el Ministerio de Educación.",
   },
   {
+    type: "credit",
+    slug: "creditos",
     icon: "credit",
     tone: "secondary",
-    border: "border-l-secondary-dark",
-    title: "Créditos ICETEX",
-    description: "Financiamiento gubernamental con tasas preferenciales para educación superior.",
+    title: "Créditos educativos",
+    description: "Financiación que pagas o te condonan después: ICETEX, Fondo Futuro y Colfuturo.",
   },
   {
-    icon: "moon",
-    tone: "success",
-    border: "border-l-success",
-    title: "Becas Deportivas",
-    description: "Para deportistas de alto rendimiento que representen a la institución.",
-  },
-  {
-    icon: "shield",
+    type: "partnership",
+    slug: "convenios",
+    icon: "funding",
     tone: "accent",
-    border: "border-l-accent",
-    title: "Matrícula Cero",
-    description: "Programa gubernamental de gratuidad para estratos 1, 2 y 3 en instituciones públicas.",
+    title: "Convenios",
+    description: "Becas que las universidades ofrecen junto con empresas, fundaciones y alcaldías.",
+  },
+  {
+    type: "university",
+    slug: "universidades",
+    icon: "building",
+    tone: "success",
+    title: "Becas de universidades",
+    description: "Becas, descuentos y estímulos propios de cada institución.",
   },
 ];
 
+/** Primero las convocatorias abiertas (la que cierra antes, arriba); el resto conserva el orden del catálogo. */
+const byUrgency = (today: string) => (a: Scholarship, b: Scholarship) => {
+  // Comparación por código (no localeCompare: la intercalación ignora el "~" centinela).
+  const key = (s: Scholarship) => (s.deadline && s.deadline.slice(0, 10) >= today ? s.deadline : "~");
+  return key(a) < key(b) ? -1 : key(a) > key(b) ? 1 : 0;
+};
+
 export default async function BecasPage() {
+  const [scholarships, today] = await Promise.all([getAllScholarships(), getToday()]);
+  const groups = sections.map((sec) => ({ ...sec, items: scholarships.filter((s) => s.type === sec.type).sort(byUrgency(today)) }));
+
   return (
-    <>
-      <section aria-labelledby="scholarships-title" className="px-(--container-padding) py-20">
+    <section aria-labelledby="scholarships-title" className="section">
+      <div className="container">
         <SectionHeader
           as="h1"
           id="scholarships-title"
           title="Becas y Financiamiento"
-          subtitle="Descubre oportunidades de becas, créditos y apoyo financiero para tus estudios"
+          subtitle="Becas, créditos y convenios vigentes para estudiar en el Área Metropolitana, con sus requisitos y la convocatoria oficial"
         />
-        <ScholarshipCarousel scholarships={await getAllScholarships()} />
-      </section>
 
-      <section aria-labelledby="types-title" className="section">
-        <div className="container">
-          <SectionHeader
-            id="types-title"
-            title="Tipos de apoyo financiero"
-            subtitle="Conoce las diferentes opciones disponibles para financiar tu educación superior"
-          />
-          <ul className="mx-auto grid max-w-(--container-max) grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
-            {aidTypes.map((a, i) => (
-              <li key={a.title} className="animate-slide-up" style={{ animationDelay: `${i * 100}ms` }}>
-                <Card as="article" className={cn("h-full border-l-4 p-6 text-center", a.border)}>
-                  <IconBadge name={a.icon} tone={a.tone} size="md" className="mb-4 self-center" />
-                  <h3 className="mb-2 text-xl font-semibold text-text">{a.title}</h3>
-                  <p className="leading-relaxed text-text-lighter">{a.description}</p>
+        <nav aria-label="Tipos de apoyo" className="mx-auto mb-16 max-w-(--container-max)">
+          <ul className="grid grid-cols-2 gap-4 lg:grid-cols-4">
+            {groups.map((g) => (
+              <li key={g.slug}>
+                <Card interactive className="h-full">
+                  <a href={`#${g.slug}`} className="flex h-full items-center gap-4 p-4 focus-visible:outline-none">
+                    <IconBadge name={g.icon} tone={g.tone} size="md" className="max-sm:hidden" />
+                    <span>
+                      <span className="block font-semibold text-text">{g.title}</span>
+                      <span className="text-sm text-text-lighter">{g.items.length} opciones</span>
+                    </span>
+                  </a>
                 </Card>
               </li>
             ))}
           </ul>
+        </nav>
+
+        <div className="mx-auto flex max-w-(--container-max) flex-col gap-16">
+          {groups.map((g) => (
+            <section key={g.slug} id={g.slug} aria-labelledby={`${g.slug}-title`} className="scroll-mt-24">
+              <header className="mb-6 flex items-center gap-4 border-b border-border pb-4">
+                <IconBadge name={g.icon} tone={g.tone} size="md" />
+                <div>
+                  <h2 id={`${g.slug}-title`} className="text-2xl font-bold text-text">
+                    {g.title}
+                  </h2>
+                  <p className="text-text-light">{g.description}</p>
+                </div>
+              </header>
+              <ul className="grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3">
+                {g.items.map((s) => (
+                  <li key={s.id}>
+                    <ScholarshipCard scholarship={s} today={today} />
+                  </li>
+                ))}
+              </ul>
+            </section>
+          ))}
         </div>
-      </section>
-    </>
+      </div>
+    </section>
   );
 }

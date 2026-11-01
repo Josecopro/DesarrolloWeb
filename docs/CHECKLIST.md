@@ -36,7 +36,7 @@ Verificado con `cd backend && npm test` (23 pruebas contra Postgres real, 2026-1
 
 ### Datos
 - [x] `users`: `name`, `email` único, `password` (hash bcrypt), `role` (`admin` | `user`).
-- [x] Catálogo con datos reales de la Entrega 1 cargados por seed (`prisma/seed.ts`, idempotente): `universities` (21) y `careers` (7 áreas, 56 programas). Becas (4) de solo lectura.
+- [x] Catálogo con datos reales de la Entrega 1 cargados por seed (`prisma/seed.ts`, idempotente): `universities` (21) y `careers` (7 áreas, 56 programas). Becas (34, recolectadas de fuentes oficiales en noviembre de 2026) de solo lectura.
 - [x] Interacción `pqrs_requests` con FK a `users` (`onDelete: Cascade`) y a `universities` (`onDelete: Restrict`).
 
 ### Endpoints mínimos

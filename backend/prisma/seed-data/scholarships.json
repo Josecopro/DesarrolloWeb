@@ -1,36 +1,558 @@
 {
+  "checkedAt": "2026-11-01",
   "scholarships": [
     {
-      "id": "matricula-0-2023",
-      "title": "Información de matrícula 0 2023",
-      "description": "Conoce los detalles del programa de matrícula cero para el año 2023",
-      "videoUrl": "https://www.youtube.com/embed/VJ7JBvXLVTM",
+      "id": "sapiencia-fondos-pregrado",
+      "title": "Fondos Sapiencia – Pregrado (crédito condonable)",
+      "provider": "Sapiencia – Alcaldía de Medellín",
       "type": "government",
-      "institution": "Gobierno Nacional"
+      "level": ["pregrado"],
+      "coverage": "Hasta 5,5 SMMLV por semestre para matrícula y hasta 2,5 SMMLV de sostenimiento (tope combinado 5,5 SMMLV). Condonable hasta el 100 % con grado y servicio social.",
+      "requirements": [
+        "Haber nacido en Medellín o residir allí los últimos 3 años (1 año para personas trans)",
+        "Bachiller o estudiante de grado 11 con Saber 11 presentado",
+        "Admitido o estudiando en una IES de la Alianza por la Educación Superior de Medellín",
+        "No tener título universitario ni otro apoyo del Distrito para lo mismo"
+      ],
+      "deadline": "2026-11-19",
+      "note": "Convocatoria 2027-1: 832 cupos (136 ordinarios y 696 de Presupuesto Participativo). Inscripción gratuita hasta el 19 de noviembre de 2026 al mediodía.",
+      "url": "https://sapiencia.gov.co/fondos-sapiencia/pregrados/",
+      "universities": ["Universidad EAFIT", "Universidad CES", "Universidad Pontificia Bolivariana", "Universidad de Medellín", "Universidad Autónoma Latinoamericana", "Universidad de Antioquia", "Instituto Tecnológico Metropolitano - ITM", "Tecnológico de Antioquia", "Universidad Nacional Abierta y a Distancia"]
+    },
+    {
+      "id": "sapiencia-presupuesto-participativo",
+      "title": "Fondos Sapiencia – Presupuesto Participativo",
+      "provider": "Sapiencia – Alcaldía de Medellín",
+      "type": "government",
+      "level": ["pregrado"],
+      "coverage": "Los mismos montos del fondo de pregrado (hasta 5,5 SMMLV por semestre). Condonable.",
+      "requirements": [
+        "Residir los últimos 3 años en la comuna o corregimiento por el que se postula (certificado de la JAC, la JAL o la inspección)",
+        "Solo compites con aspirantes de tu misma comuna",
+        "40 horas de servicio social por semestre en la comuna, avaladas por un edil"
+      ],
+      "deadline": "2026-11-19",
+      "note": "Hace parte de la convocatoria 2027-1 de Fondos Sapiencia (696 de los 832 cupos).",
+      "url": "https://sapiencia.gov.co/fondos-sapiencia/pregrados/",
+      "universities": []
+    },
+    {
+      "id": "sapiencia-matricula-cero",
+      "title": "Matrícula Cero Medellín",
+      "provider": "Sapiencia – Alcaldía de Medellín",
+      "type": "government",
+      "level": ["pregrado"],
+      "coverage": "Hasta el 100 % de la matrícula (derechos de matrícula y pecuniarios) en IES públicas con sede en Medellín.",
+      "requirements": [
+        "Haber nacido en Medellín o demostrar residencia en la ciudad",
+        "Estar admitido o estudiando un pregrado en una IES pública en convenio",
+        "Matricular mínimo 8 créditos",
+        "Para renovar: promedio acumulado de 3,0 o más"
+      ],
+      "deadline": null,
+      "note": "Convocatoria semestral; la de 2026-1 cerró el 6 de febrero de 2026.",
+      "url": "https://sapiencia.gov.co/matricula-cero/",
+      "universities": ["Universidad Nacional", "Universidad de Antioquia", "Instituto Tecnológico Metropolitano - ITM", "Tecnológico de Antioquia", "Colegio Mayor De Antioquia", "Institución Universitaria Pascual Bravo", "Politécnico Colombiano Jaime Isaza Cadavid"]
+    },
+    {
+      "id": "sapiencia-mejores-bachilleres",
+      "title": "Becas Mejores Bachilleres",
+      "provider": "Sapiencia – Alcaldía de Medellín",
+      "type": "government",
+      "level": ["pregrado"],
+      "coverage": "100 % de la matrícula de un pregrado en una IES del Valle de Aburrá.",
+      "requirements": [
+        "Ser el mejor puntaje Saber 11 de un colegio público de Medellín (categoría C o superior)",
+        "Puntaje de al menos el 60 % del máximo posible",
+        "Graduarse el mismo año en que se presentó la prueba",
+        "Para renovar: promedio acumulado de 3,2 o más"
+      ],
+      "deadline": null,
+      "note": "Se convoca a final de año, después de los resultados del Icfes.",
+      "url": "https://sapiencia.gov.co/fondos-sapiencia/becas-mejores-bachilleres/",
+      "universities": ["Universidad EAFIT", "Universidad de Medellín", "Universidad Pontificia Bolivariana", "Universidad CES", "Universidad EIA"]
+    },
+    {
+      "id": "sapiencia-mejores-deportistas",
+      "title": "Becas Mejores Deportistas",
+      "provider": "Sapiencia – Alcaldía de Medellín",
+      "type": "government",
+      "level": ["pregrado"],
+      "coverage": "100 % de los derechos de matrícula en cualquier IES pública o privada del Valle de Aburrá.",
+      "requirements": [
+        "Haber nacido en Medellín o haber cursado allí los últimos 3 años de secundaria",
+        "Medalla de oro, plata o bronce en los eventos de la convocatoria (Bolivarianos, Suramericanos de la Juventud, mundiales federados, etc.)",
+        "Certificación de la federación deportiva",
+        "No tener otro apoyo de matrícula del Distrito"
+      ],
+      "deadline": null,
+      "note": "Una convocatoria al año; en 2026 se ofrecieron 40 cupos.",
+      "url": "https://sapiencia.gov.co/fondos-sapiencia/becas-mejores-deportistas/",
+      "universities": []
+    },
+    {
+      "id": "sapiencia-posgrados-nacionales",
+      "title": "Fondos Sapiencia – Posgrados Nacionales",
+      "provider": "Sapiencia – Alcaldía de Medellín",
+      "type": "government",
+      "level": ["posgrado"],
+      "coverage": "Maestría: hasta 5,5 SMMLV. Doctorado y posdoctorado: hasta el 50 % de la matrícula, sin superar 5,5 SMMLV. Crédito condonable (50 % por rendimiento académico y 50 % por transferencia de conocimiento).",
+      "requirements": [
+        "Haber nacido en Medellín o residir allí los últimos 3 años",
+        "Estar admitido en una maestría, un doctorado o un posdoctorado registrado ante el MEN",
+        "No tener título del nivel al que aspira",
+        "Contar con recursos propios de cofinanciación"
+      ],
+      "deadline": null,
+      "note": "Se abre a mitad de año; la convocatoria 2026-2 abrió en mayo de 2026 (438 cupos de posgrado nacionales e internacionales).",
+      "url": "https://sapiencia.gov.co/fondos-sapiencia/posgrados_nacionales/",
+      "universities": []
+    },
+    {
+      "id": "sapiencia-becas-maestros",
+      "title": "Becas Maestros (maestrías para docentes)",
+      "provider": "Sapiencia – Alcaldía de Medellín",
+      "type": "government",
+      "level": ["posgrado"],
+      "coverage": "Beca de maestría para docentes.",
+      "requirements": ["Ser docente; ver la convocatoria vigente"],
+      "deadline": null,
+      "note": "50 cupos en la convocatoria de mayo de 2026.",
+      "url": "https://sapiencia.gov.co/fondos-sapiencia/posgrados_maestros/",
+      "universities": []
+    },
+    {
+      "id": "men-gratuidad-puedo-estudiar",
+      "title": "Política de Gratuidad – Puedo Estudiar",
+      "provider": "Ministerio de Educación Nacional",
+      "type": "government",
+      "level": ["pregrado"],
+      "coverage": "Paga el valor de la matrícula ordinaria neta de pregrado en IES públicas (Ley 2307 de 2023).",
+      "requirements": [
+        "Estrato 1, 2 o 3, o grupos A, B o C del Sisbén IV, o población protegida (indígena, afro, campesina o víctima del conflicto)",
+        "Estar matriculado en un pregrado de una IES pública en convenio con el MEN",
+        "La IES reporta al estudiante y el MEN valida los requisitos"
+      ],
+      "deadline": null,
+      "note": "Se tramita con la IES en cada periodo. Desde el Decreto 0616 de 2026 el PIN de inscripción es gratis para el grupo A del Sisbén IV y las comunidades indígenas.",
+      "url": "https://www.mineducacion.gov.co/portal/Educacion-superior/Politica-de-Gratuidad-Puedo-Estudiar/419531:Politica-de-Gratuidad-Puedo-Estudiar",
+      "universities": ["Universidad Nacional", "Universidad de Antioquia", "Instituto Tecnológico Metropolitano - ITM", "Tecnológico de Antioquia", "Colegio Mayor De Antioquia", "Institución Universitaria De Envigado", "Institución Universitaria Pascual Bravo", "Politécnico Colombiano Jaime Isaza Cadavid", "Universidad Nacional Abierta y a Distancia"]
+    },
+    {
+      "id": "antioquia-jovenes-palante",
+      "title": "Becas Jóvenes Pa'Lante Antioquia",
+      "provider": "Gobernación de Antioquia – Corporación Gilberto Echeverri Mejía",
+      "type": "government",
+      "level": ["técnico", "tecnológico"],
+      "coverage": "100 % de la matrícula y un apoyo económico de hasta $530.000, en más de 128 programas de educación terciaria.",
+      "requirements": [
+        "Ser colombiano y vivir en un municipio no certificado de Antioquia",
+        "Haber terminado la media o al menos el grado 9 en el departamento",
+        "Estrato 1, 2 o 3",
+        "No tener título académico ni otra beca con el mismo fin"
+      ],
+      "deadline": null,
+      "note": "10.000 cupos en 2026; la convocatoria cerró el 5 de julio de 2026.",
+      "url": "https://corporaciongilbertoecheverri.gov.co/",
+      "universities": []
+    },
+    {
+      "id": "icetex-tu-eliges-0",
+      "title": "ICETEX Tú Eliges 0 %",
+      "provider": "ICETEX",
+      "type": "credit",
+      "level": ["pregrado"],
+      "coverage": "Crédito de largo plazo hasta por el 100 % de la matrícula; pagas el 0 % mientras estudias.",
+      "requirements": [
+        "Estrato 1, 2 o 3",
+        "Buen desempeño académico",
+        "Estudio en centrales de riesgo (CIFIN) y aprobación del comité"
+      ],
+      "deadline": null,
+      "note": "Hoy los planes figuran como no disponibles; la convocatoria 2027-1 aún no tiene fecha.",
+      "url": "https://web.icetex.gov.co/es/creditos/planes-de-financiacion",
+      "universities": []
+    },
+    {
+      "id": "icetex-tu-eliges",
+      "title": "ICETEX Tú Eliges 30 %, 40 % y 100 %",
+      "provider": "ICETEX",
+      "type": "credit",
+      "level": ["pregrado"],
+      "coverage": "Hasta el 100 % de la matrícula. Pagas el 30 % (plan flexible, IPC + 9 %), el 40 % (plan progresivo) o el 100 % (corto plazo) durante los estudios y el resto al terminar.",
+      "requirements": [
+        "Abierto a todos los estratos con mérito académico",
+        "Estudio en centrales de riesgo (CIFIN); en algunas líneas se pide codeudor o Fondo de Garantías"
+      ],
+      "deadline": null,
+      "note": "En 2026-2 se otorgaron 12.900 créditos nuevos; la convocatoria 2027-1 aún no tiene fecha.",
+      "url": "https://web.icetex.gov.co/es/creditos/planes-de-financiacion",
+      "universities": []
+    },
+    {
+      "id": "icetex-fondo-comunidades-negras",
+      "title": "Fondo Especial para Comunidades Negras, Afro, Raizales y Palenqueras",
+      "provider": "ICETEX – Ministerio de Educación",
+      "type": "credit",
+      "level": ["pregrado", "posgrado"],
+      "coverage": "Crédito 100 % condonable de hasta 3 SMMLV por semestre para matrícula y sostenimiento.",
+      "requirements": [
+        "Pertenecer a una comunidad negra, afrocolombiana, raizal o palenquera",
+        "Presentar un proyecto comunitario, social o académico"
+      ],
+      "deadline": null,
+      "note": "La convocatoria 2026-2 (3.000 cupos) cerró el 21 de agosto de 2026.",
+      "url": "https://web.icetex.gov.co/",
+      "universities": []
+    },
+    {
+      "id": "icetex-fondo-alvaro-ulcue",
+      "title": "Fondo Álvaro Ulcué Chocué (pueblos indígenas)",
+      "provider": "ICETEX – Ministerio de Educación",
+      "type": "credit",
+      "level": ["pregrado", "posgrado"],
+      "coverage": "Crédito 100 % condonable para estudiar en Colombia o en el exterior.",
+      "requirements": [
+        "Pertenecer a un pueblo indígena, con certificado de su institucionalidad",
+        "Presentar un proyecto comunitario, social o académico"
+      ],
+      "deadline": null,
+      "note": "La convocatoria 2026 cerró el 11 de agosto de 2026; cerca de 3.000 beneficiarios.",
+      "url": "https://web.icetex.gov.co/",
+      "universities": []
+    },
+    {
+      "id": "fondo-futuro",
+      "title": "Fondo Futuro",
+      "provider": "Alianza EAFIT, CES, EIA, UPB y UdeMedellín (operado por Credyty)",
+      "type": "credit",
+      "level": ["pregrado"],
+      "coverage": "Hasta el 100 % de la matrícula. Pagas el 30 % durante el semestre (cuota inicial desde el 3 %) y el 70 % al terminar, sin intereses mientras estudias.",
+      "requirements": [
+        "Estar admitido en una universidad aliada",
+        "Codeudor que cumpla los requisitos de Credyty",
+        "Solicitud 100 % en línea con cédula y orden de matrícula"
+      ],
+      "deadline": null,
+      "note": "Convocatoria por periodo académico.",
+      "url": "https://www.eafit.edu.co/becas-y-financiacion/fondo-futuro",
+      "universities": ["Universidad EAFIT", "Universidad CES", "Universidad EIA", "Universidad Pontificia Bolivariana", "Universidad de Medellín"]
+    },
+    {
+      "id": "colfuturo-credito-beca",
+      "title": "Colfuturo – Programa Crédito Beca",
+      "provider": "Colfuturo – Gobierno Nacional",
+      "type": "credit",
+      "level": ["posgrado"],
+      "coverage": "Crédito para maestría o doctorado en el exterior; una parte se condona al graduarse, volver y quedarse en Colombia.",
+      "requirements": [
+        "Admisión o proceso de admisión en un posgrado en el exterior",
+        "Volver a Colombia y quedarse en el país para acceder a la condonación"
+      ],
+      "deadline": "2027-03-04",
+      "note": "Convocatoria 2027: del 4 de enero al 4 de marzo de 2027 (resultados el 18 de mayo). Las condiciones de condonación se están revisando tras reactivarse la alianza con el Gobierno.",
+      "url": "https://www.colfuturo.org/programas/credito-beca/convocatoria",
+      "universities": []
+    },
+    {
+      "id": "generacion-a",
+      "title": "Generación A",
+      "provider": "Fundación Grupo Argos con EIA, EAFIT y CES",
+      "type": "partnership",
+      "level": ["pregrado"],
+      "coverage": "Matrícula completa (50 % la fundación, 50 % la universidad), apoyo de sostenimiento según el caso y mentoría.",
+      "requirements": [
+        "Estrato 1, 2 o 3 (Sisbén)",
+        "Saber 11 de al menos 300 puntos",
+        "Mantener un promedio de 3,7 durante la carrera"
+      ],
+      "deadline": null,
+      "note": "La última convocatoria encontrada fue de octubre a diciembre de 2024; no hay fecha confirmada para 2027.",
+      "url": "https://becas.fungrupoargos.com",
+      "universities": ["Universidad EIA", "Universidad EAFIT", "Universidad CES"]
+    },
+    {
+      "id": "eafit-andi",
+      "title": "Becas Talento ANDI – EAFIT",
+      "provider": "Universidad EAFIT y ANDI",
+      "type": "partnership",
+      "level": ["pregrado"],
+      "coverage": "100 % de la matrícula, auxilio de sostenimiento y apoyo para idiomas.",
+      "requirements": [
+        "Bachiller de 2025 o que termina en 2026",
+        "Estrato 1, 2 o 3 del Valle de Aburrá",
+        "Saber 11 de al menos 345 puntos",
+        "Estar admitido a EAFIT y no haber cursado otro pregrado"
+      ],
+      "deadline": "2026-11-16",
+      "note": "Convocatoria 2027-1: resultados entre el 7 y el 14 de diciembre de 2026.",
+      "url": "https://www.eafit.edu.co/becas-y-financiacion/becas-talento-eafit",
+      "universities": ["Universidad EAFIT"]
+    },
+    {
+      "id": "eafit-nutresa-acceso",
+      "title": "Becas Nutresa Acceso – EAFIT",
+      "provider": "Universidad EAFIT y Grupo Nutresa",
+      "type": "partnership",
+      "level": ["pregrado"],
+      "coverage": "100 % de la matrícula.",
+      "requirements": [
+        "Saber 11 de al menos 300 puntos",
+        "Estrato 1, 2 o 3",
+        "Máximo 28 años, con prioridad para mujeres",
+        "Estar admitido a EAFIT y no haber cursado otro pregrado"
+      ],
+      "deadline": "2026-11-16",
+      "note": "Convocatoria 2027-1.",
+      "url": "https://www.eafit.edu.co/becas-y-financiacion/becas-talento-eafit",
+      "universities": ["Universidad EAFIT"]
+    },
+    {
+      "id": "eafit-beca-tech",
+      "title": "VER + BECA TECH – EAFIT (Ingeniería de Sistemas)",
+      "provider": "Universidad EAFIT y aliados",
+      "type": "partnership",
+      "level": ["pregrado"],
+      "coverage": "95 % de la matrícula, auxilio de manutención, computador personal y apoyo para idiomas.",
+      "requirements": [
+        "Bachiller de 2025 o 2026 con Saber 11 presentado",
+        "Sisbén A, B o C, o inscripción en el RUI",
+        "No estar cursando estudios superiores"
+      ],
+      "deadline": "2026-11-16",
+      "note": "Convocatoria 2027-1.",
+      "url": "https://www.eafit.edu.co/becas-y-financiacion/becas-talento-eafit",
+      "universities": ["Universidad EAFIT"]
+    },
+    {
+      "id": "eafit-educacion-suiza",
+      "title": "Beca Fundación Educación Suiza – EAFIT",
+      "provider": "Universidad EAFIT y Fundación Educación Suiza",
+      "type": "partnership",
+      "level": ["pregrado"],
+      "coverage": "100 % de la matrícula y los derechos de grado en Administración de Negocios, Economía, Finanzas, Ingeniería Agronómica o Ingeniería Física.",
+      "requirements": [
+        "Bachiller de 2025 o 2026 con Saber 11 de al menos 345 puntos",
+        "Estrato 1 o 2 de Medellín o de cualquier municipio de Antioquia",
+        "No haber cursado otro pregrado"
+      ],
+      "deadline": "2026-11-16",
+      "note": "Convocatoria 2027-1.",
+      "url": "https://www.eafit.edu.co/becas-y-financiacion/becas-talento-eafit",
+      "universities": ["Universidad EAFIT"]
+    },
+    {
+      "id": "eafit-velez-reyes-choco",
+      "title": "Beca Vélez Reyes+ Chocó – EAFIT",
+      "provider": "Universidad EAFIT y Vélez Reyes+",
+      "type": "partnership",
+      "level": ["pregrado"],
+      "coverage": "100 % de la matrícula, auxilio de manutención, computador personal y apoyo para idiomas.",
+      "requirements": [
+        "Haber nacido en el Chocó",
+        "Haberse graduado en 2025 o 2026 de un colegio del Chocó",
+        "Estar admitido a un pregrado elegible de EAFIT"
+      ],
+      "deadline": "2026-11-16",
+      "note": "Convocatoria 2027-1.",
+      "url": "https://www.eafit.edu.co/becas-y-financiacion/becas-talento-eafit",
+      "universities": ["Universidad EAFIT"]
+    },
+    {
+      "id": "upb-federacion-cafeteros",
+      "title": "Beca Federación Nacional de Cafeteros – UPB",
+      "provider": "UPB y Federación Nacional de Cafeteros",
+      "type": "partnership",
+      "level": ["pregrado"],
+      "coverage": "5 becas del 100 % de la matrícula (no aplica a Medicina ni Arquitectura).",
+      "requirements": [
+        "Ser caficultor federado o hijo o cónyuge acreditado de uno (pequeño caficultor SICA, hasta 5 hectáreas)",
+        "Estrato 1, 2 o 3",
+        "Promedio de bachillerato de 3,5 o más",
+        "Solo para estudiantes nuevos"
+      ],
+      "deadline": null,
+      "url": "https://portal.upb.edu.co/apoyo-financiero/becas-estudiantes",
+      "universities": ["Universidad Pontificia Bolivariana"]
+    },
+    {
+      "id": "upb-sabaneta",
+      "title": "Beca Educación Superior Sabaneta – UPB",
+      "provider": "Alcaldía de Sabaneta y UPB",
+      "type": "partnership",
+      "level": ["técnico", "tecnológico", "pregrado"],
+      "coverage": "La Alcaldía paga el 50 % (máximo 8 SMMLV), la UPB el 25 % y el estudiante el 25 %.",
+      "requirements": [
+        "Vivir en Sabaneta",
+        "Promedio de 3,5 o más cada semestre",
+        "No es acumulable con otros beneficios"
+      ],
+      "deadline": null,
+      "url": "https://portal.upb.edu.co/apoyo-financiero/becas-estudiantes",
+      "universities": ["Universidad Pontificia Bolivariana"]
     },
     {
       "id": "eafit-becas-talento",
-      "title": "Universidad EAFIT - Becas Talento",
-      "description": "Programa de becas por excelencia académica de la Universidad EAFIT",
-      "videoUrl": "https://www.youtube.com/embed/vcK6n8l6jfA",
-      "type": "academic",
-      "institution": "Universidad EAFIT"
+      "title": "Becas Talento EAFIT",
+      "provider": "Universidad EAFIT",
+      "type": "university",
+      "level": ["pregrado"],
+      "coverage": "Entre el 40 % y el 100 % de la matrícula (no incluye sostenimiento).",
+      "requirements": [
+        "Bachiller colombiano con Saber 11 de 2014-2 en adelante",
+        "Estrato 1 a 4, de cualquier municipio",
+        "Estar admitido a EAFIT antes del cierre y no tener título de pregrado"
+      ],
+      "deadline": "2026-11-16",
+      "note": "Convocatoria 2027-1: resultados entre el 7 y el 14 de diciembre de 2026.",
+      "url": "https://www.eafit.edu.co/becas-y-financiacion/becas-talento-eafit",
+      "universities": ["Universidad EAFIT"]
     },
     {
-      "id": "icetex-becas",
-      "title": "ICETEX - Créditos y Becas",
-      "description": "Opciones de financiamiento y becas del ICETEX para educación superior",
-      "videoUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
-      "type": "government",
-      "institution": "ICETEX"
+      "id": "eafit-deportistas",
+      "title": "Becas Deportistas de Alto Rendimiento – EAFIT",
+      "provider": "Universidad EAFIT",
+      "type": "university",
+      "level": ["pregrado"],
+      "coverage": "Entre el 40 % y el 100 % de la matrícula.",
+      "requirements": [
+        "Atleta activo certificado por una liga, club o federación reconocida por el Ministerio del Deporte",
+        "Estrato 1 a 4 y Saber 11 de 2014-2 en adelante",
+        "Se valoran las medallas de oro, plata o bronce"
+      ],
+      "deadline": "2026-11-16",
+      "note": "Convocatoria 2027-1.",
+      "url": "https://www.eafit.edu.co/becas-y-financiacion/becas-talento-eafit",
+      "universities": ["Universidad EAFIT"]
     },
     {
-      "id": "upe-becas-deportivas",
-      "title": "Becas Deportivas Universidad de Antioquia",
-      "description": "Programa de becas para deportistas de alto rendimiento",
-      "videoUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
-      "type": "sports",
-      "institution": "Universidad de Antioquia"
+      "id": "eia-becas-excelencia",
+      "title": "Becas Excelencia EIA",
+      "provider": "Universidad EIA",
+      "type": "university",
+      "level": ["pregrado"],
+      "coverage": "Entre el 50 % y el 90 % de la matrícula durante toda la carrera.",
+      "requirements": [
+        "Bachiller colombiano de estrato 1 a 4",
+        "Resultados destacados en Saber 11",
+        "Primero ser admitido y luego postularse a la beca",
+        "Entrevista con el aspirante y su familia y verificación socioeconómica"
+      ],
+      "deadline": "2026-11-30",
+      "url": "https://www.eia.edu.co/",
+      "universities": ["Universidad EIA"]
+    },
+    {
+      "id": "udem-beca-social",
+      "title": "Beca Social – UdeMedellín",
+      "provider": "Universidad de Medellín",
+      "type": "university",
+      "level": ["pregrado"],
+      "coverage": "Del 50 % o del 100 % de la matrícula.",
+      "requirements": [
+        "Ingresos familiares de hasta 3,5 SMMLV",
+        "Estar admitido al primer semestre (tienen prioridad los dos primeros puestos de cada colegio)",
+        "Visita domiciliaria y entrevista",
+        "Para renovar: aprobar todas las materias y hacer 40 horas de servicio social por semestre"
+      ],
+      "deadline": "2026-11-30",
+      "note": "Convocatoria 2027-1: resultados desde el 8 de febrero de 2027.",
+      "url": "https://admisiones.udemedellin.edu.co/becas-descuentos-y-financiacion-de-pregrado/",
+      "universities": ["Universidad de Medellín"]
+    },
+    {
+      "id": "udem-beca-honor",
+      "title": "Beca de Honor – UdeMedellín",
+      "provider": "Universidad de Medellín",
+      "type": "university",
+      "level": ["pregrado"],
+      "coverage": "Matrícula gratis el periodo siguiente.",
+      "requirements": [
+        "Tener el promedio más alto de la facultad en el periodo, con mínimo 4,0",
+        "Haber aprobado todas las materias sin repetir cursos y sin sanciones"
+      ],
+      "deadline": null,
+      "url": "https://admisiones.udemedellin.edu.co/becas-descuentos-y-financiacion-de-pregrado/",
+      "universities": ["Universidad de Medellín"]
+    },
+    {
+      "id": "udem-deportistas",
+      "title": "Estímulo a deportistas de alto rendimiento – UdeMedellín",
+      "provider": "Universidad de Medellín",
+      "type": "university",
+      "level": ["pregrado"],
+      "coverage": "Descuento en la matrícula del 75 % (Selección Colombia), el 40 % (selección departamental) o el 20 % (representación avalada); por logros, del 25 % al 40 %.",
+      "requirements": ["Competir a nivel departamental, nacional o internacional (incluye deporte paralímpico)"],
+      "deadline": null,
+      "url": "https://admisiones.udemedellin.edu.co/becas-descuentos-y-financiacion-de-pregrado/",
+      "universities": ["Universidad de Medellín"]
+    },
+    {
+      "id": "udem-comunidades-etnicas",
+      "title": "Descuento para comunidades étnicas – UdeMedellín",
+      "provider": "Universidad de Medellín",
+      "type": "university",
+      "level": ["pregrado"],
+      "coverage": "30 % de descuento en la matrícula, sin importar el estrato.",
+      "requirements": [
+        "Pertenecer a una comunidad negra, afrocolombiana, raizal, palenquera o indígena",
+        "Certificado del Ministerio del Interior con no más de 30 días de expedido",
+        "Pedirlo antes de pagar la matrícula"
+      ],
+      "deadline": null,
+      "url": "https://admisiones.udemedellin.edu.co/becas-descuentos-y-financiacion-de-pregrado/",
+      "universities": ["Universidad de Medellín"]
+    },
+    {
+      "id": "upb-beca-honor",
+      "title": "Beca de Honor Pregrado – UPB",
+      "provider": "Universidad Pontificia Bolivariana",
+      "type": "university",
+      "level": ["pregrado"],
+      "coverage": "100 % de la matrícula del periodo siguiente.",
+      "requirements": ["Tener el mejor promedio ponderado del programa en el periodo académico regular"],
+      "deadline": null,
+      "url": "https://portal.upb.edu.co/apoyo-financiero/becas-estudiantes",
+      "universities": ["Universidad Pontificia Bolivariana"]
+    },
+    {
+      "id": "ces-becas",
+      "title": "Becas CES: estímulo académico, compromiso con la excelencia y etnias",
+      "provider": "Universidad CES",
+      "type": "university",
+      "level": ["pregrado"],
+      "coverage": "Beca de estímulo académico del 50 % de la matrícula; una beca Compromiso con la Excelencia por pregrado en cada admisión; 2 becas del 50 % para pueblos indígenas y afrocolombianos.",
+      "requirements": ["Concurso del Comité de Becas, según la ficha técnica de cada beca"],
+      "deadline": null,
+      "note": "Condiciones tomadas de las fichas técnicas de 2023; confirmar con admisiones@ces.edu.co.",
+      "url": "https://www.ces.edu.co/",
+      "universities": ["Universidad CES"]
+    },
+    {
+      "id": "ean-becas-ingenieria",
+      "title": "Becas en Ingeniería – Universidad EAN",
+      "provider": "Universidad EAN",
+      "type": "university",
+      "level": ["pregrado"],
+      "coverage": "50 becas del 50 % de la matrícula durante toda la carrera en la Facultad de Ingeniería.",
+      "requirements": ["Ver los términos y condiciones de la convocatoria"],
+      "deadline": null,
+      "note": "La convocatoria 2026-2 ya cerró; no se encontró una para 2027-1.",
+      "url": "https://universidadean.edu.co/",
+      "universities": ["Universidad EAN"]
+    },
+    {
+      "id": "udea-becas-posgrado",
+      "title": "Becas de posgrado – Universidad de Antioquia",
+      "provider": "Universidad de Antioquia",
+      "type": "university",
+      "level": ["posgrado"],
+      "coverage": "Financiación parcial de la matrícula de maestrías y doctorados (más de $3.788 millones en la convocatoria 2026-2).",
+      "requirements": ["Aspirantes nuevos o estudiantes activos de maestría o doctorado de la UdeA"],
+      "deadline": null,
+      "note": "La convocatoria 2026-2 cerró el 6 de julio de 2026.",
+      "url": "https://www.udea.edu.co/",
+      "universities": ["Universidad de Antioquia"]
     }
   ]
 }

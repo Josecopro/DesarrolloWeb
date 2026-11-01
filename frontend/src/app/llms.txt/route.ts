@@ -12,7 +12,7 @@ export async function GET() {
 
   const body = `# DUAM - Directorio Universitario del Área Metropolitana
 
-> Directorio gratuito de educación superior en el Área Metropolitana del Valle de Aburrá (Medellín, Antioquia, Colombia). Reúne las ${universities.length} universidades acreditadas de alta calidad de la zona, sus carreras por área de estudio (datos del SNIES) y becas y opciones de financiamiento (ICETEX, becas académicas, deportivas y Matrícula Cero).
+> Directorio gratuito de educación superior en el Área Metropolitana del Valle de Aburrá (Medellín, Antioquia, Colombia). Reúne las ${universities.length} universidades acreditadas de alta calidad de la zona, sus carreras por área de estudio (datos del SNIES) y becas y opciones de financiamiento (Sapiencia, Matrícula Cero, ICETEX, convenios y becas de cada universidad).
 
 Público: estudiantes de bachillerato, padres y orientadores que eligen carrera o universidad en Antioquia. Idioma: español.
 
@@ -35,7 +35,7 @@ ${universities.map((u) => `- [${u.name}](${u.url}): universidad ${universityType
 
 ## Becas y financiamiento
 
-${scholarships.map((s) => `- ${s.title} (${s.institution}): ${s.description}`).join("\n")}
+${scholarships.map((s) => `- [${s.title}](${s.url}) (${s.provider}): ${s.coverage}`).join("\n")}
 `;
 
   return new Response(body, { headers: { "Content-Type": "text/markdown; charset=utf-8" } });

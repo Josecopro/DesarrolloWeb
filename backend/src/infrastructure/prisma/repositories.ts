@@ -129,7 +129,7 @@ export const scholarshipRepository: ScholarshipRepository = {
   async list(query) {
     const [data, total] = await prisma.$transaction([
       prisma.scholarship.findMany({
-        select: { id: true, title: true, description: true, videoUrl: true, type: true, institution: true },
+        omit: { sort: true },
         orderBy: { sort: "asc" },
         ...skipTake(query),
       }),

@@ -1,14 +1,19 @@
 import type { Page, PageQuery } from "./pagination.js";
 
-export type ScholarshipType = "government" | "academic" | "sports";
+export type ScholarshipType = "government" | "credit" | "partnership" | "university";
 
 export interface Scholarship {
   id: string;
   title: string;
-  description: string;
-  videoUrl: string;
+  provider: string;
   type: ScholarshipType;
-  institution: string;
+  level: string[];
+  coverage: string;
+  requirements: string[];
+  deadline: Date | null;
+  note: string | null;
+  url: string;
+  universities: string[];
 }
 
 export interface ScholarshipRepository {

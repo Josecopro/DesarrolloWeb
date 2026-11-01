@@ -5,6 +5,7 @@ import { readFileSync } from "node:fs";
 import { PrismaPg } from "@prisma/adapter-pg";
 import bcrypt from "bcryptjs";
 import { PrismaClient } from "../src/generated/prisma/client.js";
+import type { Scholarship } from "../src/domain/scholarship.js";
 
 const prisma = new PrismaClient({ adapter: new PrismaPg({ connectionString: process.env.DATABASE_URL_UNPOOLED ?? process.env.DATABASE_URL }) });
 const load = (file: string) => JSON.parse(readFileSync(new URL(`./seed-data/${file}`, import.meta.url), "utf8"));
@@ -15,8 +16,9 @@ const { categories } = load("careers.json") as {
 };
 // Generado con `npm run data:programs` desde el SNIES.
 const programs = load("programs.json") as { university: string; name: string; career: string; level: string; modality: string }[];
+// Recolectadas a mano de las fuentes oficiales (`url` de cada una); revisar `checkedAt` cada semestre.
 const { scholarships } = load("scholarships.json") as {
-  scholarships: { id: string; title: string; description: string; videoUrl: string; type: "government" | "academic" | "sports"; institution: string }[];
+  scholarships: (Omit<Scholarship, "deadline" | "note"> & { deadline: string | null; note?: string })[];
 };
 
 // Credenciales de prueba SOLO para el ambiente de la entrega (documentadas en el README).
@@ -47,8 +49,12 @@ async function main() {
     }),
   ]);
 
+  const universityNames = new Set([...universities.private, ...universities.public].map((u) => u.name));
+  await prisma.scholarship.deleteMany({ where: { id: { notIn: scholarships.map((s) => s.id) } } });
   for (const [sort, s] of scholarships.entries()) {
-    const data = { ...s, sort };
+    const unknown = s.universities.filter((n) => !universityNames.has(n));
+    if (unknown.length) throw new Error(`Beca ${s.id}: universidades desconocidas ${unknown.join(", ")}`);
+    const data = { ...s, deadline: s.deadline ? new Date(s.deadline) : null, note: s.note ?? null, sort };
     await prisma.scholarship.upsert({ where: { id: s.id }, create: data, update: data });
   }
 
