@@ -1,0 +1,33 @@
+# Vercel construye un proyecto a la vez y en orden variable: si desarrollo-web se construía
+# antes que duam-api, prerenderizaba contra la API vieja y fallaba. Por eso el despliegue
+# automático de main está apagado en frontend/vercel.json y este workflow lo dispara
+# (deploy hook, secreto FRONTEND_DEPLOY_HOOK) cuando la API ya sirve el mismo commit.
+name: Desplegar frontend después de la API
+
+on:
+  push:
+    branches: [main]
+
+concurrency:
+  group: deploy-frontend
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Esperar a que duam-api sirva este commit
+        run: |
+          for i in $(seq 1 90); do
+            commit=$(curl -fsS https://duam-api.vercel.app/api/health | jq -r .commit || true)
+            [ "$commit" = "$GITHUB_SHA" ] && exit 0
+            echo "API en ${commit:0:7}, esperando ${GITHUB_SHA:0:7}…"
+            sleep 10
+          done
+          echo "::error::duam-api no desplegó ${GITHUB_SHA:0:7} en 15 min (¿falló su build?). El frontend no se despliega."
+          exit 1
+      - name: Desplegar desarrollo-web
+        env:
+          HOOK: ${{ secrets.FRONTEND_DEPLOY_HOOK }}
+        run: curl -fsS -X POST "$HOOK"

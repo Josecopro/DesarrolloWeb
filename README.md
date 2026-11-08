@@ -18,7 +18,7 @@ DUAM2/
 └── PRODUCT.md  contexto de producto
 ```
 
-> **Un solo repositorio (`DesarrolloWeb`) para todo.** Los dos proyectos de Vercel se despliegan desde aquí con cada push a `main`: `desarrollo-web` (Root Directory `frontend/`) y `duam-api` (Root Directory `backend/`). El despliegue de producción de `duam-api` aplica las migraciones y el seed en Neon (`npm run build`).
+> **Un solo repositorio (`DesarrolloWeb`) para todo.** Los dos proyectos de Vercel se despliegan desde aquí con cada push a `main`: primero `duam-api` (Root Directory `backend/`), que aplica las migraciones y el seed en Neon (`npm run build`), y después `desarrollo-web` (Root Directory `frontend/`), que lo dispara `.github/workflows/deploy-frontend.yml` cuando la API ya sirve el mismo commit.
 
 ### Variables de entorno
 
