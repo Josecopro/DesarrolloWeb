@@ -78,13 +78,13 @@ prisma/               schema.prisma, migrations/, seed.ts, seed-data/ (datos de 
 | GET | `/api/solicitudes/mias` | Autenticado: solo las suyas | `{ pagination, data }` |
 | GET | `/api/solicitudes?status` | **Solo admin**: todas | `{ pagination, data }` |
 | PATCH | `/api/solicitudes/:id` | **Solo admin** | solicitud con nuevo estado |
-| GET | `/api/health` | Público | `{ ok: true }` |
+| GET | `/api/health` | Público | `{ ok: true, commit }` (commit desplegado; lo usa el build del frontend) |
 
 Errores siempre como `{ error, details? }` (`details` = errores por campo), sin stack trace. Sin token o token inválido/expirado → **401**; token válido sin rol → **403**. CORS solo para `CORS_ORIGINS`.
 
 ## Despliegue (Vercel, proyecto `duam-api`)
 
-Se despliega desde la carpeta `backend/` de este repositorio (Root Directory `backend`, preset Express, detecta `src/app.ts`) con cada push a `main`. Base de datos Neon instalada desde el Marketplace de Vercel. En producción (`VERCEL_ENV=production`), `npm run build` también corre `prisma migrate deploy` y el seed contra Neon (con `DATABASE_URL_UNPOOLED`), así que el código nuevo y el esquema salen juntos. Si una migración falla, el build falla y sigue activo el despliegue anterior. Los *previews* comparten la base y no migran.
+Se despliega desde la carpeta `backend/` de este repositorio (Root Directory `backend`, preset Express, detecta `src/app.ts`) con cada push a `main`. Base de datos Neon instalada desde el Marketplace de Vercel. En producción (`VERCEL_ENV=production`), `npm run build` también corre `prisma migrate deploy` y el seed contra Neon (con `DATABASE_URL_UNPOOLED`), así que el código nuevo y el esquema salen juntos. Si una migración falla, el build falla y sigue activo el despliegue anterior. Los *previews* comparten la base y no migran. El build de producción del frontend espera a que `/api/health` reporte su mismo commit antes de prerenderizar (`frontend/scripts/wait-for-api.mjs`, máximo 5 min), así nunca lee la API vieja.
 
 A mano, si hace falta:
 

@@ -45,7 +45,8 @@ solicitudes.patch("/:id", soloAdmin, pqrsRequestController.updateStatus);
 export const api = Router();
 api.get("/health", async (_req, res) => {
   await prisma.$queryRaw`SELECT 1`;
-  res.json({ ok: true });
+  // commit: el build del frontend espera a que coincida con el suyo (frontend/scripts/wait-for-api.mjs).
+  res.json({ ok: true, commit: process.env.VERCEL_GIT_COMMIT_SHA ?? null });
 });
 api.use("/auth", auth);
 api.use("/universidades", universidades);
