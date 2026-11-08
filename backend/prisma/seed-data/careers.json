@@ -17,7 +17,7 @@
       "image": "/images/xKfFKiN.png",
       "description": "Carreras del área de la salud y ciencias médicas",
       "tone": "success",
-      "symbol": "check-circle",
+      "symbol": "heart",
       "summary": "Carreras del área de la salud y ciencias médicas. Formación para el cuidado y bienestar de las personas."
     },
     {
@@ -57,7 +57,7 @@
       "image": "/images/GSpCIQC.jpg",
       "description": "Derecho, ciencias políticas y sociales",
       "tone": "accent",
-      "symbol": "file-text",
+      "symbol": "landmark",
       "summary": "Derecho, ciencias políticas y sociales. Formación para la justicia, la gestión pública y el análisis social."
     },
     {
@@ -67,7 +67,7 @@
       "image": "/images/wIbAFgE.png",
       "description": "Hotelería, turismo y servicios",
       "tone": "secondary",
-      "symbol": "check-circle",
+      "symbol": "building",
       "summary": "Hotelería, turismo y servicios. Formación en hospitalidad, gastronomía, gestión turística y recreación."
     },
     {
@@ -77,7 +77,7 @@
       "image": "/images/xxOPyM5.jpg",
       "description": "Administración, contaduría, finanzas y negocios",
       "tone": "secondary",
-      "symbol": "package",
+      "symbol": "funding",
       "summary": "Administración, contaduría, finanzas y negocios. Formación para dirigir organizaciones y emprender."
     }
   ]

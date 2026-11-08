@@ -7,6 +7,9 @@ export interface OfferingUniversity extends University {
   level: string;
   /** Presencial, Virtual o A distancia. */
   modality: string;
+  /** Enlace oficial: la página del programa, si no el listado de pregrados, si no el sitio. */
+  programUrl: string;
+  linkKind: "program" | "catalog" | "site";
 }
 
 /** Programa y las universidades que lo ofrecen. */

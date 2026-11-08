@@ -185,6 +185,11 @@ describe("catálogo: carreras", () => {
     assert.ok(salud.json.programs.includes("Médico y Cirujano"));
     const medico = salud.json.offerings.find((o: Json) => o.name === "Médico y Cirujano");
     assert.ok(medico.universities.some((u: Json) => u.name === "Universidad de Antioquia" && u.level === "Universitaria"));
+    for (const u of medico.universities) {
+      assert.match(u.programUrl, /^https:\/\//, "cada universidad trae un enlace oficial");
+      assert.ok(["program", "catalog", "site"].includes(u.linkKind));
+      assert.equal(u.programsUrl, undefined);
+    }
     assert.equal((await call("GET", "/carreras/no-existe")).status, 404);
     assert.equal((await call("GET", "/carreras/MAL ID")).status, 400);
   });

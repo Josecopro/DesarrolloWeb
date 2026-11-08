@@ -148,6 +148,9 @@ async function main() {
   console.table(count("university"));
   const missing = [...bySnies.values()].filter((u) => !programs.some((p) => p.university === u));
   if (missing.length) console.warn("Sin programas en Antioquia ni virtuales:", missing.join(", "));
+  const links = JSON.parse(readFileSync(file("program-links.json"), "utf8")).universities as Record<string, { programs: Record<string, string> }>;
+  const unlinked = programs.filter((p) => !links[p.university]?.programs[`${p.name}|${p.level}|${p.modality}`]);
+  if (unlinked.length) console.warn(`Sin enlace propio en program-links.json (${unlinked.length}); usan el listado de pregrados.`);
   if (dropped.length) console.warn(`Descartados (${dropped.length}):`, [...new Set(dropped)].join("; "));
 }
 

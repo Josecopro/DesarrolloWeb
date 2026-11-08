@@ -38,6 +38,8 @@ model University {
   id        Int            @id @default(autoincrement())
   name      String         @unique @db.VarChar(160)
   url       String         @db.VarChar(300)
+  /// Página oficial con el listado de pregrados (seed-data/program-links.json).
+  programsUrl String?      @map("programs_url") @db.VarChar(300)
   type      UniversityType
   createdAt DateTime       @default(now()) @map("created_at")
   updatedAt DateTime       @updatedAt @map("updated_at")
@@ -83,6 +85,8 @@ model Program {
   level        String     @db.VarChar(40)
   /// Presencial, Virtual o A distancia.
   modality     String     @db.VarChar(40)
+  /// Página oficial del programa en la universidad (seed-data/program-links.json).
+  url          String?    @db.VarChar(300)
   careerId     String     @map("career_id") @db.VarChar(60)
   universityId Int        @map("university_id")
   career       Career     @relation(fields: [careerId], references: [id], onDelete: Cascade)

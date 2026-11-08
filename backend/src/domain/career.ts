@@ -10,6 +10,9 @@ export interface OfferingUniversity {
   type: "private" | "public";
   level: string;
   modality: string;
+  /** Enlace oficial: la página del programa, si no el listado de pregrados, si no el sitio. */
+  programUrl: string;
+  linkKind: "program" | "catalog" | "site";
 }
 
 /** Programa (por nombre) y las universidades que lo ofrecen. */

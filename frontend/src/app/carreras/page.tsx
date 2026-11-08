@@ -19,7 +19,7 @@ export default async function CarrerasPage() {
         as="h1"
         id="careers-title"
         title="Carreras por Área de Estudio"
-        subtitle={`Explora las ${careers.length} áreas principales con ${programs} programas académicos`}
+        subtitle={`${programs} carreras en ${careers.length} áreas. Elige un área y entra directo a la página oficial de cada programa.`}
       />
       {/* El catálogo se carga desde la API en el navegador (?page=) con estados de carga, vacío y error. */}
       <Suspense>

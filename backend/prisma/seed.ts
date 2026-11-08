@@ -16,6 +16,11 @@ const { categories } = load("careers.json") as {
 };
 // Generado con `npm run data:programs` desde el SNIES.
 const programs = load("programs.json") as { university: string; name: string; career: string; level: string; modality: string }[];
+// Enlaces oficiales de cada programa, recolectados a mano (clave "nombre|nivel|modalidad"). Revisar con `npm run data:links`.
+const { universities: links } = load("program-links.json") as {
+  universities: Record<string, { catalog: string | null; programs: Record<string, string> }>;
+};
+const programKey = (p: { name: string; level: string; modality: string }) => `${p.name}|${p.level}|${p.modality}`;
 // Recolectadas a mano de las fuentes oficiales (`url` de cada una); revisar `checkedAt` cada semestre.
 const { scholarships } = load("scholarships.json") as {
   scholarships: (Omit<Scholarship, "deadline" | "note"> & { deadline: string | null; note?: string })[];
@@ -29,9 +34,17 @@ const testUsers = [
 ];
 
 async function main() {
+  const known = new Set(programs.map((p) => `${p.university}|${programKey(p)}`));
+  for (const [university, { programs: urls }] of Object.entries(links)) {
+    if (![...universities.private, ...universities.public].some((u) => u.name === university)) throw new Error(`program-links.json: universidad desconocida ${university}`);
+    const unknown = Object.keys(urls).filter((k) => !known.has(`${university}|${k}`));
+    if (unknown.length) throw new Error(`program-links.json, ${university}: programas que no existen ${unknown.join("; ")}`);
+  }
+
   for (const type of ["private", "public"] as const) {
     for (const { snies: _, ...u } of universities[type]) {
-      await prisma.university.upsert({ where: { name: u.name }, create: { ...u, type }, update: { url: u.url, type } });
+      const programsUrl = links[u.name]?.catalog ?? null;
+      await prisma.university.upsert({ where: { name: u.name }, create: { ...u, type, programsUrl }, update: { url: u.url, type, programsUrl } });
     }
   }
 
@@ -45,7 +58,12 @@ async function main() {
   await prisma.$transaction([
     prisma.program.deleteMany(),
     prisma.program.createMany({
-      data: programs.map(({ university, career, ...p }) => ({ ...p, careerId: career, universityId: universityIds.get(university)! })),
+      data: programs.map(({ university, career, ...p }) => ({
+        ...p,
+        url: links[university]?.programs[programKey(p)] ?? null,
+        careerId: career,
+        universityId: universityIds.get(university)!,
+      })),
     }),
   ]);
 
@@ -63,8 +81,15 @@ async function main() {
     await prisma.user.upsert({ where: { email: user.email }, create: { ...user, password: await bcrypt.hash(password, 10) }, update: {} });
   }
 
-  const [u, c, p, s, users] = await Promise.all([prisma.university.count(), prisma.career.count(), prisma.program.count(), prisma.scholarship.count(), prisma.user.count()]);
-  console.log(`Seed listo: ${u} universidades, ${c} áreas, ${p} programas, ${s} becas, ${users} usuarios.`);
+  const [u, c, p, linked, s, users] = await Promise.all([
+    prisma.university.count(),
+    prisma.career.count(),
+    prisma.program.count(),
+    prisma.program.count({ where: { url: { not: null } } }),
+    prisma.scholarship.count(),
+    prisma.user.count(),
+  ]);
+  console.log(`Seed listo: ${u} universidades, ${c} áreas, ${p} programas (${linked} con enlace propio), ${s} becas, ${users} usuarios.`);
 }
 
 main()

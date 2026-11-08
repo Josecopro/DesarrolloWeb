@@ -1,10 +1,9 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { ButtonLink } from "@/features/common/components/Button";
+import Link from "next/link";
 import { Icon } from "@/features/common/components/Icon";
 import { IconBadge } from "@/features/common/components/IconBadge";
-import { SectionHeader } from "@/features/common/components/SectionHeader";
-import { OfferingList } from "@/features/careers/components/OfferingList";
+import { ProgramIndex } from "@/features/careers/components/ProgramIndex";
 import { getAllCareers, getCareerById, getCareerDetail } from "@/features/careers/services/careers.cache";
 import { careerHref } from "@/features/common/lib/navigation";
 
@@ -24,27 +23,34 @@ export default async function DivisionPage({ params }: PageProps<"/carreras/[div
   const { division } = await params;
   if (!(await getCareerById(division))) notFound();
   const career = await getCareerDetail(division);
+  const offerings = career.offerings ?? [];
+  const universities = new Set(offerings.flatMap((o) => o.universities.map((u) => u.id))).size;
 
   return (
     <section aria-labelledby="career-title" className="section">
       <div className="container">
-        <SectionHeader
-          as="h1"
-          id="career-title"
-          title={career.name}
-          subtitle={career.summary}
-          eyebrow={<IconBadge name={career.symbol} tone={career.tone} />}
-          className="animate-fade-in"
-        />
+        <header className="mb-6 max-w-3xl">
+          <Link
+            href="/carreras"
+            className="mb-5 inline-flex items-center gap-1 rounded text-sm font-semibold text-text-light transition-colors hover:text-primary focus-visible:shadow-(--focus-ring) focus-visible:outline-none dark:hover:text-secondary-light"
+          >
+            <Icon name="chevron-left" size="sm" />
+            Todas las áreas
+          </Link>
+          <div className="flex items-center gap-4">
+            <IconBadge name={career.symbol} tone={career.tone} size="md" />
+            <h1 id="career-title" className="text-4xl font-bold text-balance text-text">
+              {career.name}
+            </h1>
+          </div>
+          <p className="mt-4 max-w-[65ch] text-lg text-text-light">{career.summary}</p>
+          <p className="mt-3 text-sm text-text-lighter">
+            {offerings.length} carreras en {universities} universidades, según el SNIES (MinEducación). Abre una carrera y entra directo a la página oficial
+            de cada universidad.
+          </p>
+        </header>
 
-        <OfferingList offerings={career.offerings ?? []} />
-
-        <div className="mt-8 animate-fade-in">
-          <ButtonLink href="/carreras" variant="ghost">
-            <Icon name="chevron-left" size="md" />
-            Volver a todas las carreras
-          </ButtonLink>
-        </div>
+        <ProgramIndex offerings={offerings} />
       </div>
     </section>
   );

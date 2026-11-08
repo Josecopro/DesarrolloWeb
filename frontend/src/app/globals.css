@@ -280,3 +280,22 @@
     }
   }
 }
+
+/* Filas del índice de carreras (ProgramIndex): al abrirse, la lista de universidades crece en altura. */
+@media (prefers-reduced-motion: no-preference) {
+  @supports (interpolate-size: allow-keywords) {
+    .disclosure {
+      interpolate-size: allow-keywords;
+    }
+    .disclosure::details-content {
+      height: 0;
+      overflow: clip;
+      transition:
+        height 280ms cubic-bezier(0.16, 1, 0.3, 1),
+        content-visibility 280ms allow-discrete;
+    }
+    .disclosure[open]::details-content {
+      height: auto;
+    }
+  }
+}

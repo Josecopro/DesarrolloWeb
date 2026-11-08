@@ -25,6 +25,7 @@ npm test                    # 23 pruebas de la API contra la base de DATABASE_UR
 | `db:deploy` | `prisma migrate deploy` (producción) |
 | `db:seed` | `prisma db seed` → `prisma/seed.ts` |
 | `data:programs` | Descarga del SNIES las carreras de cada universidad → `prisma/seed-data/programs.json` (después: `db:seed`) |
+| `data:links` | Revisa que respondan los enlaces oficiales de `prisma/seed-data/program-links.json` (página de cada programa y listado de pregrados por universidad, recolectados a mano en noviembre de 2026; repetir cada semestre) |
 | `test` | Pruebas `node:test` (`test/*.test.ts`) |
 | `typecheck` | `tsc --noEmit` |
 

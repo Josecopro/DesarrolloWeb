@@ -164,20 +164,28 @@ await test("tabs de Misión y Visión: clic y teclado", async () => {
 });
 
 // ── Catálogos desde la API ─────────────────────────────────────────────────
-await test("carreras: catálogo desde la API y tarjeta → carreras con sus universidades", async () => {
+await test("carreras: índice de áreas → carreras con filtros y enlaces oficiales por universidad", async () => {
   const p = await page();
   await open(p, "/carreras");
-  const cards = p.locator("main li").filter({ hasText: "Ver subdivisiones" });
-  await cards.first().waitFor();
-  assert.equal(await cards.count(), 8);
-  await p.click("main li:has-text('Salud') >> text=Ver subdivisiones");
+  const areas = p.locator("main li a[href^='/carreras/']");
+  await areas.first().waitFor();
+  assert.equal(await areas.count(), 8);
+  await p.click("main li a[href='/carreras/salud']");
   await p.waitForURL("**/carreras/salud");
-  const medicina = p.locator("main article").filter({ hasText: "Médico y Cirujano" });
-  assert.ok(await medicina.getByRole("link", { name: /Universidad de Antioquia/ }).isVisible());
+  // Fila cerrada → se abre y muestra las universidades con su enlace oficial en otra pestaña.
+  const medico = p.locator("main details").filter({ hasText: "Médico y Cirujano" });
+  await medico.locator("summary").click();
+  const udea = medico.getByRole("link", { name: /Universidad de Antioquia/ });
+  assert.ok(await udea.isVisible());
+  assert.equal(await udea.getAttribute("target"), "_blank");
+  assert.match(await udea.getAttribute("href"), /^https:\/\/www\.udea\.edu\.co\//);
+  // Buscar por universidad abre las filas y deja solo esa universidad; el filtro queda en la URL.
   await p.fill("main input[type=search]", "ces");
-  await p.locator("main article").first().waitFor();
-  const shown = await p.locator("main article").allTextContents();
-  assert.ok(shown.length > 0 && shown.every((t) => t.includes("Universidad CES")), "el filtro busca por universidad");
+  await p.waitForURL("**/carreras/salud?q=ces");
+  const links = await p.locator("main details[open] a").allTextContents();
+  assert.ok(links.length > 0 && links.every((t) => t.includes("Universidad CES")), "el filtro busca por universidad");
+  await p.click("main >> text=Limpiar filtros");
+  await p.waitForURL((url) => url.search === "");
 });
 
 await test("universidades: paginación por URL (?page=2) y navegación con el paginador", async () => {

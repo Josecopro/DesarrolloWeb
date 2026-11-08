@@ -97,16 +97,17 @@ export const careerRepository: CareerRepository = {
       prisma.career.findUnique({ where: { id }, select: careerSelect }),
       prisma.program.findMany({
         where: { careerId: id },
-        select: { name: true, level: true, modality: true, university: { select: universitySelect } },
+        select: { name: true, level: true, modality: true, url: true, university: { select: { ...universitySelect, programsUrl: true } } },
         orderBy: [{ name: "asc" }, { university: { name: "asc" } }],
       }),
     ]);
     if (!career) return null;
     const offerings = new Map<string, Offering>();
-    for (const { name, university, level, modality } of programs) {
+    for (const { name, url, level, modality, university: { programsUrl, ...university } } of programs) {
       let offering = offerings.get(name);
       if (!offering) offerings.set(name, (offering = { name, universities: [] }));
-      offering.universities.push({ ...university, level, modality });
+      const linkKind = url ? "program" : programsUrl ? "catalog" : "site";
+      offering.universities.push({ ...university, level, modality, programUrl: url ?? programsUrl ?? university.url, linkKind });
     }
     return { ...toCareer(career), offerings: [...offerings.values()] };
   },
