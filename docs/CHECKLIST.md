@@ -15,7 +15,7 @@ Auditoría inicial: 2026-10-21, commit `20a61ca`. Última actualización: 2026-1
 
 | # | La guía pide | Hoy existe | Decisión |
 |---|---|---|---|
-| C1 | Un repositorio propio para backend y otro para frontend | Monorepo `DUAM2/` con `frontend/`, `backend/`, `legacy/` | **Resuelto (2026-10-28):** backend en `Josecopro/duam-backend` (historial conservado, README completo). `DesarrolloWeb` guarda ambos proyectos pero funciona como el repositorio del frontend (conectado a Vercel). |
+| C1 | Un repositorio propio para backend y otro para frontend | Monorepo `DUAM2/` con `frontend/`, `backend/`, `legacy/` | **Monorepo:** `DesarrolloWeb` es la única fuente; Vercel despliega `frontend/` (`desarrollo-web`) y `backend/` (`duam-api`) desde aquí. (El repositorio `duam-backend` ya no se usa para desplegar.) |
 | C2 | Prisma + PostgreSQL | `pg` con SQL directo (`backend/db/schema.sql`, `backend/src/app.ts`) | **Migrar a Prisma** (schema, migraciones, seed). |
 | C3 | Capas domain / application / infrastructure / interface | Todo el backend en `src/app.ts` (+ `db.ts`, `pqrs.ts`) | **Reescribir en 4 capas.** |
 | C4 | Frontend organizado por features (`src/features/...`) | Atomic Design (`components/atoms|molecules|organisms|templates`) + `lib/` | **Reorganizar por features conservando el diseño**: los componentes genéricos pasan a `features/common/components`. |
@@ -30,7 +30,7 @@ Auditoría inicial: 2026-10-21, commit `20a61ca`. Última actualización: 2026-1
 Verificado con `cd backend && npm test` (23 pruebas contra Postgres real, 2026-10-21).
 
 ### Estructura
-- [x] Repositorio propio: https://github.com/Josecopro/duam-backend (C1).
+- [x] Código en `backend/` de https://github.com/Josecopro/DesarrolloWeb, desplegado desde ahí (C1).
 - [x] Node.js + Express 5 + TypeScript + Prisma 7 + PostgreSQL (`backend/prisma/schema.prisma`, migración `prisma/migrations/*_init`).
 - [x] Capas `src/domain` (entidades, contratos, errores) · `src/application` (casos de uso, puertos) · `src/infrastructure` (Prisma, bcrypt, JWT, env, container) · `src/interface/http` (routers, controllers, middlewares, schemas zod).
 
@@ -79,7 +79,7 @@ Verificado con `cd backend && npm test` (23 pruebas contra Postgres real, 2026-1
 Verificado con `cd frontend && npm run test:e2e` (27 pruebas en navegador real contra la API local, 2026-10-22) y capturas en 375/1280/1536 px, claro y oscuro.
 
 ### Estructura
-- [x] Repositorio propio: https://github.com/Josecopro/DesarrolloWeb, que también guarda `backend/` pero funciona como el repositorio del frontend (C1).
+- [x] Código en `frontend/` de https://github.com/Josecopro/DesarrolloWeb (C1).
 - [x] Next.js 16 (App Router) + TypeScript + Tailwind v4.
 - [x] `app/` solo compone (las páginas importan componentes y loaders de `features/`).
 - [x] `features/common/config.ts`: `API_BASE_URL` desde `NEXT_PUBLIC_API_HOST`.

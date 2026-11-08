@@ -127,7 +127,7 @@ Cada área (`/carreras/<id>`) muestra las carreras reales de las 21 universidade
 - Fuente: SNIES del MinEducación, API abierta de datos.gov.co, dataset `upr9-nkiz` (sin clave). `backend/prisma/fetch-programs.ts` (`npm run data:programs`) toma los pregrados activos ofrecidos en Antioquia, más los virtuales o a distancia, y los clasifica por área de conocimiento/NBC en las áreas DUAM. Escribe `prisma/seed-data/programs.json`, que va versionado. Para refrescar: `npm run data:programs && npm run db:seed`.
 - Nueva área `negocios` ("Economía y Administración"). Las 8 subcategorías manuales de cada área desaparecen: `Career.programs` ahora se deriva de la tabla `programs` y en /admin ya no se edita.
 - Limitaciones: la columna de nombre de programa del SNIES está dañada (trae el departamento), así que se muestra el **título otorgado** ("Ingeniero de Sistemas"). Algunas tildes vienen mal desde el origen y se corrigen con las grafías que aparecen en los mismos datos. Los datos del SNIES son de enero de 2025. La Universidad Piloto no tiene programas en Antioquia ni virtuales, así que no aparece en ninguna área.
-- Producción: `DATABASE_URL=<UNPOOLED> npm run db:deploy && npm run db:seed` en `backend` **antes** de desplegar el frontend.
+- Producción: el build de `duam-api` corre `migrate deploy` + seed solo (ver backend/README.md).
 
 ### Fase 6 — Limpieza
 Borrar `legacy/` (hecho 2026-11-01; el sitio de la Entrega 1 sigue en el historial de git, commit `fd1709b`), CI (lint + build), README final.

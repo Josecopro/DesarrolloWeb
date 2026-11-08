@@ -84,7 +84,9 @@ Errores siempre como `{ error, details? }` (`details` = errores por campo), sin 
 
 ## Despliegue (Vercel, proyecto `duam-api`)
 
-Root Directory `backend`, preset Express (detecta `src/app.ts`). Base de datos Neon instalada desde el Marketplace de Vercel. Migraciones y seed en producción, con la URL directa de Neon:
+Se despliega desde la carpeta `backend/` de este repositorio (Root Directory `backend`, preset Express, detecta `src/app.ts`) con cada push a `main`. Base de datos Neon instalada desde el Marketplace de Vercel. En producción (`VERCEL_ENV=production`), `npm run build` también corre `prisma migrate deploy` y el seed contra Neon (con `DATABASE_URL_UNPOOLED`), así que el código nuevo y el esquema salen juntos. Si una migración falla, el build falla y sigue activo el despliegue anterior. Los *previews* comparten la base y no migran.
+
+A mano, si hace falta:
 
 ```bash
 DATABASE_URL_UNPOOLED=<url> npm run db:deploy
